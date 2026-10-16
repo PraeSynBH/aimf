@@ -1,0 +1,66 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1E3A8A', 'primaryBorderColor':'#1E3A8A', 'tertiaryColor':'#0D9488', 'lineColor':'#64748B'}}}%%
+graph TB
+    subgraph ProfilesP["6 Framework Profiles — Customize for Your Context"]
+        direction LR
+        P1["Foundational<br/>35 controls | B1<br/>Essential governance"]
+        P2["Balanced<br/>50 controls | B2<br/>Enterprise standard"]
+        P3["High-Assurance<br/>72 controls | B3<br/>Maximum rigor"]
+        P4["Financial Services<br/>59 controls | B2-B3<br/>Sector-specific"]
+        P5["Healthcare<br/>62 controls | B2-B3<br/>Sector-specific"]
+        P6["Government<br/>63 controls | B2-B3<br/>Sector-specific"]
+    end
+
+    subgraph Maturity["5 Maturity Levels — Organizational Capability"]
+        direction LR
+        L1["Level 1<br/>Initial<br/>Ad-hoc, reactive"]
+        L2["Level 2<br/>Developing<br/>Foundational structure"]
+        L3["Level 3<br/>Defined<br/>Systematic processes"]
+        L4["Level 4<br/>Managed<br/>Data-driven optimization"]
+        L5["Level 5<br/>Optimizing<br/>Continuous innovation"]
+    end
+
+    subgraph Tiers["3 Risk Baselines — Implementation Rigor"]
+        direction LR
+        B1["B1: Initial<br/>Low-risk AI<br/>Foundational controls"]
+        B2["B2: Mature<br/>Moderate-risk AI<br/>Systematic programs"]
+        B3["B3: High-Risk<br/>Critical AI systems<br/>Maximum rigor"]
+    end
+
+    subgraph Dimensions["4 Capability Dimensions — Cross-Cutting Views"]
+        D1["Governance &<br/>Accountability<br/>26% of controls"]
+        D2["Data Management<br/>& Privacy<br/>8% of controls"]
+        D3["Technical Operations<br/>& MLOps<br/>42% of controls"]
+        D4["Organizational Culture<br/>& Capabilities<br/>23% of controls"]
+    end
+
+    subgraph Framework["AIMF Core: 72 Controls across 4 Functions (NIST AI RMF Aligned)"]
+        GOVERN["GOVERN<br/>19 Controls<br/>Legal, Accountability,<br/>Risk, Culture"]
+        MAP["MAP<br/>19 Controls<br/>Context, Impact,<br/>Stakeholder, Third-Party"]
+        MEASURE["MEASURE<br/>22 Controls<br/>Testing, TEVV,<br/>Trustworthiness"]
+        MANAGE["MANAGE<br/>13 Controls<br/>Response, Monitoring,<br/>Improvement"]
+    end
+
+    subgraph Standards["Standards Foundation — Built on Internationally Recognized Standards"]
+        ISO42001["ISO 42001:2023<br/>AI Management System"]
+        NIST["NIST AI RMF 1.0<br/>Risk Management Framework"]
+        ISO27001["ISO 27001:2022<br/>Information Security"]
+        EO["Executive Orders<br/>14110 / 14179"]
+    end
+
+    Standards --> Framework
+    Framework --> Dimensions
+    Dimensions --> Maturity
+    Framework --> Tiers
+    Framework --> ProfilesP
+    ProfilesP -.-> Maturity
+    ProfilesP -.-> Tiers
+    L1 --> L2 --> L3 --> L4 --> L5
+    B1 --> B2 --> B3
+
+    style ProfilesP fill:#1E3A8A,stroke:#1E3A8A,stroke-width:2px,color:#fff
+    style P1 fill:#64748B,stroke:#475569,stroke-width:1px,color:#fff
+    style P2 fill:#0D9488,stroke:#0F766E,stroke-width:1px,color:#fff
+    style P3 fill:#EA580C,stroke:#C2410C,stroke-width:2px,color:#fff
+    style P4 fill:#1E3A8A,stroke:#1E40AF,stroke-width:1px,color:#fff
+    style P5 fill:#7C3AED,stroke:#6D28D9,stroke-width:1px,color:#fff
+    style P6 fill:#059669,stroke:#047857,stroke-width:1px,color:#fff

@@ -1,0 +1,74 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0D9488', 'primaryBorderColor':'#0D9488', 'tertiaryColor':'#1E3A8A', 'lineColor':'#64748B'}}}%%
+graph TD
+    AIMF["<b>AI MANAGEMENT FRAMEWORK (AIMF)</b><br/>by PraeSyn<br/><br/>72 Controls | 4 Functions<br/>4 Dimensions | 5 Maturity Levels<br/>3 Tiers | 6 Profiles"]
+
+    subgraph ISO_Standards["Spoke 1: ISO/IEC Standards (Primary Foundation)"]
+        ISO42001["ISO/IEC 42001:2023<br/>AI Management Systems<br/><br/>PRIMARY FOUNDATION<br/>All 72 controls mapped<br/>Certification preparation"]
+        ISO27001["ISO/IEC 27001:2022<br/>Information Security<br/><br/>Security controls alignment<br/>MEA-2.7 mapped<br/>Joint certification path"]
+        ISO23894["ISO/IEC 23894:2023<br/>AI Risk Management<br/><br/>Risk guidance<br/>MANAGE function alignment"]
+    end
+
+    subgraph NIST_Standards["Spoke 2: NIST Frameworks (Functional Alignment)"]
+        NIST_RMF["NIST AI RMF 1.0<br/><br/>FUNCTIONAL ALIGNMENT<br/>59/59 subcategories mapped<br/>4 functions aligned<br/>100% coverage"]
+        NIST_CSF["NIST CSF 2.0<br/><br/>Profile methodology adopted<br/>Community profiles approach<br/>Customization guidance"]
+    end
+
+    subgraph US_Regulations["Spoke 3: U.S. Federal Regulations"]
+        EO14110["Executive Order 14110<br/>AI Safety & Trustworthiness<br/><br/>Government Profile compliance<br/>High-risk reporting<br/>Civil rights protections"]
+        EO14179["Executive Order 14179<br/>AI Innovation<br/><br/>Innovation enablement<br/>Responsible AI deployment<br/>Federal agency support"]
+        OMB["OMB Memo M-24-10<br/>Agency AI Governance<br/><br/>Federal agency guidance<br/>Minimum practices<br/>Impact assessment"]
+    end
+
+    subgraph EU_Regulations["Spoke 4: European Union Regulations"]
+        EU_AI_Act["EU AI Act (2024/1689)<br/><br/>High-risk AI alignment<br/>Conformity assessment prep<br/>Fundamental rights impact<br/>Transparency obligations"]
+        GDPR["GDPR<br/><br/>Privacy & data protection<br/>DPIA methodology<br/>Data minimization<br/>Consent management"]
+    end
+
+    subgraph Sector_Regs["Spoke 5: Sector-Specific Regulations"]
+        Healthcare["Healthcare<br/>• HIPAA Privacy/Security<br/>• FDA SaMD<br/>• Clinical validation<br/><br/>Healthcare Profile (62 ctrls)"]
+        Financial["Financial Services<br/>• GLBA • FCRA<br/>• SR 11-7 • ECOA<br/>• Model risk management<br/><br/>Financial Services Profile (59 ctrls)"]
+        Government["Government<br/>• State AI laws<br/>• Public accountability<br/>• FOIA compliance<br/><br/>Government Profile (63 ctrls)"]
+    end
+
+    subgraph Industry["Spoke 6: Industry Standards & Best Practices"]
+        IEEE["IEEE 7000-2021<br/>Ethical systems design<br/><br/>Best Practices Integration"]
+        PAI["Partnership on AI<br/>Microsoft RAI Standard v2<br/>Google Responsible AI<br/><br/>Industry best practices"]
+    end
+
+    AIMF -.->|"Primary Standard<br/>All Controls Mapped"| ISO42001
+    AIMF -.->|"Security Controls<br/>Alignment"| ISO27001
+    AIMF -.->|"Risk Management<br/>Guidance"| ISO23894
+
+    AIMF -.->|"100% Subcategory<br/>Coverage (59/59)"| NIST_RMF
+    AIMF -.->|"Profile Methodology<br/>Alignment"| NIST_CSF
+
+    AIMF -.->|"Government Profile<br/>Compliance"| EO14110
+    AIMF -.->|"Innovation<br/>Enablement"| EO14179
+    AIMF -.->|"Federal Agency<br/>Guidance"| OMB
+
+    AIMF -.->|"High-Risk AI<br/>Alignment"| EU_AI_Act
+    AIMF -.->|"Privacy & Data<br/>Protection"| GDPR
+
+    AIMF -.->|"Healthcare<br/>Profile"| Healthcare
+    AIMF -.->|"Financial Services<br/>Profile"| Financial
+    AIMF -.->|"Government<br/>Profile"| Government
+
+    AIMF -.->|"Best Practices<br/>Integration"| IEEE
+    AIMF -.->|"Industry<br/>Consortia"| PAI
+
+    style AIMF fill:#0D9488,stroke:#0F766E,stroke-width:4px,color:#fff
+    style ISO42001 fill:#1E3A8A,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style NIST_RMF fill:#1E3A8A,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style ISO27001 fill:#475569,stroke:#334155,stroke-width:2px,color:#fff
+    style ISO23894 fill:#475569,stroke:#334155,stroke-width:2px,color:#fff
+    style NIST_CSF fill:#475569,stroke:#334155,stroke-width:2px,color:#fff
+    style EO14110 fill:#7C3AED,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style EO14179 fill:#7C3AED,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style OMB fill:#7C3AED,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style EU_AI_Act fill:#1E3A8A,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style GDPR fill:#1E3A8A,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style Healthcare fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
+    style Financial fill:#EA580C,stroke:#C2410C,stroke-width:2px,color:#fff
+    style Government fill:#1E3A8A,stroke:#1E40AF,stroke-width:2px,color:#fff
+    style IEEE fill:#64748B,stroke:#475569,stroke-width:2px,color:#fff
+    style PAI fill:#64748B,stroke:#475569,stroke-width:2px,color:#fff

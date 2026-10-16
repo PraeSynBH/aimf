@@ -192,7 +192,7 @@ Once Foundational Profile is mature (6-12 months), consider advancing to:
 ## Related Documents
 
 - **Profile Selection**: [AIMF-PROFILES-GUIDE.md](../../implementation/AIMF-PROFILES-GUIDE.md)
-- **Implementation Tiers**: [AIMF-IMPLEMENTATION-TIERS.md](../../implementation/AIMF-IMPLEMENTATION-TIERS.md)
+- **Implementation Tiers**: [AIMF-RISK-BASELINES.md](../../implementation/AIMF-RISK-BASELINES.md)
 - **Control Details**: [AIMF-CONTROL-CATALOG.md](../../core/AIMF-CONTROL-CATALOG.md)
 - **Next Profile**: [Balanced Profile](profile-balanced.md)
 

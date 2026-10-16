@@ -1,0 +1,69 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#64748B', 'primaryBorderColor':'#475569', 'tertiaryColor':'#1E3A8A', 'lineColor':'#64748B'}}}%%
+graph TB
+    Title["Risk Baseline Comparison: B1 vs B2 vs B3"]
+
+    subgraph B1["B1: INITIAL — Foundational (Low-Risk)"]
+        direction TB
+        B1_Risk["Risk Level: Low impact, minimal harm"]
+        B1_Doc["Documentation: Basic, informal procedures"]
+        B1_Test["Testing: Spot checks, manual validation, annual reviews"]
+        B1_Gov["Governance: Manager-level, ad-hoc meetings, part-time"]
+        B1_Stakeholder["Stakeholder: Internal awareness, limited feedback"]
+        B1_Fairness["Fairness: Basic awareness, informal checks, reactive"]
+        B1_Incident["Incident Response: Basic logging, manual, best-effort"]
+        B1_Resources["Resources: 1-2 FTE part-time, <$100K, basic tools"]
+        B1_Compliance["Compliance: Essential only, reactive, basic awareness"]
+        B1_Timeline["Timeline: 3-6 months implementation"]
+        B1_Examples["Examples: Internal tools, analytics, dev environments"]
+    end
+
+    subgraph B2["B2: MATURE — Systematic (Moderate-Risk)"]
+        direction TB
+        B2_Risk["Risk Level: Moderate impact, customer-facing"]
+        B2_Doc["Documentation: Formal, comprehensive, version control"]
+        B2_Test["Testing: Systematic TEVV, quarterly reviews, validated"]
+        B2_Gov["Governance: Committee, director-level, quarterly meetings"]
+        B2_Stakeholder["Stakeholder: Systematic engagement, regular feedback"]
+        B2_Fairness["Fairness: Systematic testing, multiple metrics, documented"]
+        B2_Incident["Incident Response: Formal plan, defined SLAs, RCA"]
+        B2_Resources["Resources: 2-4 FTE dedicated, $150K-$500K, commercial"]
+        B2_Compliance["Compliance: Comprehensive, proactive monitoring, audits"]
+        B2_Timeline["Timeline: 6-12 months implementation"]
+        B2_Examples["Examples: Recommendations, chatbots, fraud detection"]
+    end
+
+    subgraph B3["B3: HIGH-RISK — Maximum Rigor (Critical)"]
+        direction TB
+        B3_Risk["Risk Level: High impact, life-safety, critical systems"]
+        B3_Doc["Documentation: Exhaustive, legal-grade, public transparency"]
+        B3_Test["Testing: Independent validation, external experts, continuous"]
+        B3_Gov["Governance: Board-level, independent function, monthly reviews"]
+        B3_Stakeholder["Stakeholder: Comprehensive, public consultation, appeals"]
+        B3_Fairness["Fairness: Independent assessment, intersectional analysis"]
+        B3_Incident["Incident Response: 24/7 monitoring, <4hr critical, regulatory"]
+        B3_Resources["Resources: 5-10+ FTE specialists, $500K-$2M+, enterprise"]
+        B3_Compliance["Compliance: Maximum rigor, independent audits, certification"]
+        B3_Timeline["Timeline: 12-24 months implementation"]
+        B3_Examples["Examples: Autonomous vehicles, medical, credit, life-safety"]
+    end
+
+    Title --> B1
+    Title --> B2
+    Title --> B3
+
+    B1_Risk --> B2_Risk --> B3_Risk
+    B1_Doc --> B2_Doc --> B3_Doc
+    B1_Test --> B2_Test --> B3_Test
+    B1_Gov --> B2_Gov --> B3_Gov
+    B1_Stakeholder --> B2_Stakeholder --> B3_Stakeholder
+    B1_Fairness --> B2_Fairness --> B3_Fairness
+    B1_Incident --> B2_Incident --> B3_Incident
+    B1_Resources --> B2_Resources --> B3_Resources
+    B1_Compliance --> B2_Compliance --> B3_Compliance
+    B1_Timeline --> B2_Timeline --> B3_Timeline
+    B1_Examples --> B2_Examples --> B3_Examples
+
+    style Title fill:#1E3A8A,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style B1 fill:#64748B,stroke:#475569,stroke-width:2px,color:#fff
+    style B2 fill:#1E3A8A,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style B3 fill:#EA580C,stroke:#C2410C,stroke-width:4px,color:#fff

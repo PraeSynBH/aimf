@@ -358,4 +358,4 @@ Each GOVERN control is assessed on a 0-3 scale:
 
 ---
 
-**Next Document**: [MAP Function Controls](AIMF-FUNCTION-MAP.md) | [Risk Baselines](AIMF-RISK-BASELINES.md)
+**Next Document**: [MAP Function Controls](AIMF-FUNCTION-MAP.md) | [Risk Baselines](../implementation/AIMF-RISK-BASELINES.md)

@@ -1,0 +1,63 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1E3A8A', 'primaryBorderColor':'#1E3A8A', 'tertiaryColor':'#0D9488', 'lineColor':'#64748B'}}}%%
+graph TD
+    Start["🎯 Start: Select AIMF Profile"]
+
+    Q1{"Are you a regulated<br/>industry with sector-<br/>specific AI requirements?"}
+
+    Q_Financial{"Financial services?<br/>(Banking, insurance,<br/>fintech, lending)"}
+    Q_Healthcare{"Healthcare?<br/>(Hospitals, clinics,<br/>health tech, pharma)"}
+    Q_Government{"Government?<br/>(Federal, state, local<br/>public sector)"}
+
+    P_Financial["FINANCIAL SERVICES PROFILE<br/>59 controls, B2-B3<br/><br/>Focus: Fairness, explainability,<br/>model risk management,<br/>third-party risk<br/><br/>Regulations: GLBA, FCRA,<br/>SR 11-7, fair lending"]
+
+    P_Healthcare["HEALTHCARE PROFILE<br/>62 controls, B2-B3<br/><br/>Focus: Patient safety, HIPAA,<br/>clinical validation,<br/>explainability<br/><br/>Regulations: HIPAA, FDA,<br/>patient safety standards"]
+
+    P_Government["GOVERNMENT PROFILE<br/>63 controls, B2-B3<br/><br/>Focus: Transparency,<br/>stakeholder engagement,<br/>civil rights, accountability<br/><br/>Regulations: EO 14110/14179,<br/>OMB guidance, FOIA"]
+
+    Q2{"What is your<br/>AI system risk level?"}
+
+    Q_HighRisk{"High-risk or<br/>autonomous AI?<br/>(Life-safety, critical<br/>infrastructure, high-impact)"}
+
+    P_HighAssurance["HIGH-ASSURANCE PROFILE<br/>72 controls, B3<br/><br/>All controls at maximum rigor<br/><br/>Use cases: Autonomous vehicles,<br/>critical infrastructure,<br/>high-risk regulated AI"]
+
+    Q_ModerateRisk{"Moderate-risk?<br/>(Customer-facing,<br/>business-critical,<br/>operational AI)"}
+
+    P_Balanced["BALANCED PROFILE<br/>50 controls, B2<br/><br/>Comprehensive enterprise<br/>AI governance<br/><br/>Use cases: SaaS products,<br/>enterprise AI, moderate-risk"]
+
+    Q_LowRisk{"Low-risk or<br/>just starting?<br/>(Internal tools,<br/>minimal impact)"}
+
+    P_Foundational["FOUNDATIONAL PROFILE<br/>35 controls, B1<br/><br/>Essential governance basics<br/><br/>Use cases: Small orgs,<br/>low-risk AI, pilot programs"]
+
+    Other["Consider Future Profiles:<br/>• Generative AI (v1.1)<br/>• Manufacturing (v1.1)<br/>• Small Business (v1.1)<br/>• Energy/Infrastructure (v1.2)<br/>• Education/Research (v1.2)"]
+
+    Start --> Q1
+
+    Q1 -->|Yes| Q_Financial
+    Q1 -->|No| Q2
+
+    Q_Financial -->|Yes| P_Financial
+    Q_Financial -->|No| Q_Healthcare
+
+    Q_Healthcare -->|Yes| P_Healthcare
+    Q_Healthcare -->|No| Q_Government
+
+    Q_Government -->|Yes| P_Government
+    Q_Government -->|No| Q2
+
+    Q2 --> Q_HighRisk
+
+    Q_HighRisk -->|Yes| P_HighAssurance
+    Q_HighRisk -->|No| Q_ModerateRisk
+
+    Q_ModerateRisk -->|Yes| P_Balanced
+    Q_ModerateRisk -->|No| Q_LowRisk
+
+    Q_LowRisk -->|Yes| P_Foundational
+    Q_LowRisk -->|No| Other
+
+    style P_Financial fill:#1E3A8A,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style P_Healthcare fill:#7C3AED,stroke:#6D28D9,stroke-width:3px,color:#fff
+    style P_Government fill:#059669,stroke:#047857,stroke-width:3px,color:#fff
+    style P_HighAssurance fill:#EA580C,stroke:#C2410C,stroke-width:4px,color:#fff
+    style P_Balanced fill:#0D9488,stroke:#0F766E,stroke-width:3px,color:#fff
+    style P_Foundational fill:#64748B,stroke:#475569,stroke-width:2px,color:#fff

@@ -466,4 +466,4 @@ Each MANAGE control is assessed on a 0-3 scale:
 
 ---
 
-**Related Documents**: [GOVERN Function Controls](AIMF-FUNCTION-GOVERN.md) | [MEASURE Function Controls](AIMF-FUNCTION-MEASURE.md) | [Framework Overview](AIMF-FRAMEWORK-OVERVIEW.md)
+**Related Documents**: [GOVERN Function Controls](AIMF-FUNCTION-GOVERN.md) | [MEASURE Function Controls](AIMF-FUNCTION-MEASURE.md) | [Framework Overview](../core/AIMF-FRAMEWORK-OVERVIEW.md)

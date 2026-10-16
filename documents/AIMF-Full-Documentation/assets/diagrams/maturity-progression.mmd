@@ -1,0 +1,35 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1E3A8A', 'primaryBorderColor':'#1E3A8A', 'tertiaryColor':'#0D9488', 'lineColor':'#64748B'}}}%%
+graph LR
+    subgraph Progression["AIMF Maturity Progression — 5 Levels"]
+        direction LR
+        L1["Level 1: INITIAL<br/>Ad-hoc, Reactive<br/><br/>Characteristics:<br/>• Minimal documentation<br/>• Informal processes<br/>• Individual heroics<br/><br/>Typical Behaviors:<br/>• 'Just trying things out'<br/>• AI is a side project<br/>• No formal policies"]
+        L2["Level 2: DEVELOPING<br/>Foundational Structure<br/><br/>Characteristics:<br/>• Basic policies<br/>• Assigned roles (part-time)<br/>• Documented awareness<br/><br/>Investment: 1-2 FTE<br/>&lt;$100K<br/>Timeline: 3-6 months"]
+        L3["Level 3: DEFINED<br/>Systematic Processes<br/><br/>Characteristics:<br/>• Formal processes<br/>• Regular reviews<br/>• Dedicated team<br/><br/>Investment: 2-4 FTE<br/>$150K-$300K<br/>Timeline: 6-12 months"]
+        L4["Level 4: MANAGED<br/>Data-Driven<br/><br/>Characteristics:<br/>• Quantitative management<br/>• Continuous monitoring<br/>• Process optimization<br/><br/>Investment: 4-6 FTE<br/>$500K+<br/>Timeline: 12-18 months"]
+        L5["Level 5: OPTIMIZING<br/>Continuous Innovation<br/><br/>Characteristics:<br/>• Industry leadership<br/>• Advanced research<br/>• Proactive anticipation<br/><br/>Investment: 6+ FTE<br/>$1M+<br/>Timeline: 18+ months"]
+
+        L1 -->|"Foundational Profile<br/>3-6 months<br/>1-2 FTE"| L2
+        L2 -->|"Balanced Profile<br/>6-12 months<br/>2-4 FTE"| L3
+        L3 -->|"Advanced Practices<br/>12-18 months<br/>4-6 FTE"| L4
+        L4 -->|"Continuous Excellence<br/>18+ months<br/>6+ FTE"| L5
+    end
+
+    subgraph Dimensions["Capability Dimensions (applied at each level)"]
+        direction TB
+        D1["Governance &<br/>Accountability"]
+        D2["Data Management<br/>& Privacy"]
+        D3["Technical Operations<br/>& MLOps"]
+        D4["Organizational Culture<br/>& Capabilities"]
+    end
+
+    Dimensions -.->|"Assessed per level"| L1
+    Dimensions -.->|"Assessed per level"| L2
+    Dimensions -.->|"Assessed per level"| L3
+    Dimensions -.->|"Assessed per level"| L4
+    Dimensions -.->|"Assessed per level"| L5
+
+    style L1 fill:#9CA3AF,stroke:#6B7280,stroke-width:2px,color:#000
+    style L2 fill:#64748B,stroke:#475569,stroke-width:2px,color:#fff
+    style L3 fill:#1E3A8A,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style L4 fill:#0D9488,stroke:#0F766E,stroke-width:3px,color:#fff
+    style L5 fill:#059669,stroke:#047857,stroke-width:4px,color:#fff

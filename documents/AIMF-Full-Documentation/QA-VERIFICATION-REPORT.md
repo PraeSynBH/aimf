@@ -38,7 +38,7 @@ The AI Management Framework (AIMF) by PraeSyn v1.0 has undergone comprehensive q
 - ✅ README.md created with comprehensive framework navigation
 - ✅ CHANGELOG.md created with detailed v1.0 release notes
 - ✅ AIMF-FRAMEWORK-OVERVIEW.md present in core/
-- ✅ AIMF-CONTROL-CATALOG.csv enhanced (20 columns, 73 rows)
+- ✅ AIMF-CONTROL-CATALOG.csv enhanced (20 columns, 72 rows)
 - ✅ AIMF-CONTROL-CATALOG.md human-readable version created
 - ✅ AIMF-DOMAIN-TAXONOMY.md hierarchical structure documented
 
@@ -144,9 +144,9 @@ Licensed under CC BY-NC-ND 4.0
 - ✅ No variant forms (e.g., "PraeSyn AI Management Framework")
 
 ### Control Counts
-- ✅ Total controls: 73 (consistently referenced)
+- ✅ Total controls: 72 (consistently referenced)
 - ✅ GOVERN: 19 controls (verified in function document)
-- ✅ MAP: 19 controls (verified in function document)
+- ✅ MAP: 18 controls (verified in function document)
 - ✅ MEASURE: 22 controls (verified in function document)
 - ✅ MANAGE: 13 controls (verified in function document)
 - ✅ Function documents reflect correct counts
@@ -179,7 +179,7 @@ Licensed under CC BY-NC-ND 4.0
 
 ### Control Catalog CSV
 - ✅ 20 columns present and correctly labeled
-- ✅ 73 data rows (one per control)
+- ✅ 72 data rows (one per control)
 - ✅ All Control_IDs follow pattern (GOV-X.X, MAP-X.X, MEA-X.X, MAN-X.X)
 - ✅ All controls have complete B1, B2, B3 requirements
 - ✅ All controls have maturity level associations
@@ -190,7 +190,7 @@ Licensed under CC BY-NC-ND 4.0
 ### Domain Taxonomy
 - ✅ 4 Level 1 domains defined (Governance, Data, Technical, Culture)
 - ✅ 16 Level 2 categories defined
-- ✅ 73 Level 3 subcategories (one per control)
+- ✅ 72 Level 3 subcategories (one per control)
 - ✅ All controls assigned to correct domain hierarchy
 
 ### Standards Mappings

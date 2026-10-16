@@ -367,7 +367,7 @@ Common challenges advancing from Level 2 (Developing) to Level 3 (Defined):
 4. **Lack of executive support**: Governance seen as IT problem, not strategic priority
    - **Solution**: Frame AI risk in business terms, demonstrate regulatory/reputational risks, benchmark competitors
 
-**Level 2 → Level 3 Transition Guide**: See `TIER-2-TO-3-GUIDE.md` for detailed roadmap
+**Level 2 → Level 3 Transition Guide**: See `MATURITY-LEVEL-2-TO-3-GUIDE.md` for detailed roadmap
 
 **Key Success Factors**:
 - Executive sponsorship (not just budget, but active engagement)

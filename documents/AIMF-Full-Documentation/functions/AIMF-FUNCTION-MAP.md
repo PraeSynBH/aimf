@@ -8,7 +8,7 @@ Licensed under CC BY-NC-ND 4.0
 **Publication Date**: January 29, 2026
 **Status**: Pre-Publication (Working Draft)
 **Function Identifier**: MAP
-**Controls**: MAP-1.1 through MAP-5.2 (19 controls)
+**Controls**: MAP-1.1 through MAP-5.2 (18 controls)
 
 ---
 
