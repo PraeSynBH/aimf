@@ -60,6 +60,68 @@ is a credibility defect.
 
 ---
 
+## [1.0.1] - 2026-10-17 (Standards Mapping Completion)
+
+**Change Type**: Content completion + catalog correction
+**Rationale**: v1.0 shipped four standards-mapping documents that were research
+skeletons behind completed-looking filenames, and a control catalog whose ISO 27001
+column was both incomplete and numbered across two editions. This release completes
+the mappings from data already held in the catalog, normalises the catalog, and makes
+the mappings machine-generated so the claim cannot drift from the data again.
+
+#### Added
+
+- **NIST AI RMF 1.0 mapping completed**: `mappings/AIMF-NIST-RMF-MAPPING.md` now
+  carries all 19 categories and all 72 subcategories, each attributed to exactly one
+  AIMF control, with the per-control maturity floor/target and the baseline, defined
+  and advanced implementation statements.
+- **ISO/IEC 42001:2023 mapping completed**: `mappings/AIMF-ISO42001-MAPPING.md` maps
+  all 19 clause references the catalog attributes to the 72 controls, at the standard's
+  own clause-heading level (no licensed body text reproduced).
+- **ISO/IEC 27001:2022 mapping completed at public control-theme level**:
+  `mappings/AIMF-ISO27001-MAPPING.md` carries the Annex A 2022 attribution for every
+  one of the 72 controls, plus an explicit, reasoned list of the controls that were
+  reviewed and found to have no ISMS analogue. Deep Annex A fidelity remains open
+  pending a licensed copy of the 2022 edition and is not claimed.
+- **EO 14179 mapping authored**: `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md`
+  maps every provision of the order and its three follow-on federal actions
+  (the AI Action Plan and OMB M-25-21 / M-25-22) to the AIMF controls that support
+  readiness, and states plainly that the order creates no private-sector obligation.
+- **DIMENSION mapping regenerated**: `mappings/AIMF-DIMENSION-MAPPING.md` derives every
+  dimension table and every count from the catalog's `Dimension` /
+  `Dimension_Secondary` columns.
+- **`scripts/aimf_mappings.py`**: generator and drift validator. It renders the
+  generated tables from `core/AIMF-CONTROL-CATALOG.csv`, owns the ISO/IEC 27001:2022
+  Annex A attribution, and fails (`check`) on any drift between catalog, script and
+  documents, on an unknown control reference, on a pre-2022 ISO 27001 reference, or on
+  a placeholder/unchecked task in any mapping document.
+
+#### Fixed
+
+- **ISO/IEC 27001 numbering normalised to the 2022 edition**: the three superseded
+  2013-edition references in `core/AIMF-CONTROL-CATALOG.csv` were replaced with their
+  2022 equivalents, and the 38 controls that carried no reference at all were reviewed
+  so that every one of the 72 controls now carries either a 2022 Annex A reference or
+  an explicit no-analogue finding.
+- **Documented control counts corrected**: the GOVERN / MAP / MEASURE / MANAGE tallies
+  and the DIMENSION per-dimension counts now come from the catalog (19/18/22/13 = 72)
+  rather than from hand-maintained lists.
+- **`core/AIMF-CONTROL-CATALOG.md`** standards metadata lines are synchronised with the
+  CSV by the generator.
+- **GOVERN function status**: `mappings/GOVERN-FUNCTION-MATURITY-MAPPING.md` validated
+  (all 19 GOVERN subcategories present, no placeholders) and its status corrected from
+  working draft to complete.
+
+#### Notes
+
+- This release supersedes the four mapping-document `**Status**` values recorded in the
+  [Unreleased] standards-completeness correction above; those files are now complete and
+  the header statuses say so.
+- `AIMF-MAPPING-COMPLETENESS.md` describes the pre-1.0.1 state of those four files and
+  is superseded by them.
+
+---
+
 ## [1.0.0] - 2026-01-29 (Pre-Publication Revision)
 
 ### Major Conceptual Refinement: Tier-to-Baseline Revision
@@ -286,7 +348,8 @@ Full license: [LICENSE.md](LICENSE.md)
 
 | Version | Release Date | Status | Key Changes |
 |---------|--------------|--------|-------------|
-| 1.0.0   | 2026-01-25   | Current | Initial public release |
+| 1.0.1   | 2026-10-17   | Current | Standards mapping completion; ISO/IEC 27001:2022 catalog normalisation; generated mapping tables with a drift validator |
+| 1.0.0   | 2026-01-25   | Superseded | Initial public release |
 
 ---
 
@@ -314,6 +377,6 @@ See [AIMF-FUTURE-PROFILES.md](supplemental/AIMF-FUTURE-PROFILES.md) for detailed
 
 ---
 
-**Last Updated**: January 29, 2026
-**Framework Version**: 1.0.0 (Pre-Publication)
+**Last Updated**: October 17, 2026
+**Framework Version**: 1.0.1 (Pre-Publication)
 **Maintained by**: PraeSyn, LLC

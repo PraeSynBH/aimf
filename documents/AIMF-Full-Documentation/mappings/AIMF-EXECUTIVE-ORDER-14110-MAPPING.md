@@ -19,12 +19,12 @@ Licensed under CC BY-NC-ND 4.0
 ### Executive Order 14110 (October 30, 2023)
 **Title**: Executive Order on Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence
 **Signed by**: President Joe Biden
-**Order Status**: **Rescinded January 20, 2025** by Executive Order 14179
+**Order Status**: **Rescinded January 20, 2025** by Executive Order 14148 (Initial Rescissions of Harmful Executive Orders and Actions). Executive Order 14179 (January 23, 2025) then directed agencies to review and unwind the actions taken under it.
 
-### Executive Order 14179 (January 20, 2025)
+### Executive Order 14179 (January 23, 2025)
 **Title**: Removing Barriers to American Leadership in Artificial Intelligence
 **Signed by**: President Donald Trump
-**Purpose**: Revoked EO 14110 and directed review of AI policies
+**Purpose**: Directed review of actions taken under EO 14110 and required an AI Action Plan
 
 ### Framework Approach
 
