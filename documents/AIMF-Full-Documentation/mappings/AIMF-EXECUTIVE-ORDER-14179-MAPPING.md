@@ -4,17 +4,16 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Executive Order**: Executive Order 14179 - Advancing AI Innovation (December 2024)
+**Executive Order**: Executive Order 14179 - Removing Barriers to American Leadership in Artificial Intelligence (January 23, 2025)
 **Version**: 1.0
 **Publication Date**: January 29, 2026
-**Status**: Pre-Publication (Working Draft)
+**Status**: Research Required - Detailed mapping needed
 
 **Purpose**: This document maps Executive Order 14179 requirements to the AI Management Framework (AIMF).
 
-**Purpose**: This document maps EO 14179 requirements to the AI maturity framework.
-
-**Date**: October 30, 2023
-**Status**: Research Required - Detailed mapping needed
+**Completeness**: Incomplete. This document is a research skeleton (6 "Required
+Research" markers, 0 AIMF control IDs). EO 14179 revoked EO 14110 on January 20, 2025
+and directed the review of AI policies. See `AIMF-MAPPING-COMPLETENESS.md`.
 
 ---
 

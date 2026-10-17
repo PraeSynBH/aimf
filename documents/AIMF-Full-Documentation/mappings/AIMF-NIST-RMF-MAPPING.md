@@ -7,12 +7,16 @@ Licensed under CC BY-NC-ND 4.0
 **Framework Title**: Artificial Intelligence Risk Management Framework (AI RMF 1.0)
 **Version**: 1.0
 **Publication Date**: January 29, 2026
-**Status**: Pre-Publication (Working Draft)
+**Standard Version**: NIST AI RMF 1.0 (January 2023)
+**Status**: Research Required - Detailed mapping needed
 
 **Purpose**: This document maps the NIST AI RMF core functions, categories, and subcategories to the AI Management Framework (AIMF).
 
-**Version**: NIST AI RMF 1.0 (January 2023)
-**Status**: Research Required - Detailed mapping needed
+**Completeness**: Incomplete. Framework-wide NIST AI RMF subcategory coverage is
+complete (72/72 subcategories, verified against NIST AI 100-1) and is held in
+`core/AIMF-CONTROL-CATALOG.csv` and the four `*-FUNCTION-MATURITY-MAPPING.md`
+documents. This narrative document is a research skeleton and does not yet contain that
+mapping. See `AIMF-MAPPING-COMPLETENESS.md`.
 
 ---
 

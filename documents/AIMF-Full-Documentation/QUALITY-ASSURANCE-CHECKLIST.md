@@ -23,7 +23,7 @@ This document provides a comprehensive quality assurance checklist for AIMF v1.0
 - [x] README.md created with framework navigation
 - [x] CHANGELOG.md created with v1.0 release notes
 - [x] AIMF-FRAMEWORK-OVERVIEW.md present in core/
-- [x] AIMF-CONTROL-CATALOG.csv enhanced (20 columns, 73 rows)
+- [x] AIMF-CONTROL-CATALOG.csv enhanced (20 columns, 72 rows)
 - [x] AIMF-CONTROL-CATALOG.md human-readable version created
 - [x] AIMF-DOMAIN-TAXONOMY.md hierarchical structure documented
 
@@ -120,9 +120,9 @@ Licensed under CC BY-NC-ND 4.0
 - [ ] No references to old names or variants
 
 ### Control Counts
-- [ ] Total controls: 73 (consistently referenced)
+- [ ] Total controls: 72 (consistently referenced)
 - [ ] GOVERN: 19 controls
-- [ ] MAP: 19 controls
+- [ ] MAP: 18 controls
 - [ ] MEASURE: 22 controls
 - [ ] MANAGE: 13 controls
 - [ ] Function documents reflect correct counts
@@ -151,7 +151,7 @@ Licensed under CC BY-NC-ND 4.0
 
 ### Control Catalog CSV
 - [ ] 20 columns present and correctly labeled
-- [ ] 73 data rows (one per control)
+- [ ] 72 data rows (one per control)
 - [ ] All Control_IDs follow pattern (GOV-X.X, MAP-X.X, MEA-X.X, MAN-X.X)
 - [ ] All controls have complete B1, B2, B3 requirements
 - [ ] All controls have maturity level associations
@@ -162,14 +162,15 @@ Licensed under CC BY-NC-ND 4.0
 ### Domain Taxonomy
 - [ ] 4 Level 1 domains defined
 - [ ] 16 Level 2 categories defined
-- [ ] 73 Level 3 subcategories (one per control)
+- [ ] 72 Level 3 subcategories (one per control)
 - [ ] All controls assigned to correct domain hierarchy
 
 ### Standards Mappings
-- [ ] ISO 42001: All clauses mapped
-- [ ] NIST AI RMF: All 59 subcategories mapped
-- [ ] ISO 27001: Security controls mapped
-- [ ] Executive Orders: Requirements mapped
+- [ ] ISO 42001: clause references populated for all controls in the catalog CSV
+- [ ] NIST AI RMF: all 72 subcategories covered (verified against NIST AI 100-1)
+- [ ] ISO 27001: references present where applicable (currently 34/72 controls, numbering vintage to be reconciled)
+- [ ] Executive Orders: 14110 mapped; 14179 acknowledged as research-required
+- [ ] Dedicated narrative mapping docs marked to match their real content (see AIMF-MAPPING-COMPLETENESS.md)
 
 ---
 
@@ -199,7 +200,7 @@ Licensed under CC BY-NC-ND 4.0
 - [ ] No broken links to non-existent files
 
 ### Document References
-- [ ] Profile numbers match (35, 50, 73, 59, 62, 63)
+- [ ] Profile numbers match (35, 50, 72, 59, 62, 63)
 - [ ] Control counts match across documents
 - [ ] Maturity level descriptions consistent
 - [ ] Tier descriptions consistent
@@ -254,18 +255,19 @@ Licensed under CC BY-NC-ND 4.0
 ## 8. Regulatory and Standards Accuracy
 
 ### ISO 42001
-- [ ] Clause references accurate
-- [ ] All clauses from ISO 42001 covered
-- [ ] AIMF claims about ISO 42001 alignment are accurate
+- [ ] Clause references accurate (catalog CSV: `ISO42001_Clauses` populated for 72/72 controls)
+- [ ] `mappings/AIMF-ISO42001-MAPPING.md` held to `Research Required` until a clause-by-clause mapping exists
+- [ ] AIMF claims about ISO 42001 alignment do not exceed file content
 
 ### NIST AI RMF
-- [ ] All 59 subcategories accurately mapped
+- [ ] All 72 subcategories covered (NIST AI RMF 1.0 / NIST AI 100-1 defines 72, not 59)
+- [ ] Catalog `NIST_RMF_Subcategory` set equals the authoritative NIST set exactly
 - [ ] Function names match NIST (GOVERN, MAP, MEASURE, MANAGE)
 - [ ] Subcategory numbering correct (e.g., GOVERN 1.1, MAP 5.2)
 
 ### Executive Orders
-- [ ] EO 14110 date correct (October 30, 2023)
-- [ ] EO 14179 details verified (if applicable)
+- [ ] EO 14110 date correct (October 30, 2023) and rescission recorded (January 20, 2025)
+- [ ] `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` held to `Research Required` until a detailed mapping exists
 - [ ] Requirements accurately represented
 
 ### Sector Regulations

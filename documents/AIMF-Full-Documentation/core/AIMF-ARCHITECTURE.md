@@ -13,7 +13,7 @@ This document explains the structural design of the AI Management Framework (AIM
 ## Architectural Layers
 
 1. **Foundation: Standards & Principles**
-   - AIMF is rooted in **ISO/IEC 42001:2023**, with the clauses of that standard anchoring the four capability dimensions (Governance, Data, Technical, Culture). The framework surface is also traced across **NIST AI RMF 1.0** (four functions, 59 subcategories) and **ISO/IEC 27001:2022** for security coverage. See [AIMF-FRAMEWORK-OVERVIEW.md](AIMF-FRAMEWORK-OVERVIEW.md) for the full standards alignment tables.
+   - AIMF is rooted in **ISO/IEC 42001:2023**, with the clauses of that standard anchoring the four capability dimensions (Governance, Data, Technical, Culture). The framework surface is also traced across **NIST AI RMF 1.0** (four functions, 72 subcategories) and **ISO/IEC 27001:2022** for security coverage. See [AIMF-FRAMEWORK-OVERVIEW.md](AIMF-FRAMEWORK-OVERVIEW.md) for the full standards alignment tables.
    - These standards define the high-level success criteria, compliance obligations, and the vocabulary that downstream artifacts reuse (controls, baselines, maturity, profiles).
 
 2. **Control Engine**

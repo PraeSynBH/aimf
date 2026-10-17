@@ -7,11 +7,15 @@ Licensed under CC BY-NC-ND 4.0
 **Standard Title**: Information technology — Artificial intelligence — Management system
 **Version**: 1.0
 **Publication Date**: January 29, 2026
+**Standard Version**: ISO/IEC 42001:2023
+**Status**: Research Required - Detailed mapping needed
 
 **Purpose**: This document maps ISO 42001 clauses and controls to the AI Management Framework (AIMF).
 
-**Version**: ISO/IEC 42001:2023
-**Status**: Research Required - Detailed mapping needed
+**Completeness**: Incomplete. This document is a research skeleton (5 "Required
+Research" markers, 7 clause references, 0 AIMF control IDs). ISO 42001 clause
+references are populated for all 72 controls in `core/AIMF-CONTROL-CATALOG.csv`. See
+`AIMF-MAPPING-COMPLETENESS.md`.
 
 ---
 

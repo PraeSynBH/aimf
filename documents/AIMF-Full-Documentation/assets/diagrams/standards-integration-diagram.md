@@ -83,11 +83,11 @@ Licensed under CC BY-NC-ND 4.0
 
 **Integration Points**:
 - AIMF's 4 functions (GOVERN, MAP, MEASURE, MANAGE) directly align with NIST AI RMF
-- All 59 NIST AI RMF subcategories mapped to AIMF controls
+- All 72 NIST AI RMF subcategories mapped to AIMF controls
 - AIMF provides implementation guidance for NIST AI RMF
 
 **Visual Treatment**: Thick solid line
-**Label**: "100% Subcategory Coverage (59/59)"
+**Label**: "100% Subcategory Coverage (72/72)"
 
 **Detailed Mapping**:
 ```
@@ -251,7 +251,7 @@ graph TD
     end
 
     subgraph NIST_Standards["NIST Frameworks"]
-        NIST_RMF["NIST AI RMF 1.0<br/><br/>FUNCTIONAL ALIGNMENT<br/>59/59 subcategories mapped<br/>4 functions aligned"]
+        NIST_RMF["NIST AI RMF 1.0<br/><br/>FUNCTIONAL ALIGNMENT<br/>72/72 subcategories mapped<br/>4 functions aligned"]
         NIST_CSF["NIST CSF 2.0<br/><br/>Profile methodology<br/>Community profiles approach"]
     end
 
@@ -356,7 +356,7 @@ graph TD
 │ ISO/IEC 42001:2023     │ All 72 controls  │ 100% (all        │ Primary Foundation     │
 │                        │                  │ clauses mapped)  │ Implements standard    │
 ├────────────────────────┼──────────────────┼──────────────────┼────────────────────────┤
-│ NIST AI RMF 1.0        │ 4 Functions      │ 100% (59/59      │ Structural Alignment   │
+│ NIST AI RMF 1.0        │ 4 Functions      │ 100% (72/72      │ Structural Alignment   │
 │                        │ 72 controls      │ subcategories)   │ Implementation guide   │
 ├────────────────────────┼──────────────────┼──────────────────┼────────────────────────┤
 │ ISO/IEC 27001:2022     │ MEA-2.7 + select │ Partial (security│ Complementary          │

@@ -274,7 +274,7 @@ After README.md, review these for context:
    - Time: 30 minutes
 
 2. **AIMF-NIST-RMF-MAPPING.md**
-   - All 59 NIST AI RMF subcategories mapped
+   - All 72 NIST AI RMF subcategories mapped
    - Time: 30 minutes
 
 3. **AIMF-ISO27001-MAPPING.md**
@@ -304,7 +304,7 @@ After README.md, review these for context:
 
 #### Review Criteria - Phase 5
 - [ ] ISO 42001 clauses accurately cited
-- [ ] All 59 NIST AI RMF subcategories covered
+- [ ] All 72 NIST AI RMF subcategories covered (NIST AI RMF 1.0 / NIST AI 100-1 defines 72, not 59)
 - [ ] ISO 27001 controls relevant to AI security
 - [ ] Executive Order requirements correctly interpreted
 - [ ] Dimension mappings logical
@@ -313,7 +313,7 @@ After README.md, review these for context:
 
 #### AI Assistance Points - Phase 5
 - Extract all ISO 42001 clause references
-- Count NIST AI RMF subcategory mappings (should be 59)
+- Count NIST AI RMF subcategory mappings (should be 72)
 - Verify all 72 controls mapped in each document
 - Check for mapping consistency across files
 
@@ -648,7 +648,7 @@ Create these tasks in "Develop IP" project:
 
 ### Standards Questions
 1. Is ISO 42001 alignment accurate?
-2. Are all 59 NIST AI RMF subcategories covered?
+2. Are all 72 NIST AI RMF subcategories covered?
 3. Are regulatory mappings defensible?
 4. Can organizations use AIMF for ISO 42001 certification prep?
 

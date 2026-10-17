@@ -7,14 +7,16 @@ Licensed under CC BY-NC-ND 4.0
 **Standard Title**: Information security, cybersecurity and privacy protection — Information security management systems — Requirements
 **Version**: 1.0
 **Publication Date**: January 29, 2026
-**Status**: Pre-Publication (Working Draft)
-
-**Purpose**: This document maps ISO 27001 information security controls to the AI Management Framework (AIMF).
-
-**Purpose**: This document maps ISO 27001 security controls applicable to AI systems to the AI maturity framework.
-
-**Version**: ISO/IEC 27001:2022
+**Standard Version**: ISO/IEC 27001:2022
 **Status**: Research Required - Detailed mapping needed
+
+**Purpose**: This document maps ISO/IEC 27001:2022 information security controls applicable to AI systems to the AI Management Framework (AIMF).
+
+**Completeness**: Incomplete. This document is a research skeleton and does not yet
+contain a control-by-control mapping. In the control catalog,
+`core/AIMF-CONTROL-CATALOG.csv`, 34 of 72 controls carry an ISO 27001 reference, and
+those references mix ISO/IEC 27001:2022 theme IDs (A.5, A.6, A.8) with retired
+ISO/IEC 27001:2013 IDs (A.9.2, A.18.1, A.18.2). See `AIMF-MAPPING-COMPLETENESS.md`.
 
 ---
 

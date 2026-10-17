@@ -123,13 +123,17 @@ Organized across 4 NIST AI RMF functions:
 
 ### Standards Mappings
 
-| Document | Standard | Purpose |
-|----------|----------|---------|
-| **[AIMF-DIMENSION-MAPPING.md](mappings/AIMF-DIMENSION-MAPPING.md)** | Internal | Cross-reference of 4 dimensions |
-| **[AIMF-ISO42001-MAPPING.md](mappings/AIMF-ISO42001-MAPPING.md)** | ISO 42001 | Map AIMF to ISO 42001 clauses |
-| **[AIMF-NIST-RMF-MAPPING.md](mappings/AIMF-NIST-RMF-MAPPING.md)** | NIST AI RMF | All 59 subcategories mapped |
-| **[AIMF-ISO27001-MAPPING.md](mappings/AIMF-ISO27001-MAPPING.md)** | ISO 27001 | Security control alignment |
-| **[AIMF-REGULATORY-MAPPING.md](mappings/AIMF-REGULATORY-MAPPING.md)** | Various | Executive Orders, regulations |
+See **[AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md)** for the verified
+status of every mapping artifact, with the command output behind each status.
+
+| Document | Standard | Status |
+|----------|----------|--------|
+| **[AIMF-DIMENSION-MAPPING.md](mappings/AIMF-DIMENSION-MAPPING.md)** | Internal | Working draft — cross-reference of the 4 dimensions |
+| **[AIMF-ISO42001-MAPPING.md](mappings/AIMF-ISO42001-MAPPING.md)** | ISO 42001 | Research required — narrative skeleton. ISO 42001 clauses are populated for all 72 controls in the catalog CSV |
+| **[AIMF-NIST-RMF-MAPPING.md](mappings/AIMF-NIST-RMF-MAPPING.md)** | NIST AI RMF | Research required — narrative skeleton. NIST AI RMF subcategory coverage is complete (72/72) but lives in the catalog CSV and the four function maturity mappings, not here |
+| **[AIMF-ISO27001-MAPPING.md](mappings/AIMF-ISO27001-MAPPING.md)** | ISO 27001 | Research required — narrative skeleton. 34/72 controls carry ISO 27001 references in the catalog CSV |
+| **[AIMF-EXECUTIVE-ORDER-14110-MAPPING.md](mappings/AIMF-EXECUTIVE-ORDER-14110-MAPPING.md)** | EO 14110 | Complete detailed mapping (order rescinded 2025-01-20; retained for traceability) |
+| **[AIMF-EXECUTIVE-ORDER-14179-MAPPING.md](mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md)** | EO 14179 | Research required — narrative skeleton |
 
 ### Framework Profiles
 
@@ -210,20 +214,24 @@ AIMF is designed to complement and integrate with established standards:
 ### Primary Foundation
 - **ISO/IEC 42001:2023** - AI Management System
   - AIMF structure aligns with ISO 42001 clauses
-  - All ISO 42001 requirements mapped to AIMF controls
-  - Can be used as implementation guide for ISO 42001 certification
+  - ISO 42001 clause references are populated for all 72 controls in the control catalog
+  - Can be used as implementation guide for ISO 42001 certification preparation
 
 ### Full Alignment
 - **NIST AI Risk Management Framework 1.0**
-  - All 59 subcategories across 4 functions (GOVERN, MAP, MEASURE, MANAGE)
+  - All 72 subcategories across 4 functions (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13)
+  - Coverage is complete and verified against NIST AI 100-1; it is held in the control catalog and the four function maturity mappings
   - 7 trustworthy AI characteristics fully integrated
   - Compatible with NIST terminology and approach
 
 ### Additional Integration
-- **ISO/IEC 27001:2022** - Information Security Management
-- **Executive Order 14110** - Safe, Secure, and Trustworthy AI
+- **ISO/IEC 27001:2022** - Information Security Management (partial: 34/72 controls carry an ISO 27001 reference)
+- **Executive Order 14110** - Safe, Secure, and Trustworthy AI (rescinded 2025-01-20)
 - **Executive Order 14179** - Government AI Innovation
 - **Various sector-specific regulations** (HIPAA, GLBA, FCRA, etc.)
+
+See [AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md) for the verified
+status of each mapping.
 
 ---
 

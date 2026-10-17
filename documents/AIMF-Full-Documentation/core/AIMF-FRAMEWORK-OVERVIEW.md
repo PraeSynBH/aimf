@@ -151,15 +151,15 @@ AIMF is built on the ISO 42001 Artificial Intelligence Management System (AIMS) 
 
 ### Supporting Framework: NIST AI RMF 1.0
 
-AIMF integrates all NIST AI RMF subcategories across four functions (59 subcategories mapped to 72 controls):
+AIMF integrates all NIST AI RMF subcategories across four functions (72 subcategories mapped to 72 controls):
 
 | Function | Categories | Subcategories | Primary Dimension |
 |----------|------------|---------------|-------------------|
-| GOVERN | 6 | 18 | D1, D4 |
-| MAP | 5 | 14 | D1, D2 |
-| MEASURE | 4 | 17 | D3 |
-| MANAGE | 4 | 10 | D1, D3 |
-| **Total** | **19** | **59** | All |
+| GOVERN | 6 | 19 | D1, D4 |
+| MAP | 5 | 18 | D1, D2 |
+| MEASURE | 4 | 22 | D3 |
+| MANAGE | 4 | 13 | D1, D3 |
+| **Total** | **19** | **72** | All |
 
 ---
 

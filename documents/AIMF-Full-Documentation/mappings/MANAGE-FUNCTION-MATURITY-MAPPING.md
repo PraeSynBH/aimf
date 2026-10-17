@@ -817,14 +817,19 @@ The MANAGE function integrates across all four capability dimensions:
 
 ## Complete AI RMF Integration
 
-All four NIST AI RMF functions are now mapped:
+All four NIST AI RMF functions are mapped:
 
-1. **GOVERN**: Establishes policies, structures, culture (18 subcategories)
-2. **MAP**: Frames risks and establishes context (14 subcategories)
-3. **MEASURE**: Analyzes and assesses risks (17 subcategories)
-4. **MANAGE**: Allocates resources and responds to risks (10 subcategories)
+1. **GOVERN**: Establishes policies, structures, culture (19 subcategories)
+2. **MAP**: Frames risks and establishes context (18 subcategories)
+3. **MEASURE**: Analyzes and assesses risks (22 subcategories)
+4. **MANAGE**: Allocates resources and responds to risks (13 subcategories)
 
-**Total**: 59 subcategories mapped across 5 maturity levels with ISO 42001 as primary foundation
+**Total**: 72 subcategories mapped across 5 maturity levels with ISO 42001 as primary foundation
+
+> **Note (2026-10-17).** Earlier issues of this document stated a total of 59
+> subcategories (GOVERN 18 / MAP 14 / MEASURE 17 / MANAGE 10). That figure was wrong.
+> NIST AI RMF 1.0 (NIST AI 100-1) defines 72 subcategories; the counts above match it.
+> See `AIMF-MAPPING-COMPLETENESS.md`.
 
 ---
 

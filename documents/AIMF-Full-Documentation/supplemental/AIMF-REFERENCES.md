@@ -58,7 +58,7 @@ This document provides comprehensive references for all standards, regulations, 
 - **Publisher**: National Institute of Standards and Technology (NIST), U.S. Department of Commerce
 - **Document**: NIST AI 100-1
 - **Scope**: Framework for managing AI risks across the AI lifecycle
-- **Relationship to AIMF**: AIMF's 4 functions (GOVERN, MAP, MEASURE, MANAGE) align with NIST AI RMF; all 59 NIST subcategories mapped to AIMF controls
+- **Relationship to AIMF**: AIMF's 4 functions (GOVERN, MAP, MEASURE, MANAGE) align with NIST AI RMF; all 72 NIST subcategories mapped to AIMF controls
 - **Availability**: Free download (https://www.nist.gov/itl/ai-risk-management-framework)
 
 **NIST Cybersecurity Framework (CSF) 2.0**

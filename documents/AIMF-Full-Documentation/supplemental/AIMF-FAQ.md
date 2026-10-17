@@ -37,7 +37,7 @@ AIMF is designed as a **practical implementation guide** for existing standards:
 | Standard | Relationship |
 |----------|--------------|
 | **ISO 42001** | AIMF maps all 72 controls to ISO 42001 clauses; can be used for ISO 42001 certification preparation |
-| **NIST AI RMF** | AIMF's 4 functions (GOVERN, MAP, MEASURE, MANAGE) align with NIST AI RMF; all 59 NIST subcategories mapped |
+| **NIST AI RMF** | AIMF's 4 functions (GOVERN, MAP, MEASURE, MANAGE) align with NIST AI RMF; all 72 NIST subcategories mapped |
 | **ISO 27001** | AIMF security controls map to ISO 27001 Annex A; complementary for AI + cybersecurity governance |
 | **Executive Orders 14110/14179** | AIMF profiles address EO requirements for federal agencies and AI safety reporting |
 | **EU AI Act** | High-Assurance profile supports high-risk AI requirements; compliance mappings in development |

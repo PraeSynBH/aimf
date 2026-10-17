@@ -17,6 +17,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [Unreleased] - 2026-10-17 (Standards-Completeness Correction)
+
+**Change Type**: Correctness correction (documentation)
+**Rationale**: v1.0 asserted standards-mapping completeness that the files did not
+support. For an IP asset sold on standards alignment, an unsupported completeness claim
+is a credibility defect.
+
+#### Fixed
+
+- **Overstated standards-completeness claims removed**: README.md,
+  QA-VERIFICATION-REPORT.md and QUALITY-ASSURANCE-CHECKLIST.md no longer claim that the
+  dedicated standard-mapping documents are complete. `QA-VERIFICATION-REPORT.md` now
+  states what was actually checked, by what command, and has withdrawn the claims it
+  could not substantiate (including the publication-readiness "all criteria met"
+  posture, now "publication-ready with disclosed exceptions").
+- **NIST AI RMF subcategory count corrected from 59 to 72**: NIST AI RMF 1.0
+  (NIST AI 100-1) defines 72 subcategories (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13),
+  not 59. Corrected in README.md, QA-VERIFICATION-REPORT.md,
+  QUALITY-ASSURANCE-CHECKLIST.md, core/AIMF-FRAMEWORK-OVERVIEW.md,
+  core/AIMF-ARCHITECTURE.md, supplemental/AIMF-REFERENCES.md, supplemental/AIMF-FAQ.md,
+  mappings/MANAGE-FUNCTION-MATURITY-MAPPING.md, and the standards-integration diagrams
+  (.md, .mmd, .svg). Framework-wide coverage was verified to be complete (72/72) and to
+  reside in `core/AIMF-CONTROL-CATALOG.csv` and the four function maturity mappings.
+- **Mapping file headers reconciled**: `AIMF-NIST-RMF-MAPPING.md`,
+  `AIMF-ISO42001-MAPPING.md`, `AIMF-ISO27001-MAPPING.md` and
+  `AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` now carry a single, accurate `**Status**`
+  (`Research Required - Detailed mapping needed`) and a `**Completeness**` line stating
+  what the file actually contains. Duplicate, contradictory header stanzas removed.
+- **EO 14179 header corrected**: title and date corrected to "Removing Barriers to
+  American Leadership in Artificial Intelligence" (January 23, 2025); EO 14110
+  rescission (January 20, 2025) recorded.
+- **Broken README link fixed**: the Standards Mappings table referenced a non-existent
+  `AIMF-REGULATORY-MAPPING.md`; replaced with the actual EO mapping documents.
+- **Control counts corrected in the QA checklist**: 73 → 72 rows / 72 controls / MAP 18.
+
+#### Added
+
+- **AIMF-MAPPING-COMPLETENESS.md**: verified register of every mapping artifact
+  (file | standard | status | evidence), with the reproducible command output behind
+  each status. This register supersedes the completeness claims elsewhere in the doc set.
+
+---
+
 ## [1.0.0] - 2026-01-29 (Pre-Publication Revision)
 
 ### Major Conceptual Refinement: Tier-to-Baseline Revision
@@ -84,7 +127,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Fixed
 
 - **Control Count**: Corrected from 59 to 72 total controls
-- **NIST Mapping**: Clarified 59 NIST subcategories map to 72 AIMF controls (some NIST subcategories map to multiple controls)
+- **NIST Mapping**: Clarified that 72 NIST AI RMF subcategories map to 72 AIMF controls (some NIST subcategories map to multiple controls)
 - **Terminology Consistency**: Unified terminology across all 50+ documents
 
 #### Documentation Updates
@@ -131,7 +174,7 @@ This is the inaugural public release of AIMF, establishing the framework as an o
 #### Enhanced Control Catalog
 - **Hierarchical Structure**: 3-level domain taxonomy (L1 high-level domains → L2 mid-level categories → L3 detailed subcategories)
 - **20-Column CSV Format**: Comprehensive control metadata including domain hierarchy, maturity associations, tier requirements, and standards mappings
-- **Standards Integration**: Complete mappings to ISO 42001, NIST AI RMF (all 59 subcategories), ISO 27001, and Executive Orders 14110/14179
+- **Standards Integration**: Complete mappings to ISO 42001, NIST AI RMF (all 72 subcategories), ISO 27001, and Executive Orders 14110/14179
 - **Profile Tagging**: Controls tagged for applicability across framework profiles
 
 #### Framework Profiles System (NIST CSF-Style)
