@@ -90,7 +90,7 @@ Each control includes:
 - **T3**: Comprehensive legal framework with continuous monitoring; external legal counsel engagement; regulatory change management process
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 4.1, 4.2, 6.1 | **ISO 27001**: A.5.1, A.18.1
+**ISO 42001**: 4.1, 4.2, 6.1 | **ISO 27001**: A.5.1, A.5.31
 **Profiles**: foundational, balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -124,7 +124,7 @@ Each control includes:
 - **T3**: Quantitative AI risk thresholds; automated risk monitoring; real-time risk dashboards; independent risk validation
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 6.1 | **ISO 27001**: A.5.1
+**ISO 42001**: 6.1 | **ISO 27001**: A.5.1, A.8.32
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -141,7 +141,7 @@ Each control includes:
 - **T3**: Continuous compliance monitoring; automated policy enforcement; independent audit program; regulatory liaison function
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 9.1, 9.2 | **ISO 27001**: A.9.2, A.18.2
+**ISO 42001**: 9.1, 9.2 | **ISO 27001**: A.5.15, A.5.35
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -247,7 +247,7 @@ Each control includes:
 - **T3**: Board-level AI committee; independent risk function reporting; external advisory board; shareholder communication
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 5.1, 5.2 | **ISO 27001**: A.5.1
+**ISO 42001**: 5.1, 5.2 | **ISO 27001**: A.5.1, A.5.4
 **Profiles**: foundational, balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -285,7 +285,7 @@ Each control includes:
 - **T3**: Industry-leading diversity initiatives; external partnerships; public diversity commitments; inclusion effectiveness measured
 
 **Maturity**: Min Level 1 → Target Level 3
-**ISO 42001**: 7.1 | **ISO 27001**: A.6.2
+**ISO 42001**: 7.1 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, government
 
 ---
@@ -323,7 +323,7 @@ Each control includes:
 - **T3**: Comprehensive stakeholder engagement; real-time feedback integration; public transparency on feedback; external validation
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 7.4
+**ISO 42001**: 7.4 | **ISO 27001**: A.5.6
 **Profiles**: balanced, high-assurance, healthcare, government
 
 ---
@@ -340,7 +340,7 @@ Each control includes:
 - **T3**: Industry-leading transparency; real-time communication; public AI governance reporting; external stakeholder councils
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 7.4
+**ISO 42001**: 7.4 | **ISO 27001**: A.5.6
 **Profiles**: balanced, high-assurance, government
 
 ---
@@ -357,7 +357,7 @@ Each control includes:
 - **T3**: Leadership in ecosystem; standards development contribution; regulatory dialogue; industry coalition participation
 
 **Maturity**: Min Level 1 → Target Level 3
-**ISO 42001**: 4.2
+**ISO 42001**: 4.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, government
 
 ---
@@ -374,7 +374,7 @@ Each control includes:
 - **T3**: Comprehensive research program; joint appointments; research funding; public research contribution
 
 **Maturity**: Min Level 1 → Target Level 3
-**ISO 42001**: 4.2
+**ISO 42001**: 4.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance
 
 ---
@@ -412,7 +412,7 @@ Each control includes:
 - **T3**: Industry-leading capabilities; continuous innovation; research investment; capability sharing
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 7.2, 10.2
+**ISO 42001**: 7.2, 10.2 | **ISO 27001**: A.6.3
 **Profiles**: balanced, high-assurance, financial, healthcare
 
 ---
@@ -456,7 +456,7 @@ Each control includes:
 - **T3**: Advanced validation science; statistical rigor; continuous reliability tracking; public validation reports
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.2
+**ISO 42001**: 8.2 | **ISO 27001**: A.8.29
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -559,7 +559,7 @@ Each control includes:
 - **T3**: Comprehensive classification system; automated categorization; independent validation; continuous classification
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 6.2
+**ISO 42001**: 6.2 | **ISO 27001**: —
 **Profiles**: foundational, balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -576,7 +576,7 @@ Each control includes:
 - **T3**: Exhaustive boundary documentation; automated limit detection; real-time oversight; independent validation
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.1, 8.2
+**ISO 42001**: 8.1, 8.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -593,7 +593,7 @@ Each control includes:
 - **T3**: Rigorous scientific standards; independent validation; research-grade methodology; public methodology
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 8.2, 9.1
+**ISO 42001**: 8.2, 9.1 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, healthcare
 
 ---
@@ -610,7 +610,7 @@ Each control includes:
 - **T3**: Exhaustive documentation; automated documentation; public methodology; research-grade practices
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.2
+**ISO 42001**: 8.2 | **ISO 27001**: A.5.37
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -627,7 +627,7 @@ Each control includes:
 - **T3**: Comprehensive human research program; IRB oversight; external ethics review; public protocols
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 8.2
+**ISO 42001**: 8.2 | **ISO 27001**: A.5.34
 **Profiles**: balanced, high-assurance, healthcare, government
 
 ---
@@ -644,7 +644,7 @@ Each control includes:
 - **T3**: Advanced performance validation; automated measurement; continuous demonstration; public performance reports
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.2, 9.1
+**ISO 42001**: 8.2, 9.1 | **ISO 27001**: A.8.16
 **Profiles**: foundational, balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -661,7 +661,7 @@ Each control includes:
 - **T3**: Advanced TEVV optimization; meta-evaluation; automated effectiveness assessment; research contribution
 
 **Maturity**: Min Level 3 → Target Level 4
-**ISO 42001**: 9.1, 10.2
+**ISO 42001**: 9.1, 10.2 | **ISO 27001**: A.8.29
 **Profiles**: high-assurance, healthcare
 
 ---
@@ -682,7 +682,7 @@ Each control includes:
 - **T3**: Precise scope specification; automated scope monitoring; real-time drift detection; independent validation
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 6.2
+**ISO 42001**: 6.2 | **ISO 27001**: —
 **Profiles**: foundational, balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -699,7 +699,7 @@ Each control includes:
 - **T3**: Advanced oversight design; automated assistance; real-time oversight monitoring; independent validation
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.1, 8.2
+**ISO 42001**: 8.1, 8.2 | **ISO 27001**: A.5.3
 **Profiles**: foundational, balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -716,7 +716,7 @@ Each control includes:
 - **T3**: Advanced MLOps monitoring; AI-powered monitoring; predictive alerting; real-time dashboards
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 8.1, 9.1
+**ISO 42001**: 8.1, 9.1 | **ISO 27001**: A.8.15, A.8.16
 **Profiles**: foundational, balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -733,7 +733,7 @@ Each control includes:
 - **T3**: Advanced failsafe systems; automated disengage; predictive intervention; self-healing capabilities
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.1
+**ISO 42001**: 8.1 | **ISO 27001**: A.5.30
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -750,7 +750,7 @@ Each control includes:
 - **T3**: Advanced model management; automated model monitoring; predictive drift detection; continuous validation
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 8.1
+**ISO 42001**: 8.1 | **ISO 27001**: A.5.9, A.8.32
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -788,7 +788,7 @@ Each control includes:
 - **T3**: Advanced risk intelligence; predictive risk monitoring; automated tracking; real-time risk dashboards
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 8.1, 9.1
+**ISO 42001**: 8.1, 9.1 | **ISO 27001**: A.5.7
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -805,7 +805,7 @@ Each control includes:
 - **T3**: Advanced measurement innovation; research into novel methods; comprehensive alternative approaches; public methodology
 
 **Maturity**: Min Level 3 → Target Level 4
-**ISO 42001**: 9.1
+**ISO 42001**: 9.1 | **ISO 27001**: —
 **Profiles**: high-assurance, healthcare
 
 ---
@@ -822,7 +822,7 @@ Each control includes:
 - **T3**: Advanced analytics; predictive performance modeling; automated change detection; real-time performance intelligence
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 9.1, 10.1
+**ISO 42001**: 9.1, 10.1 | **ISO 27001**: A.8.16, A.8.32
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -839,7 +839,7 @@ Each control includes:
 - **T3**: Advanced value optimization; predictive value modeling; self-sustaining mechanisms; continuous optimization
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 8.1, 10.2
+**ISO 42001**: 8.1, 10.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare
 
 ---
@@ -949,7 +949,7 @@ Each control includes:
 - **T3**: Advanced measurement science; automated measurement; predictive metrics; industry-leading practices
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 9.1
+**ISO 42001**: 9.1 | **ISO 27001**: A.8.16
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -966,7 +966,7 @@ Each control includes:
 - **T3**: Continuous metric optimization; AI-powered metric assessment; automated effectiveness tracking; research contribution
 
 **Maturity**: Min Level 3 → Target Level 4
-**ISO 42001**: 9.1
+**ISO 42001**: 9.1 | **ISO 27001**: A.5.36
 **Profiles**: balanced, high-assurance, healthcare
 
 ---
@@ -983,7 +983,7 @@ Each control includes:
 - **T3**: Comprehensive independent program; external assessors; public assessment reports; industry certification
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 9.2, 9.3
+**ISO 42001**: 9.2, 9.3 | **ISO 27001**: A.5.35
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -1000,7 +1000,7 @@ Each control includes:
 - **T3**: Advanced context-aware measurement; automated alignment; predictive context modeling; continuous adaptation
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 9.1
+**ISO 42001**: 9.1 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -1017,7 +1017,7 @@ Each control includes:
 - **T3**: Comprehensive expert program; automated expert consultation; validated by external experts; public validation
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 9.1, 9.3
+**ISO 42001**: 9.1, 9.3 | **ISO 27001**: A.5.35
 **Profiles**: balanced, high-assurance, healthcare, government
 
 ---
@@ -1038,7 +1038,7 @@ Each control includes:
 - **T3**: Advanced transparency program; explainability metrics; public transparency reports; independent review
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.2
+**ISO 42001**: 8.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, government
 
 ---
@@ -1055,7 +1055,7 @@ Each control includes:
 - **T3**: Advanced explainability; user-appropriate explanations; continuous validation; public model documentation
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.2
+**ISO 42001**: 8.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -1072,7 +1072,7 @@ Each control includes:
 - **T3**: Advanced fairness program; intersectional analysis; continuous bias monitoring; public fairness reports
 
 **Maturity**: Min Level 2 → Target Level 4
-**ISO 42001**: 8.2
+**ISO 42001**: 8.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -1089,7 +1089,7 @@ Each control includes:
 - **T3**: Advanced sustainability program; carbon tracking; efficiency optimization; public environmental reports
 
 **Maturity**: Min Level 1 → Target Level 3
-**ISO 42001**: 6.1
+**ISO 42001**: 6.1 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance
 
 ---
@@ -1154,7 +1154,7 @@ Each control includes:
 - **T3**: Comprehensive engagement ecosystem; real-time feedback; external advisory; public engagement reports
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 4.2, 7.4
+**ISO 42001**: 4.2, 7.4 | **ISO 27001**: A.5.6
 **Profiles**: balanced, high-assurance, healthcare, government
 
 ---
@@ -1171,7 +1171,7 @@ Each control includes:
 - **T3**: Advanced feedback ecosystem; real-time feedback; AI-powered analysis; public feedback transparency
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 7.4, 9.1
+**ISO 42001**: 7.4, 9.1 | **ISO 27001**: A.5.6
 **Profiles**: balanced, high-assurance, healthcare, government
 
 ---
@@ -1226,7 +1226,7 @@ Each control includes:
 - **T3**: Quantified value realization; continuous value monitoring; value optimization; public value reporting
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 6.2
+**ISO 42001**: 6.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare
 
 ---
@@ -1264,7 +1264,7 @@ Each control includes:
 - **T3**: Rigorous benefit quantification; independent validation; continuous benefit tracking; public benefit reporting
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 6.2
+**ISO 42001**: 6.2 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare
 
 ---
@@ -1281,7 +1281,7 @@ Each control includes:
 - **T3**: Rigorous cost quantification; total cost of ownership; trustworthiness impact monetization; public reporting
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 6.1
+**ISO 42001**: 6.1 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare
 
 ---
@@ -1298,7 +1298,7 @@ Each control includes:
 - **T3**: Rigorous impact assessment; independent validation; continuous monitoring; public impact reporting
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 8.2, 6.1
+**ISO 42001**: 8.2, 6.1 | **ISO 27001**: A.5.31
 **Profiles**: balanced, high-assurance, financial, healthcare, government
 
 ---
@@ -1332,7 +1332,7 @@ Each control includes:
 - **T3**: Comprehensive options analysis; AI-powered alternative evaluation; optimization modeling; public methodology
 
 **Maturity**: Min Level 2 → Target Level 3
-**ISO 42001**: 6.1
+**ISO 42001**: 6.1 | **ISO 27001**: —
 **Profiles**: balanced, high-assurance, financial, healthcare
 
 ---

@@ -21,7 +21,7 @@ Licensed under CC BY-NC-ND 4.0
 **Signed by**: President Joe Biden
 **Order Status**: **Rescinded January 20, 2025** by Executive Order 14179
 
-### Executive Order 14179 (January 23, 2025)
+### Executive Order 14179 (January 20, 2025)
 **Title**: Removing Barriers to American Leadership in Artificial Intelligence
 **Signed by**: President Donald Trump
 **Purpose**: Revoked EO 14110 and directed review of AI policies

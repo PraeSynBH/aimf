@@ -4,224 +4,416 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Standard Title**: Information technology — Artificial intelligence — Management system
+**Standard**: ISO/IEC 42001:2023, Information technology - Artificial intelligence - Management system
 **Version**: 1.0
 **Publication Date**: January 29, 2026
-**Standard Version**: ISO/IEC 42001:2023
-**Status**: Research Required - Detailed mapping needed
+**Status**: Complete - all 19 clause references the AIMF catalog attributes to ISO/IEC 42001:2023 are mapped
+**Table source**: rendered from `core/AIMF-CONTROL-CATALOG.csv` by `scripts/aimf_mappings.py`
 
-**Purpose**: This document maps ISO 42001 clauses and controls to the AI Management Framework (AIMF).
-
-**Completeness**: Incomplete. This document is a research skeleton (5 "Required
-Research" markers, 7 clause references, 0 AIMF control IDs). ISO 42001 clause
-references are populated for all 72 controls in `core/AIMF-CONTROL-CATALOG.csv`. See
-`AIMF-MAPPING-COMPLETENESS.md`.
+**Purpose**: Map the ISO/IEC 42001:2023 requirements structure (clauses 4 to 10) to the AIMF controls, so an organisation running the AIMF can read its assessment results as progress toward an AI management system (AIMS).
 
 ---
 
-## Standard Overview
+## Copyright position
 
-ISO 42001 is the first international standard for AI management systems. It provides requirements and guidance for establishing, implementing, maintaining, and continually improving an AI management system within organizations.
-
-### Key Components
-
-1. **Context of the Organization** (Clause 4)
-2. **Leadership** (Clause 5)
-3. **Planning** (Clause 6)
-4. **Support** (Clause 7)
-5. **Operation** (Clause 8)
-6. **Performance Evaluation** (Clause 9)
-7. **Improvement** (Clause 10)
+ISO/IEC 42001:2023 is a licensed standard. This document reproduces **clause numbers and clause headings only** - no clause text, no Annex A control text and no verbatim requirement language. The clause headings below were taken from the framework's own maintained structure and cross-checked against the licensed copy held on file. Customers requiring the normative text must obtain it from ISO or their national standards body.
 
 ---
 
-## Maturity Level Mapping
+## How to read this mapping
 
-### Level 1: Initial - ISO 42001 Gaps
+The AIMF control catalog carries an `ISO42001_Clauses` attribution for every one of its 72 controls. The mapping is Clause to control, not Clause to document:
 
-**Gap Analysis**:
-- No AI management system established
-- Clause 4.1: Organization context for AI not defined
-- Clause 5.2: No AI policy established
-- Clause 6.1: AI risks not systematically identified
-- Clause 7.2: Competence requirements not determined
-- Clause 7.4: No communication plan for AI
-- Clause 8.1: Operational planning absent
+| ISO/IEC 42001:2023 | AIMF | Direction |
+|---|---|---|
+| Clauses 4-10 (management system) | Catalog `ISO42001_Clauses` | one control may serve several clauses; several controls may serve one clause |
+| Annex A controls (AI-specific) | Catalog `Function`, `Category`, `Subcategory` | the AIMF control set is organised by governance outcome rather than by the Annex A grouping |
+| Statement of Applicability | `Default_Target_Maturity`, `Baseline_Applicability`, `Profile_Tags` | the catalog records which controls are baseline-applicable and at which target maturity |
 
-**Required Research**:
-- [ ] Identify all mandatory clauses in ISO 42001
-- [ ] Determine minimum requirements for AIMS
-- [ ] Map initial gaps to framework characteristics
+Clause attribution is deliberately not exclusive: a clause such as 6.1 (actions to address risks and opportunities) is served by a group of controls, and a control such as GOV-1.4 (compliance verification) reports against more than one clause. The tables below are the authoritative statement of which controls report against which clause.
 
 ---
 
-### Level 2: Developing - ISO 42001 Partial Compliance
+## Coverage at a glance
 
-**Partial Implementation**:
-- Initial AIMS planning underway
-- Clause 4.3: Initial AIMS scope definition
-- Clause 5.2: Basic AI policy documented
-- Clause 6.1: Risk assessment framework initiated
-- Clause 7.2: Competence needs identified
-- Clause 8.1: Basic operational processes defined
-
-**Required Research**:
-- [ ] Define "partial compliance" criteria for each clause
-- [ ] Identify acceptable interim measures
-- [ ] Document typical Level 2 implementations
-
----
-
-### Level 3: Defined - ISO 42001 Substantial Compliance
-
-**Substantial Implementation**:
-- AIMS operational across organization
-- All mandatory clauses implemented
-- Documentation complete and maintained
-- Regular management reviews
-- Internal audits conducted
-- Continual improvement process established
-
-**Required Research**:
-- [ ] Map all mandatory clauses to Level 3 characteristics
-- [ ] Define evidence requirements for each clause
-- [ ] Document typical Level 3 implementations
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:iso42001-summary -->
+| Clause | Heading | Controls | AIMF controls |
+|---|---|---|---|
+| 4.1 | Understanding the organization and its context | 3 | GOV-1.1, MAP-1.1, MAP-1.3 |
+| 4.2 | Understanding the needs and expectations of interested parties | 6 | GOV-1.1, GOV-5.1, GOV-5.2, MAN-3.1, MAP-4.1, MAP-5.2 |
+| 5.1 | Leadership and commitment | 2 | GOV-2.1, GOV-2.3 |
+| 5.2 | AI policy | 2 | GOV-2.3, GOV-4.1 |
+| 5.3 | Roles, responsibilities and authorities | 1 | GOV-2.1 |
+| 6.1 | Actions to address risks and opportunities | 17 | GOV-1.1, GOV-1.2, GOV-1.3, GOV-1.5, MAN-1.1, MAN-1.2, MAN-1.3, MAN-1.4, MAN-2.1, MAP-1.5, MAP-3.2, MAP-4.2, MAP-5.1, MEA-2.10, MEA-2.12, MEA-2.6, MEA-2.7 |
+| 6.2 | AI objectives and planning to achieve them | 7 | MAP-1.1, MAP-1.3, MAP-1.4, MAP-1.6, MAP-2.1, MAP-3.1, MAP-3.3 |
+| 7.1 | Resources | 4 | GOV-3.1, GOV-3.2, GOV-6.1, MAP-1.2 |
+| 7.2 | Competence | 4 | GOV-2.2, GOV-3.1, GOV-6.2, MAP-3.4 |
+| 7.3 | Awareness | 3 | GOV-2.2, GOV-4.1, MAP-3.4 |
+| 7.4 | Communication | 4 | GOV-4.2, GOV-4.3, MAP-5.2, MEA-3.3 |
+| 7.5 | Documented information | 1 | GOV-6.1 |
+| 8.1 | Operational planning and control | 16 | GOV-1.6, GOV-1.7, MAN-1.1, MAN-1.3, MAN-2.2, MAN-2.3, MAN-2.4, MAN-3.1, MAN-3.2, MAN-4.1, MAP-2.2, MAP-3.5, MAP-4.1, MAP-4.2, MEA-2.4, MEA-3.1 |
+| 8.2 | AI risk assessment | 15 | MAP-1.6, MAP-2.2, MAP-2.3, MAP-3.5, MAP-5.1, MEA-2.1, MEA-2.10, MEA-2.11, MEA-2.2, MEA-2.3, MEA-2.5, MEA-2.6, MEA-2.7, MEA-2.8, MEA-2.9 |
+| 9.1 | Monitoring, measurement, analysis and evaluation | 14 | GOV-1.4, MAN-4.3, MAP-2.3, MEA-1.1, MEA-1.2, MEA-2.13, MEA-2.3, MEA-2.4, MEA-3.1, MEA-3.2, MEA-3.3, MEA-4.1, MEA-4.2, MEA-4.3 |
+| 9.2 | Internal audit | 2 | GOV-1.4, MEA-1.3 |
+| 9.3 | Management review | 2 | MEA-1.3, MEA-4.2 |
+| 10.1 | Continual improvement | 4 | MAN-2.3, MAN-4.1, MAN-4.3, MEA-4.3 |
+| 10.2 | Nonconformity and corrective action | 4 | GOV-6.2, MAN-2.2, MAN-4.2, MEA-2.13 |
+| **Total** | **19 distinct clause references** | **72** | 72 controls (clause references are not mutually exclusive) |
+<!-- END GENERATED:iso42001-summary -->
 
 ---
 
-### Level 4: Managed - ISO 42001 Optimized with Metrics
+## Detailed clause mapping
 
-**Advanced Implementation**:
-- Clause 9: Comprehensive performance evaluation
-- Quantitative objectives for AIMS
-- Metrics-driven management
-- Predictive risk analytics
-- Automated compliance monitoring
+Every clause and sub-clause heading in clauses 4 to 10 is listed below, with the AIMF controls the catalog attributes to it. A sub-clause with no direct attribution is covered indirectly by the controls attributed to its parent clause; that is stated explicitly rather than left blank.
 
-**Required Research**:
-- [ ] Identify metric requirements from standard
-- [ ] Define advanced performance indicators
-- [ ] Document measurement methodologies
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:iso42001-detail -->
+### Clause 4: Context of the organization
 
----
+Top-level clause heading; sub-clauses below carry the control attribution.
 
-### Level 5: Optimizing - ISO 42001 Innovation and Leadership
+#### Clause 4.1: Understanding the organization and its context
 
-**Continuous Improvement**:
-- Clause 10: Systematic continual improvement
-- Industry leadership in AIMS
-- Innovation in AI management practices
-- Contribution to standards development
-- Ecosystem collaboration
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-1.1 | Legal/Regulatory Compliance Policies | GOVERN | D1 |
+| MAP-1.1 | AI System Purpose Characterization | MAP | D1 |
+| MAP-1.3 | AI Strategic Alignment | MAP | D1 |
 
-**Required Research**:
-- [ ] Define excellence criteria beyond compliance
-- [ ] Identify innovation opportunities
-- [ ] Document leadership indicators
+#### Clause 4.2: Understanding the needs and expectations of interested parties
 
----
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-1.1 | Legal/Regulatory Compliance Policies | GOVERN | D1 |
+| GOV-5.1 | AI Ecosystem Engagement | GOVERN | D4 |
+| GOV-5.2 | AI Research Collaboration | GOVERN | D4 |
+| MAN-3.1 | Third-Party AI Ongoing Monitoring | MANAGE | D1 |
+| MAP-4.1 | Third-Party AI Risk Assessment | MAP | D1 |
+| MAP-5.2 | AI Stakeholder Feedback | MAP | D4 |
 
-## Detailed Clause Mapping
+#### Clause 4.3: Determining the scope of the AI management system
 
-### Clause 4: Context of the Organization
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
 
-**4.1 Understanding the organization and its context**
-- Maturity Mapping: [Research Required]
-- Video Content Application: [Research Required]
-- Assessment Criteria: [Research Required]
+#### Clause 4.4: AI management system
 
-**4.2 Understanding the needs and expectations of interested parties**
-- Maturity Mapping: [Research Required]
-- Video Content Application: [Research Required]
-- Assessment Criteria: [Research Required]
-
-**4.3 Determining the scope of the AI management system**
-- Maturity Mapping: [Research Required]
-- Video Content Application: [Research Required]
-- Assessment Criteria: [Research Required]
-
-**4.4 AI management system**
-- Maturity Mapping: [Research Required]
-- Video Content Application: [Research Required]
-- Assessment Criteria: [Research Required]
-
----
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
 
 ### Clause 5: Leadership
 
-[Detailed mapping required for each sub-clause]
+Top-level clause heading; sub-clauses below carry the control attribution.
 
----
+#### Clause 5.1: Leadership and commitment
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-2.1 | AI Accountability Assignment | GOVERN | D1 |
+| GOV-2.3 | Executive AI Oversight | GOVERN | D1 |
+
+#### Clause 5.2: AI policy
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-2.3 | Executive AI Oversight | GOVERN | D1 |
+| GOV-4.1 | AI Risk Culture Development | GOVERN | D4 |
+
+#### Clause 5.3: Roles, responsibilities and authorities
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-2.1 | AI Accountability Assignment | GOVERN | D1 |
 
 ### Clause 6: Planning
 
-[Detailed mapping required for each sub-clause]
+Top-level clause heading; sub-clauses below carry the control attribution.
 
----
+#### Clause 6.1: Actions to address risks and opportunities
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-1.1 | Legal/Regulatory Compliance Policies | GOVERN | D1 |
+| GOV-1.2 | AI Use Scope Definition | GOVERN | D1 |
+| GOV-1.3 | AI Lifecycle Governance | GOVERN | D1 |
+| GOV-1.5 | AI Environmental Impact Management | GOVERN | D1 |
+| MAN-1.1 | AI Go/No-Go Decision | MANAGE | D1 |
+| MAN-1.2 | AI Risk Prioritization | MANAGE | D1 |
+| MAN-1.3 | AI Risk Response Planning | MANAGE | D1 |
+| MAN-1.4 | AI Residual Risk Documentation | MANAGE | D1 |
+| MAN-2.1 | AI Alternative Evaluation | MANAGE | D1 |
+| MAP-1.5 | AI Risk Tolerance Definition | MAP | D1 |
+| MAP-3.2 | AI Cost Documentation | MAP | D1 |
+| MAP-4.2 | Third-Party Risk Controls | MAP | D1 |
+| MAP-5.1 | AI Impact Assessment | MAP | D1 |
+| MEA-2.10 | AI Privacy Evaluation | MEASURE | D2 |
+| MEA-2.12 | AI Environmental Impact | MEASURE | D3 |
+| MEA-2.6 | AI Safety Evaluation | MEASURE | D3 |
+| MEA-2.7 | AI Security and Resilience | MEASURE | D3 |
+
+##### Clause 6.1.1: General
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+##### Clause 6.1.2: AI risk assessment
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+##### Clause 6.1.3: AI risk treatment
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+##### Clause 6.1.4: AI system impact assessment
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+#### Clause 6.2: AI objectives and planning to achieve them
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| MAP-1.1 | AI System Purpose Characterization | MAP | D1 |
+| MAP-1.3 | AI Strategic Alignment | MAP | D1 |
+| MAP-1.4 | AI Business Value Documentation | MAP | D1 |
+| MAP-1.6 | AI System Requirements | MAP | D2 |
+| MAP-2.1 | AI System Task Categorization | MAP | D3 |
+| MAP-3.1 | AI Benefits Documentation | MAP | D1 |
+| MAP-3.3 | AI Application Scope | MAP | D3 |
+
+#### Clause 6.3: Planning of changes
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
 
 ### Clause 7: Support
 
-**7.2 Competence** (Example - detailed mapping needed)
-- **Level 1 Gap**: No systematic competence management for AI
-- **Level 2 Partial**: Initial training needs identified
-- **Level 3 Full**: Comprehensive competence framework operational
-- **Level 4 Managed**: Competence metrics tracked
-- **Level 5 Optimizing**: Continuous skills development ecosystem
+Top-level clause heading; sub-clauses below carry the control attribution.
 
-**7.4 Communication**
-[Detailed mapping required]
+#### Clause 7.1: Resources
 
-**7.5 Documented information**
-[Detailed mapping required]
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-3.1 | Interdisciplinary AI Teams | GOVERN | D4 |
+| GOV-3.2 | Demographic Diversity in AI | GOVERN | D4 |
+| GOV-6.1 | AI Governance Resourcing | GOVERN | D1 |
+| MAP-1.2 | AI Development Team Composition | MAP | D4 |
 
----
+#### Clause 7.2: Competence
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-2.2 | AI Competency Development | GOVERN | D4 |
+| GOV-3.1 | Interdisciplinary AI Teams | GOVERN | D4 |
+| GOV-6.2 | AI Governance Capability Development | GOVERN | D1 |
+| MAP-3.4 | AI Operator Requirements | MAP | D4 |
+
+#### Clause 7.3: Awareness
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-2.2 | AI Competency Development | GOVERN | D4 |
+| GOV-4.1 | AI Risk Culture Development | GOVERN | D4 |
+| MAP-3.4 | AI Operator Requirements | MAP | D4 |
+
+#### Clause 7.4: Communication
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-4.2 | AI Feedback Integration | GOVERN | D4 |
+| GOV-4.3 | AI Transparency Communication | GOVERN | D4 |
+| MAP-5.2 | AI Stakeholder Feedback | MAP | D4 |
+| MEA-3.3 | AI User Feedback Processes | MEASURE | D4 |
+
+#### Clause 7.5: Documented information
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-6.1 | AI Governance Resourcing | GOVERN | D1 |
+
+##### Clause 7.5.1: General
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+##### Clause 7.5.2: Creating and updating documented information
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+##### Clause 7.5.3: Control of documented information
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
 
 ### Clause 8: Operation
 
-[Detailed mapping required for each sub-clause]
+Top-level clause heading; sub-clauses below carry the control attribution.
 
----
+#### Clause 8.1: Operational planning and control
 
-### Clause 9: Performance Evaluation
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-1.6 | AI System Decommissioning Policies | GOVERN | D1 |
+| GOV-1.7 | Third-Party AI Risk Management | GOVERN | D1 |
+| MAN-1.1 | AI Go/No-Go Decision | MANAGE | D1 |
+| MAN-1.3 | AI Risk Response Planning | MANAGE | D1 |
+| MAN-2.2 | AI Value Preservation | MANAGE | D3 |
+| MAN-2.3 | AI Emergent Risk Response | MANAGE | D3 |
+| MAN-2.4 | AI System Disengage/Deactivate | MANAGE | D3 |
+| MAN-3.1 | Third-Party AI Ongoing Monitoring | MANAGE | D1 |
+| MAN-3.2 | Pre-trained Model Management | MANAGE | D3 |
+| MAN-4.1 | AI Post-Deployment Monitoring | MANAGE | D3 |
+| MAP-2.2 | AI System Boundaries | MAP | D3 |
+| MAP-3.5 | Human Oversight Design | MAP | D3 |
+| MAP-4.1 | Third-Party AI Risk Assessment | MAP | D1 |
+| MAP-4.2 | Third-Party Risk Controls | MAP | D1 |
+| MEA-2.4 | AI Production Monitoring | MEASURE | D3 |
+| MEA-3.1 | AI Continuous Risk Tracking | MEASURE | D3 |
 
-[Detailed mapping required for each sub-clause]
+#### Clause 8.2: AI risk assessment
 
----
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| MAP-1.6 | AI System Requirements | MAP | D2 |
+| MAP-2.2 | AI System Boundaries | MAP | D3 |
+| MAP-2.3 | AI Scientific Rigor | MAP | D3 |
+| MAP-3.5 | Human Oversight Design | MAP | D3 |
+| MAP-5.1 | AI Impact Assessment | MAP | D1 |
+| MEA-2.1 | AI Testing Documentation | MEASURE | D3 |
+| MEA-2.10 | AI Privacy Evaluation | MEASURE | D2 |
+| MEA-2.11 | AI Fairness and Bias Testing | MEASURE | D3 |
+| MEA-2.2 | AI Human Subject Testing | MEASURE | D3 |
+| MEA-2.3 | AI Performance Measurement | MEASURE | D3 |
+| MEA-2.5 | AI Validity and Reliability | MEASURE | D3 |
+| MEA-2.6 | AI Safety Evaluation | MEASURE | D3 |
+| MEA-2.7 | AI Security and Resilience | MEASURE | D3 |
+| MEA-2.8 | AI Transparency Evaluation | MEASURE | D3 |
+| MEA-2.9 | AI Model Explanation | MEASURE | D3 |
+
+#### Clause 8.3: AI risk treatment
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+#### Clause 8.4: AI system impact assessment
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+### Clause 9: Performance evaluation
+
+Top-level clause heading; sub-clauses below carry the control attribution.
+
+#### Clause 9.1: Monitoring, measurement, analysis and evaluation
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-1.4 | AI Governance Compliance Monitoring | GOVERN | D1 |
+| MAN-4.3 | AI Incident and Error Reporting | MANAGE | D3 |
+| MAP-2.3 | AI Scientific Rigor | MAP | D3 |
+| MEA-1.1 | AI Risk Measurement Selection | MEASURE | D3 |
+| MEA-1.2 | AI Metric Validation | MEASURE | D3 |
+| MEA-2.13 | AI Testing Effectiveness | MEASURE | D3 |
+| MEA-2.3 | AI Performance Measurement | MEASURE | D3 |
+| MEA-2.4 | AI Production Monitoring | MEASURE | D3 |
+| MEA-3.1 | AI Continuous Risk Tracking | MEASURE | D3 |
+| MEA-3.2 | AI Risk Assessment in Complex Contexts | MEASURE | D3 |
+| MEA-3.3 | AI User Feedback Processes | MEASURE | D4 |
+| MEA-4.1 | AI Measurement-Context Alignment | MEASURE | D3 |
+| MEA-4.2 | AI Results Expert Review | MEASURE | D3 |
+| MEA-4.3 | AI Performance Change Detection | MEASURE | D3 |
+
+#### Clause 9.2: Internal audit
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-1.4 | AI Governance Compliance Monitoring | GOVERN | D1 |
+| MEA-1.3 | AI Independent Evaluation | MEASURE | D3 |
+
+##### Clause 9.2.1: General
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+##### Clause 9.2.2: Internal audit programme
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+#### Clause 9.3: Management review
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| MEA-1.3 | AI Independent Evaluation | MEASURE | D3 |
+| MEA-4.2 | AI Results Expert Review | MEASURE | D3 |
+
+##### Clause 9.3.1: General
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+##### Clause 9.3.2: Management review inputs
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
+
+##### Clause 9.3.3: Management review results
+
+No AIMF control carries a direct catalog attribution to this sub-clause. It is covered indirectly through the controls attributed to the parent clause.
 
 ### Clause 10: Improvement
 
-[Detailed mapping required for each sub-clause]
+Top-level clause heading; sub-clauses below carry the control attribution.
+
+#### Clause 10.1: Continual improvement
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| MAN-2.3 | AI Emergent Risk Response | MANAGE | D3 |
+| MAN-4.1 | AI Post-Deployment Monitoring | MANAGE | D3 |
+| MAN-4.3 | AI Incident and Error Reporting | MANAGE | D3 |
+| MEA-4.3 | AI Performance Change Detection | MEASURE | D3 |
+
+#### Clause 10.2: Nonconformity and corrective action
+
+| AIMF control | Control name | Function | Dimension |
+|---|---|---|---|
+| GOV-6.2 | AI Governance Capability Development | GOVERN | D1 |
+| MAN-2.2 | AI Value Preservation | MANAGE | D3 |
+| MAN-4.2 | AI Continuous Improvement Integration | MANAGE | D3 |
+| MEA-2.13 | AI Testing Effectiveness | MEASURE | D3 |
+<!-- END GENERATED:iso42001-detail -->
 
 ---
 
-## Research Tasks
+## What the mapping does and does not establish
 
-### Phase 1: Standard Acquisition and Review
-- [ ] Obtain official ISO 42001:2023 standard document
-- [ ] Read and analyze all clauses
-- [ ] Identify mandatory vs. optional requirements
-- [ ] Note assessment criteria from standard
+**It establishes** which AIMF controls produce the evidence an AIMS auditor asks for at each clause: documented context and scope, policy and roles, risk assessment and treatment, AI system impact assessment, competence and awareness, operational control, monitoring and measurement, internal audit, management review and corrective action.
 
-### Phase 2: Detailed Mapping
-- [ ] Map each clause to maturity levels
-- [ ] Identify capability dimension alignment
-- [ ] Document evidence requirements
-- [ ] Create assessment questions
+**It does not establish** conformity with ISO/IEC 42001:2023. Conformity requires an accredited certification audit against the normative requirements, including the Annex A controls in the organisation's Statement of Applicability. The mapping tells an organisation where to look in its own evidence; the certification body decides whether the evidence is sufficient.
 
-### Phase 3: Content Development
-- [ ] Extract executive-friendly language
-- [ ] Develop video content snippets
-- [ ] Create assessment rubrics
-- [ ] Validate with subject matter experts
+---
+
+## Maturity progression against the clause structure
+
+The catalog's maturity columns let the same clause set be read at each AIMF level:
+
+| AIMF level | Reading against ISO/IEC 42001:2023 |
+|---|---|
+| Level 1 - Initial | No AIMS: clause 4 context is undocumented, clause 5.2 has no AI policy, clause 6.1 risk identification is absent |
+| Level 2 - Developing | AIMS drafted: scope defined, AI policy issued, risk assessment method chosen, competence needs identified |
+| Level 3 - Defined | AIMS operating: clauses 4-10 implemented with maintained documentation, internal audit cycle running, management review held |
+| Level 4 - Managed | AIMS measured: clause 9 obligations carry quantified objectives and trends, and compliance monitoring is partly automated |
+| Level 5 - Optimizing | AIMS improving continuously: clause 10 corrective action feeds a change programme, and the organisation contributes its practice back |
+
+---
+
+## Maintenance
+
+This document is generated, not hand-maintained. To change it, change `core/AIMF-CONTROL-CATALOG.csv` and re-run:
+
+```
+python3 scripts/aimf_mappings.py generate
+python3 scripts/aimf_mappings.py check
+```
+
+`check` fails if a generated table drifts from the catalog, if a clause reference used in this document is not an ISO/IEC 42001 heading, or if a referenced AIMF control id does not exist.
 
 ---
 
 ## References
 
-- ISO/IEC 42001:2023 - Information technology — Artificial intelligence — Management system
-- ISO/IEC 23894:2023 - AI - Guidance on risk management
-- ISO/IEC TR 24028:2020 - AI - Overview of trustworthiness in AI
-
----
-
-**Next Steps**: Acquire ISO 42001 standard document and begin detailed clause-by-clause analysis.
+- ISO/IEC 42001:2023, Information technology - Artificial intelligence - Management system
+- ISO/IEC 42006, Requirements for bodies providing audit and certification of AI management systems
+- ISO/IEC 23894:2023, Guidance on AI risk management
+- ISO/IEC TR 24028:2020, Overview of trustworthiness in AI
+- NIST AI RMF 1.0 - see [NIST AI RMF Mapping](AIMF-NIST-RMF-MAPPING.md)

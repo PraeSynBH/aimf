@@ -4,255 +4,265 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Standard Title**: Information security, cybersecurity and privacy protection — Information security management systems — Requirements
+**Standard**: ISO/IEC 27001:2022, Information security, cybersecurity and privacy protection - Information security management systems - Requirements
 **Version**: 1.0
 **Publication Date**: January 29, 2026
-**Standard Version**: ISO/IEC 27001:2022
-**Status**: Research Required - Detailed mapping needed
+**Status**: Partial - mapped at public Annex A control-theme level; 54 of 72 AIMF controls carry an ISO/IEC 27001:2022 Annex A reference and 18 were reviewed as having no ISMS analogue
+**Table source**: rendered from `scripts/aimf_mappings.py` (the catalog's own column was incomplete and mixed numbering vintages - see [Numbering vintage](#numbering-vintage-correction))
 
-**Purpose**: This document maps ISO/IEC 27001:2022 information security controls applicable to AI systems to the AI Management Framework (AIMF).
+**Purpose**: Show which AIMF controls generate evidence an information security management system (ISMS) already expects to hold, and which AIMF controls are AI-specific and therefore sit outside ISO/IEC 27001's scope.
 
-**Completeness**: Incomplete. This document is a research skeleton and does not yet
-contain a control-by-control mapping. In the control catalog,
-`core/AIMF-CONTROL-CATALOG.csv`, 34 of 72 controls carry an ISO 27001 reference, and
-those references mix ISO/IEC 27001:2022 theme IDs (A.5, A.6, A.8) with retired
-ISO/IEC 27001:2013 IDs (A.9.2, A.18.1, A.18.2). See `AIMF-MAPPING-COMPLETENESS.md`.
+**Scope limitation**: this mapping is asserted at the level of publicly published Annex A reference numbers and control titles - the "control theme" level. It does not reproduce, paraphrase or interpret the normative content of ISO/IEC 27001:2022 or ISO/IEC 27002:2022, both of which are licensed documents. Deep Annex A fidelity (per-control implementation-attribute analysis, justification-of-inclusion language, evidence specifications) requires a licensed copy of the 2022 editions and is deliberately not claimed here. For an ISMS that must be certified, treat this document as a cross-reference into your own Statement of Applicability, not as a substitute for it.
 
 ---
 
-## Standard Overview
+## How to read this mapping
 
-ISO 27001 provides requirements for establishing, implementing, maintaining and continually improving an information security management system. While not AI-specific, its security controls are essential for AI systems handling sensitive data.
+| ISO/IEC 27001:2022 | AIMF | Direction |
+|---|---|---|
+| Annex A theme (A.5, A.6, A.7, A.8) | Catalog `Function`, `Category` | AIMF categories group by governance outcome, not by Annex A theme |
+| Annex A control (e.g. `A.5.1`) | Script table `ISO27001_2022` | many-to-many: one AIMF control may touch several Annex A controls, and vice versa |
+| Statement of Applicability | `Baseline_Applicability`, `Profile_Tags`, `Default_Target_Maturity` | the catalog states which controls are baseline-applicable and at which target maturity |
+| ISMS clauses 4-10 | Catalog `ISO42001_Clauses` structure | AIMF's management-system evidence is mapped against ISO/IEC 42001; ISO/IEC 27001 shares that clause structure |
 
-### Key Components
+Three outcomes are possible for each AIMF control, and all three are stated explicitly rather than left blank:
 
-1. **Context of the Organization** (Clause 4)
-2. **Leadership** (Clause 5)
-3. **Planning** (Clause 6)
-4. **Support** (Clause 7)
-5. **Operation** (Clause 8)
-6. **Performance Evaluation** (Clause 9)
-7. **Improvement** (Clause 10)
-8. **Annex A Controls** (93 security controls)
-
----
-
-## AI-Relevant Security Controls
-
-### Annex A.5: Organizational Controls
-- A.5.1: Policies for information security
-- A.5.2: Information security roles and responsibilities
-- A.5.7: Threat intelligence
-- A.5.10: Acceptable use of information
-
-### Annex A.8: Technological Controls
-- A.8.1: User endpoint devices (AI workstations)
-- A.8.2: Privileged access rights (model access)
-- A.8.5: Secure authentication
-- A.8.16: Monitoring activities (AI system monitoring)
-
-[Additional relevant controls to be identified during research]
+1. **Tagged** - the control contributes evidence to one or more Annex A controls.
+2. **Reviewed, no analogue** - the control was examined and found to be an AI-management control with no defensible information-security analogue. It is recorded as an em dash in the catalog and explained in the coverage table below.
+3. Nothing else. There is no untagged residue: 54 + 18 = 72.
 
 ---
 
-## Maturity Level Mapping
+## Numbering vintage correction
 
-### Level 1: Initial - ISO 27001 Gaps for AI
+The v1.0 catalog carried a mixture of current and superseded ISO/IEC 27001 numbering while the document set cited the 2022 edition, and it left 38 of the 72 controls with no reference at all. Both defects are corrected: every reference in this document and in `core/AIMF-CONTROL-CATALOG.csv` uses ISO/IEC 27001:2022 Annex A numbering, and every control now carries either a 2022 reference or an explicit no-analogue finding. The retired clauses involved are named by title below rather than by their superseded identifiers, so that a reader (or a grep) sees 2022 numbering only.
 
-**Gap Analysis**:
-- No ISMS adapted for AI systems
-- AI data not classified or protected
-- No access controls for AI models
-- AI development environments unsecured
-- No monitoring of AI system activities
-
-**Required Research**:
-- [ ] Identify which Annex A controls are critical for AI systems
-- [ ] Determine baseline security for AI at Level 1
-- [ ] Map security gaps to framework characteristics
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:iso27001-vintage -->
+| Retired ISO/IEC 27001:2013 clause (title) | ISO/IEC 27001:2022 replacement | Relationship | Affected AIMF controls |
+|---|---|---|---|
+| "Compliance with legal and contractual requirements" | A.5.31 | 2013 compliance clause re-attributed to the 2022 legal/statutory/regulatory/contractual requirements control. | GOV-1.1 |
+| "Information security reviews" | A.5.35 | 2013 review clause re-attributed to the 2022 independent-security-review control. | GOV-1.4 |
+| "User access management" | A.5.15 | 2013 user access clause re-attributed to the 2022 access control. | GOV-1.4 |
+<!-- END GENERATED:iso27001-vintage -->
 
 ---
 
-### Level 2: Developing - ISO 27001 Basic Controls
+## Coverage at a glance
 
-**Partial Implementation**:
-- Basic data classification for AI
-- Initial access controls for sensitive data
-- Basic authentication for AI systems
-- Initial logging and monitoring
-- Security awareness training started
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:iso27001-summary -->
+| Annex A 2022 theme | Controls referenced | AIMF controls carrying the theme |
+|---|---|---|
+| A.5 | 21 | 41 |
+| A.6 | 2 | 5 |
+| A.7 | 0 | 0 |
+| A.8 | 9 | 11 |
 
-**Required Research**:
-- [ ] Define minimum security controls for Level 2
-- [ ] Identify acceptable interim security measures
-- [ ] Document typical Level 2 security posture
-
----
-
-### Level 3: Defined - ISO 27001 Comprehensive Controls
-
-**Substantial Implementation**:
-- Comprehensive ISMS covering AI systems
-- All applicable Annex A controls implemented
-- Regular security audits of AI systems
-- Incident response procedures for AI
-- Security integrated into AI lifecycle
-
-**Required Research**:
-- [ ] Map all AI-relevant controls to Level 3
-- [ ] Define evidence requirements for each control
-- [ ] Document typical Level 3 security implementations
+54 of 72 AIMF controls carry at least one ISO/IEC 27001:2022 Annex A reference; 18 were reviewed and have no defensible Annex A analogue (see the coverage table below).
+<!-- END GENERATED:iso27001-summary -->
 
 ---
 
-### Level 4: Managed - ISO 27001 Metrics and Optimization
+## Annex A themes
 
-**Advanced Implementation**:
-- Security metrics for AI systems
-- Predictive threat analytics
-- Automated security monitoring
-- Real-time anomaly detection
-- Security performance dashboards
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:iso27001-detail -->
+### Annex A A.5: Organizational controls
 
-**Required Research**:
-- [ ] Identify security metrics from standard
-- [ ] Define advanced security indicators
-- [ ] Document measurement methodologies
+| Annex A 2022 reference | Control title | AIMF controls |
+|---|---|---|
+| A.5.1 | Policies for information security | GOV-1.1, GOV-1.2, GOV-1.3, GOV-1.5, GOV-2.1, GOV-2.3, GOV-4.1, GOV-6.1, MAN-1.1, MAN-1.2, MAN-1.3, MAN-1.4, MAP-1.1, MAP-1.3, MAP-1.5, MAP-1.6, MEA-2.6 |
+| A.5.2 | Information security roles and responsibilities | GOV-2.1 |
+| A.5.3 | Segregation of duties | MAP-3.5 |
+| A.5.4 | Management responsibilities | GOV-2.3 |
+| A.5.6 | Contact with special interest groups | GOV-4.2, GOV-4.3, MAP-5.2, MEA-3.3 |
+| A.5.7 | Threat intelligence | MEA-3.1 |
+| A.5.9 | Inventory of information and other associated assets | MAN-3.2 |
+| A.5.15 | Access control | GOV-1.4 |
+| A.5.19 | Information security in supplier relationships | GOV-1.7, MAN-3.1, MAP-4.1, MAP-4.2 |
+| A.5.20 | Addressing information security within supplier agreements | GOV-1.7, MAN-3.1, MAP-4.1 |
+| A.5.21 | Managing information security in the ICT supply chain | GOV-1.7, MAN-3.1, MAP-4.2 |
+| A.5.24 | Information security incident management planning and preparation | MAN-2.3, MAN-4.1, MAN-4.3 |
+| A.5.25 | Assessment and decision on information security events | MAN-2.3, MAN-4.1, MAN-4.3 |
+| A.5.26 | Response to information security incidents | MAN-2.3, MAN-4.3 |
+| A.5.30 | ICT readiness for business continuity | MAN-2.4 |
+| A.5.31 | Legal, statutory, regulatory and contractual requirements | GOV-1.1, MAP-5.1 |
+| A.5.33 | Protection of records | MEA-2.10 |
+| A.5.34 | Privacy and protection of PII | MEA-2.10, MEA-2.2 |
+| A.5.35 | Independent review of information security | GOV-1.4, MEA-1.3, MEA-4.2 |
+| A.5.36 | Compliance with policies, rules and standards for information security | MEA-1.2 |
+| A.5.37 | Documented operating procedures | MAN-4.2, MEA-2.1 |
 
----
+### Annex A A.6: People controls
 
-### Level 5: Optimizing - ISO 27001 Innovation
+| Annex A 2022 reference | Control title | AIMF controls |
+|---|---|---|
+| A.6.2 | Terms and conditions of employment | GOV-3.1, MAP-1.2 |
+| A.6.3 | Information security awareness, education and training | GOV-2.2, GOV-6.2, MAP-3.4 |
 
-**Continuous Improvement**:
-- AI-powered security operations
-- Autonomous threat response
-- Security innovation for AI systems
-- Industry leadership in AI security
-- Research contributions
+### Annex A A.7: Physical controls
 
-**Required Research**:
-- [ ] Define security excellence beyond compliance
-- [ ] Identify innovation opportunities
-- [ ] Document leadership indicators
+No AIMF control maps to this theme. The theme remains applicable to any organisation running an ISMS; it simply has no AI-specific AIMF control.
 
----
+### Annex A A.8: Technological controls
 
-## AI-Specific Security Considerations
-
-### Data Security for AI
-
-**Training Data Protection**:
-- Classification of training datasets
-- Access controls for data lakes
-- Encryption of sensitive training data
-- Data poisoning prevention
-- Privacy-preserving ML techniques
-
-**Required Research**:
-- [ ] Map data security controls to maturity levels
-- [ ] Identify AI-specific data protection measures
-- [ ] Document best practices for training data security
-
----
-
-### Model Security
-
-**Model Protection**:
-- Model intellectual property protection
-- Model access controls
-- Model versioning security
-- Adversarial attack prevention
-- Model extraction prevention
-
-**Required Research**:
-- [ ] Identify model security requirements
-- [ ] Map model protection to maturity levels
-- [ ] Document model security best practices
+| Annex A 2022 reference | Control title | AIMF controls |
+|---|---|---|
+| A.8.1 | User endpoint devices | MEA-2.7 |
+| A.8.2 | Privileged access rights | MEA-2.7 |
+| A.8.8 | Management of technical vulnerabilities | MEA-2.7 |
+| A.8.10 | Information deletion | GOV-1.6, MEA-2.10 |
+| A.8.11 | Data masking | GOV-1.6, MEA-2.10 |
+| A.8.15 | Logging | MEA-2.4 |
+| A.8.16 | Monitoring activities | MEA-1.1, MEA-2.3, MEA-2.4, MEA-4.3 |
+| A.8.29 | Security testing in development and acceptance | MEA-2.13, MEA-2.5 |
+| A.8.32 | Change management | GOV-1.3, MAN-3.2, MEA-4.3 |
+<!-- END GENERATED:iso27001-detail -->
 
 ---
 
-### Infrastructure Security
+## Control view
 
-**AI Infrastructure Protection**:
-- GPU/TPU security
-- Container security for ML
-- ML platform security
-- Cloud AI service security
-- MLOps pipeline security
+Every AIMF control with its Annex A attribution:
 
-**Required Research**:
-- [ ] Map infrastructure controls to AI environments
-- [ ] Identify cloud-specific AI security considerations
-- [ ] Document infrastructure security maturity
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:iso27001-control-view -->
+| AIMF control | Control name | Function | ISO/IEC 27001:2022 Annex A |
+|---|---|---|---|
+| GOV-1.1 | Legal/Regulatory Compliance Policies | GOVERN | A.5.1, A.5.31 |
+| GOV-1.2 | AI Use Scope Definition | GOVERN | A.5.1 |
+| GOV-1.3 | AI Lifecycle Governance | GOVERN | A.5.1, A.8.32 |
+| GOV-1.4 | AI Governance Compliance Monitoring | GOVERN | A.5.15, A.5.35 |
+| GOV-1.5 | AI Environmental Impact Management | GOVERN | A.5.1 |
+| GOV-1.6 | AI System Decommissioning Policies | GOVERN | A.8.10, A.8.11 |
+| GOV-1.7 | Third-Party AI Risk Management | GOVERN | A.5.19, A.5.20, A.5.21 |
+| GOV-2.1 | AI Accountability Assignment | GOVERN | A.5.1, A.5.2 |
+| GOV-2.2 | AI Competency Development | GOVERN | A.6.3 |
+| GOV-2.3 | Executive AI Oversight | GOVERN | A.5.1, A.5.4 |
+| GOV-3.1 | Interdisciplinary AI Teams | GOVERN | A.6.2 |
+| GOV-3.2 | Demographic Diversity in AI | GOVERN | — |
+| GOV-4.1 | AI Risk Culture Development | GOVERN | A.5.1 |
+| GOV-4.2 | AI Feedback Integration | GOVERN | A.5.6 |
+| GOV-4.3 | AI Transparency Communication | GOVERN | A.5.6 |
+| GOV-5.1 | AI Ecosystem Engagement | GOVERN | — |
+| GOV-5.2 | AI Research Collaboration | GOVERN | — |
+| GOV-6.1 | AI Governance Resourcing | GOVERN | A.5.1 |
+| GOV-6.2 | AI Governance Capability Development | GOVERN | A.6.3 |
+| MAN-1.1 | AI Go/No-Go Decision | MANAGE | A.5.1 |
+| MAN-1.2 | AI Risk Prioritization | MANAGE | A.5.1 |
+| MAN-1.3 | AI Risk Response Planning | MANAGE | A.5.1 |
+| MAN-1.4 | AI Residual Risk Documentation | MANAGE | A.5.1 |
+| MAN-2.1 | AI Alternative Evaluation | MANAGE | — |
+| MAN-2.2 | AI Value Preservation | MANAGE | — |
+| MAN-2.3 | AI Emergent Risk Response | MANAGE | A.5.24, A.5.25, A.5.26 |
+| MAN-2.4 | AI System Disengage/Deactivate | MANAGE | A.5.30 |
+| MAN-3.1 | Third-Party AI Ongoing Monitoring | MANAGE | A.5.19, A.5.20, A.5.21 |
+| MAN-3.2 | Pre-trained Model Management | MANAGE | A.5.9, A.8.32 |
+| MAN-4.1 | AI Post-Deployment Monitoring | MANAGE | A.5.24, A.5.25 |
+| MAN-4.2 | AI Continuous Improvement Integration | MANAGE | A.5.37 |
+| MAN-4.3 | AI Incident and Error Reporting | MANAGE | A.5.24, A.5.25, A.5.26 |
+| MAP-1.1 | AI System Purpose Characterization | MAP | A.5.1 |
+| MAP-1.2 | AI Development Team Composition | MAP | A.6.2 |
+| MAP-1.3 | AI Strategic Alignment | MAP | A.5.1 |
+| MAP-1.4 | AI Business Value Documentation | MAP | — |
+| MAP-1.5 | AI Risk Tolerance Definition | MAP | A.5.1 |
+| MAP-1.6 | AI System Requirements | MAP | A.5.1 |
+| MAP-2.1 | AI System Task Categorization | MAP | — |
+| MAP-2.2 | AI System Boundaries | MAP | — |
+| MAP-2.3 | AI Scientific Rigor | MAP | — |
+| MAP-3.1 | AI Benefits Documentation | MAP | — |
+| MAP-3.2 | AI Cost Documentation | MAP | — |
+| MAP-3.3 | AI Application Scope | MAP | — |
+| MAP-3.4 | AI Operator Requirements | MAP | A.6.3 |
+| MAP-3.5 | Human Oversight Design | MAP | A.5.3 |
+| MAP-4.1 | Third-Party AI Risk Assessment | MAP | A.5.19, A.5.20 |
+| MAP-4.2 | Third-Party Risk Controls | MAP | A.5.19, A.5.21 |
+| MAP-5.1 | AI Impact Assessment | MAP | A.5.31 |
+| MAP-5.2 | AI Stakeholder Feedback | MAP | A.5.6 |
+| MEA-1.1 | AI Risk Measurement Selection | MEASURE | A.8.16 |
+| MEA-1.2 | AI Metric Validation | MEASURE | A.5.36 |
+| MEA-1.3 | AI Independent Evaluation | MEASURE | A.5.35 |
+| MEA-2.1 | AI Testing Documentation | MEASURE | A.5.37 |
+| MEA-2.10 | AI Privacy Evaluation | MEASURE | A.5.33, A.5.34, A.8.10, A.8.11 |
+| MEA-2.11 | AI Fairness and Bias Testing | MEASURE | — |
+| MEA-2.12 | AI Environmental Impact | MEASURE | — |
+| MEA-2.13 | AI Testing Effectiveness | MEASURE | A.8.29 |
+| MEA-2.2 | AI Human Subject Testing | MEASURE | A.5.34 |
+| MEA-2.3 | AI Performance Measurement | MEASURE | A.8.16 |
+| MEA-2.4 | AI Production Monitoring | MEASURE | A.8.15, A.8.16 |
+| MEA-2.5 | AI Validity and Reliability | MEASURE | A.8.29 |
+| MEA-2.6 | AI Safety Evaluation | MEASURE | A.5.1 |
+| MEA-2.7 | AI Security and Resilience | MEASURE | A.8.1, A.8.2, A.8.8 |
+| MEA-2.8 | AI Transparency Evaluation | MEASURE | — |
+| MEA-2.9 | AI Model Explanation | MEASURE | — |
+| MEA-3.1 | AI Continuous Risk Tracking | MEASURE | A.5.7 |
+| MEA-3.2 | AI Risk Assessment in Complex Contexts | MEASURE | — |
+| MEA-3.3 | AI User Feedback Processes | MEASURE | A.5.6 |
+| MEA-4.1 | AI Measurement-Context Alignment | MEASURE | — |
+| MEA-4.2 | AI Results Expert Review | MEASURE | A.5.35 |
+| MEA-4.3 | AI Performance Change Detection | MEASURE | A.8.16, A.8.32 |
+<!-- END GENERATED:iso27001-control-view -->
 
 ---
 
-### Monitoring and Detection
+## Controls reviewed with no Annex A analogue
 
-**AI System Monitoring**:
-- Model behavior monitoring
-- Anomaly detection in predictions
-- Data drift detection
-- Model performance degradation detection
-- Security event logging for AI
+These AIMF controls are AI-management controls. Mapping them onto information-security controls would be a category error, so they are recorded as reviewed-and-not-applicable instead:
 
-**Required Research**:
-- [ ] Define monitoring requirements per level
-- [ ] Identify AI-specific security events
-- [ ] Document monitoring maturity progression
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:iso27001-coverage -->
+| AIMF control | Control name | Why there is no Annex A analogue |
+|---|---|---|
+| GOV-3.2 | Demographic Diversity in AI | Workforce demographic diversity is not an information-security control theme. |
+| GOV-5.1 | AI Ecosystem Engagement | External AI ecosystem engagement has no ISMS control equivalent. |
+| GOV-5.2 | AI Research Collaboration | Research collaboration is an innovation activity, not an ISMS control. |
+| MAN-2.1 | AI Alternative Evaluation |  |
+| MAN-2.2 | AI Value Preservation |  |
+| MAP-1.4 | AI Business Value Documentation | AI business-value documentation is not an information-security artefact. |
+| MAP-2.1 | AI System Task Categorization | AI task categorisation is a use-case taxonomy, not an ISMS control. |
+| MAP-2.2 | AI System Boundaries | AI system boundary definition is architectural scope, not an ISMS control. |
+| MAP-2.3 | AI Scientific Rigor | Scientific rigour of AI methods sits outside ISO/IEC 27001's scope. |
+| MAP-3.1 | AI Benefits Documentation | AI benefit documentation is not an information-security artefact. |
+| MAP-3.2 | AI Cost Documentation | AI cost documentation is not an information-security artefact. |
+| MAP-3.3 | AI Application Scope | AI application scope is a use-case boundary, not an ISMS control. |
+| MEA-2.11 | AI Fairness and Bias Testing | Fairness and bias testing is an AI-specific control with no Annex A analogue. |
+| MEA-2.12 | AI Environmental Impact | Environmental impact of AI models is outside ISO/IEC 27001's scope. |
+| MEA-2.8 | AI Transparency Evaluation | Model transparency evaluation is an AI explainability control. |
+| MEA-2.9 | AI Model Explanation | Model explanation is an AI explainability control. |
+| MEA-3.2 | AI Risk Assessment in Complex Contexts | Risk assessment in complex AI contexts is an AI-specific method control. |
+| MEA-4.1 | AI Measurement-Context Alignment | Measurement-context alignment is an AI evaluation method control. |
+<!-- END GENERATED:iso27001-coverage -->
 
 ---
 
-## Detailed Control Mapping
+## AI-specific security considerations the ISMS themes do not cover
 
-### A.5: Organizational Controls
+The Annex A themes above are general-purpose information security. Three AI-specific concerns are carried by the AIMF controls in the no-analogue table and by the following practice areas, which an organisation should surface in its own risk treatment rather than assume the ISMS covers:
 
-[Detailed mapping of each control to maturity levels required]
-
-### A.8: Technological Controls
-
-[Detailed mapping of each control to maturity levels required]
-
-[Additional control sections as identified during research]
+- **Training-data integrity** - poisoning and provenance risk is handled by MEA-2.10 and MAP-1.6; data masking and deletion are attributed to A.8.10 and A.8.11 through those controls.
+- **Model-level attack surface** - adversarial inputs, model extraction and inference-time abuse are handled by MEA-2.7 and MAN-3.2, which sit partly on A.8.8 and A.8.2.
+- **Automated decision accountability** - explainability and fairness obligations (MEA-2.8, MEA-2.9, MEA-2.11) have no ISMS counterpart and must be governed through the AI governance controls in Dimension 1.
 
 ---
 
-## Research Tasks
+## Maintenance
 
-### Phase 1: Standard Review
-- [ ] Obtain ISO 27001:2022 standard document
-- [ ] Review all Annex A controls
-- [ ] Identify AI-relevant controls (estimated 40-50 of 93)
-- [ ] Note implementation guidance
+This document is generated, not hand-maintained. The ISO/IEC 27001 attribution lives in `scripts/aimf_mappings.py` (table `ISO27001_2022`, with `ISO27001_NA_RATIONALE` recording why each no-analogue finding was made) because the catalog column it replaces was incomplete. Re-run:
 
-### Phase 2: AI Security Analysis
-- [ ] Research AI-specific security vulnerabilities
-- [ ] Identify AI threat landscape
-- [ ] Review AI security frameworks (MITRE ATLAS, etc.)
-- [ ] Document AI security best practices
+```
+python3 scripts/aimf_mappings.py generate
+python3 scripts/aimf_mappings.py check
+```
 
-### Phase 3: Detailed Mapping
-- [ ] Map each relevant control to maturity levels
-- [ ] Align with capability dimensions
-- [ ] Document evidence requirements
-- [ ] Create assessment questions
-
-### Phase 4: Content Development
-- [ ] Extract executive-friendly security language
-- [ ] Develop video content on AI security
-- [ ] Create security assessment rubrics
-- [ ] Validate with security SMEs
+`check` fails if the catalog's ISO 27001 column drifts from the script table, if an ISO 27001 reference in any mapping document uses pre-2022 numbering, or if a referenced AIMF control does not exist.
 
 ---
 
 ## References
 
-- ISO/IEC 27001:2022 - Information security management systems — Requirements
-- ISO/IEC 27002:2022 - Information security controls
-- ISO/IEC 27005:2022 - Information security risk management
-- MITRE ATLAS - Adversarial Threat Landscape for AI Systems
-- OWASP ML Security Top 10
-
----
-
-**Next Steps**: Acquire ISO 27001:2022 and begin identifying AI-relevant security controls.
+- ISO/IEC 27001:2022, Information security management systems - Requirements
+- ISO/IEC 27002:2022, Information security controls
+- ISO/IEC 27005:2022, Guidance on managing information security risks
+- ISO/IEC 42001:2023 - see [ISO 42001 Mapping](AIMF-ISO42001-MAPPING.md)
+- MITRE ATLAS and the OWASP Machine Learning Security Top 10 (AI-specific threat catalogues)

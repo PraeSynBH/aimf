@@ -6,341 +6,257 @@ Licensed under CC BY-NC-ND 4.0
 
 **Version**: 1.0
 **Publication Date**: January 29, 2026
-**Status**: Pre-Publication (Working Draft)
-**Document Type**: Cross-Reference Guide
+**Status**: Complete - dimension attribution for all 72 controls regenerated from the catalog
+**Document Type**: Cross-reference guide
+**Table source**: rendered from `core/AIMF-CONTROL-CATALOG.csv` by `scripts/aimf_mappings.py`
+
+**Purpose**: Map the four AIMF capability dimensions to the 72 framework controls, so a dimension-focused assessment can walk the control set in the order an organisation typically builds capability.
 
 ---
 
-## Overview
+## What changed in this revision
 
-This document maps the four AIMF capability dimensions to the 72 framework controls, providing a cross-reference view for dimension-focused assessments and improvements.
+An earlier revision of this document carried its own hand-written dimension lists and a closing tally of "18 / 14 / 17 / 10 = 59" controls. Those numbers disagreed with the catalog and with the NIST AI RMF subcategory count. Both the lists and every count in this document are now generated from the catalog's `Dimension` and `Dimension_Secondary` columns, so the tally cannot drift again: 72 controls carry a primary dimension, 2 of them also carry a secondary dimension, and the four primary counts sum to 72.
 
 ---
 
-## The Four Capability Dimensions
+## The four capability dimensions
 
-| ID | Dimension | Description | Primary Focus |
+| ID | Dimension | Description | Primary focus |
 |----|-----------|-------------|---------------|
 | **D1** | AI Governance & Risk Management | Strategic oversight, policies, accountability | Leadership, compliance, risk |
 | **D2** | Data Governance & Management | Data quality, privacy, security, lifecycle | Data practices, privacy |
 | **D3** | Technical Operations (MLOps) | Development, deployment, monitoring, maintenance | Engineering, operations |
 | **D4** | Organizational Culture & Change | Skills, awareness, collaboration, ethics | People, culture |
 
----
-
-## Dimension 1: AI Governance & Risk Management
-
-### Description
-
-Dimension 1 addresses the strategic and organizational aspects of AI management, including governance structures, policies, risk management frameworks, and leadership engagement.
-
-### Scope
-
-- Executive sponsorship and accountability
-- Policy frameworks and compliance
-- Risk appetite and tolerance
-- Strategic alignment
-- Resource allocation
-- Third-party governance
-
-### Control Mapping
-
-| Control ID | Control Name | Function | Primary/Secondary |
-|------------|--------------|----------|-------------------|
-| GOV-1.1 | Legal/Regulatory Compliance | GOVERN | Primary |
-| GOV-1.2 | AI Use Scope Definition | GOVERN | Primary |
-| GOV-1.3 | AI Lifecycle Governance | GOVERN | Primary |
-| GOV-1.4 | Compliance Verification | GOVERN | Primary |
-| GOV-1.5 | Environmental Stewardship | GOVERN | Primary |
-| GOV-1.6 | Decommissioning Policies | GOVERN | Primary |
-| GOV-1.7 | Third-Party Management | GOVERN | Primary |
-| GOV-2.1 | Accountability Assignment | GOVERN | Primary |
-| GOV-2.3 | Executive Oversight | GOVERN | Primary |
-| GOV-6.1 | Resource Allocation | GOVERN | Primary |
-| GOV-6.2 | Capability Building | GOVERN | Primary |
-| MAP-1.1 | Purpose Characterization | MAP | Primary |
-| MAP-1.3 | Strategic Alignment | MAP | Primary |
-| MAP-1.4 | Business Value | MAP | Primary |
-| MAP-1.5 | Risk Tolerance | MAP | Primary |
-| MAP-3.1 | Benefits Analysis | MAP | Primary |
-| MAP-3.2 | Cost Analysis | MAP | Primary |
-| MAP-4.1 | Third-Party Risk Assessment | MAP | Primary |
-| MAP-4.2 | Third-Party Risk Controls | MAP | Primary |
-| MAP-5.1 | Impact Assessment | MAP | Primary |
-| MAN-1.1 | Go/No-Go Decision | MANAGE | Primary |
-| MAN-1.2 | Risk Prioritization | MANAGE | Primary |
-| MAN-1.3 | Response Development | MANAGE | Primary |
-| MAN-1.4 | Residual Documentation | MANAGE | Primary |
-| MAN-2.1 | Alternative Analysis | MANAGE | Primary |
-| MAN-3.1 | Third-Party Monitoring | MANAGE | Primary |
-
-**Total Primary Controls: 26**
-
-### Key Assessment Questions
-
-1. Is there documented executive sponsorship for AI governance?
-2. Are AI policies approved and maintained by leadership?
-3. Is AI risk integrated into enterprise risk management?
-4. Are risk tolerances defined and approved for AI systems?
-5. Are resources appropriately allocated for AI governance?
+A control's primary dimension is the capability area that must be mature before the control can be satisfied. A secondary dimension marks a control that also depends on a second capability area - for example MAP-1.1 (AI system purpose characterisation) is primarily a governance control whose output only has value if the organisation can actually communicate it, which is a culture capability.
 
 ---
 
-## Dimension 2: Data Governance & Management
+## Control attribution by dimension
 
-### Description
+The generated block below states each dimension's authoritative primary count, lists those controls, and names any control that also carries the dimension as a secondary attribution. The lists are exhaustive: every AIMF control appears exactly once as a primary control.
 
-Dimension 2 addresses the management of data used in AI systems, including data quality, privacy, security, lineage, and lifecycle management.
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:dimension-tables -->
+### D1: AI Governance & Risk Management
 
-### Scope
+**Primary controls: 26** - the control's catalog `Dimension` is D1.
 
-- Data quality frameworks
-- Privacy protection
-- Data security
-- Data lineage and provenance
-- Data lifecycle management
-- Regulatory compliance (privacy laws)
+| Control ID | Control name | Function |
+|---|---|---|
+| GOV-1.1 | Legal/Regulatory Compliance Policies | GOVERN |
+| GOV-1.2 | AI Use Scope Definition | GOVERN |
+| GOV-1.3 | AI Lifecycle Governance | GOVERN |
+| GOV-1.4 | AI Governance Compliance Monitoring | GOVERN |
+| GOV-1.5 | AI Environmental Impact Management | GOVERN |
+| GOV-1.6 | AI System Decommissioning Policies | GOVERN |
+| GOV-1.7 | Third-Party AI Risk Management | GOVERN |
+| GOV-2.1 | AI Accountability Assignment | GOVERN |
+| GOV-2.3 | Executive AI Oversight | GOVERN |
+| GOV-6.1 | AI Governance Resourcing | GOVERN |
+| GOV-6.2 | AI Governance Capability Development | GOVERN |
+| MAN-1.1 | AI Go/No-Go Decision | MANAGE |
+| MAN-1.2 | AI Risk Prioritization | MANAGE |
+| MAN-1.3 | AI Risk Response Planning | MANAGE |
+| MAN-1.4 | AI Residual Risk Documentation | MANAGE |
+| MAN-2.1 | AI Alternative Evaluation | MANAGE |
+| MAN-3.1 | Third-Party AI Ongoing Monitoring | MANAGE |
+| MAP-1.1 | AI System Purpose Characterization | MAP |
+| MAP-1.3 | AI Strategic Alignment | MAP |
+| MAP-1.4 | AI Business Value Documentation | MAP |
+| MAP-1.5 | AI Risk Tolerance Definition | MAP |
+| MAP-3.1 | AI Benefits Documentation | MAP |
+| MAP-3.2 | AI Cost Documentation | MAP |
+| MAP-4.1 | Third-Party AI Risk Assessment | MAP |
+| MAP-4.2 | Third-Party Risk Controls | MAP |
+| MAP-5.1 | AI Impact Assessment | MAP |
 
-### Control Mapping
+No control carries D1 as its catalog `Dimension_Secondary`; dimension AI Governance & Risk Management is evidenced through its 26 primary controls.
 
-| Control ID | Control Name | Function | Primary/Secondary |
-|------------|--------------|----------|-------------------|
-| MAP-1.6 | Requirements | MAP | Primary |
-| MAP-2.3 | Scientific Integrity | MAP | Primary |
-| MEA-2.1 | Test Documentation | MEASURE | Secondary |
-| MEA-2.2 | Human Evaluation | MEASURE | Primary |
-| MEA-2.10 | Privacy Assessment | MEASURE | Primary |
-| MEA-2.11 | Fairness Assessment | MEASURE | Secondary |
-| MAN-3.2 | Model Monitoring | MANAGE | Secondary |
+### D2: Data Governance & Management
 
-**Total Primary Controls: 4**
-**Total Secondary Controls: 3**
+**Primary controls: 2** - the control's catalog `Dimension` is D2.
 
-### Key Assessment Questions
+| Control ID | Control name | Function |
+|---|---|---|
+| MAP-1.6 | AI System Requirements | MAP |
+| MEA-2.10 | AI Privacy Evaluation | MEASURE |
 
-1. Are data quality requirements defined for AI systems?
-2. Is data lineage tracked for AI training data?
-3. Are privacy impact assessments performed?
-4. Is there a data governance framework integrated with AI?
-5. Are human subject protections applied in evaluations?
+No control carries D2 as its catalog `Dimension_Secondary`; dimension Data Governance & Management is evidenced through its 2 primary controls.
 
-### Note on Data Governance
+### D3: Technical Operations (MLOps)
 
-While Dimension 2 has fewer dedicated controls, data governance is implicitly embedded in many other controls. Organizations should also consider:
+**Primary controls: 32** - the control's catalog `Dimension` is D3.
 
-- Integration with enterprise data governance
-- Compliance with privacy regulations (GDPR, CCPA, etc.)
-- Data quality monitoring in production
-- Synthetic data and data augmentation governance
+| Control ID | Control name | Function |
+|---|---|---|
+| MAN-2.2 | AI Value Preservation | MANAGE |
+| MAN-2.3 | AI Emergent Risk Response | MANAGE |
+| MAN-2.4 | AI System Disengage/Deactivate | MANAGE |
+| MAN-3.2 | Pre-trained Model Management | MANAGE |
+| MAN-4.1 | AI Post-Deployment Monitoring | MANAGE |
+| MAN-4.2 | AI Continuous Improvement Integration | MANAGE |
+| MAN-4.3 | AI Incident and Error Reporting | MANAGE |
+| MAP-2.1 | AI System Task Categorization | MAP |
+| MAP-2.2 | AI System Boundaries | MAP |
+| MAP-2.3 | AI Scientific Rigor | MAP |
+| MAP-3.3 | AI Application Scope | MAP |
+| MAP-3.5 | Human Oversight Design | MAP |
+| MEA-1.1 | AI Risk Measurement Selection | MEASURE |
+| MEA-1.2 | AI Metric Validation | MEASURE |
+| MEA-1.3 | AI Independent Evaluation | MEASURE |
+| MEA-2.1 | AI Testing Documentation | MEASURE |
+| MEA-2.11 | AI Fairness and Bias Testing | MEASURE |
+| MEA-2.12 | AI Environmental Impact | MEASURE |
+| MEA-2.13 | AI Testing Effectiveness | MEASURE |
+| MEA-2.2 | AI Human Subject Testing | MEASURE |
+| MEA-2.3 | AI Performance Measurement | MEASURE |
+| MEA-2.4 | AI Production Monitoring | MEASURE |
+| MEA-2.5 | AI Validity and Reliability | MEASURE |
+| MEA-2.6 | AI Safety Evaluation | MEASURE |
+| MEA-2.7 | AI Security and Resilience | MEASURE |
+| MEA-2.8 | AI Transparency Evaluation | MEASURE |
+| MEA-2.9 | AI Model Explanation | MEASURE |
+| MEA-3.1 | AI Continuous Risk Tracking | MEASURE |
+| MEA-3.2 | AI Risk Assessment in Complex Contexts | MEASURE |
+| MEA-4.1 | AI Measurement-Context Alignment | MEASURE |
+| MEA-4.2 | AI Results Expert Review | MEASURE |
+| MEA-4.3 | AI Performance Change Detection | MEASURE |
 
----
+No control carries D3 as its catalog `Dimension_Secondary`; dimension Technical Operations (MLOps) is evidenced through its 32 primary controls.
 
-## Dimension 3: Technical Operations (MLOps)
+### D4: Organizational Culture & Change
 
-### Description
+**Primary controls: 12** - the control's catalog `Dimension` is D4.
 
-Dimension 3 addresses the technical aspects of AI system development, deployment, monitoring, and maintenance throughout the lifecycle.
+| Control ID | Control name | Function |
+|---|---|---|
+| GOV-2.2 | AI Competency Development | GOVERN |
+| GOV-3.1 | Interdisciplinary AI Teams | GOVERN |
+| GOV-3.2 | Demographic Diversity in AI | GOVERN |
+| GOV-4.1 | AI Risk Culture Development | GOVERN |
+| GOV-4.2 | AI Feedback Integration | GOVERN |
+| GOV-4.3 | AI Transparency Communication | GOVERN |
+| GOV-5.1 | AI Ecosystem Engagement | GOVERN |
+| GOV-5.2 | AI Research Collaboration | GOVERN |
+| MAP-1.2 | AI Development Team Composition | MAP |
+| MAP-3.4 | AI Operator Requirements | MAP |
+| MAP-5.2 | AI Stakeholder Feedback | MAP |
+| MEA-3.3 | AI User Feedback Processes | MEASURE |
 
-### Scope
+**Secondary controls: 2** - the control's catalog `Dimension_Secondary` is D4.
 
-- Development practices
-- Testing and validation
-- Deployment pipelines
-- Production monitoring
-- Model management
-- Incident response
-- System control mechanisms
-
-### Control Mapping
-
-| Control ID | Control Name | Function | Primary/Secondary |
-|------------|--------------|----------|-------------------|
-| MAP-2.1 | Task Classification | MAP | Primary |
-| MAP-2.2 | Knowledge Limits | MAP | Primary |
-| MAP-3.3 | Scope Definition | MAP | Primary |
-| MAP-3.5 | Human Oversight | MAP | Primary |
-| MEA-1.1 | Measurement Selection | MEASURE | Primary |
-| MEA-1.2 | Metric Validation | MEASURE | Primary |
-| MEA-1.3 | Independent Evaluation | MEASURE | Primary |
-| MEA-2.1 | Test Documentation | MEASURE | Primary |
-| MEA-2.3 | Performance Measurement | MEASURE | Primary |
-| MEA-2.4 | Production Monitoring | MEASURE | Primary |
-| MEA-2.5 | Validity Testing | MEASURE | Primary |
-| MEA-2.6 | Safety Assessment | MEASURE | Primary |
-| MEA-2.7 | Security Assessment | MEASURE | Primary |
-| MEA-2.8 | Transparency Assessment | MEASURE | Primary |
-| MEA-2.9 | Explainability | MEASURE | Primary |
-| MEA-2.11 | Fairness Assessment | MEASURE | Primary |
-| MEA-2.12 | Environmental Assessment | MEASURE | Primary |
-| MEA-2.13 | TEVV Effectiveness | MEASURE | Primary |
-| MEA-3.1 | Continuous Monitoring | MEASURE | Primary |
-| MEA-3.2 | Complex Settings | MEASURE | Primary |
-| MEA-4.1 | Context Connection | MEASURE | Primary |
-| MEA-4.2 | Expert Validation | MEASURE | Primary |
-| MEA-4.3 | Performance Trends | MEASURE | Primary |
-| MAN-2.2 | Value Sustainment | MANAGE | Primary |
-| MAN-2.3 | Unknown Risk Response | MANAGE | Primary |
-| MAN-2.4 | System Control | MANAGE | Primary |
-| MAN-3.2 | Model Monitoring | MANAGE | Primary |
-| MAN-4.1 | Post-Deployment | MANAGE | Primary |
-| MAN-4.2 | Continuous Improvement | MANAGE | Primary |
-| MAN-4.3 | Incident Communication | MANAGE | Primary |
-
-**Total Primary Controls: 30**
-
-### Key Assessment Questions
-
-1. Is there systematic production monitoring for AI systems?
-2. Are TEVV processes defined and documented?
-3. Can AI systems be safely deactivated if needed?
-4. Are model changes tracked and validated?
-5. Is there continuous improvement integration?
-
----
-
-## Dimension 4: Organizational Culture & Change
-
-### Description
-
-Dimension 4 addresses the human and cultural aspects of AI adoption, including workforce capabilities, diversity, stakeholder engagement, and organizational change.
-
-### Scope
-
-- Workforce development
-- Training and awareness
-- Team diversity
-- Stakeholder engagement
-- Communication practices
-- Risk culture
-- External engagement
-
-### Control Mapping
-
-| Control ID | Control Name | Function | Primary/Secondary |
-|------------|--------------|----------|-------------------|
-| GOV-2.2 | Workforce Training | GOVERN | Primary |
-| GOV-3.1 | Cross-Functional Teams | GOVERN | Primary |
-| GOV-3.2 | Demographic Representation | GOVERN | Primary |
-| GOV-4.1 | Risk Culture | GOVERN | Primary |
-| GOV-4.2 | Stakeholder Feedback | GOVERN | Primary |
-| GOV-4.3 | Transparency Communication | GOVERN | Primary |
-| GOV-5.1 | Ecosystem Engagement | GOVERN | Primary |
-| GOV-5.2 | Research Collaboration | GOVERN | Primary |
-| MAP-1.2 | Team Diversity | MAP | Primary |
-| MAP-3.4 | Operator Proficiency | MAP | Primary |
-| MAP-5.2 | Stakeholder Engagement | MAP | Primary |
-| MEA-2.2 | Human Evaluation | MEASURE | Secondary |
-| MEA-3.3 | Feedback Integration | MEASURE | Primary |
-
-**Total Primary Controls: 12**
-**Total Secondary Controls: 1**
-
-### Key Assessment Questions
-
-1. Is AI risk awareness integrated into organizational culture?
-2. Are AI teams composed of diverse perspectives?
-3. Are stakeholder feedback mechanisms in place?
-4. Is there systematic training for AI-related roles?
-5. Does the organization engage with the external AI ecosystem?
+| Control ID | Control name | Function | Primary dimension |
+|---|---|---|---|
+| GOV-1.1 | Legal/Regulatory Compliance Policies | GOVERN | D1 |
+| MAP-1.1 | AI System Purpose Characterization | MAP | D1 |
+<!-- END GENERATED:dimension-tables -->
 
 ---
 
-## Cross-Dimensional Dependencies
+## Summary statistics
 
-### Dependency Matrix
+<!-- GENERATED by scripts/aimf_mappings.py from core/AIMF-CONTROL-CATALOG.csv - do not edit by hand -->
+<!-- BEGIN GENERATED:dimension-stats -->
+| Dimension | Primary controls | Secondary controls | Total related |
+|---|---|---|---|
+| D1: AI Governance & Risk Management | 26 | 0 | 26 |
+| D2: Data Governance & Management | 2 | 0 | 2 |
+| D3: Technical Operations (MLOps) | 32 | 0 | 32 |
+| D4: Organizational Culture & Change | 12 | 2 | 14 |
+| **Total** | **72** | **2** | **74 attributions** |
 
-| From → To | D1 Governance | D2 Data | D3 Technical | D4 Culture |
-|-----------|---------------|---------|--------------|------------|
+| Function | Controls | Dimensions involved |
+|---|---|---|
+| GOVERN | 19 | D1, D4 |
+| MAP | 18 | D1, D2, D3, D4 |
+| MEASURE | 22 | D2, D3, D4 |
+| MANAGE | 13 | D1, D3 |
+| **Total** | **72** | D1-D4 |
+<!-- END GENERATED:dimension-stats -->
+
+### Where the dimension balance falls
+
+D1 and D3 together hold 58 of the 72 controls, which reflects the shape of the AIMF control set: governance and technical operations are where most *written* controls live. D2 holds 2 dedicated primary controls, and that is a real property of the framework rather than a gap being hidden - data governance is delivered through the governance and technical controls that also touch data, plus the enterprise data management an organisation already runs. D4 likewise holds 12 primary controls while carrying 2 secondary attributions, and it is the dimension most often under-resourced in practice, because culture controls are the easiest to declare met and the hardest to evidence.
+
+---
+
+## Cross-dimensional dependencies
+
+| From / to | D1 Governance | D2 Data | D3 Technical | D4 Culture |
+|---|---|---|---|---|
 | **D1 Governance** | - | Policies enable data governance | Risk tolerance guides technical decisions | Sponsorship enables culture change |
 | **D2 Data** | Data quality informs risk assessment | - | Data enables ML operations | Privacy awareness requires culture |
 | **D3 Technical** | Monitoring provides governance data | Technical controls protect data | - | Technical tools need skilled users |
 | **D4 Culture** | Culture enables governance adoption | Culture drives data stewardship | Culture enables technical excellence | - |
 
-### Key Integration Points
+### Key integration points
 
-1. **Governance ↔ Technical**: Risk tolerance determines monitoring requirements; monitoring provides compliance evidence
-
-2. **Governance ↔ Culture**: Executive sponsorship enables cultural change; culture determines governance effectiveness
-
-3. **Data ↔ Technical**: Data quality determines model quality; technical processes protect data
-
-4. **Culture ↔ Technical**: Skilled workforce enables technical excellence; technical tools require training
+1. **Governance and technical** - risk tolerance determines monitoring requirements; monitoring returns the compliance evidence governance needs.
+2. **Governance and culture** - executive sponsorship enables cultural change; culture determines whether governance is followed or merely published.
+3. **Data and technical** - data quality sets the ceiling on model quality; technical processes protect the data.
+4. **Culture and technical** - a skilled workforce enables technical excellence; technical tooling needs trained operators.
 
 ---
 
-## Dimension-Focused Improvement Planning
+## Dimension-focused improvement sequencing
 
-### Starting with Governance (D1)
+### Starting with governance (D1)
 
-Organizations often start with Dimension 1 because governance provides the foundation for other dimensions.
+Governance first, because it authorises everything else:
 
-**Recommended sequence**:
 1. Establish executive sponsorship (GOV-2.3)
-2. Define accountability (GOV-2.1)
-3. Develop policies (GOV-1.x)
+2. Assign accountability (GOV-2.1)
+3. Issue policies (GOV-1.1, GOV-1.2, GOV-1.3, GOV-1.4, GOV-1.5, GOV-1.6, GOV-1.7)
 4. Set risk tolerance (MAP-1.5)
 5. Allocate resources (GOV-6.1)
 
-### Building Technical Capabilities (D3)
+### Building technical capability (D3)
 
-Technical capabilities should be built on governance foundations.
+Technical capability is built on the governance foundation:
 
-**Recommended sequence**:
-1. Establish testing standards (MEA-2.x)
-2. Implement production monitoring (MEA-2.4)
+1. Establish measurement and testing standards (MEA-1.1, MEA-1.2, MEA-1.3, MEA-2.1)
+2. Operate production monitoring (MEA-2.4, MEA-3.1)
 3. Define control mechanisms (MAN-2.4)
-4. Build continuous improvement (MAN-4.2)
+4. Institutionalise continual improvement (MAN-4.2)
 
-### Enabling Through Culture (D4)
+### Enabling through culture (D4)
 
-Culture change takes time and should run parallel to other improvements.
+Culture change runs in parallel and takes longest:
 
-**Recommended approach**:
 1. Training and awareness (GOV-2.2)
-2. Team composition (GOV-3.x, MAP-1.2)
+2. Team composition and diversity of perspective (GOV-3.1, GOV-3.2, MAP-1.2)
 3. Feedback mechanisms (GOV-4.2, MEA-3.3)
 4. Risk culture (GOV-4.1)
 
-### Integrating Data Governance (D2)
+### Integrating data governance (D2)
 
-Data governance should integrate with existing enterprise data management.
+Data governance should extend the enterprise data programme rather than start a parallel one:
 
-**Key considerations**:
-1. Leverage existing data governance frameworks
-2. Add AI-specific requirements
-3. Ensure privacy compliance
-4. Build data quality monitoring
+1. Attribute AI data requirements to the existing data governance framework (MAP-1.6, MEA-2.10)
+2. Add AI-specific privacy and fairness assessment (MEA-2.10, MEA-2.11)
+3. Keep lineage and quality monitoring in production (MEA-2.4, MAN-3.2)
 
 ---
 
-## Summary Statistics
+## Maintenance
 
-### Control Distribution by Dimension
+This document is generated, not hand-maintained. The dimension view is only ever as current as the catalog:
 
-| Dimension | Primary Controls | Secondary Controls | Total Related |
-|-----------|-----------------|-------------------|---------------|
-| D1: Governance & Risk | 26 | 0 | 26 |
-| D2: Data Governance | 4 | 3 | 7 |
-| D3: Technical Operations | 30 | 0 | 30 |
-| D4: Culture & Change | 12 | 1 | 13 |
+```
+python3 scripts/aimf_mappings.py generate
+python3 scripts/aimf_mappings.py check
+```
 
-### Control Distribution by Function
-
-| Function | Controls | Primary Dimensions |
-|----------|----------|-------------------|
-| GOVERN | 18 | D1, D4 |
-| MAP | 14 | D1, D3, D4 |
-| MEASURE | 17 | D2, D3 |
-| MANAGE | 10 | D1, D3 |
+`check` fails if the dimension tables on disk differ from the catalog's `Dimension` / `Dimension_Secondary` columns.
 
 ---
 
 ## References
 
-- ISO/IEC 42001:2023 - Mapping to management system structure
-- NIST AI RMF 1.0 - Profile and tier concepts
-- CMMI for Development - Process area groupings
+- ISO/IEC 42001:2023 clause structure - see [ISO 42001 Mapping](AIMF-ISO42001-MAPPING.md)
+- NIST AI RMF 1.0 profile and tier concepts - see [NIST AI RMF Mapping](AIMF-NIST-RMF-MAPPING.md)
+- CMMI process-area grouping as the origin of the dimension concept
 
----
-
-**Related Documents**: [Framework Overview](AIMF-FRAMEWORK-OVERVIEW.md) | [Control Catalog](AIMF-CONTROL-CATALOG.csv) | [Assessment Guide](AIMF-ASSESSMENT-GUIDE.md)
+**Related documents**: [Framework Overview](../core/AIMF-FRAMEWORK-OVERVIEW.md) | [Control Catalog](../core/AIMF-CONTROL-CATALOG.csv) | [Assessment Guide](../implementation/AIMF-ASSESSMENT-GUIDE.md)

@@ -8,9 +8,9 @@ Licensed under CC BY-NC-ND 4.0
 **Function**: GOVERN (Cross-cutting)
 **Version**: 1.0
 **Publication Date**: January 29, 2026
-**Status**: Pre-Publication (Working Draft)
+**Status**: Complete detailed mapping - all 19 NIST AI RMF GOVERN subcategories mapped
 **Total Categories**: 6
-**Total Subcategories**: 18
+**Total Subcategories**: 19
 
 **Purpose**: The GOVERN function cultivates organizational culture and implements structures for AI risk management. It is cross-cutting and infuses throughout all other functions (MAP, MEASURE, MANAGE).
 
