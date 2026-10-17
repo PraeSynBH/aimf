@@ -57,6 +57,13 @@ is a credibility defect.
 - **AIMF-MAPPING-COMPLETENESS.md**: verified register of every mapping artifact
   (file | standard | status | evidence), with the reproducible command output behind
   each status. This register supersedes the completeness claims elsewhere in the doc set.
+- **Completeness register re-verified against v1.0.1**: after v1.0.1 completed the four
+  dedicated mapping documents, the register, the README mapping table, the QA report and
+  the QA checklist were re-checked and updated so that every status matches the per-file
+  `**Status**` header. The register now records 72/72 NIST AI RMF coverage in three
+  agreeing sources (catalog, four function maturity mappings, dedicated NIST mapping),
+  19 ISO 42001 clauses, and ISO 27001 as the single partial item (54/72 referenced,
+  18 no-analogue, 0 pre-2022 IDs).
 
 ---
 
@@ -117,8 +124,9 @@ the mappings machine-generated so the claim cannot drift from the data again.
 - This release supersedes the four mapping-document `**Status**` values recorded in the
   [Unreleased] standards-completeness correction above; those files are now complete and
   the header statuses say so.
-- `AIMF-MAPPING-COMPLETENESS.md` describes the pre-1.0.1 state of those four files and
-  is superseded by them.
+- `AIMF-MAPPING-COMPLETENESS.md` was first issued against the v1.0 baseline (`78d9089`)
+  and is re-verified here against the v1.0.1 tree (`e46481d`); it is the register of
+  record and its statuses match the per-file `**Status**` headers.
 
 ---
 

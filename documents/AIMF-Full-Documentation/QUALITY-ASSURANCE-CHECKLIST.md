@@ -166,11 +166,11 @@ Licensed under CC BY-NC-ND 4.0
 - [ ] All controls assigned to correct domain hierarchy
 
 ### Standards Mappings
-- [ ] ISO 42001: clause references populated for all controls in the catalog CSV
-- [ ] NIST AI RMF: all 72 subcategories covered (verified against NIST AI 100-1)
-- [ ] ISO 27001: references present where applicable (currently 34/72 controls, numbering vintage to be reconciled)
-- [ ] Executive Orders: 14110 mapped; 14179 acknowledged as research-required
-- [ ] Dedicated narrative mapping docs marked to match their real content (see AIMF-MAPPING-COMPLETENESS.md)
+- [ ] ISO 42001: clause references populated for all controls in the catalog CSV (19 distinct clauses)
+- [ ] NIST AI RMF: all 72 subcategories covered (verified against NIST AI 100-1, GOVERN 19 / MAP 18 / MEASURE 22 / MANAGE 13)
+- [ ] ISO 27001: 54/72 controls carry an ISO/IEC 27001:2022 Annex A reference; 18 reviewed as no-analogue; 0 retired 2013-edition IDs remain
+- [ ] Executive Orders: 14110 mapped (rescinded 2025-01-20, retained for traceability); 14179 mapped, provisions and follow-on actions
+- [ ] Dedicated narrative mapping docs carry real mappings and their `**Status**` matches content (see AIMF-MAPPING-COMPLETENESS.md)
 
 ---
 
@@ -255,8 +255,8 @@ Licensed under CC BY-NC-ND 4.0
 ## 8. Regulatory and Standards Accuracy
 
 ### ISO 42001
-- [ ] Clause references accurate (catalog CSV: `ISO42001_Clauses` populated for 72/72 controls)
-- [ ] `mappings/AIMF-ISO42001-MAPPING.md` held to `Research Required` until a clause-by-clause mapping exists
+- [ ] Clause references accurate (catalog CSV: `ISO42001_Clauses` populated for 72/72 controls, 19 distinct clauses)
+- [ ] `mappings/AIMF-ISO42001-MAPPING.md` maps all 19 catalog-attributed clause references
 - [ ] AIMF claims about ISO 42001 alignment do not exceed file content
 
 ### NIST AI RMF
@@ -267,7 +267,7 @@ Licensed under CC BY-NC-ND 4.0
 
 ### Executive Orders
 - [ ] EO 14110 date correct (October 30, 2023) and rescission recorded (January 20, 2025)
-- [ ] `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` held to `Research Required` until a detailed mapping exists
+- [ ] `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` maps every provision and its follow-on federal actions to AIMF controls
 - [ ] Requirements accurately represented
 
 ### Sector Regulations

@@ -128,12 +128,12 @@ status of every mapping artifact, with the command output behind each status.
 
 | Document | Standard | Status |
 |----------|----------|--------|
-| **[AIMF-DIMENSION-MAPPING.md](mappings/AIMF-DIMENSION-MAPPING.md)** | Internal | Working draft — cross-reference of the 4 dimensions |
-| **[AIMF-ISO42001-MAPPING.md](mappings/AIMF-ISO42001-MAPPING.md)** | ISO 42001 | Research required — narrative skeleton. ISO 42001 clauses are populated for all 72 controls in the catalog CSV |
-| **[AIMF-NIST-RMF-MAPPING.md](mappings/AIMF-NIST-RMF-MAPPING.md)** | NIST AI RMF | Research required — narrative skeleton. NIST AI RMF subcategory coverage is complete (72/72) but lives in the catalog CSV and the four function maturity mappings, not here |
-| **[AIMF-ISO27001-MAPPING.md](mappings/AIMF-ISO27001-MAPPING.md)** | ISO 27001 | Research required — narrative skeleton. 34/72 controls carry ISO 27001 references in the catalog CSV |
+| **[AIMF-DIMENSION-MAPPING.md](mappings/AIMF-DIMENSION-MAPPING.md)** | Internal | Complete — dimension attribution regenerated from the catalog for all 72 controls |
+| **[AIMF-ISO42001-MAPPING.md](mappings/AIMF-ISO42001-MAPPING.md)** | ISO 42001 | Complete — all 19 catalog-attributed clause references mapped, each to an AIMF control |
+| **[AIMF-NIST-RMF-MAPPING.md](mappings/AIMF-NIST-RMF-MAPPING.md)** | NIST AI RMF | Complete — all 72 subcategories (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13) mapped to AIMF controls |
+| **[AIMF-ISO27001-MAPPING.md](mappings/AIMF-ISO27001-MAPPING.md)** | ISO 27001 | Partial — mapped at public Annex A control-theme level; 54/72 controls carry an ISO/IEC 27001:2022 reference and 18 are recorded as no-analogue |
 | **[AIMF-EXECUTIVE-ORDER-14110-MAPPING.md](mappings/AIMF-EXECUTIVE-ORDER-14110-MAPPING.md)** | EO 14110 | Complete detailed mapping (order rescinded 2025-01-20; retained for traceability) |
-| **[AIMF-EXECUTIVE-ORDER-14179-MAPPING.md](mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md)** | EO 14179 | Research required — narrative skeleton |
+| **[AIMF-EXECUTIVE-ORDER-14179-MAPPING.md](mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md)** | EO 14179 | Complete — every provision and its three follow-on federal actions mapped to AIMF controls |
 
 ### Framework Profiles
 
@@ -225,7 +225,7 @@ AIMF is designed to complement and integrate with established standards:
   - Compatible with NIST terminology and approach
 
 ### Additional Integration
-- **ISO/IEC 27001:2022** - Information Security Management (partial: 34/72 controls carry an ISO 27001 reference)
+- **ISO/IEC 27001:2022** - Information Security Management (partial: mapped at public Annex A control-theme level; 54/72 controls carry a 2022 reference, 18 recorded as no-analogue)
 - **Executive Order 14110** - Safe, Secure, and Trustworthy AI (rescinded 2025-01-20)
 - **Executive Order 14179** - Government AI Innovation
 - **Various sector-specific regulations** (HIPAA, GLBA, FCRA, etc.)

@@ -4,45 +4,48 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0
-**Status**: ⚠️ CORRECTED - PASSED WITH EXCEPTIONS
+**Framework Version**: 1.0.1
+**Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
 
 > **Correction notice (2026-10-17).** The original v1.0 issue of this report asserted
-> that the standards mappings were complete. That assertion was not substantiated:
-> the report did not open the mapping files it named. On re-check,
-> `mappings/AIMF-NIST-RMF-MAPPING.md` is a research skeleton, the headline figure
-> "59" NIST subcategories was wrong (NIST AI RMF 1.0 has 72), and three further
-> mapping documents are skeletons. The affected claims below have been corrected to
-> what the files actually contain. Every current claim is reproducible with a command;
-> the register of mapping artifacts and evidence is
+> that the standards mappings were complete. That assertion was not substantiated: the
+> report did not open the mapping files it named. On re-check at the v1.0 baseline,
+> `mappings/AIMF-NIST-RMF-MAPPING.md` was a research skeleton, the headline figure "59"
+> NIST subcategories was wrong (NIST AI RMF 1.0 has 72), and three further mapping
+> documents were skeletons. Those claims were corrected to what the files actually
+> contained. Release v1.0.1 then **completed** those four documents and normalised the
+> control catalog; this report has been re-verified against that release and now reflects
+> the completed files. Every claim below is reproducible with a command; the register of
+> mapping artifacts and evidence is
 > [AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md).
 
 ---
 
 ## Executive Summary
 
-The AI Management Framework (AIMF) by PraeSyn v1.0 has undergone quality assurance
+The AI Management Framework (AIMF) by PraeSyn v1.0.1 has undergone quality assurance
 testing against the standards defined in QUALITY-ASSURANCE-CHECKLIST.md. The document
-set is publication-ready **except** where noted below: the dedicated narrative
-standard-mapping documents are incomplete and are now labelled as such.
+set is publication-ready; every dedicated narrative standard-mapping document now carries
+the mapping its filename claims, and the single partial item (ISO 27001 depth) is
+disclosed rather than asserted.
 
 ### Overall Assessment
 
 | Category | Status | Notes |
 |----------|--------|-------|
-| **Completeness** | ⚠️ PARTIAL | Narrative standard-mapping documents are skeletons (see completeness register) |
+| **Completeness** | ✅ PASS | All mapping documents carry real content (see completeness register) |
 | **Copyright & Licensing** | ✅ PASS | All files have proper headers |
-| **Consistency** | ⚠️ PARTIAL | Framework naming and versions consistent; control count is inconsistent across documents (72 vs 73) |
+| **Consistency** | ⚠️ PARTIAL | Framework naming and versions consistent; residual control count inconsistency (72 vs 73) in a few non-mapping documents |
 | **Technical Accuracy** | ✅ PASS | Control catalog verified; per-control NIST subcategory coverage is complete (72/72) |
-| **Cross-References** | ⚠️ PARTIAL | Standards-mapping rows in README pointed at skeleton files; corrected |
-| **Standards Compliance** | ⚠️ PARTIAL | NIST AI RMF coverage complete and verified (72/72); dedicated ISO 42001 / ISO 27001 / EO 14179 mappings incomplete |
+| **Cross-References** | ✅ PASS | Standards-mapping rows in README corrected and consistent with per-file `**Status**` headers |
+| **Standards Compliance** | ⚠️ PARTIAL | NIST AI RMF coverage complete and verified (72/72); dedicated ISO 42001 / EO 14179 mappings complete; ISO 27001 partial at public Annex A control-theme level |
 | **Documentation Quality** | ✅ PASS | Professional, clear, comprehensive |
 
-**Overall Result**: ⚠️ PUBLICATION-READY WITH DISCLOSED EXCEPTIONS
+**Overall Result**: ✅ PUBLICATION-READY WITH DISCLOSED EXCEPTIONS
 
 ---
 
@@ -211,17 +214,26 @@ Licensed under CC BY-NC-ND 4.0
 ### Standards Mappings
 - ✅ Control catalog CSV `NIST_RMF_Subcategory` populated for 72/72 controls; the 72
   distinct subcategory IDs equal the NIST AI RMF 1.0 set exactly
-  (`grep -oE '(GOVERN|MAP|MEASURE|MANAGE) [0-9]+\.[0-9]+' core/AIMF-CONTROL-CATALOG.csv | sort -u | wc -l` → `72`)
-- ✅ Control catalog CSV `ISO42001_Clauses` populated for 72/72 controls
-- ⚠️ `mappings/AIMF-NIST-RMF-MAPPING.md` is a research skeleton (4 subcategory IDs, 0
-  AIMF control IDs) and does **not** contain the mapping the README attributed to it
-- ⚠️ `mappings/AIMF-ISO42001-MAPPING.md`, `mappings/AIMF-ISO27001-MAPPING.md` and
-  `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` are research skeletons
-- ⚠️ ISO 27001 references exist for 34/72 controls only, and mix ISO/IEC 27001:2022
-  theme IDs with retired ISO/IEC 27001:2013 IDs
+  (`grep -oE '(GOVERN|MAP|MEASURE|MANAGE) ?[0-9]+\.[0-9]+' core/AIMF-CONTROL-CATALOG.csv | sort -u | wc -l` → `72`)
+- ✅ Control catalog CSV `ISO42001_Clauses` populated for 72/72 controls (19 distinct clauses)
+- ✅ Control catalog CSV `ISO27001_Controls` populated for 72/72 controls: 54 carry an
+  ISO/IEC 27001:2022 Annex A reference and 18 are recorded as reviewed-with-no-analogue;
+  0 retired 2013-edition IDs remain
+- ✅ `mappings/AIMF-NIST-RMF-MAPPING.md` carries all 72 subcategories (GOVERN 19, MAP 18,
+  MEASURE 22, MANAGE 13), each attributed to an AIMF control (72 control IDs, 0 placeholders)
+- ✅ `mappings/AIMF-ISO42001-MAPPING.md` maps all 19 catalog-attributed clause references
+  (72 control IDs, 0 placeholders)
+- ✅ `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` maps every provision and its three
+  follow-on federal actions (23 control IDs, 0 placeholders)
+- ⚠️ `mappings/AIMF-ISO27001-MAPPING.md` is **partial**: mapped at public Annex A
+  control-theme level only. 18 controls were reviewed and found to have no ISMS analogue.
+  Clause-level depth is not claimed pending a licensed copy of the 2022 edition
+- ✅ `python3 scripts/aimf_mappings.py check` reports the catalog and mapping documents
+  consistent
 
-**Finding**: ⚠️ Technical accuracy verified for the control catalog; narrative
-standard-mapping documents are incomplete and are now labelled accordingly. See
+**Finding**: ✅ Technical accuracy verified. The dedicated narrative mapping documents now
+carry the mappings their filenames claim; the single remaining partial item (ISO 27001
+depth) is disclosed rather than asserted. See
 [AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md).
 
 ---
@@ -264,24 +276,25 @@ standard-mapping documents are incomplete and are now labelled accordingly. See
 ## 6. Standards and Regulatory Accuracy ⚠️ PASS WITH EXCEPTIONS
 
 ### ISO 42001
-- ✅ Clause references present for 72/72 controls in the control catalog CSV
-- ⚠️ `mappings/AIMF-ISO42001-MAPPING.md` is a research skeleton; it does not contain a
-  completed clause-by-clause mapping
-- ⚠️ The claim "All clauses from ISO 42001:2023 covered" is not substantiated and has
-  been withdrawn
+- ✅ Clause references present for 72/72 controls in the control catalog CSV (19 distinct clauses)
+- ✅ `mappings/AIMF-ISO42001-MAPPING.md` maps all 19 catalog-attributed clause
+  references to AIMF controls, at the standard's own clause-heading level (no licensed
+  body text reproduced)
 
 ### NIST AI RMF
 - ✅ All 72 subcategories covered — the catalog `NIST_RMF_Subcategory` values match the
-  NIST AI RMF 1.0 set exactly (0 missing, 0 extra)
+  NIST AI RMF 1.0 set exactly (0 missing, 0 extra), and the dedicated
+  `mappings/AIMF-NIST-RMF-MAPPING.md` now carries the same 72 subcategories
 - ✅ Function names match NIST exactly (GOVERN, MAP, MEASURE, MANAGE)
-- ⚠️ The figure "59" used throughout v1.0 was wrong; NIST AI RMF 1.0 (NIST AI 100-1)
-  defines 72 subcategories (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13)
+- ✅ The figure "59" used throughout v1.0 was wrong; NIST AI RMF 1.0 (NIST AI 100-1)
+  defines 72 subcategories (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13). Corrected throughout
 
 ### Executive Orders
 - ✅ EO 14110 date correct (October 30, 2023)
 - ✅ EO 14110 rescission (January 20, 2025, by EO 14179) recorded
-- ⚠️ `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` is a research skeleton; the
-  previously asserted EO 14179 completeness claim has been withdrawn
+- ✅ `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` maps every provision of the order
+  and its three follow-on federal actions to the AIMF controls that support readiness, and
+  states plainly that the order creates no private-sector obligation
 
 ### Sector Regulations
 - ✅ HIPAA requirements accurate (Healthcare Profile)
@@ -289,8 +302,9 @@ standard-mapping documents are incomplete and are now labelled accordingly. See
 - ✅ GLBA/FCRA/SR 11-7 accurate (Financial Services Profile)
 - ✅ Government regulations accurate (Government Profile)
 
-**Finding**: ⚠️ Mappings verified where the content exists; the incomplete narrative
-mapping documents are now marked incomplete. See
+**Finding**: ✅ Mappings verified against file content. The four dedicated narrative
+mapping documents carry the mappings their filenames claim; the one remaining partial
+item (ISO 27001 depth) is disclosed rather than asserted. See
 [AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md).
 
 ---
@@ -349,7 +363,7 @@ mapping documents are now marked incomplete. See
 ### Critical Issues (All Resolved)
 1. ❌ → ✅ **README.md control counts incorrect** (Line 87-92)
    - Issue: Showed GOVERN (18), MAP (14), MEASURE (17), MANAGE (10)
-   - Resolution: Corrected to GOVERN (19), MAP (19), MEASURE (22), MANAGE (13)
+   - Resolution: Corrected to GOVERN (19), MAP (18), MEASURE (22), MANAGE (13)
    - Status: RESOLVED during QA Phase 6
 
 2. ❌ → ✅ **CHANGELOG.md missing copyright header**
@@ -403,11 +417,11 @@ mapping documents are now marked incomplete. See
 - ✅ All documentation complete (49/49 files)
 - ✅ All files have copyright headers
 - ✅ Framework naming consistent throughout
-- ⚠️ Control count stated inconsistently across documents (catalog has 72: GOVERN 19, MAP 18, MEASURE 22, MANAGE 13; several documents say 73)
+- ⚠️ Control count stated inconsistently across a few profile/change-control documents (catalog has 72: GOVERN 19, MAP 18, MEASURE 22, MANAGE 13; some documents still say 73)
 - ✅ All 6 profiles documented and consistent
-- ⚠️ Standards mappings: NIST AI RMF coverage complete (72/72, verified); dedicated ISO 42001 / ISO 27001 / EO 14179 narrative mappings incomplete and now marked as such
-- ✅ Cross-references validated (standards-mapping rows corrected)
-- ✅ Version numbering consistent (1.0)
+- ✅ Standards mappings: NIST AI RMF coverage complete (72/72, verified in three agreeing sources); the four dedicated narrative mappings are complete; ISO 27001 is mapped at public Annex A control-theme level and labelled partial
+- ✅ Cross-references validated (standards-mapping rows corrected and consistent with per-file headers)
+- ✅ Version numbering consistent (1.0.1)
 - ✅ Publication dates consistent (January 29, 2026)
 - ✅ LICENSE.md with CC BY-NC-ND 4.0 license
 - ✅ README.md comprehensive and navigable
@@ -415,9 +429,9 @@ mapping documents are now marked incomplete. See
 - ⚠️ Known non-blocking defects disclosed (see AIMF-MAPPING-COMPLETENESS.md)
 
 ### Quality Gates
-- ⚠️ **Completeness**: all planned files present; narrative standard-mapping documents remain skeletons
-- ✅ **Accuracy**: technical content verified where it exists; overstated completeness claims corrected
-- ⚠️ **Consistency**: naming and versions consistent; control count inconsistent (72 vs 73)
+- ✅ **Completeness**: all planned files present; all mapping documents carry real content
+- ✅ **Accuracy**: technical content verified; overstated completeness claims corrected and re-verified
+- ⚠️ **Consistency**: naming and versions consistent; residual control count inconsistency (72 vs 73) in a few non-mapping documents
 - ✅ **Professional Quality**: publication-ready documentation
 - ✅ **Legal Compliance**: licensing and attribution complete
 
@@ -425,36 +439,39 @@ mapping documents are now marked incomplete. See
 
 ## 12. Publication Readiness Statement
 
-**The AI Management Framework (AIMF) by PraeSyn Version 1.0 is APPROVED for publication
+**The AI Management Framework (AIMF) by PraeSyn Version 1.0.1 is APPROVED for publication
 with the disclosed exceptions recorded below.**
 
 Quality assurance criteria have been met with the following disclosed exceptions:
 
-- **Complete**: All 49 planned files present
-- **Accurate**: Technical content verified where it exists; overstated standards-mapping
-  completeness claims have been corrected
-- **Consistent**: Naming, numbering, and cross-references validated, with a known
-  control-count inconsistency (72 vs 73) tracked as a follow-up
+- **Complete**: All 49 planned files present; every mapping document carries real content
+- **Accurate**: Technical content verified against file content; overstated
+  standards-mapping completeness claims have been corrected and re-verified
+- **Consistent**: Naming, numbering, and cross-references validated, with a residual
+  control-count inconsistency (72 vs 73) in a few non-mapping documents tracked as a follow-up
 - **Professional**: Documentation meets enterprise publication standards
 - **Legally Compliant**: CC BY-NC-ND 4.0 licensing properly applied
 
 ### Release Recommendation
-⚠️ **READY FOR v1.0 PUBLICATION WITH DISCLOSED EXCEPTIONS**
+✅ **READY FOR PUBLICATION WITH DISCLOSED EXCEPTIONS**
 
-The dedicated narrative standard-mapping documents
+The four dedicated narrative standard-mapping documents
 (`AIMF-NIST-RMF-MAPPING.md`, `AIMF-ISO42001-MAPPING.md`, `AIMF-ISO27001-MAPPING.md`,
-`AIMF-EXECUTIVE-ORDER-14179-MAPPING.md`) remain research skeletons and are described as
-such wherever the doc set refers to them. NIST AI RMF subcategory coverage is complete
-and verified (72/72). See [AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md).
+`AIMF-EXECUTIVE-ORDER-14179-MAPPING.md`) were completed in v1.0.1 and now carry the
+mappings their filenames claim. NIST AI RMF subcategory coverage is complete and
+verified (72/72) in three agreeing sources. ISO 27001 is mapped at public Annex A
+control-theme level and is labelled partial. See
+[AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md).
 
 ---
 
 ## 13. Sign-Off
 
-**Quality Assurance Review**: ⚠️ PASSED WITH EXCEPTIONS
-- Framework accuracy: Verified where content exists
-- Standards mappings: NIST AI RMF complete (72/72, verified); narrative ISO 42001 /
-  ISO 27001 / EO 14179 mappings incomplete and marked as such
+**Quality Assurance Review**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
+- Framework accuracy: Verified against file content
+- Standards mappings: NIST AI RMF complete (72/72, verified in three agreeing sources);
+  dedicated narrative ISO 42001 / ISO 27001 / EO 14179 mappings complete except ISO 27001
+  depth, which is mapped at public Annex A control-theme level and labelled partial
 - Control definitions: Accurate
 
 **Documentation Review**: ✅ PASSED

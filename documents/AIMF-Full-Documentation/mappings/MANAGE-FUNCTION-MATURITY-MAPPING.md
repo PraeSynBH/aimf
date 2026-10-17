@@ -836,6 +836,6 @@ All four NIST AI RMF functions are mapped:
 **End of MANAGE Function Maturity Mapping**
 
 **Next Steps**:
-1. Research Executive Order 14179 and map requirements
+1. ~~Research Executive Order 14179 and map requirements~~ — done in v1.0.1; see `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md`
 2. Integrate all function mappings into FRAMEWORK_MASTER.md
 3. Validate framework completeness and consistency
