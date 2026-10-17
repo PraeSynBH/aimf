@@ -229,7 +229,11 @@ Licensed under CC BY-NC-ND 4.0
   control-theme level only. 18 controls were reviewed and found to have no ISMS analogue.
   Clause-level depth is not claimed pending a licensed copy of the 2022 edition
 - ✅ `python3 scripts/aimf_mappings.py check` reports the catalog and mapping documents
-  consistent
+  consistent. The generator **ships in this bundle** at `scripts/aimf_mappings.py`, so
+  the check is reproducible from an unpacked bundle root rather than only in the
+  repository that produced the bundle. `check` validates the generated tables (no
+  drift), unknown control references, pre-2022 ISO 27001 references, and
+  placeholder/unchecked tasks across all ten mapping documents.
 
 **Finding**: ✅ Technical accuracy verified. The dedicated narrative mapping documents now
 carry the mappings their filenames claim; the single remaining partial item (ISO 27001
@@ -408,6 +412,15 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 | Visual Asset Specs | 6 files | ✅ Complete |
 | Root Files | 3 files | ✅ Complete |
 | **Total** | **49 files** | ✅ **Complete** |
+
+**Distribution bundle**: the shipped bundles
+(`documents/AIMF-Full-Documentation-v1.0.1.zip` and the rolling
+`documents/AIMF-Full-Documentation.zip`) carry 81 regular files plus 17 directory
+entries. Note that `unzip -l`'s summary line counts directory entries as well, so its
+figure overstates the file count by one per directory; quote the file count from
+`unzip -Z1 … | grep -vc '/$'`, not from `unzip -l`. The generator
+`scripts/aimf_mappings.py` is one of those 81 files, so a recipient can run the drift
+check this report cites.
 
 ---
 

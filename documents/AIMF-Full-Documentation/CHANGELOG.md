@@ -65,6 +65,21 @@ is a credibility defect.
   19 ISO 42001 clauses, and ISO 27001 as the single partial item (54/72 referenced,
   18 no-analogue, 0 pre-2022 IDs).
 
+#### Distribution
+
+- **The mapping generator now ships in the bundle**: `scripts/aimf_mappings.py` is
+  packaged as `AIMF-Full-Documentation/scripts/aimf_mappings.py`, so the packaged
+  documents that cite it as the source and validator of their generated tables describe
+  a tool the recipient actually has. From an unpacked bundle root,
+  `python3 scripts/aimf_mappings.py check` reproduces the drift check the mapping
+  headers, this changelog and the QA report claim; `generate` and `report` also work
+  there. The packaged directory is auto-detected from the script's own location, so the
+  same file runs from the repository as well; the repository-root `scripts/aimf_mappings.py`
+  remains as a delegating shim.
+- **Distribution bundles re-cut**: both `documents/AIMF-Full-Documentation-v1.0.1.zip`
+  and the rolling `documents/AIMF-Full-Documentation.zip` are rebuilt from the packaged
+  directory of this commit and are byte-identical to each other.
+
 ---
 
 ## [1.0.1] - 2026-10-17 (Standards Mapping Completion)
@@ -101,7 +116,10 @@ the mappings machine-generated so the claim cannot drift from the data again.
   generated tables from `core/AIMF-CONTROL-CATALOG.csv`, owns the ISO/IEC 27001:2022
   Annex A attribution, and fails (`check`) on any drift between catalog, script and
   documents, on an unknown control reference, on a pre-2022 ISO 27001 reference, or on
-  a placeholder/unchecked task in any mapping document.
+  a placeholder/unchecked task in any mapping document. **This script ships inside the
+  distribution bundle** at `scripts/aimf_mappings.py`, so a bundle recipient can
+  reproduce the drift guarantee the mapping documents cite: unpack the bundle and run
+  `python3 scripts/aimf_mappings.py check` from its root.
 
 #### Fixed
 

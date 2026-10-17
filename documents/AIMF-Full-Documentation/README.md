@@ -126,6 +126,11 @@ Organized across 4 NIST AI RMF functions:
 See **[AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md)** for the verified
 status of every mapping artifact, with the command output behind each status.
 
+Every generated table in these documents is rendered from
+`core/AIMF-CONTROL-CATALOG.csv`. The generator that does the rendering and the drift
+check ships with this bundle: from an unpacked bundle root run
+`python3 scripts/aimf_mappings.py check` (`generate` re-renders, `report` prints counts).
+
 | Document | Standard | Status |
 |----------|----------|--------|
 | **[AIMF-DIMENSION-MAPPING.md](mappings/AIMF-DIMENSION-MAPPING.md)** | Internal | Complete — dimension attribution regenerated from the catalog for all 72 controls |
