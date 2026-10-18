@@ -63,7 +63,7 @@ Baseline assignment is determined by assessing AI systems across six risk dimens
 
 ### Assessment Questions
 
-**See**: [Baseline Selection Questionnaire](../../change-control/20260129143000-BASELINE-SELECTION-QUESTIONNAIRE.md) for detailed scoring criteria.
+**See**: [Baseline Selection Questionnaire](../change-control/20260129143000-BASELINE-SELECTION-QUESTIONNAIRE.md) for detailed scoring criteria.
 
 ---
 

@@ -1,5 +1,7 @@
 # AI Management Framework (AIMF) by PraeSyn
+
 ## Maturity Level 4→5 Implementation Guide
+
 ### From Data-Driven Management to Continuous Innovation
 
 **© 2026 PraeSyn, LLC. All rights reserved.**
@@ -39,7 +41,9 @@ Licensed under CC BY-NC-ND 4.0
 
 ## 1. Current State Context: Understanding Maturity Level 4
 
-### Where You Are: The Top 5%
+### Where You Are:
+
+The Top 5%
 
 **You're at Maturity Level 4 if**:
 - Comprehensive AI metrics and real-time dashboards across all stakeholders
@@ -542,7 +546,94 @@ Reality: Maturity Level 5 is sustainable through **institutionalized innovation*
 
 ### Governance Playbook: Adaptive Risk Management
 
-[Continued with Governance and Change Agent playbooks following similar structure]
+#### Priority Actions (Months 1-12)
+
+**Action 1: Build Continuous Risk Sensing**
+
+**What**: Replace periodic risk assessment with a standing sensing capability that detects change in the risk landscape as it happens.
+
+**Why**: At Maturity Level 4 the risk register is refreshed on a cycle; at Maturity Level 5 the cycle is the constraint. Regulation changes, provider models change, and new use cases appear between cycles, and a register that is four months old is a historical document.
+
+**How**:
+1. Define the sensing sources: regulatory and standards feeds, provider change notices, incident trends across the portfolio, external research on failure modes, customer and frontline feedback
+2. Assign an owner to each source with a review cadence and a route into the risk register
+3. Require that a change in any source produces either a register update or a recorded decision that no action is needed
+4. Track sensing latency — time from external change to register entry — as a stated measure
+5. Review the source list annually; sources that never produce a signal are retired
+
+**Timeline**: Month 1-6 (design and instrumentation), then continuous
+**Investment**: 60-100 hours setup, 0.25-0.5 FTE ongoing
+
+---
+
+**Action 2: Institutionalize Scenario Planning and Stress Testing**
+
+**What**: Test the governance system against scenarios it has not experienced, including scenarios where several things fail at once.
+
+**Why**: Maturity Level 4 prevents the incidents it has seen. Maturity Level 5 prepares for the ones it has not. The characteristic Maturity Level 5 failure is a correlated failure — a provider outage during a drift event during an audit — that no single-control test would have surfaced.
+
+**How**:
+1. Build a scenario library from incident history, external incidents in the sector, and deliberate imagination (model withdrawal, adversarial input wave, regulatory reversal, key-person loss)
+2. Run at least two exercises a year, one of them a tabletop with executives present and one a live technical game day
+3. Include the governance response, not only the technical response: who decides to suspend a system, who notifies whom, under what authority
+4. Record findings as defects with owners, and re-test the same scenario in the next cycle to prove the fix
+5. Publish a scenario coverage map so gaps are visible rather than assumed
+
+**Timeline**: Month 3-12, then two exercises per year
+**Investment**: 100-160 hours per cycle including preparation and follow-up
+
+---
+
+**Action 3: Govern Emerging AI Classes Before They Are Operational**
+
+**What**: Extend the control framework to new AI classes — agentic systems, autonomous tool use, model-generated code, synthetic media — before they enter production rather than after.
+
+**Why**: Each new AI class arrives through the side door, piloted by an enthusiastic team. The Maturity Level 5 organization's advantage is that it has already decided what the controls are, so the pilot is governed on day one instead of retrofitted after an incident.
+
+**How**:
+1. Maintain a standing "emerging classes" review that meets quarterly and names the classes in pilot across the organization
+2. For each class, define the additional risks (autonomy, action scope, reversibility, provenance) and the extra controls before the pilot is approved
+3. Add the class to the risk tiering method so it can be assessed rather than exempted
+4. Require a bounded pilot: named scope, kill switch, human authority, and a defined promotion test
+5. Record what was learned and fold it into the framework version — this is how the framework keeps pace
+
+**Timeline**: Month 6-18, then quarterly
+**Investment**: 40-80 hours per class plus ongoing review
+
+---
+
+**Action 4: Make the Control Set Adaptive**
+
+**What**: Give the framework a defined mechanism for shedding controls that no longer earn their cost and adding controls that current evidence demands.
+
+**Why**: Control estates ratchet upward. Without a removal mechanism, a Maturity Level 5 organization ends up with Maturity Level 3 agility and a Maturity Level 1 relationship with its own governance function.
+
+**How**:
+1. Require every control to state the risk it addresses and the evidence that it works
+2. Review the control set annually against measured effectiveness: failure rate, incident correlation, cost per control
+3. Retire controls that show no risk reduction, with the retired risk documented and accepted
+4. Add controls only with a stated failure mode they prevent and a test that would prove it
+5. Record the rationale for both directions — the record is what makes the next review possible
+
+**Timeline**: Month 9-18 for the first cycle, then annually
+**Investment**: 60-100 hours per cycle
+
+---
+
+#### Ongoing Responsibilities (Months 12-36)
+
+**Monthly**:
+- Review sensing signals and confirm register updates or recorded no-action decisions
+- Review degradation and containment events, including near misses
+
+**Quarterly**:
+- Review emerging AI classes in pilot and their control coverage
+- Review scenario coverage and exercise findings
+
+**Annually**:
+- Full control set review including retirements
+- Scenario library refresh and exercise plan
+- Framework version increment with a changelog entry stating what changed and why
 
 ---
 
@@ -598,11 +689,67 @@ Reality: Maturity Level 5 is sustainable through **institutionalized innovation*
 
 ---
 
-[Continue with remaining playbook sections]
+**Action 3: Stand Up an Internal Innovation Lab**
+
+**What**: Create a small, protected team whose job is to make the organization's next capability rather than its current one.
+
+**Why**: Exploratory work loses to operational work in every prioritisation meeting, because it has no current customer and no current metric. The lab exists to give it a constituency and a budget that operational demand cannot reach.
+
+**How**:
+1. Define the lab's remit: a horizon (12-36 months), a domain, and an explicit exclusion of production support
+2. Staff it deliberately — a mix of people who know the business and people who will break it, and rotate members every 12-18 months so it seeds the rest of the organization
+3. Give it a protected budget with a stated failure tolerance: a defined share of experiments that may return nothing
+4. Require it to publish findings internally, including negative findings, within 30 days of concluding each experiment
+5. Define the handover path: what happens when something in the lab works — who takes it to production and under what governance
+
+**Timeline**: Month 6-12 (design and staff), then continuous
+**Investment**: 2-4 FTE plus a protected experiment budget
 
 ---
 
-## 7. Cross-Functional Elements
+**Action 4: Participate in the Standards and Ecosystem**
+
+**What**: Move from following standards to contributing to them, and from consuming open source to contributing upstream.
+
+**Why**: At Maturity Level 5 the organization's governance is credibility, not just compliance. Contributing to the standards its customers will be audited against is how that credibility is established, and it is also the cheapest form of early warning about where regulation is going.
+
+**How**:
+1. Identify the two or three standards bodies, consortia or working groups where your sector's AI rules are actually shaped
+2. Commit named people with protected time — participation without allocated time is nominal membership
+3. Bring back written intelligence: what is being drafted, what it means for the framework, and what to change
+4. Contribute substantively (draft comments, worked examples, test methods) rather than attending
+5. Contribute upstream to the open-source components the organization depends on, and track the contribution as part of the dependency strategy
+
+**Timeline**: Month 6-18 to establish, then continuous
+**Investment**: 0.25-0.5 FTE plus memberships and travel
+
+---
+
+#### Ongoing Responsibilities (Months 12-36)
+
+**Quarterly**:
+- Portfolio review against the 70/20/10 allocation, and rebalance
+- Experiment throughput, cycle time and scale-or-kill decisions
+- Innovation metrics reported alongside operational metrics, not instead of them
+
+**Annually**:
+- Lab remit and staffing review
+- Standards participation review: what changed in the drafts, and what we contributed
+- Talent review for the people who did the exploratory work — retention risk here is the single largest threat to a Maturity Level 5 capability
+
+---
+
+**Change Agent Playbook Success Metrics**:
+By Month 36, you should be able to answer "yes" to:
+- An experimentation framework exists and is used beyond the lab, with a measured cycle time
+- The 70/20/10 allocation is met in practice and reviewed quarterly
+- The innovation lab has shipped at least one capability into production under the standard governance path
+- The organization has contributed substantively to at least one standard or upstream project it depends on
+- People who worked on exploratory projects are still with the organization
+
+---
+
+## 6. Cross-Functional Elements
 
 ### Innovation Metrics
 
@@ -639,9 +786,60 @@ Reality: Maturity Level 5 is sustainable through **institutionalized innovation*
 
 ---
 
-## 8. Practical Tools and Resources
+## 7. Practical Tools and Resources
 
-[Innovation toolkit, experimentation templates, industry engagement guides]
+Everything below is a working artefact, not a reading list. Each entry states what it contains and when it is used, so the toolkit can be adopted selectively.
+
+### Experimentation Templates
+
+| Template | When used | Minimum content |
+|---|---|---|
+| **Experiment proposal** | Before any exploratory work is funded | Hypothesis; the decision this experiment informs; success measure and threshold; population and sample; cost ceiling; stop conditions; owner; expected duration |
+| **Experiment review record** | At approval (lightweight, low-risk path) | Safety review outcome; resource decision; any bounded constraints; approver |
+| **Experiment results note** | Within 30 days of conclusion | Result against the pre-registered measure; what was learned beyond the measure; ship / iterate / kill recommendation; what would change the recommendation |
+| **Scale-or-kill decision record** | At the end of each experiment | Decision; evidence cited; governance path chosen if scaling; owner for the next step |
+| **Negative-results register** | Continuously | What was tried, what it cost, why it did not work, and who should not repeat it |
+
+### Portfolio Management Templates
+
+- **Portfolio inventory** — every AI initiative classified as core (optimisation), adjacent (extension) or transformational (exploration), with its allocation share and owner.
+- **Quarterly rebalancing record** — allocation target vs actual by category, the reasoning for any change, and the expected effect.
+- **Protected-resources statement** — the explicit commitment that exploratory budget and headcount cannot be reallocated to operational demand mid-cycle, and who may waive it.
+
+### Industry Engagement Artefacts
+
+| Artefact | Cadence | Content |
+|---|---|---|
+| **Standards watch brief** | Quarterly | Drafts in progress that affect the framework, with a stated position and required change |
+| **Contribution log** | Per contribution | Working group, contribution type (comment, worked example, test method, upstream commit), status, named contributor |
+| **Ecosystem dependency register** | Quarterly | Open-source and provider dependencies, contribution status, and concentration risk |
+| **Public-position register** | Per publication | What the organization has said publicly about AI practice, the internal control that substantiates it, and the review date |
+
+### Horizon-Scanning Routine
+
+A quarterly session with a standing agenda, run by the Change Agent with the lab and governance present:
+
+1. **What changed** — provider capability, cost curves, regulation, competitor moves, published failure modes
+2. **What it invalidates** — which current assumptions in the strategy, the risk register or the control set no longer hold
+3. **What it enables** — which previously rejected ideas become viable, and the cheapest test of each
+4. **What we will do** — at most three actions, each with an owner and a date, recorded
+
+The routine earns its place only if item 4 produces actions. A horizon-scanning session with no output is a reading group, and should be stopped when it stops producing.
+
+### Traps at Maturity Level 5
+
+- **Innovation theatre** — a lab with a brand, a space and no shipped capability. Measure it by what reached production, not by what was demoed.
+- **Metric fixation at the top** — Maturity Level 5 organizations fail by optimising the measures they are proud of. Rotate measures and keep a deliberate space for work that no current metric captures.
+- **Governance ossification** — the framework that made the organization excellent becomes the reason it cannot change. The control-set review in the Governance playbook is the counterweight, and it has to actually retire controls.
+- **Ecosystem free-riding** — consuming standards and open source without contributing, then being surprised when the direction changes without you.
+- **Talent loss after the experiment** — the people who did the exploratory work leave because there is no path after it. Handover and role design are part of the work, not an afterthought.
+
+### Shipped Reference Documents
+
+- **Assessment method and evidence tests** — `../AIMF-ASSESSMENT-GUIDE.md` and the per-control anchors in `../AIMF-ASSESSMENT-QUESTION-BANK.csv`; at this level they are the arbiter of whether a claimed Maturity Level 5 capability is evidenced or merely asserted.
+- **Maturity level definitions** — `../AIMF-MATURITY-LEVELS.md`, which states the evidence required at each level and the common assessment pitfalls.
+- **Control catalogue** — `../../core/AIMF-CONTROL-CATALOG.csv`; the control-set review in the Governance playbook operates on this catalogue.
+- **Sustaining practice** — the Maturity Level 5 Optimization Guide (`MATURITY-LEVEL-5-OPTIMIZATION-GUIDE.md`) covers the operating model, the continuous improvement cycle and the traps in more depth than this transition guide.
 
 ---
 
@@ -662,5 +860,5 @@ By achieving Maturity Level 5, you:
 
 ---
 
-**Return to**: [Implementation Master](../IMPLEMENTATION-MASTER.md) | [Maturity Level 3→4 Guide](maturity level-3-TO-4-GUIDE.md)
-**Next**: [Maturity Level 5 Optimization Guide](maturity level-5-OPTIMIZATION-GUIDE.md) (sustaining excellence)
+**Return to**: [Assessment Method](../AIMF-ASSESSMENT-GUIDE.md) | [Maturity Levels](../AIMF-MATURITY-LEVELS.md) | [Maturity Level 3→4 Guide](MATURITY-LEVEL-3-TO-4-GUIDE.md)
+**Next**: [Maturity Level 5 Optimization Guide](MATURITY-LEVEL-5-OPTIMIZATION-GUIDE.md) (sustaining excellence)

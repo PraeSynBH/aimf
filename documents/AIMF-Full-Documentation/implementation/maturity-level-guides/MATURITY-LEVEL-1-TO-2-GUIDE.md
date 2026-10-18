@@ -1,5 +1,7 @@
 # AI Management Framework (AIMF) by PraeSyn
+
 ## Maturity Level 1→2 Implementation Guide
+
 ### From Ad-Hoc AI Usage to Foundational Structure
 
 **© 2026 PraeSyn, LLC. All rights reserved.**
@@ -1806,6 +1808,6 @@ By this time next year, you'll look back and see **dramatic progress**. Let's ge
 
 ---
 
-**Return to**: [Implementation Master](../IMPLEMENTATION-MASTER.md) | [Assessment Methodology](../assessments/ASSESSMENT-SCORING-METHODOLOGY.md)
+**Return to**: [Assessment Method](../AIMF-ASSESSMENT-GUIDE.md) | [Maturity Levels](../AIMF-MATURITY-LEVELS.md) | [Maturity Level 2→3 Guide](MATURITY-LEVEL-2-TO-3-GUIDE.md)
 
-**Next Guide**: [Maturity Level 2→3 Implementation Guide](maturity level-2-TO-3-GUIDE.md) (use this when you've solidified Maturity Level 2)
+**Next Guide**: [Maturity Level 2→3 Implementation Guide](MATURITY-LEVEL-2-TO-3-GUIDE.md) (use this when you've solidified Maturity Level 2)

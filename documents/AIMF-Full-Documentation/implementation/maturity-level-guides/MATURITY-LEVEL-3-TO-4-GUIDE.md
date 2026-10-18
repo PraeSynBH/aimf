@@ -1,5 +1,7 @@
 # AI Management Framework (AIMF) by PraeSyn
+
 ## Maturity Level 3→4 Implementation Guide
+
 ### From Enterprise Standards to Data-Driven Management
 
 **© 2026 PraeSyn, LLC. All rights reserved.**
@@ -233,7 +235,9 @@ Maturity Level 3 is sustainable, but **Maturity Level 4 competitors will outpace
 
 **Maturity Level 4 is about making AI governance and operations intelligent**. You don't just have data - you use it to predict, optimize, and improve continuously.
 
-### Maturity Level 5 (The Future): Continuous Innovation and Industry Leadership
+### Maturity Level 5 (
+
+The Future): Continuous Innovation and Industry Leadership
 
 **Looking ahead to Maturity Level 5** (24-36 months from now):
 
@@ -313,6 +317,8 @@ Use these assessments to validate Maturity Level 3 maturity and plan Maturity Le
 - Resource allocation based on measured value and strategic importance
 - Post-decision reviews compare actual outcomes to projections
 
+**Evidence to Look For**: Investment business cases with measured outcomes, decision records citing the metrics used, post-decision reviews comparing projection to result
+
 **Your Score**: ___ (0-4)
 
 ---
@@ -327,11 +333,446 @@ Use these assessments to validate Maturity Level 3 maturity and plan Maturity Le
 - Alerts for portfolio-level issues (e.g., multiple systems underperforming)
 - Historical trends show AI maturity progression
 
+**Evidence to Look For**: The executive dashboard itself, its refresh configuration, a portfolio-level inventory view, alert configuration and the response record for the last portfolio alert
+
 **Your Score**: ___ (0-4)
 
 ---
 
-[Continue with remaining assessment questions - similar structure to Maturity Level 1→2 and Maturity Level 2→3 guides]
+#### L3. AI Value Accountability
+
+**Question**: Is the value delivered by AI measured, attributed and reviewed with the same discipline as the case that justified the investment?
+
+**Maturity Level 4 Target**:
+- Every AI initiative has a baseline and a measured outcome, recorded in a standard form
+- Attribution is stated explicitly, including where the AI contribution cannot be isolated
+- Underperforming initiatives are re-scoped or stopped on evidence, not quietly continued
+- Portfolio-level value is reported in business units (revenue, cost, cycle time, risk avoided) and reconciled with finance
+
+**Evidence to Look For**: Baseline and outcome records, financial reconciliation, stop/re-scope decisions with rationale
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### L4. Quantitative Risk Appetite for AI
+
+**Question**: Has leadership set explicit, quantified risk appetite for AI that governs how much risk each system class may carry?
+
+**Maturity Level 4 Target**:
+- Risk appetite is stated in measurable terms (incident rates, error tolerances, exposure limits) by system class
+- Every AI system is compared against the appetite for its class, with breaches visible
+- Appetite breaches trigger a defined response, including business-owner accountability
+- Appetite is revisited on evidence, and changes are recorded with their rationale
+
+**Evidence to Look For**: Risk appetite statement, system-to-appetite comparison, breach response records, revision history
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### L5. Portfolio Rebalancing on Evidence
+
+**Question**: Does leadership rebalance AI investment between exploitation and exploration based on measured returns and risk, on a set cadence?
+
+**Maturity Level 4 Target**:
+- A defined allocation exists between running existing AI, extending it, and exploratory work
+- Rebalancing decisions are made on measured performance, not on seniority of the sponsor
+- Protected allocation exists for exploratory work so it is not crowded out by operational demand
+- Rebalancings and their outcomes are recorded, including where the decision was wrong
+
+**Evidence to Look For**: Allocation targets, portfolio review minutes, reallocation records, outcome reviews
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### L6. Quantitative Reporting to the Board
+
+**Question**: Does the board or equivalent receive AI performance and risk in quantitative, comparable form rather than narrative assurance?
+
+**Maturity Level 4 Target**:
+- A standing board pack section carries a stable set of AI measures with trends, not one-off figures
+- Measures are defined once and do not change definition between periods without explanation
+- Risk measures include leading indicators, not only incidents that already happened
+- The board's questions and decisions are recorded and tracked to answer
+
+**Evidence to Look For**: Board packs across periods, metric definitions register, question/action log
+
+**Your Score**: ___ (0-4)
+
+**Leadership Assessment Total**: ___/24 points (6 questions × 4)
+**Leadership Score**: (Total/24) × 100 = ___%
+
+---
+
+### Technical Assessment
+
+**Instructions for Technical**: Rate the measurement capability that exists in operation today — instrumentation, thresholds, and whether the numbers are trusted.
+
+#### T1. Metrics Instrumentation
+
+**Question**: Are AI system metrics collected automatically into a durable store, with defined definitions and lineage to business outcomes?
+
+**Maturity Level 4 Target**:
+- Metrics are emitted by the system or its platform, not compiled by hand
+- Each metric has a written definition, unit, owner and known limitations
+- Metrics are retained long enough to compare periods and to support audit
+- Business-outcome metrics are linked to system metrics so the causal chain can be examined
+
+**Evidence to Look For**: Metric definitions register, instrumentation code/config, retention configuration, linkage documentation
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### T2. Performance and Business-KPI Linkage
+
+**Question**: Can the team demonstrate the relationship between model performance and the business KPI the model exists to move?
+
+**Maturity Level 4 Target**:
+- Each production model has at least one business KPI it is expected to affect, agreed with the business owner
+- The relationship is measured (correlation, controlled test or modelled attribution) and its strength is stated
+- Degradation in the model metric is interpreted in business terms, not just engineering terms
+- Known confounders are documented rather than assumed away
+
+**Evidence to Look For**: KPI linkage records, analysis notebooks or reports, confounder documentation
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### T3. Thresholded Drift and Degradation Management
+
+**Question**: Are drift and degradation thresholds defined, alerting, and tied to a defined response — including automatic retraining where that is safe?
+
+**Maturity Level 4 Target**:
+- Thresholds are set per system from baseline data and reviewed after each retraining
+- Alerts distinguish noise from signal, and alert precision is measured
+- Retraining triggers are defined, with validation gates before promotion
+- Automated retraining, where used, has a documented safety boundary and a rollback path
+
+**Evidence to Look For**: Threshold register, alert history with precision measure, retraining policy, automation guardrails
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### T4. Cost and Capacity Management
+
+**Question**: Are AI running costs measured per system and per transaction, with forecasts used in planning?
+
+**Maturity Level 4 Target**:
+- Cost is attributed per system, and where feasible per unit of business volume
+- Unit economics are tracked over time and compared across systems
+- Forecasts exist for volume growth, with the cost curve of the main drivers stated
+- Cost anomalies alert to an owner, not discovered at quarter end
+
+**Evidence to Look For**: Cost attribution reports, unit economics trends, forecasts, anomaly alerting
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### T5. Experimental Discipline
+
+**Question**: Are changes to models and prompts evaluated through controlled experiments with pre-registered hypotheses and decision rules?
+
+**Maturity Level 4 Target**:
+- A hypothesis, success measure and decision rule are written before the experiment runs
+- Experiments run against a control, with sample sizing that can detect the effect claimed
+- Results — including inconclusive and negative results — are recorded in one place
+- Ship/no-ship decisions cite the experiment, not the opinion of the most senior person present
+
+**Evidence to Look For**: Experiment register, pre-registration records, analysis outputs, decision log
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### T6. Predictive Incident Forecasting
+
+**Question**: Are leading indicators used to forecast incidents before they occur, with the forecast evaluated after the fact?
+
+**Maturity Level 4 Target**:
+- Candidate leading indicators are identified from incident history rather than guessed
+- Forecasts are scored against outcomes, and forecast accuracy is published
+- Forecasts trigger preventive action with an owner, not just a warning
+- Indicators that fail to predict are retired rather than retained for comfort
+
+**Evidence to Look For**: Indicator analysis, forecast-versus-actual records, preventive action log, retired indicators list
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### T7. Automation with Human Oversight
+
+**Question**: Where remediation is automated, is there a documented automation boundary with human authority preserved and exercised?
+
+**Maturity Level 4 Target**:
+- The automation boundary is written per system: what may be changed automatically and what requires approval
+- Automated actions are logged with before/after state and the triggering condition
+- A human override exists, is reachable, and has been exercised in a drill
+- Automation effectiveness is measured, and autonomy is increased only on evidence
+
+**Evidence to Look For**: Automation boundary document, action logs, override drill records, effectiveness review
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### T8. Measurement Integrity
+
+**Question**: Is there a control over the metrics themselves — so a reported number can be trusted, reproduced and defended?
+
+**Maturity Level 4 Target**:
+- Metric definitions are versioned, with changes announced and restated where they alter history
+- Metric pipelines are tested, and failures are visible rather than silently producing nulls
+- A sample of reported metrics is reconciled against source data each period
+- Known limitations of each metric are stated wherever the metric is reported
+
+**Evidence to Look For**: Definition version history, pipeline tests, reconciliation records, limitation statements
+
+**Your Score**: ___ (0-4)
+
+**Technical Assessment Total**: ___/32 points (8 questions × 4)
+**Technical Score**: (Total/32) × 100 = ___%
+
+---
+
+### Governance Assessment
+
+**Instructions for Governance**: Rate whether governance can demonstrate effectiveness in numbers, rather than demonstrating activity.
+
+#### G1. Governance Effectiveness Measures
+
+**Question**: Are there measures that show whether governance is reducing risk, rather than whether governance activity is being performed?
+
+**Maturity Level 4 Target**:
+- Effectiveness measures exist (incident prevention rate, early-detection rate, time-to-approval trend, audit finding severity trend)
+- Baselines were set before the measures were used for reporting, so improvement is measurable
+- Measures are reviewed quarterly and are used to change the control set
+- Activity measures (reviews completed, policies issued) are reported separately and never presented as effectiveness
+
+**Evidence to Look For**: Effectiveness measure definitions, baselines, quarterly review records, control changes attributed to the data
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### G2. Risk-Based Control Tailoring in Operation
+
+**Question**: Are control depth and approval paths actually differentiated by measured risk, or does every system get the same process?
+
+**Maturity Level 4 Target**:
+- Control requirements are defined per risk tier and are enforced by workflow, not by convention
+- Tier assignment is data-driven (impact, incident history, regulatory exposure) and recorded
+- High-risk systems show lower incident rates and low-risk systems show shorter approval times — the signature of working tailoring
+- Tier drift is monitored: a system whose risk profile changed is re-tiered
+
+**Evidence to Look For**: Tier definitions, workflow configuration, measures by tier, re-tiering records
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### G3. Quantitative Control Testing
+
+**Question**: Is control testing sampled and measured, so that assurance coverage and failure rates are known numbers?
+
+**Maturity Level 4 Target**:
+- Each control has a test method and a sample basis that can be re-performed
+- Test results are recorded as pass/fail with evidence references, in a form that can be aggregated
+- Coverage is measured: which controls were tested, how often, and which were never tested
+- Failure rates by control and by team drive where the next cycle's effort goes
+
+**Evidence to Look For**: Test plans, result records, coverage report, failure-rate trend by control
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### G4. Predictive Compliance Monitoring
+
+**Question**: Are leading compliance indicators monitored so that drift toward non-compliance is detected before an audit or incident finds it?
+
+**Maturity Level 4 Target**:
+- Leading indicators are defined per obligation (training currency, review backlog age, exception accumulation, evidence gaps)
+- Thresholds trigger action with an owner and a deadline
+- Indicator performance is reviewed: did the indicator in fact precede the finding?
+- Indicators that never move are retired
+
+**Evidence to Look For**: Indicator definitions, threshold breach records, action closure, indicator performance review
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### G5. Automated Policy Enforcement
+
+**Question**: Is policy enforced by system controls where it can be, with manual review reserved for judgement calls?
+
+**Maturity Level 4 Target**:
+- Each policy requirement is classified as enforceable by system, checkable by review, or dependent on judgement
+- Enforceable requirements are implemented in tooling, with the enforcement point documented
+- Exceptions are recorded with an expiry and are reported as a trend
+- Enforcement effectiveness is measured by exception volume and by whether violations recur
+
+**Evidence to Look For**: Policy-to-enforcement map, tool configurations, exception register, recurrence analysis
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### G6. Continuous Assurance and Audit Analytics
+
+**Question**: Does assurance use continuous or frequent data sampling rather than annual snapshots?
+
+**Maturity Level 4 Target**:
+- Key controls are monitored continuously or on a short cycle from system data
+- Analytics identify anomalies (unreviewed approvals, missing evidence, out-of-band deployments) without waiting for a review cycle
+- Findings are raised as they appear, with remediation tracked from the moment of detection
+- External auditors are given access to the same evidence stream, reducing annual effort
+
+**Evidence to Look For**: Monitoring rules, anomaly case log, remediation tracking, auditor access records
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### G7. Metric Governance
+
+**Question**: Is there an owner and a change process for the metrics used in governance reporting?
+
+**Maturity Level 4 Target**:
+- Every reported governance metric has a named owner and a written definition
+- Changes to definitions are approved and restated, so trends remain comparable
+- Disputes about a number are resolved through the definition, not through escalation
+- Metric owners attest to the accuracy of their metrics each reporting period
+
+**Evidence to Look For**: Metric ownership register, change approvals, restatement records, attestation records
+
+**Your Score**: ___ (0-4)
+
+**Governance Assessment Total**: ___/28 points (7 questions × 4)
+**Governance Score**: (Total/28) × 100 = ___%
+
+---
+
+### Change Agent Assessment
+
+**Instructions for Change Agent**: Rate whether the organization decides on evidence — the cultural precondition for Maturity Level 4 to mean anything.
+
+#### C1. Data and Metric Fluency
+
+**Question**: Can the people making AI decisions read, question and interpret the metrics they are shown?
+
+**Maturity Level 4 Target**:
+- Role-based training covers the metrics each role is accountable for, including their limitations
+- Decision-makers routinely ask for the definition and sample behind a number
+- Interpretation errors are treated as a capability gap to close, not a personal failing
+- A shared metric glossary exists and is used in meetings
+
+**Evidence to Look For**: Training records, glossary, meeting minutes showing definition-level questions
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### C2. Experiment-Driven Working
+
+**Question**: Do teams treat experiments as the normal way to decide, including when the answer is "no"?
+
+**Maturity Level 4 Target**:
+- Teams can run low-cost experiments without a lengthy approval cycle for low-risk changes
+- Negative and inconclusive results are shared, not buried
+- Decision records cite evidence, and the absence of evidence is stated plainly
+- Experiment throughput and cycle time are tracked as a capability measure
+
+**Evidence to Look For**: Experiment register including negative results, decision records, throughput metrics
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### C3. Feedback Loops into Product Decisions
+
+**Question**: Do operational findings (incidents, drift, user feedback) actually change the roadmap within a defined cycle?
+
+**Maturity Level 4 Target**:
+- A defined route exists from operational finding to roadmap decision, with a timeframe
+- Findings are triaged with the business owner, not only within engineering
+- Changes made in response are recorded and linked back to the finding
+- Findings that produce no change are explicitly closed with a reason
+
+**Evidence to Look For**: Triage records, roadmap change log linked to findings, closure decisions
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### C4. Dashboard-to-Decision Adoption
+
+**Question**: Are the dashboards that exist actually used in decisions, or do they exist to demonstrate measurement?
+
+**Maturity Level 4 Target**:
+- Dashboard usage is measured (viewers, decisions referencing the data, actions triggered)
+- Dashboards with no decision attached are retired rather than maintained
+- Each dashboard has a named decision it supports and an owner who uses it
+- Reviews ask "what did this data change?" and record the answer
+
+**Evidence to Look For**: Usage analytics, dashboard inventory with decision linkage, retirement records
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### C5. Incentives Aligned to Measured Outcomes
+
+**Question**: Are team and individual incentives aligned to measured outcomes and honest reporting, rather than to favourable numbers?
+
+**Maturity Level 4 Target**:
+- Objectives include outcome and quality measures, not only delivery volume
+- Reporting quality is itself assessed, so there is no reward for a flattering number
+- Corrections to previously reported figures are treated as good practice
+- Incentive design is reviewed after each cycle for gaming behaviour
+
+**Evidence to Look For**: Objective definitions, appraisal criteria, reporting-error handling records, incentive review
+
+**Your Score**: ___ (0-4)
+
+---
+
+#### C6. Analytical Capability Building
+
+**Question**: Is analytical capability being built in the teams that own AI outcomes, not concentrated in a single reporting function?
+
+**Maturity Level 4 Target**:
+- Analytical skills are defined in role expectations for AI owners, not only for analysts
+- Embedded analysis support exists with a plan to transfer capability over time
+- Capability gaps are identified from work products (quality of experiment design, interpretation)
+- Progression paths exist for analytical roles
+
+**Evidence to Look For**: Role expectations, embedded support plan, capability assessment, progression framework
+
+**Your Score**: ___ (0-4)
+
+**Change Agent Assessment Total**: ___/24 points (6 questions × 4)
+**Change Agent Score**: (Total/24) × 100 = ___%
+
+---
+
+### Assessment Summary and Next Steps
+
+| Audience | Score | What a 75-100% score (average ML4) means here |
+|---|---|---|
+| Leadership | ___% | Decisions are made on measured value and quantified risk appetite, not narrative |
+| Technical | ___% | The numbers are instrumented, thresholded, and their integrity is itself controlled |
+| Governance | ___% | Effectiveness is measured, controls are tiered and tested, and enforcement is automated where it can be |
+| Change Agent | ___% | Decisions cite evidence, and honest reporting is safe |
+
+**Readiness rule**: Maturity Level 4 is claimed on measured effectiveness, not on the existence of dashboards. Before declaring it, confirm three things from evidence: a control set that has been *tested* with a published failure rate, a portfolio in which at least one initiative was stopped or re-scoped on measured evidence, and a board pack whose measures are defined, versioned and comparable period over period. An organization with dashboards and none of those three is at Maturity Level 3 with better reporting.
 
 ---
 
@@ -616,7 +1057,107 @@ Use these assessments to validate Maturity Level 3 maturity and plan Maturity Le
 
 ---
 
-[Continue with Change Agent playbook following similar structure]
+### Change Agent Playbook: Building an Evidence Culture
+
+**Your Role**: Maturity Level 4 is a decision-making change before it is a technical one. Dashboards do not change decisions; people who trust and interrogate numbers do. Your job is to make measurement the ordinary way a decision is made — and to make honest numbers safe to report.
+
+#### Priority Actions (Months 1-6)
+
+**Action 1: Make Metric Definitions a Shared Artefact**
+
+**What**: Publish one metric glossary, owned per metric, and use it in every forum where AI performance is discussed.
+
+**How**:
+1. Collect every metric currently reported to leadership, governance or customers
+2. For each, write the definition, the calculation, the population covered, the owner and the known limitation
+3. Resolve contradictions openly — two teams reporting "accuracy" with different definitions is the normal starting state, not a scandal
+4. Present the glossary at the first review meeting and require definition-level questions to be answered from it
+5. Keep it versioned; a silent redefinition is how a trend becomes a fiction
+
+**Deliverable**: Versioned metric glossary used in governance forums
+
+**Timeline**: Month 1-3
+**Investment**: 60-100 hours
+
+---
+
+**Action 2: Establish Decision Records for AI Changes**
+
+**What**: Make the evidence behind a decision retrievable, so the organization can learn from it later.
+
+**How**:
+1. Adopt a lightweight decision record: decision, evidence cited, alternatives considered, who decided, review date
+2. Apply it to material model, prompt, threshold and roadmap changes
+3. Record decisions that were made *without* evidence as such — this is the measure of the culture, not a confession
+4. Review a sample monthly: are decisions citing the experiment or the opinion?
+5. Publish the aggregate (share of decisions with cited evidence) as a culture measure
+
+**Deliverable**: Decision log in use, with an evidence-citation rate reported monthly
+
+**Timeline**: Month 2-5
+**Investment**: 40-60 hours plus per-decision time (10-20 minutes each)
+
+---
+
+**Action 3: Build Experiment Capability in the Teams**
+
+**What**: Give teams the ability to test cheaply, so evidence becomes faster than opinion.
+
+**How**:
+1. Define a low-risk experiment path that does not require the full approval cycle
+2. Provide templates: hypothesis, success measure, sample, decision rule, cost ceiling
+3. Train teams in experiment design — sample sizing and decision rules are the common gaps
+4. Reserve a small standing budget for experiments so they are not funded project by project
+5. Report throughput and cycle time; celebrate informative failures as well as wins
+
+**Deliverable**: Experiment path in use, with throughput and cycle time tracked
+
+**Timeline**: Month 2-6
+**Investment**: 80-120 hours
+
+---
+
+**Action 4: Retire the Dashboards Nobody Decides With**
+
+**What**: Reduce measurement surface area to what is used, so the numbers that remain are trusted.
+
+**How**:
+1. Inventory dashboards and reports, and name the decision each supports and who makes it
+2. Measure usage over a quarter rather than assuming it
+3. Retire the unused ones, and record what was retired so it can be revived if needed
+4. For the survivors, add the definition and limitation notes from the glossary
+5. Re-check annually — dashboards accumulate the way meetings do
+
+**Deliverable**: Dashboard inventory with decision linkage and a retirement record
+
+**Timeline**: Month 3-5, then annually
+**Investment**: 40-60 hours
+
+---
+
+#### Ongoing Responsibilities (Months 6-24)
+
+**Monthly**:
+- Review the evidence-citation rate on material decisions
+- Review the metric glossary for unannounced changes
+
+**Quarterly**:
+- Review experiment throughput and where evidence changed a decision
+- Review dashboard usage and retire what is no longer used
+
+**Annually**:
+- Re-baseline data and metric fluency across decision-making roles
+- Review incentives for gaming behaviour observed in the year
+
+---
+
+**Change Agent Playbook Success Metrics**:
+By Month 24, you should be able to answer "yes" to:
+- A versioned metric glossary exists and is cited in governance forums
+- Material AI decisions carry a decision record citing evidence, and the citation rate is reported
+- Teams can run low-risk experiments without a full approval cycle, and negative results are shared
+- Dashboards have named decisions and owners, and unused ones have been retired
+- Appraisal and incentives do not reward a favourable number over an honest one
 
 ---
 
@@ -688,15 +1229,88 @@ Use these assessments to validate Maturity Level 3 maturity and plan Maturity Le
 
 ### Maturity Level 4 Metrics Library
 
-[Comprehensive reference of measurable metrics by category]
+These are the measures a Maturity Level 4 organization actually runs on. Every row is written so that two assessors computing it from the same data would get the same number — that is the test a metric has to pass before it belongs in a governance dashboard.
+
+| Category | Metric | Definition | Cadence | Typical owner |
+|---|---|---|---|---|
+| **Performance** | Task accuracy (per system) | Correct outcomes ÷ total outcomes on the current evaluation set, with the evaluation set version recorded | Per release + weekly | Technical owner |
+| | Service reliability | Successful responses ÷ total requests, excluding client errors, over the window | Daily | Technical owner |
+| | Latency percentile | p50 / p95 / p99 response time in ms | Continuous | Technical owner |
+| | Evaluation coverage | Share of production systems with an evaluation run in the last 90 days | Monthly | Technical owner |
+| **Drift** | Input distribution drift | Population stability index (PSI) between the reference window and the last 7 days, per monitored feature group | Weekly | Technical owner |
+| | Output behaviour drift | Change in the distribution of model outputs or decisions vs the reference window | Weekly | Technical owner |
+| | Retraining currency | Days since last validated retraining, against the system's stated retraining interval | Monthly | Technical owner |
+| **Risk** | Incidents per system per quarter | Count of AI incidents attributed to the system, by severity | Quarterly | Risk owner |
+| | Early-detection rate | Incidents detected before customer or business impact ÷ all incidents | Quarterly | Risk owner |
+| | Mean time to contain | Median time from incident detection to containment | Quarterly | Operations owner |
+| | Control test failure rate | Failed control tests ÷ control tests performed, by control | Per assurance cycle | Governance |
+| | Risk appetite breach count | Systems exceeding their risk-appetite measures, with the measure named | Monthly | Governance |
+| **Governance** | Time-to-approval | Median elapsed time from review request to decision, by risk tier | Monthly | Governance |
+| | Review backlog age | Age of oldest open review, in days | Weekly | Governance |
+| | Exception volume and expiry | Open exceptions, and those past their expiry date | Monthly | Governance |
+| | Evidence completeness | Controls with current evidence in the evidence map ÷ controls in scope | Monthly | Governance |
+| | Repeat findings | Findings recurring from a previous cycle ÷ total findings | Per assurance cycle | Governance |
+| **Cost** | Cost per system | Total run cost (compute, API, licences, support) attributed to the system, per period | Monthly | Finance + technical owner |
+| | Unit cost | Cost per 1,000 inferences or per business transaction, trended | Monthly | Finance + technical owner |
+| | Forecast variance | Actual vs forecast cost, with the main driver named | Monthly | Finance |
+| **Value** | Realised benefit | Measured benefit against the baseline recorded at approval | Quarterly | Business owner |
+| | Value attribution confidence | Stated confidence in the attribution (measured / modelled / estimated) — a required field, not a footnote | Quarterly | Business owner |
+| | Adoption of AI-assisted workflow | Share of eligible transactions or users actually using the AI capability | Monthly | Business owner |
+| **Data** | Data quality pass rate | Automated quality checks passing ÷ checks run, by dataset | Daily | Data owner |
+| | Lineage coverage | Production models with complete lineage records ÷ all production models | Monthly | Data owner |
+| | Deletion compliance | Deletion requests completed within the required period ÷ requests received | Monthly | Data owner |
+| **People** | Capability coverage | Roles meeting their defined AI capability requirement ÷ roles in scope | Quarterly | Change Agent |
+| | Training currency | Staff with current required training ÷ staff in scope | Monthly | Change Agent |
+
+**Rules for using this library**:
+- Adopt a subset. Twenty monitored measures with owners beat sixty on a wall.
+- Every measure must have a named owner and a written definition before it appears in a governance forum.
+- Report leading and lagging measures together; a dashboard of only lagging indicators tells you what has already gone wrong.
 
 ### Predictive Analytics Cookbook
 
-[Recipes for common predictive use cases in AI operations]
+Recipes for the four predictive questions a Maturity Level 4 AI operation actually asks. Each one states what it needs, what it gives you, and where it can mislead you.
+
+| # | Question | Inputs | Method | Output | Where it misleads |
+|---|---|---|---|---|---|
+| 1 | **Which system will breach its performance threshold next?** | Time series of task accuracy and drift measures per system; threshold definitions | Trend extrapolation with change-point detection; compare against the system's own history, not the portfolio's | Ranked list of systems with expected breach date and confidence | Seasonal business cycles read as drift; a change in data collection looks identical to a change in the world |
+| 2 | **Which model should be retrained first?** | Drift measures, retraining history, incident history, cost to retrain | Score by risk exposure × drift severity ÷ cost to retrain; validate against last quarter's incidents | Ordered retraining queue | Retraining on drifted data launders the drift into the training set; always validate on a held-out, current window |
+| 3 | **Where will cost exceed budget next quarter?** | Cost per system per period, volume forecasts, provider price changes | Driver-based forecast (volume × unit cost) with a scenario band | Per-system forecast with variance band and the driver that dominates | Provider price and model-mix changes invalidate history-based unit costs; re-estimate after any model change |
+| 4 | **Which controls are drifting toward non-compliance?** | Review backlog age, exception accumulation, evidence gaps, training currency | Composite leading-indicator score with thresholds set from prior findings | Controls ranked by predicted finding risk | The indicator becomes a target and stops measuring anything (Goodhart); rotate and re-validate annually |
+| 5 | **Which incident class is growing?** | Incident records with class, severity, system, cause | Rate-of-change analysis on class-level counts; separate systemic causes from noise | Growing classes with the underlying systems named | Small counts produce volatile rates; require a minimum count before acting |
+
+**Discipline that makes any of these usable**: record the forecast, record the outcome, and publish the hit rate. A predictive capability without a published accuracy track record is a narrative, and at Maturity Level 4 the whole point is that the narrative can be checked.
 
 ### Dashboard Templates
 
-[Templates for each dashboard type with sample queries]
+Each template below states the audience, the refresh rate, the measures (by name from the library above), and the decision it is meant to support. A dashboard with no decision attached should be retired — see the Change Agent playbook, Action 4.
+
+**Executive / board dashboard**
+- **Refresh**: Monthly (with a daily operational view available for incidents)
+- **Measures**: Risk appetite breach count; incidents per system; early-detection rate; realised benefit vs baseline; forecast variance; evidence completeness; repeat findings
+- **Decision supported**: Whether the AI portfolio is within appetite, and where to reallocate
+- **Sample query shape** (illustrative, warehouse-neutral):
+  `SELECT measure, period, value, target, variance FROM ai_metrics WHERE audience = 'board' AND period >= :last_12_months ORDER BY measure, period`
+
+**Operational dashboard (AI/ML teams)**
+- **Refresh**: Real time
+- **Measures**: Service reliability; latency percentiles; task accuracy; input and output drift; alert volume and precision; retraining currency
+- **Decision supported**: Whether to intervene now on a specific system
+- **Query shape**: `SELECT system, metric, window_end, value FROM ai_system_metrics WHERE system = :system AND window_end >= now() - interval '24 hours'`
+
+**Governance dashboard (risk/compliance)**
+- **Refresh**: Daily
+- **Measures**: Time-to-approval by tier; review backlog age; exception volume and expiry; evidence completeness; control test failure rate; repeat findings; training currency
+- **Decision supported**: Where governance is the bottleneck, and which controls need attention
+- **Query shape**: `SELECT control, tier, tests_run, tests_failed, last_tested FROM control_tests WHERE cycle = :current_cycle`
+
+**Business value dashboard (product/business owners)**
+- **Refresh**: Weekly
+- **Measures**: Realised benefit vs baseline; value attribution confidence; adoption of AI-assisted workflow; unit cost; experiment results and decisions
+- **Decision supported**: Whether to scale, re-scope or stop a capability
+- **Query shape**: `SELECT initiative, baseline_value, measured_value, attribution_confidence, period FROM ai_value WHERE initiative = :initiative`
+
+**Chart hygiene that stops a dashboard lying**: fixed axis scales on trend charts; always show the comparison period; label the sample size; show the definition and limitation (hover or footnote) on every measure; never show a percentage without its denominator.
 
 ---
 
@@ -716,5 +1330,5 @@ By achieving Maturity Level 4, you:
 
 ---
 
-**Return to**: [Implementation Master](../IMPLEMENTATION-MASTER.md) | [Maturity Level 2→3 Guide](maturity level-2-TO-3-GUIDE.md)
-**Next Guide**: [Maturity Level 4→5 Implementation Guide](maturity level-4-TO-5-GUIDE.md) (use when you've solidified Maturity Level 4)
+**Return to**: [Assessment Method](../AIMF-ASSESSMENT-GUIDE.md) | [Maturity Levels](../AIMF-MATURITY-LEVELS.md) | [Maturity Level 2→3 Guide](MATURITY-LEVEL-2-TO-3-GUIDE.md)
+**Next Guide**: [Maturity Level 4→5 Implementation Guide](MATURITY-LEVEL-4-TO-5-GUIDE.md) (use when you've solidified Maturity Level 4)

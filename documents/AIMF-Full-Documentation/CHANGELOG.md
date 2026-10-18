@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.8
+**Version**: 1.0.9
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -16,6 +16,70 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [1.0.9] - 2026-10-18 (The guides stop being notes to the author, and the sweep covers the bundle)
+
+**Change Type**: Content completion + release-gate extension
+**Rationale**: five bracketed author notes of the "continue with ..." kind shipped inside the
+maturity-level transition guides from v1.0.5 through v1.0.8 while `check` exited 0, because the
+placeholder sweep only ever looked at `mappings/*.md`. A buyer who meets "continue with similar
+structure for remaining assessment questions" is reading the author's notes, not an instrument —
+the same defect class as P7, except the file admits it in the middle of the content. This release
+writes the missing sections, extends the sweep to every `.md` in the bundle, and closes the class.
+
+#### Changed
+
+- **`implementation/maturity-level-guides/MATURITY-LEVEL-2-TO-3-GUIDE.md`** (489 → 1250 lines) —
+  the assessment section is complete for all four audiences: 6 leadership, 8 technical, 8
+  governance and 6 change-agent questions, each with Maturity Level 3 target criteria and an
+  evidence expectation. The four technical playbook actions are written, the Governance and Change
+  Agent playbooks are written, §7 gains platform selection criteria and integration architecture,
+  and §8 gains templates, shipped-reference links and pitfalls.
+- **`implementation/maturity-level-guides/MATURITY-LEVEL-3-TO-4-GUIDE.md`** (720 → 1334 lines) —
+  6 leadership, 8 technical, 7 governance and 6 change-agent questions at Maturity Level 4, a
+  Change Agent playbook, and a §8 that carries the metrics library (by category, with definitions
+  and owners), the predictive analytics cookbook and the dashboard templates with sample queries.
+- **`implementation/maturity-level-guides/MATURITY-LEVEL-4-TO-5-GUIDE.md`** (666 → 864 lines) — a
+  Governance playbook for adaptive risk management (continuous sensing, scenario and stress
+  testing, governing emerging AI classes, an adaptive control set), Change Agent Actions 3 and 4
+  with ongoing responsibilities, and a §7 that carries the innovation toolkit, the horizon-scanning
+  routine and the traps. Section numbering corrected: the guide previously skipped section 6.
+- **Every other placeholder in the bundle removed**, not only the five named in the card: 19 author
+  notes under `implementation/`, 18 to-be-determined values and template blanks across `assets/`,
+  `profiles/` and `supplemental/`, and a stale "Next Steps" authoring note at the end of
+  `mappings/GOVERN-FUNCTION-MATURITY-MAPPING.md` that instructed a future author to continue with
+  MEASURE and MANAGE functions for four documents that already existed on disk.
+- **Broken relative links fixed (8)** — `../IMPLEMENTATION-MASTER.md` and
+  `../assessments/ASSESSMENT-SCORING-METHODOLOGY.md` do not exist in the bundle; five guide links
+  used filenames with spaces and wrong case; four documents linked `../../change-control/...` from
+  one directory too shallow; `AIMF-IMPLEMENTATION-TIERS.md` linked `AIMF-FUNCTION-GOVERN.md`
+  without `../functions/`.
+- **Version stamps reconciled** — the v1.0.8 bundle shipped a changelog reading 1.0.8 with a README
+  and a QA verification report still reading 1.0.7. All three now read 1.0.9.
+- **The repository-root invocation works again** — `python3 scripts/aimf_mappings.py check` from the
+  repository root (through the shim) failed from v1.0.6 onward with "scripts/aimf_question_bank.py is
+  missing", because the sibling import depended on how the packaged script was launched. The
+  packaged script now puts its own directory on `sys.path` explicitly.
+
+#### Added
+
+- **Bundle-wide sweep in `scripts/aimf_mappings.py`** — `check` now fails on (a) a line that is
+  nothing but a bracketed note, (b) "Continue with" / "For brevity" author phrasing, (c) a TODO or
+  TBD token, and (d) a relative link to a `.md` document that does not exist — anywhere in the
+  packaged tree, not just in `mappings/`. Two paths are excluded, with the reason printed in the
+  failure message: `change-control/**` (dated change records, which quote the state they found) and
+  `CHANGELOG.md` (release history, which quotes defect text verbatim). `report` prints the sweep
+  count.
+- The sweep was exercised by mutation before the cut: re-injecting an author note, a TBD value and
+  a broken link each fails `check` with the finding and the path exclusions named.
+
+#### Not changed
+
+- No question text, anchor, maturity scale or control changed. `report` still reads 72 controls,
+  72 of 72 questions, 19 ISO 42001 clauses and 72 NIST AI RMF subcategories, and the v1.0.8 anchor
+  set (`b6f9a6a1…15bd`) is untouched, so the published 65/72 (90.3%) measurement still refers to
+  the instrument that ships.
+- Nothing pushed and nothing published: publication remains the board's decision (PRA-6431, D2).
 
 ## [1.0.8] - 2026-10-18 (Anchors rewritten on the controls that still split; measured 90.3%, threshold met)
 

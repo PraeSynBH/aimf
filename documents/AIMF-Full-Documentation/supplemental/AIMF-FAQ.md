@@ -442,7 +442,7 @@ Yes, AIMF will evolve with AI technology and regulation:
 
 **Compatibility**: Minor updates (v1.x) maintain backward compatibility. Organizations on v1.0 can upgrade to v1.1 without major rework.
 
-**Community Input**: PraeSyn welcomes feedback on AIMF through [feedback channels TBD].
+**Community Input**: PraeSyn welcomes feedback on AIMF through your PraeSyn contact or the maintainer named in the bundle README.
 
 ---
 
@@ -479,7 +479,7 @@ AIMF is an open framework with opportunities for community engagement:
 - Share learnings with community (encouraged but not required)
 
 **Feedback and Suggestions**:
-- Report issues, suggest improvements [channels TBD]
+- Report issues and suggest improvements through your PraeSyn contact
 - Share implementation experiences and lessons learned
 
 **Professional Services** (Proprietary):
@@ -495,30 +495,29 @@ AIMF is an open framework with opportunities for community engagement:
 
 ### Where can I get help implementing AIMF?
 
-**Self-Service Resources**:
-- [AIMF GitHub Repository] (TBD): Complete documentation, examples, templates
+**Self-Service Resources** (all inside this bundle):
+- This bundle is the complete documentation set — core, implementation, profiles, mappings and supplemental
 - [AIMF Profiles Guide](../implementation/AIMF-PROFILES-GUIDE.md): Profile selection methodology
 - [Implementation Tier Guide](../implementation/AIMF-RISK-BASELINES.md): Tier requirements
 - [Tier Transition Guides](../implementation/maturity-level-guides/): Maturity advancement roadmaps
 
-**Professional Services**:
-- PraeSyn Consulting: [Contact information TBD]
-  - AIMF implementation consulting
-  - Custom profile development
-  - Assessment and gap analysis
-  - Training programs
+**Professional Services** (PraeSyn):
+- AIMF implementation consulting
+- Custom profile development
+- Assessment and gap analysis
+- Training programs
+- Contact details are published with the release; this bundle is pre-publication.
 
-**Community** (Future):
-- [AIMF Community Forum] (TBD): Peer support, implementation discussions
-- [Case Studies] (TBD): Learn from other organizations' AIMF implementations
+**Community** (planned for a future release):
+- A peer forum for implementation questions
+- Published case studies from organizations applying AIMF
 
 ---
 
 ### How do I report an issue or suggest an improvement?
 
-**Issue Reporting** [Channels TBD]:
-- GitHub Issues (for documentation errors, clarifications)
-- Email: [support email TBD]
+**Issue Reporting**:
+- Report documentation errors and clarifications through your PraeSyn contact or the maintainer named in the bundle README
 
 **When Reporting Issues, Include**:
 - AIMF version (v1.0)

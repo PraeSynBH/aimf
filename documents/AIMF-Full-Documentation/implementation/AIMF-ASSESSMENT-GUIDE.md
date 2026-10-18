@@ -366,7 +366,7 @@ The AIMF uses a four-audience assessment approach to ensure comprehensive covera
    - Document baseline assignment rationale
    - Identify controls in scope (B1: 23, B2: 61, B3: 72 controls)
 
-**See**: [Baseline Selection Questionnaire](../../change-control/20260129143000-BASELINE-SELECTION-QUESTIONNAIRE.md) for detailed methodology.
+**See**: [Baseline Selection Questionnaire](../change-control/20260129143000-BASELINE-SELECTION-QUESTIONNAIRE.md) for detailed methodology.
 
 ---
 

@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6; guide completion and bundle-wide placeholder/link sweep verified 2026-10-18 against v1.0.9)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.7
+**Framework Version**: 1.0.9
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -114,6 +114,23 @@ Licensed under CC BY-NC-ND 4.0
 > instrument ships as specified and enforced, not validated, and the bank, the guide, the README
 > and `implementation/AIMF-INSTRUMENT-VALIDATION.md` all say so. See
 > `CHANGELOG.md` → `[1.0.6]`.
+>
+> **v1.0.9 addendum (2026-10-18).** The built-but-unfinished sections are gone. Five notes telling
+> a future author to carry on with the remaining sections shipped inside the three maturity-level
+> transition guides from
+> v1.0.5 to v1.0.8 while `check` still exited 0, because the placeholder sweep was scoped to
+> `mappings/*.md`; the same sweep missed 14 further bracketed stubs in the same guides, 18
+> to-be-determined values and template blanks elsewhere in the bundle, eight broken relative links,
+> and version stamps that disagreed between the README (1.0.7), this report (1.0.7) and the
+> changelog (1.0.8). v1.0.9 writes the missing content — the 2→3 guide grows 489 → 1250 lines, the
+> 3→4 guide 720 → 1334, the 4→5 guide 666 → 864 — and moves the sweep into the packaged script so
+> it covers every `.md` in the bundle: bracketed author notes, carry-on phrasing, unfilled-value
+> tokens and relative links to documents that do not exist. `change-control/**` and `CHANGELOG.md`
+> are excluded by path, with the reason stated in the failure message. Verified from an unpacked
+> v1.0.9 bundle root: `check` exits 0 with `placeholder sweep: 56 .md files scanned, 0 findings`,
+> and mutation of the sweep (an author note, an unfilled value, a broken link re-injected) fails it three
+> times out of three. No question, anchor or scale changed. See `CHANGELOG.md` → `[1.0.9]`.
+
 
 ---
 
@@ -511,18 +528,24 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 | **Total** | **49 files** | ✅ **Complete** |
 
 **Distribution bundle**: the shipped bundles
-(`documents/AIMF-Full-Documentation-v1.0.6.zip` and the rolling
-`documents/AIMF-Full-Documentation.zip`) carry 83 regular files plus 16 directory
+(`documents/AIMF-Full-Documentation-v1.0.9.zip` and the rolling
+`documents/AIMF-Full-Documentation.zip`) carry 84 regular files plus 16 directory
 entries. Note that `unzip -l`'s summary line counts directory entries as well, so its
 figure overstates the file count by one per directory; quote the file count from
 `unzip -Z1 … | grep -vc '/$'`, not from `unzip -l`. Both generators —
 `scripts/aimf_mappings.py` and the bank renderer `scripts/aimf_question_bank.py` — and the
-authored bank source `implementation/AIMF-ASSESSMENT-QUESTION-BANK.csv` are among those 83
+authored bank source `implementation/AIMF-ASSESSMENT-QUESTION-BANK.csv` are among those 84
 files, so a recipient can run both drift checks this report cites. The v1.0.1–v1.0.3 bundles carried 81 files because they included
 `AIMF-Full-Documentation/.claude/settings.local.json`, an agent-tooling permissions file
 with no place in a customer bundle; since v1.0.4 the archive is built with dotfiles
-excluded — 80 files at v1.0.4/v1.0.5, and 83 at v1.0.6 with the question-bank document, its
-authored source and the bank renderer added (16 directory entries throughout).
+excluded — 80 files at v1.0.4/v1.0.5, 83 at v1.0.6 with the question-bank document, its
+authored source and the bank renderer added, and 84 from v1.0.7 (16 directory entries
+throughout). Since v1.0.9 the build also excludes `__pycache__/` and `*.pyc`: running the
+checks inside the packaged directory leaves byte-compiled copies of the two generators
+there, and they have no place in a customer bundle. The v1.0.9 archive was built from the
+committed tree with `zip -rq -X AIMF-Full-Documentation-v1.0.9.zip AIMF-Full-Documentation
+-x '.*' -x '*/.*' -x '*__pycache__*' -x '*.pyc'` and copied byte-for-byte to the rolling
+name.
 
 ---
 
@@ -623,4 +646,4 @@ control-theme level and is labelled partial. See
 
 *Quality Assurance Verification Report completed January 26, 2026*
 
-**QA Status**: ✅ PASSED - READY FOR v1.0.5 REVIEW (pre-publication)
+**QA Status**: ✅ PASSED - READY FOR v1.0.9 REVIEW (pre-publication)

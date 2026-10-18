@@ -17,7 +17,7 @@ Licensed under CC BY-NC-ND 4.0
 ## Profile Overview
 
 ### Purpose
-[Brief description of why this implementation profile was created and what it aims to achieve]
+_Describe why this implementation profile was created and what it aims to achieve._
 
 ### Scope
 - **Business Units**: [Which parts of organization this applies to]
@@ -299,7 +299,7 @@ Profile will be updated when:
 
 ### Appendix A: Complete Control List
 
-[Full list of all selected controls with implementation notes]
+_List every selected control with its implementation notes._
 
 | Control ID | Control Name | Tier | Priority | Assigned To | Status | Notes |
 |------------|--------------|------|----------|-------------|--------|-------|
@@ -307,7 +307,7 @@ Profile will be updated when:
 
 ### Appendix B: Deviations from Framework Profile
 
-[Detailed rationale for any deviations from the base framework profile]
+_Give the detailed rationale for any deviation from the base framework profile._
 
 ### Appendix C: Related Documents
 

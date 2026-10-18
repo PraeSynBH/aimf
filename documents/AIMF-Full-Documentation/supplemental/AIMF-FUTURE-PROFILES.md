@@ -433,7 +433,13 @@ PraeSyn welcomes community input on future AIMF profiles:
 4. **Subject Matter Expertise**: Volunteers or organizations willing to validate profile
 5. **Market Demand**: Evidence of demand (surveys, consultations, industry requests)
 
-**Submission Process** [TBD]:
+**Submission Process**:
+
+A proposal takes the form of a profile draft that follows the structure in
+`../profiles/implementation-profiles/profile-implementation-template.md`, with
+the sector evidence for each control selection stated. Proposals are reviewed
+against the framework's control set and the profile selection methodology in
+`../implementation/AIMF-PROFILES-GUIDE.md`.
 - GitHub Issues (for public proposals)
 - Email: [profile-proposals@praesyn.com] (fictional - replace with actual)
 
@@ -483,6 +489,6 @@ AIMF's profile strategy balances immediate market needs (v1.1 generative AI, sma
 
 **AI Management Framework (AIMF) by PraeSyn**
 
-*This future profiles document will evolve based on community input, regulatory developments, and market demand. Suggest new profiles or provide feedback through PraeSyn channels [TBD].*
+*This future profiles document will evolve based on community input, regulatory developments, and market demand. Suggest new profiles or provide feedback through your PraeSyn contact or the maintainer named in the bundle README.*
 
 **Last Updated**: January 25, 2026 (v1.0 release)

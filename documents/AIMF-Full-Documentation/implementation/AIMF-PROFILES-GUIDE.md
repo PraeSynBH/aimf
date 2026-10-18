@@ -434,7 +434,7 @@ ELSE IF none of the above
 
 ### Step 2: Risk-Based Baseline Determination
 
-Use the [Risk Characterization Questionnaire](../../change-control/20260129143000-BASELINE-SELECTION-QUESTIONNAIRE.md) to assess AI system risk and determine baseline:
+Use the [Risk Characterization Questionnaire](../change-control/20260129143000-BASELINE-SELECTION-QUESTIONNAIRE.md) to assess AI system risk and determine baseline:
 
 **Key Risk Dimensions** (scored 1-5 each):
 

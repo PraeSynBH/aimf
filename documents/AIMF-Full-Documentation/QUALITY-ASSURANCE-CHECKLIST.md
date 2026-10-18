@@ -5,7 +5,7 @@
 Licensed under CC BY-NC-ND 4.0
 
 **QA Date**: January 29, 2026
-**Reviewer**: [Name]
+**Reviewer**: PraeSyn AIMF maintainer
 **Status**: In Progress
 
 ---
@@ -227,7 +227,7 @@ Licensed under CC BY-NC-ND 4.0
 - [ ] Consistent use of serial comma (Oxford comma)
 - [ ] Acronyms defined on first use
 - [ ] Consistent date format (January 29, 2026)
-- [ ] No placeholder text (e.g., "[TBD]", "[TODO]")
+- [ ] No unfilled author notes or to-be-determined values (enforced by `python3 scripts/aimf_mappings.py check`)
 
 ---
 

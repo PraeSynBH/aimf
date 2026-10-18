@@ -321,4 +321,4 @@ Organizations progressing from T2 to T3 should focus on:
 
 ---
 
-**Next Document**: [GOVERN Function Controls](AIMF-FUNCTION-GOVERN.md) | [Control Catalog](AIMF-CONTROL-CATALOG.csv)
+**Next Document**: [GOVERN Function Controls](../functions/AIMF-FUNCTION-GOVERN.md) | [Control Catalog](AIMF-CONTROL-CATALOG.csv)

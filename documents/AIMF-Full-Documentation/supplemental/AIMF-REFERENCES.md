@@ -99,7 +99,7 @@ This document provides comprehensive references for all standards, regulations, 
 - **President**: [Verify]
 - **Key Provisions**: Federal AI innovation, research investment, international collaboration
 - **Relationship to AIMF**: Supplementary to EO 14110; mapping in AIMF-EXECUTIVE-ORDER-14179-MAPPING.md
-- **Availability**: Federal Register [URL TBD]
+- **Availability**: Federal Register (published 2025; confirm the document number and title before citing)
 
 ### OMB Guidance
 
@@ -337,7 +337,7 @@ This document provides comprehensive references for all standards, regulations, 
 ## How to Cite AIMF
 
 **Academic Citation** (APA Style):
-> PraeSyn, LLC. (2026). *AI Management Framework (AIMF) Version 1.0*. https://[URL TBD]
+> PraeSyn, LLC. (2026). *AI Management Framework (AIMF) Version 1.0*.
 
 **Professional Reference**:
 > AI Management Framework (AIMF) by PraeSyn, Version 1.0 (2026). Available under CC BY-NC-ND 4.0 license.
@@ -349,7 +349,7 @@ This document provides comprehensive references for all standards, regulations, 
 
 ## Document Updates
 
-This references document will be updated with new standards, regulations, and research as AIMF evolves. Suggest additions by contacting PraeSyn [contact information TBD].
+This references document will be updated with new standards, regulations, and research as AIMF evolves. Suggest additions through your PraeSyn contact or the maintainer named in the bundle README.
 
 **Last Updated**: January 25, 2026 (v1.0 release)
 

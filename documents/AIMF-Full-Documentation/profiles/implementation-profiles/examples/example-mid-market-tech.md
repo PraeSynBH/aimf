@@ -82,7 +82,7 @@ This implementation profile establishes AI governance for TechVenture Analytics,
 | Demand Forecasting Engine | Moderate | B2 | Customer-facing; directly impacts client inventory/staffing decisions |
 | Pricing Optimization AI | Moderate | B2 | Customer-facing; affects client pricing strategy and revenue |
 | Support Chatbot | Low | B1 | Internal use; human oversight; minimal risk |
-| New AI Systems (default) | TBD | B2 | Default to B2 until risk assessment completed |
+| New AI Systems (default) | Assess at intake | B2 | Default to B2 until risk assessment completed |
 
 **Default baseline**: B2 for new customer-facing AI systems unless risk assessment indicates B1 sufficient
 

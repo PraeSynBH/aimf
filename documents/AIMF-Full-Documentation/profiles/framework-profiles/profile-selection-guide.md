@@ -5,7 +5,7 @@ Use this guide whenever you need to pick the framework profile that will become 
 ## Step-by-step decision flow
 
 1. **Industry/Sector** – If you operate in healthcare, financial services, or the public sector, start with the matching industry profile (healthcare, financial services, government). These profiles already encode the key regulatory controls, so treat them as the default unless the risk characterization pulls you to a different tier.
-2. **Risk-based baseline** – Run the [Risk Characterization Questionnaire](../change-control/20260129143000-BASELINE-SELECTION-QUESTIONNAIRE.md) to score autonomy, reversibility, impact scale, consequences, data sensitivity, and regulatory pressure (1‑5 each). Assign:
+2. **Risk-based baseline** – Run the [Risk Characterization Questionnaire](../../change-control/20260129143000-BASELINE-SELECTION-QUESTIONNAIRE.md) to score autonomy, reversibility, impact scale, consequences, data sensitivity, and regulatory pressure (1‑5 each). Assign:
    - **B3** when the total ≥ 21 or any dimension is 5 or both consequences/regulatory ≥ 4
    - **B2** when the total ≥ 13, any dimension ≥ 4, or two+ dimensions ≥ 3
    - **B1** when the total ≤ 12 and all dimensions ≤ 3

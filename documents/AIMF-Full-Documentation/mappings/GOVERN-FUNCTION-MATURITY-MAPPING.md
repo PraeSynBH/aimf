@@ -1039,10 +1039,9 @@ The GOVERN function maps across all four capability dimensions but primarily rel
 
 **End of GOVERN Function Mapping**
 
-**Next Steps**:
-1. Review and validate GOVERN mappings with SMEs
-2. Begin MAP function mapping
-3. Continue with MEASURE and MANAGE functions
-4. Integrate all mappings into FRAMEWORK_MASTER.md
-5. Cross-reference with ISO 42001 specific clauses
-6. Add Executive Order 14179 mappings
+**Status of the four function mappings**: complete. GOVERN, MAP, MEASURE and
+MANAGE each have their own document in this directory (72 of 72 NIST AI RMF
+subcategories, 19 of 19 catalog-attributed ISO/IEC 42001 clauses), and the
+Executive Order 14179 mapping is in `AIMF-EXECUTIVE-ORDER-14179-MAPPING.md`.
+The completeness argument, including the counts that earlier drafts of this
+directory got wrong, is recorded in `AIMF-MAPPING-COMPLETENESS.md`.

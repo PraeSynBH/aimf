@@ -307,7 +307,7 @@ To suggest improvements to visual assets:
 1. Identify the specific diagram and issue
 2. Provide clear description of suggested change
 3. Explain rationale (clarity, accuracy, usability)
-4. Submit via [feedback channel TBD]
+4. Submit it through your PraeSyn contact, or to the maintainer named in the bundle README
 
 ### Sharing Custom Visuals
 
@@ -336,12 +336,10 @@ If you create professional renderings of these diagrams:
 
 ## Contact and Support
 
-For questions about visual assets or to request custom renderings:
-- Email: [contact information TBD]
-- Website: [URL TBD]
-
-For professional graphic design services or custom diagrams:
-- PraeSyn Consulting: [contact information TBD]
+This bundle is pre-publication (see the README status line), so no support
+address or canonical URL is listed here; both are published with the release.
+For questions about visual assets or to request custom renderings, contact
+PraeSyn through the channel given in the release announcement.
 
 ---
 
