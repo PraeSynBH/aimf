@@ -1,6 +1,6 @@
 # AI Management Framework (AIMF) by PraeSyn
 
-**Version 1.0.10** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
+**Version 1.0.11** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
 
 ---
 
@@ -182,7 +182,7 @@ Use the [AIMF Assessment Guide](implementation/AIMF-ASSESSMENT-GUIDE.md) to:
 2. Determine your current maturity level (1-5)
 3. Identify strengths and gaps
 
-Score each control with the [AIMF Assessment Question Bank](implementation/AIMF-ASSESSMENT-QUESTION-BANK.md): one question, one evidence expectation and five behavioural anchors (0-4 / ML1-ML5) for all 72 controls, scored under the guide's written Scoring Protocol so that two assessors given the same evidence reach the same number. The blind double-scoring of the validation case agreed on 65 of 72 controls (90.3%) — above the 90% publication threshold in the protocol, up from 45/72 (62.5%) before the behavioural anchors were rewritten, and still short of the 72/72 target: seven controls still split and are named in [AIMF-INSTRUMENT-VALIDATION.md](implementation/AIMF-INSTRUMENT-VALIDATION.md).
+Score each control with the [AIMF Assessment Question Bank](implementation/AIMF-ASSESSMENT-QUESTION-BANK.md): one question, one evidence expectation and five behavioural anchors (0-4 / ML1-ML5) for all 72 controls, scored under the guide's written Scoring Protocol so that two assessors given the same evidence reach the same number. On the held-out case the instrument had never been applied to (`AIMF-VAL-2026-B`, frozen before any score existed), two independent sessions of one model agreed on **65 of 72 controls (90.3%)** — above the 90% publication threshold — while two different vendors agreed on **43 of 72 (59.7%)**. Reproducibility is therefore stated **within one model family**, not across vendors: quote 65 of 72 with that qualifier, never as a rounded percentage. The fitting case (`AIMF-VAL-2026-A`) is carried as a regression series (45/72 → 51/72 → 63/72 → 65/72) and is not validation. The splitting controls, the adjudications and the limits of the measurement are in [AIMF-INSTRUMENT-VALIDATION.md](implementation/AIMF-INSTRUMENT-VALIDATION.md).
 
 ### Step 2: Select Your Profile
 
@@ -315,7 +315,7 @@ Our mission is to make AI governance accessible, practical, and effective for or
 
 ## Framework Information
 
-- **Version**: 1.0.10
+- **Version**: 1.0.11
 - **Release Date**: October 18, 2026
 - **License**: CC BY-NC-ND 4.0
 - **Copyright**: © 2026 PraeSyn, LLC

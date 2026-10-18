@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.10
+**Version**: 1.0.11
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -14,6 +14,51 @@ All notable changes to the AI Management Framework (AIMF) by PraeSyn will be doc
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.11] - 2026-10-18 (Held-out validation published in the artifact; version label repaired)
+
+**Change Type**: Validation record + measurement-scoping correction
+**Rationale**: the bundle's validation record has until now described one case,
+`AIMF-VAL-2026-A`, and that case is the one the anchors were edited against — a regression series,
+not a validation. A second evidence pack, `AIMF-VAL-2026-B`, was authored, hashed and committed
+before any score for it existed, then scored blind with no anchor edit permitted in the window. It
+measured **65/72 (90.3%)** for two independent sessions of one model and **43/72 (59.7%)** across two
+vendors. This release puts that measurement in the shipped artifact and states which part of it may
+be quoted. It also repairs a label defect: the record's headline read `Current result (v1.0.8)` in
+the v1.0.9 and v1.0.10 bundles even though the number was unchanged and still correct.
+
+#### Added
+
+- **`implementation/AIMF-INSTRUMENT-VALIDATION.md` §11** — the held-out measurement: fixture and
+  freeze (pack sha256 `2513cb0a…6a91`, freeze commit `dc0d8e1`, bank sha256 `b6f9a6a1…15bd`,
+  `git diff` on the question bank across the freeze-to-publication window empty), the three pair
+  results, the adjudication rule counts, the named splitting controls on every pair, the verdicts
+  against A3/A10/P6, and the statement of what may and may not be quoted.
+- **`implementation/AIMF-ASSESSMENT-GUIDE.md` P6** — one paragraph scoping the anchor-revision rule:
+  if a held-out case agrees within one model family but splits across vendors, those splits are not
+  anchor defects and a scored fixture may not be used to tune the anchors afterwards.
+- **`implementation/AIMF-ASSESSMENT-GUIDE.md` P7** — rewritten to report both cases. Case B
+  (held out) 65/72 (90.3%) same model, 43/72 (59.7%) cross-vendor; case A (fitting) labelled as a
+  regression series. The `validated for reproducibility` sentence now carries the within-model
+  qualifier.
+
+#### Fixed
+
+- Validation-record headline and README validation sentence no longer present the case-A figure as
+  the instrument's reproducibility result, and the record's version label now names the shipping
+  version instead of lagging it two releases.
+
+#### Verified
+
+- No question, anchor, scale, control, count or mapping changed. Question-bank sha256 remains
+  `b6f9a6a19bfd25381657d33776812edf6f524e9ab9edd35727cb57c4600915bd`, identical to the bank scored
+  in all six case-B sessions and to the v1.0.9/v1.0.10 bundle.
+- `verify_release.sh` runs from inside the unpacked v1.0.11 zip: mapping and bank checks exit 0, the
+  validation-record headline and the guide's P7 measured line agree, and the in-zip anchor set sha
+  reads `b6f9a6a1`.
+- Version stamps reconciled to 1.0.11 in the README, this changelog and the QA verification report.
 
 ---
 

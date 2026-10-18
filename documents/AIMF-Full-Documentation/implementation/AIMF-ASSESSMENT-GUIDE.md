@@ -256,18 +256,34 @@ at least **90% of scored controls agree** and **every** disagreement carries a r
 adjudication. Below 90%, the anchors for the disagreeing controls are treated as defective and
 revised before the next engagement. A measured 90% is evidence; an unmeasured claim is not.
 
-#### P7. Measured result (2026-10-18)
+The revision rule is scoped to the pair being measured, and this matters. If a held-out case
+agrees at or above the threshold for two sessions of **one** model but falls far below it across
+**two vendors**, the split controls are not anchor defects, and editing their anchors against that
+case would fit a second fixture exactly as the first was fitted. Those controls are recorded as a
+cross-vendor disagreement class, stated as a limit of what the instrument reproduces, and left
+unedited. A fixture that has been scored may not be used to tune the anchors afterwards.
 
-The instrument has been blind-scored against one recorded case study: a frozen 72-control evidence
-pack (`AIMF-VAL-2026-A`, sha256 `c643fd60d973aa043331c7d10ce48949f314c0218ed966edd7a5a6fae8121b0e`),
-two assessors in separate sessions with no sight of each other's sheet (`anthropic/claude-sonnet-5.5`
-and `openai/gpt-4.1`), a third independent session adjudicating every disagreement.
+#### P7. Measured results (2026-10-18)
 
-**Agreement: 65 of 72 controls (90.3%) on the anchor set shipped in this version.** That meets the
-90% threshold in P6, and all seven remaining disagreements carry a recorded adjudication, so
-**this version of the instrument is validated for reproducibility on this case.** The margin is one
-control — 64/72 would be 88.9% — so the result is stated as the measured count, never as a rounded
-percentage.
+The instrument has been blind-scored on two frozen 72-control evidence packs: `AIMF-VAL-2026-A`
+(`c643fd60d973aa043331c7d10ce48949f314c0218ed966edd7a5a6fae8121b0e`) and the held-out case
+`AIMF-VAL-2026-B` (`2513cb0afe87a0f4a9b50192883529f8eaabe81223a3ec33eb742041414c6a91`), which was
+authored and hashed **before any case-B score existed** and whose anchors were not edited between
+the freeze and the publication of the result. Each pair is two model sessions with no sight of each
+other's sheet, at temperature 0, with a third independent session adjudicating what a P5 rule could
+not settle.
+
+**Held-out result (case B — the only figure to quote as validation): the same model in two
+independent sessions agreed on 65 of 72 controls (90.3%); two different vendors agreed on 43 of 72
+(59.7%).** All seven same-model disagreements carry a recorded adjudication.
+
+So this version of the instrument is **validated for reproducibility within one model family** —
+two blind sessions of one model, same pack, same anchors, 65/72 — and it is **not reproducible
+across vendors**: on the same held-out pack, five anchor passes did not move cross-vendor agreement
+above its pre-fix level. The 30-point gap between the two pair types is the finding. Quote the 65 of
+72 with the within-toolchain qualifier attached, or do not quote it.
+
+The table below is case **A**, the fitting case — a regression sequence, not a validation series.
 
 | Run | Instrument | Scoring brief | Agreement |
 |---|---|---|---|
@@ -301,13 +317,26 @@ Four findings:
    but two of the seven adjudicated to a score neither assessor gave, which is the honest signal
    that those two anchors still carry a judgement. For each, the validation record states the rule a
    third assessor would apply. One of them (`MAN-2.4`) was not edited in either pass and split
-   anyway, which sets the run-to-run noise of this harness at about one control; read 90.3% with
-   that width in mind, and re-measure on the next engagement rather than treating the figure as
-   fixed.
+   anyway, which sets the run-to-run noise of this harness at about one control; read the case-A
+   90.3% with that width in mind, and re-measure on the next engagement rather than treating the
+   figure as fixed.
+
+**Held-out case B, and what it adds.** The seven same-model splits on case B are `GOV-3.2`,
+`GOV-5.2`, `MAN-3.2`, `MAP-2.1`, `MAP-2.3`, `MEA-2.9`, `MEA-3.3` — 4 by rule 1, 3 by rule 2, with
+`GOV-5.2`, `MAN-3.2` and `MAP-2.3` unresolved without a third adjudicator. That is the same failure
+mode as case A at the same rate, on a pack the anchors were never written against, which is what
+makes the within-model figure a validation figure rather than a regression one.
+
+The 29 cross-vendor splits are a different population. Eight of them differ by one level **while
+citing the same deciding artefact** — two sessions read the same evidence and reached different
+verdicts — and the other 21 needed a third adjudicator under rules 2, 3 and 4. Every one of the 29
+carries a final adjudicated score, but no anchor edit can settle an eight-control same-evidence
+disagreement without being written to that case, so these are recorded as the instrument's
+cross-vendor limit and are not treated as anchor defects.
 
 All seven run-6 disagreements were adjudicated under P5 (3 by rule 1, 3 by rule 2, 1 by rule 3), none
-left unresolved. Full record, the adjudication tables, the per-control rules and the limits of the
-measurement: `implementation/AIMF-INSTRUMENT-VALIDATION.md`.
+left unresolved. Full record, the adjudication tables, the per-control rules, the held-out case-B
+result and the limits of the measurement: `implementation/AIMF-INSTRUMENT-VALIDATION.md`.
 
 
 

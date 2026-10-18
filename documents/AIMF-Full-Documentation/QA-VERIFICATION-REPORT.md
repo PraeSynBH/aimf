@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6; guide completion and bundle-wide placeholder/link sweep verified 2026-10-18 against v1.0.9; guide heading repair verified 2026-10-18 against v1.0.10)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6; guide completion and bundle-wide placeholder/link sweep verified 2026-10-18 against v1.0.9; guide heading repair verified 2026-10-18 against v1.0.10; held-out validation record and claim scoping verified 2026-10-18 against v1.0.11)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.10
+**Framework Version**: 1.0.11
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -139,6 +139,21 @@ Licensed under CC BY-NC-ND 4.0
 > for dangling prepositions and for one-to-three-word paragraphs directly beneath a heading found no
 > second occurrence. No counts, questions, anchors or mappings changed; `check` still exits 0 and
 > `report` still shows 0 sweep findings over 56 `.md` files. See `CHANGELOG.md` → `[1.0.10]`.
+>
+> **v1.0.11 addendum (2026-10-18).** The validation record now carries the held-out measurement.
+> `AIMF-VAL-2026-B` was authored and hashed at `dc0d8e1` before any score for it existed, then
+> scored by six blind sessions at temperature 0 against question bank `b6f9a6a1` with no anchor edit
+> in the freeze-to-publication window (`git diff` on the bank is empty). Result: same model in two
+> independent sessions **65/72 (90.3%)**; two different vendors **43/72 (59.7%)**; case-A same-model
+> re-run **68/72 (94.4%)**. The Assessment Guide's P6 now scopes the anchor-revision rule so a
+> scored held-out fixture cannot be tuned against, and P7 reports both cases with the case-A series
+> labelled as regression rather than validation. The record's `Current result (v1.0.8)` headline —
+> which lagged the artifact by two releases while its number stayed correct — now names the shipping
+> version and states both legs. Re-verified from an unpacked v1.0.11 bundle root: both `check`
+> commands exit 0, `report` reads 72 controls, 72 of 72 questions, 19 ISO 42001 clauses, 72 NIST
+> subcategories and `placeholder sweep: 56 .md files scanned, 0 findings`, the record/guide
+> measured-result gate passes, and the in-zip bank sha is `b6f9a6a1`. No question, anchor, scale,
+> count or mapping changed. See `CHANGELOG.md` → `[1.0.11]`.
 
 
 ---
@@ -537,7 +552,7 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 | **Total** | **49 files** | ✅ **Complete** |
 
 **Distribution bundle**: the shipped bundles
-(`documents/AIMF-Full-Documentation-v1.0.10.zip` and the rolling
+(`documents/AIMF-Full-Documentation-v1.0.11.zip` and the rolling
 `documents/AIMF-Full-Documentation.zip`) carry 84 regular files plus 16 directory
 entries. Note that `unzip -l`'s summary line counts directory entries as well, so its
 figure overstates the file count by one per directory; quote the file count from
@@ -655,4 +670,4 @@ control-theme level and is labelled partial. See
 
 *Quality Assurance Verification Report completed January 26, 2026*
 
-**QA Status**: ✅ PASSED - READY FOR v1.0.10 REVIEW (pre-publication)
+**QA Status**: ✅ PASSED - READY FOR v1.0.11 REVIEW (pre-publication)
