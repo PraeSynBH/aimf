@@ -533,7 +533,7 @@ START: Assess AI system using 6 risk dimensions (Q1-Q6)
 
 ---
 
-### B3 (High Risk) - All Controls (73)
+### B3 (High Risk) - All Controls (72)
 
 **All B1 and B2 controls PLUS**:
 

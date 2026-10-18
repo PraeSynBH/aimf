@@ -88,7 +88,7 @@ The AIMF defines three risk baselines that determine **which controls apply** ba
 AIMF uses a multi-layered scoring model that enables objective measurement and continuous improvement:
 
 ```
-Framework (73 controls, ML5 max)
+Framework (72 controls, ML5 max)
     └── Baseline (scoped controls based on risk)
             └── Profile (selected controls, ML3 default target)
                     └── Entity Assessment (actual maturity ratings)

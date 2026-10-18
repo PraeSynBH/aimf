@@ -41,7 +41,7 @@ This plan provides a systematic approach to manually reviewing the entire AI Man
 - Does the overview clearly explain the framework?
 - Are navigation links working and logical?
 - Does the quick start guide make sense for different audiences?
-- Are control counts accurate (73 total: 19, 19, 22, 13)?
+- Are control counts accurate (72 total: 19, 18, 22, 13)?
 
 ### Secondary Context Documents
 After README.md, review these for context:
@@ -73,7 +73,7 @@ After README.md, review these for context:
 
 3. **AIMF-CONTROL-CATALOG.csv** (core/)
    - **CRITICAL**: Master control catalog
-   - Verify 20 columns, 73 rows
+   - Verify 22 columns, 72 rows
    - Check all Control_IDs follow pattern
    - Spot-check B1/B2/B3 requirements for completeness
    - Verify profile tags present
@@ -92,7 +92,7 @@ After README.md, review these for context:
 
 #### Review Criteria - Phase 1
 - [ ] Framework name consistently "AI Management Framework (AIMF) by PraeSyn"
-- [ ] Control counts accurate: Total 73 (GOVERN 19, MAP 19, MEASURE 22, MANAGE 13)
+- [ ] Control counts accurate: Total 72 (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13)
 - [ ] Maturity levels clearly defined (1-5: Initial, Developing, Defined, Managed, Optimizing)
 - [ ] 4 dimensions clearly explained
 - [ ] 3 tiers (B1, B2, B3) properly defined
@@ -255,7 +255,7 @@ After README.md, review these for context:
 
 #### AI Assistance Points - Phase 4
 - Count controls in each profile (grep for Control IDs)
-- Verify coverage percentages: (selected controls / 73) * 100
+- Verify coverage percentages: (selected controls / 72) * 100
 - Check profile tags in master CSV match profile documents
 - Validate no duplicate controls within profiles
 

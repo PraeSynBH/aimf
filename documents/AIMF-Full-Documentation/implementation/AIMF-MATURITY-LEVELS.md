@@ -547,7 +547,7 @@ When multiple assessors rate the same control:
 **Baseline determines scope** (which controls):
 - B1: ~35 controls
 - B2: ~50 controls
-- B3: 73 controls
+- B3: 72 controls
 
 **Maturity determines quality** (how well implemented):
 - Each control assessed ML1-5 independently

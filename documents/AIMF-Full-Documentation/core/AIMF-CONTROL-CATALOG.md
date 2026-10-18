@@ -15,7 +15,7 @@ www.praesyn.com
 
 ## Overview
 
-This document provides a human-readable guide to all 73 AIMF controls. Controls are organized by the 4 high-level domains and 16 mid-level categories defined in the domain taxonomy.
+This document provides a human-readable guide to all 72 AIMF controls. Controls are organized by the 4 high-level domains and 19 mid-level categories defined in the domain taxonomy.
 
 For the machine-readable version, see [AIMF-CONTROL-CATALOG.csv](AIMF-CONTROL-CATALOG.csv).
 
@@ -1394,16 +1394,16 @@ Each control includes:
 
 ## Document Information
 
-**Total Controls**: 73
+**Total Controls**: 72
 **Domain Distribution**:
 - Governance & Accountability: 19 controls (26%)
 - Data Management & Privacy: 6 controls (8%)
-- Technical Operations & MLOps: 31 controls (42%)
-- Organizational Culture & Capabilities: 17 controls (23%)
+- Technical Operations & MLOps: 31 controls (43%)
+- Organizational Culture & Capabilities: 16 controls (22%)
 
 **NIST AI RMF Coverage**:
 - GOVERN: 19 controls
-- MAP: 19 controls
+- MAP: 18 controls
 - MEASURE: 22 controls
 - MANAGE: 13 controls
 
@@ -1414,7 +1414,7 @@ Each control includes:
 **Profile System**:
 - Foundational: ~35 controls (48%)
 - Balanced: ~50 controls (68%)
-- High-Assurance: 73 controls (100%)
+- High-Assurance: 72 controls (100%)
 - Industry profiles: 55-60 controls (75-82%)
 
 ---

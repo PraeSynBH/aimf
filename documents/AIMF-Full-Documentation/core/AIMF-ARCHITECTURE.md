@@ -17,7 +17,7 @@ This document explains the structural design of the AI Management Framework (AIM
    - These standards define the high-level success criteria, compliance obligations, and the vocabulary that downstream artifacts reuse (controls, baselines, maturity, profiles).
 
 2. **Control Engine**
-   - AIMF defines **73 controls** spread across four functions (GOVERN, MAP, MEASURE, MANAGE) and mapped to the four capability dimensions. Controls are described in both [AIMF-CONTROL-CATALOG.csv](AIMF-CONTROL-CATALOG.csv) (machine-friendly) and [AIMF-CONTROL-CATALOG.md](AIMF-CONTROL-CATALOG.md) (human-readable). The catalog is the schema that every implementation artifact refers to.
+   - AIMF defines **72 controls** spread across four functions (GOVERN, MAP, MEASURE, MANAGE) and mapped to the four capability dimensions. Controls are described in both [AIMF-CONTROL-CATALOG.csv](AIMF-CONTROL-CATALOG.csv) (machine-friendly) and [AIMF-CONTROL-CATALOG.md](AIMF-CONTROL-CATALOG.md) (human-readable). The catalog is the schema that every implementation artifact refers to.
    - **Baselines (B1/B2/B3)** scope the relevant subset of controls for a risk tier; they are the risk filter. Baseline definitions and the risk-characterization decision tree live in [implementation/AIMF-RISK-BASELINES.md](../implementation/AIMF-RISK-BASELINES.md).
 
 3. **Profiles & Maturity**

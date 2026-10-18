@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.1
+**Framework Version**: 1.0.2
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -22,6 +22,25 @@ Licensed under CC BY-NC-ND 4.0
 > the completed files. Every claim below is reproducible with a command; the register of
 > mapping artifacts and evidence is
 > [AIMF-MAPPING-COMPLETENESS.md](AIMF-MAPPING-COMPLETENESS.md).
+
+---
+
+> **v1.0.2 addendum (2026-10-18).** The count/consistency exceptions this report disclosed
+> for v1.0.1 have been corrected in the shipped documents. `README.md`,
+> `core/AIMF-ARCHITECTURE.md`, `core/AIMF-FRAMEWORK-OVERVIEW.md`,
+> `core/AIMF-CONTROL-CATALOG.md`, `core/AIMF-DOMAIN-TAXONOMY.md`,
+> `implementation/AIMF-MATURITY-LEVELS.md`, `implementation/AIMF-RISK-BASELINES.md`,
+> `implementation/AIMF-PROFILES-GUIDE.md` and `AIMF-V1.0-REVIEW-PLAN.md` now state 72
+> controls, split GOVERN 19 / MAP 18 / MEASURE 22 / MANAGE 13 (catalog:
+> `python3 -c "import csv;r=list(csv.DictReader(open('core/AIMF-CONTROL-CATALOG.csv')));print(len(r))"` → 72),
+> and the README release status is `Pre-Publication (Working Draft)`, matching
+> `CHANGELOG.md`. The statements below that describe a *residual* 72-vs-73
+> inconsistency are therefore historical as of this addendum; the total row of the
+> Executive Summary table above reads ⚠️ PARTIAL and is superseded by this note for the
+> count dimension, while the ISO 27001 partial item still stands. One consistency gap
+> remains open and is tracked separately: the taxonomy defines 20 L2 category names
+> against 19 distinct `Domain_L2` values in the catalog CSV. See
+> `CHANGELOG.md` → `[1.0.2]`.
 
 ---
 
@@ -268,7 +287,7 @@ depth) is disclosed rather than asserted. See
 - ✅ No broken links to non-existent files detected
 
 ### Document References
-- ✅ Profile control numbers match across documents (35, 50, 73, 59, 62, 63)
+- ✅ Profile control numbers match across documents (35, 50, 72, 59, 62, 63)
 - ✅ Control counts match across all references
 - ✅ Maturity level descriptions consistent
 - ✅ Tier descriptions consistent across documents
@@ -521,4 +540,4 @@ control-theme level and is labelled partial. See
 
 *Quality Assurance Verification Report completed January 26, 2026*
 
-**QA Status**: ✅ PASSED - READY FOR v1.0 PUBLICATION
+**QA Status**: ✅ PASSED - READY FOR v1.0.2 REVIEW (pre-publication)

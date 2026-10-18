@@ -225,8 +225,11 @@ mappings/MEASURE-FUNCTION-MATURITY-MAPPING.md            research=0  **Status**:
 Defects found during verification that are outside the scope of the
 standards-completeness correction are tracked separately rather than silently folded in:
 
-- **Control count.** The catalog contains **72** controls, but README.md, CHANGELOG.md,
-  several profile documents and the change-control records variously still say **73**.
+- **Control count.** The catalog contains **72** controls. Every current-count statement in
+  README.md, core/, implementation/ and the QA report now reads 72 (GOVERN 19, MAP 18,
+  MEASURE 22, MANAGE 13) as of v1.0.2; the only remaining `73` figures are the dated
+  January-2026 change-control plan records (`change-control/20260129143000-*.md`), which
+  are kept as the historical record of what was planned before the change was completed.
 - **ISO 27001 depth.** `mappings/AIMF-ISO27001-MAPPING.md` is mapped at the public
   Annex A control-theme level only; control-level depth is not claimed pending a licensed
   copy of ISO/IEC 27001:2022.

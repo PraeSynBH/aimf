@@ -15,12 +15,12 @@ www.praesyn.com
 
 ## Overview
 
-This document defines the 3-level domain taxonomy used to organize the 73 AIMF controls. The taxonomy provides a business-friendly organizational structure that complements the NIST AI RMF function-based organization.
+This document defines the 3-level domain taxonomy used to organize the 72 AIMF controls. The taxonomy provides a business-friendly organizational structure that complements the NIST AI RMF function-based organization.
 
 **Taxonomy Levels**:
 - **Level 1 (L1)**: 4 high-level domains aligned with the 4 AIMF capability dimensions
-- **Level 2 (L2)**: 16 mid-level categories representing key capability areas
-- **Level 3 (L3)**: 73 detailed subcategories (1:1 mapping with individual controls)
+- **Level 2 (L2)**: 20 mid-level categories representing key capability areas
+- **Level 3 (L3)**: 72 detailed subcategories (1:1 mapping with individual controls)
 
 ---
 
@@ -323,9 +323,9 @@ This document defines the 3-level domain taxonomy used to organize the 73 AIMF c
 |-----------|---------------|----------------|------------|
 | **Governance & Accountability** | 5 | 19 | 26% |
 | **Data Management & Privacy** | 4 | 6 | 8% |
-| **Technical Operations & MLOps** | 6 | 31 | 42% |
-| **Organizational Culture & Capabilities** | 5 | 17 | 23% |
-| **TOTAL** | **20** | **73** | **100%** |
+| **Technical Operations & MLOps** | 6 | 31 | 43% |
+| **Organizational Culture & Capabilities** | 5 | 16 | 22% |
+| **TOTAL** | **20** | **72** | **100%** |
 
 ---
 
@@ -338,8 +338,8 @@ This document defines the 3-level domain taxonomy used to organize the 73 AIMF c
 | **Governance & Accountability** | 19 | 0 | 0 | 0 | 19 |
 | **Data Management & Privacy** | 0 | 3 | 1 | 2 | 6 |
 | **Technical Operations & MLOps** | 0 | 5 | 19 | 7 | 31 |
-| **Organizational Culture & Capabilities** | 0 | 11 | 2 | 4 | 17 |
-| **TOTAL** | **19** | **19** | **22** | **13** | **73** |
+| **Organizational Culture & Capabilities** | 0 | 10 | 1 | 5 | 16 |
+| **TOTAL** | **19** | **18** | **22** | **13** | **72** |
 
 *Note: Some controls serve multiple domains/functions and are counted in their primary domain.*
 

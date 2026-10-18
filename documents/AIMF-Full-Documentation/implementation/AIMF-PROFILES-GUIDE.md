@@ -31,7 +31,7 @@ A **profile** is a customized selection and prioritization of AIMF controls base
 
 ### Key Concepts
 
-**Purpose**: Profiles allow organizations to implement AIMF in a way that matches their specific needs without implementing all 73 controls immediately.
+**Purpose**: Profiles allow organizations to implement AIMF in a way that matches their specific needs without implementing all 72 controls immediately.
 
 **Flexibility**: Organizations can:
 - Start with a pre-defined framework profile
@@ -62,7 +62,7 @@ AIMF supports two distinct profile types:
 **Available Framework Profiles** (v1.0):
 1. **Foundational Profile** (~35 controls, ~48% coverage)
 2. **Balanced Profile** (~50 controls, ~68% coverage)
-3. **High-Assurance Profile** (73 controls, 100% coverage)
+3. **High-Assurance Profile** (72 controls, 100% coverage)
 4. **Financial Services Profile** (~55 controls, ~75% coverage)
 5. **Healthcare Profile** (~55 controls, ~75% coverage)
 6. **Government Profile** (~60 controls, ~82% coverage)

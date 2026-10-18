@@ -1,6 +1,6 @@
 # AI Management Framework (AIMF) by PraeSyn
 
-**Version 1.0** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
+**Version 1.0.2** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
 
 ---
 
@@ -52,7 +52,7 @@ Choose a framework profile that matches your context:
 |---------|---------------|----------|
 | **[Foundational](profiles/framework-profiles/profile-foundational.md)** | ~35 | Small orgs, low-risk AI, starting point |
 | **[Balanced](profiles/framework-profiles/profile-balanced.md)** | ~50 | Standard enterprise AI programs |
-| **[High-Assurance](profiles/framework-profiles/profile-high-assurance.md)** | 73 (all) | High-risk AI, critical infrastructure |
+| **[High-Assurance](profiles/framework-profiles/profile-high-assurance.md)** | 72 (all) | High-risk AI, critical infrastructure |
 | **[Financial Services](profiles/framework-profiles/profile-financial-services.md)** | ~55 | Regulated financial sector |
 | **[Healthcare](profiles/framework-profiles/profile-healthcare.md)** | ~55 | Healthcare, patient-facing AI |
 | **[Government](profiles/framework-profiles/profile-government.md)** | ~60 | Public sector, transparency requirements |
@@ -83,10 +83,10 @@ See [Profile Selection Guide](profiles/framework-profiles/profile-selection-guid
 - **Baseline 2 (B2)**: Mature implementation for moderate-risk AI
 - **Baseline 3 (B3)**: High-rigor implementation for high-risk AI
 
-#### 73 Controls
+#### 72 Controls
 Organized across 4 NIST AI RMF functions:
 - **GOVERN** (19 controls) - Governance foundations
-- **MAP** (19 controls) - Context establishment and categorization
+- **MAP** (18 controls) - Context establishment and categorization
 - **MEASURE** (22 controls) - Trustworthy AI characteristics assessment
 - **MANAGE** (13 controls) - Risk response and mitigation
 
@@ -100,7 +100,7 @@ Organized across 4 NIST AI RMF functions:
 |----------|---------|----------|
 | **[AIMF-FRAMEWORK-OVERVIEW.md](core/AIMF-FRAMEWORK-OVERVIEW.md)** | High-level introduction to framework structure | All audiences |
 | **[AIMF-ARCHITECTURE.md](core/AIMF-ARCHITECTURE.md)** | Detailed framework design and relationships | Technical, Governance |
-| **[AIMF-CONTROL-CATALOG.csv](core/AIMF-CONTROL-CATALOG.csv)** | Complete control catalog (20 columns, 73 rows) | Assessors, Implementers |
+| **[AIMF-CONTROL-CATALOG.csv](core/AIMF-CONTROL-CATALOG.csv)** | Complete control catalog (22 columns, 72 rows) | Assessors, Implementers |
 | **[AIMF-CONTROL-CATALOG.md](core/AIMF-CONTROL-CATALOG.md)** | Human-readable control guide | All audiences |
 
 ### Implementation Guidance
@@ -146,7 +146,7 @@ check ships with this bundle: from an unpacked bundle root run
 |---------|----------|-------------|
 | **[Foundational](profiles/framework-profiles/profile-foundational.md)** | ~35 | Minimal viable AI governance |
 | **[Balanced](profiles/framework-profiles/profile-balanced.md)** | ~50 | Standard enterprise implementation |
-| **[High-Assurance](profiles/framework-profiles/profile-high-assurance.md)** | 73 | Maximum rigor for high-risk AI |
+| **[High-Assurance](profiles/framework-profiles/profile-high-assurance.md)** | 72 | Maximum rigor for high-risk AI |
 | **[Financial Services](profiles/framework-profiles/profile-financial-services.md)** | ~55 | Regulated financial sector |
 | **[Healthcare](profiles/framework-profiles/profile-healthcare.md)** | ~55 | Healthcare and patient-facing AI |
 | **[Government](profiles/framework-profiles/profile-government.md)** | ~60 | Public sector and transparency |
@@ -311,11 +311,11 @@ Our mission is to make AI governance accessible, practical, and effective for or
 
 ## Framework Information
 
-- **Version**: 1.0
-- **Release Date**: January 29, 2026
+- **Version**: 1.0.2
+- **Release Date**: October 18, 2026
 - **License**: CC BY-NC-ND 4.0
 - **Copyright**: © 2026 PraeSyn, LLC
-- **Status**: Published
+- **Status**: Pre-Publication (Working Draft)
 
 ---
 

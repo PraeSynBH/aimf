@@ -4,8 +4,8 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0
-**Publication Date**: January 29, 2026
+**Version**: 1.0.2
+**Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
 ---
@@ -17,7 +17,67 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [Unreleased] - 2026-10-17 (Standards-Completeness Correction)
+## [1.0.2] - 2026-10-18 (Control Count, Release Status and Header Correction)
+
+**Change Type**: Correctness correction (documentation)
+**Rationale**: v1.0.1's own notes recorded "Control counts corrected in the QA checklist:
+73 → 72 rows / 72 controls / MAP 18", but the shipped README, the human-readable catalog
+guide, the architecture document, the framework overview and the taxonomy summary still
+told a reader 73 controls, and the README's release status said "Published" above this
+file's "Pre-Publication (Working Draft)". A bundle that contradicts itself on its control
+count and on whether it is published is a credibility defect for an asset sold on
+standards fidelity. Every number below was taken from `core/AIMF-CONTROL-CATALOG.csv`
+(72 data rows: GOVERN 19, MAP 18, MEASURE 22, MANAGE 13; 22 columns) and cross-checked
+against the control IDs listed in the taxonomy and the catalog guide.
+
+#### Fixed
+
+- **Control count corrected to 72 wherever it was still stated as 73** — README.md
+  (profile tables, "72 Controls" section heading, catalog entry), core/AIMF-ARCHITECTURE.md,
+  core/AIMF-FRAMEWORK-OVERVIEW.md, core/AIMF-CONTROL-CATALOG.md (overview, document
+  information, profile system), core/AIMF-DOMAIN-TAXONOMY.md (overview, summary
+  statistics, domain-to-function totals).
+- **Per-function split corrected to GOVERN 19 / MAP 18 / MEASURE 22 / MANAGE 13** —
+  README's function list and the catalog guide's coverage block said MAP 19, which no
+  catalog row supports.
+- **Catalog column count corrected** — README described the CSV as "20 columns"; it has 22.
+- **Domain distribution corrected** — Organizational Culture & Capabilities is 16 controls
+  (22%), not 17 (23%), in the catalog guide and in both taxonomy summary tables; the
+  taxonomy's domain-to-function row for that domain is now 0/10/1/5 and its TOTAL row is
+  19/18/22/13 = 72.
+- **Mid-level category count corrected** — the control guide described "16 mid-level
+  categories" while listing 19; the taxonomy described 16 while defining 20.
+- **Release status reconciled** — README and this changelog now both state
+  `Pre-Publication (Working Draft)`, and the README version block reads 1.0.2 /
+  October 18, 2026. There is no remote and no public copy of this bundle, so "Published"
+  was not supportable (see the D2 decision on PRA-6431).
+- **Changelog header version corrected** — `**Version**: 1.0` → `1.0.2`, matching the
+  release entries it actually contains.
+
+#### Known remaining (not corrected here, tracked separately)
+
+- The taxonomy defines 20 L2 category names; the catalog CSV carries 19 distinct
+  `Domain_L2` values. One taxonomy category name has no catalog counterpart, so the two
+  documents disagree on the L2 layer even though they agree on all 72 control IDs. This
+  needs a taxonomy/catalog reconciliation, not a number edit.
+- `change-control/20260129143000-*.md` (the January 2026 baseline change plans and
+  questionnaire) still state `B3 = 73 controls`. Those are dated planning records of what
+  was decided before the change was completed — the completed outcome (72 controls) is
+  recorded in the same folder — so they are left as history rather than rewritten.
+- Profile control counts in the README are approximate by design (~35, ~50, ~55, ~60) and
+  are not part of this correction.
+
+#### Distribution
+
+- Both `documents/AIMF-Full-Documentation-v1.0.2.zip` and the rolling
+  `documents/AIMF-Full-Documentation.zip` are rebuilt from the packaged directory of this
+  release and are byte-identical to each other.
+- Tagged `aimf-v1.0.2` locally. Not pushed, not published, no public repository — that
+  still waits on the D2 decision on PRA-6431.
+
+---
+
+### Carried into this release: standards-completeness correction (2026-10-17)
 
 **Change Type**: Correctness correction (documentation)
 **Rationale**: v1.0 asserted standards-mapping completeness that the files did not
@@ -77,8 +137,9 @@ is a credibility defect.
   same file runs from the repository as well; the repository-root `scripts/aimf_mappings.py`
   remains as a delegating shim.
 - **Distribution bundles re-cut**: both `documents/AIMF-Full-Documentation-v1.0.1.zip`
-  and the rolling `documents/AIMF-Full-Documentation.zip` are rebuilt from the packaged
-  directory of this commit and are byte-identical to each other.
+  and the rolling `documents/AIMF-Full-Documentation.zip` were rebuilt from the packaged
+  directory at v1.0.1 and were byte-identical to each other. Both are superseded by the
+  v1.0.2 bundles described above.
 
 ---
 
