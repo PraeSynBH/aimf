@@ -274,9 +274,10 @@ from the run-4 adjudication table rather than from a hypothesis.
 
 | Boundary | Controls |
 |---|---|
-| 1 ↔ 2 | `GOV-1.3`, `GOV-1.4`, `GOV-2.3`, `GOV-3.2`, `GOV-5.2`, `MAN-1.1`, `MAN-3.2`, `MAN-4.2`, `MAP-1.3`, `MAP-3.5`, `MEA-1.1`, `MEA-1.2`, `MEA-2.1`, `MEA-2.11`, `MEA-2.2`, `MEA-2.6`, `MEA-2.8`, `MEA-3.1`, `MEA-3.3`, `MEA-4.3` |
-| 2 ↔ 3 / 3 ↔ 4 | `MEA-2.4` |
-| `NA` vs numeric | `MEA-2.2`, `GOV-3.2` |
+| 1 ↔ 2 (12) | `GOV-1.3`, `GOV-2.3`, `MAN-1.1`, `MAN-3.2`, `MAN-4.2`, `MAP-1.3`, `MAP-3.5`, `MEA-2.6`, `MEA-2.8`, `MEA-2.11`, `MEA-3.1`, `MEA-3.3` |
+| 2 ↔ 3 / 3 ↔ 4 (6) | `GOV-1.4`, `MEA-1.1`, `MEA-1.2`, `MEA-2.1`, `MEA-2.4`, `MEA-4.3` |
+| `NA` vs numeric (2) | `GOV-3.2`, `MEA-2.2` |
+| 0 ↔ 1 (1) | `GOV-5.2` |
 
 The rule was unchanged from run 4: anchor 1 names the countable test the artefact fails (a stated
 population not fully covered, a dated record missing for one member of it, or a required element
@@ -307,8 +308,9 @@ question-bank table changed.
 9: one 0, three 1, three 2, one 3, one 4. Sheet and comparison: `validation/run5/`.
 
 The control group did not move (50/51 both runs), so the 12-control movement is attributable to the
-21 edited rows. Pass 1 fixed 8 of the run-4 splits and 87.5% is three controls short of the 90%
-threshold — which is why a second pass was run rather than the number being published as final.
+21 edited rows. Pass 1 fixed 13 of run 4's 21 splits and produced one new one (`MAP-2.2`, unedited
+and agreeing in run 4), leaving 9 and 87.5% — three controls short of the 90% threshold, which is why
+a second pass was run rather than the number being published as final.
 
 ### 9.3 The nine that still split, and why
 
