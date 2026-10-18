@@ -1,0 +1,8 @@
+AD1: 12/72 scored
+AD1: 24/72 scored
+AD1: 36/72 scored
+AD1: 48/72 scored
+AD1: 60/72 scored
+AD1: 72/72 scored
+wrote runB/scores-AD1.json: 72 controls
+AD1 exit=0

@@ -1,0 +1,8 @@
+BD2: 12/72 scored
+BD2: 24/72 scored
+BD2: 36/72 scored
+BD2: 48/72 scored
+BD2: 60/72 scored
+BD2: 72/72 scored
+wrote runB/scores-BD2.json: 72 controls
+BD2 exit=0

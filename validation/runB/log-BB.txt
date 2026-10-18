@@ -1,0 +1,8 @@
+BB: 12/72 scored
+BB: 24/72 scored
+BB: 36/72 scored
+BB: 48/72 scored
+BB: 60/72 scored
+BB: 72/72 scored
+wrote runB/scores-BB.json: 72 controls
+BB exit=0

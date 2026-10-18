@@ -1,0 +1,727 @@
+{
+ "summary": {
+  "controls_scored": 72,
+  "agree": 65,
+  "agreement_rate": 0.9028,
+  "disagreements": 7,
+  "by_rule": {
+   "1": 4,
+   "2": 3
+  },
+  "final_after_adjudication": {
+   "0": 1,
+   "1": 1,
+   "2": 2,
+   "None": 3
+  },
+  "unresolved": [
+   "GOV-5.2",
+   "MAN-3.2",
+   "MAP-2.3"
+  ],
+  "assessors": {
+   "A": {
+    "model": "deepseek/deepseek-chat",
+    "transport": "openrouter",
+    "pack_sha256": "2513cb0afe87a0f4a9b50192883529f8eaabe81223a3ec33eb742041414c6a91"
+   },
+   "B": {
+    "model": "deepseek/deepseek-chat",
+    "transport": "openrouter",
+    "pack_sha256": "2513cb0afe87a0f4a9b50192883529f8eaabe81223a3ec33eb742041414c6a91"
+   }
+  }
+ },
+ "rows": [
+  {
+   "control": "GOV-1.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-015",
+   "B_artefact": "EV-015",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-022",
+   "B_artefact": "EV-022",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.3",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-031",
+   "B_artefact": "EV-031",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.4",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-043",
+   "B_artefact": "EV-043",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.5",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-050",
+   "B_artefact": "EV-050",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.6",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-060",
+   "B_artefact": "EV-060",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.7",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-071",
+   "B_artefact": "EV-070",
+   "agree": true
+  },
+  {
+   "control": "GOV-2.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-080",
+   "B_artefact": "EV-080",
+   "agree": true
+  },
+  {
+   "control": "GOV-2.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-090",
+   "B_artefact": "EV-090",
+   "agree": true
+  },
+  {
+   "control": "GOV-2.3",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-102",
+   "B_artefact": "EV-100",
+   "agree": true
+  },
+  {
+   "control": "GOV-3.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-113",
+   "B_artefact": "EV-113",
+   "agree": true
+  },
+  {
+   "control": "GOV-3.2",
+   "A": 1,
+   "B": 0,
+   "A_artefact": "EV-120",
+   "B_artefact": "EV-120",
+   "agree": false,
+   "final": 0,
+   "rule": 1,
+   "A_note": "EV-120 partially satisfies level 1, but EV-121 and EV-122 show no AI-specific representation monitoring.",
+   "B_note": "EV-120 and EV-121 report only all-staff or technical roles, with no AI-specific breakdown."
+  },
+  {
+   "control": "GOV-4.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-132",
+   "B_artefact": "EV-132",
+   "agree": true
+  },
+  {
+   "control": "GOV-4.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-142",
+   "B_artefact": "EV-142",
+   "agree": true
+  },
+  {
+   "control": "GOV-4.3",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-150",
+   "B_artefact": "EV-150",
+   "agree": true
+  },
+  {
+   "control": "GOV-5.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-160",
+   "B_artefact": "EV-160",
+   "agree": true
+  },
+  {
+   "control": "GOV-5.2",
+   "A": 0,
+   "B": 1,
+   "A_artefact": "EV-170",
+   "B_artefact": "EV-171",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "EV-170 establishes absence of academic contact.",
+   "B_note": "Personal collaboration exists but lacks formal agreements."
+  },
+  {
+   "control": "GOV-6.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-180",
+   "B_artefact": "EV-180",
+   "agree": true
+  },
+  {
+   "control": "GOV-6.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-190",
+   "B_artefact": "EV-190",
+   "agree": true
+  },
+  {
+   "control": "MAN-1.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-622",
+   "B_artefact": "EV-621",
+   "agree": true
+  },
+  {
+   "control": "MAN-1.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-630",
+   "B_artefact": "EV-630",
+   "agree": true
+  },
+  {
+   "control": "MAN-1.3",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-640",
+   "B_artefact": "EV-640",
+   "agree": true
+  },
+  {
+   "control": "MAN-1.4",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-653",
+   "B_artefact": "EV-653",
+   "agree": true
+  },
+  {
+   "control": "MAN-2.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-662",
+   "B_artefact": "EV-662",
+   "agree": true
+  },
+  {
+   "control": "MAN-2.2",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-671",
+   "B_artefact": "EV-671",
+   "agree": true
+  },
+  {
+   "control": "MAN-2.3",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-682",
+   "B_artefact": "EV-682",
+   "agree": true
+  },
+  {
+   "control": "MAN-2.4",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-692",
+   "B_artefact": "EV-692",
+   "agree": true
+  },
+  {
+   "control": "MAN-3.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-702",
+   "B_artefact": "EV-702",
+   "agree": true
+  },
+  {
+   "control": "MAN-3.2",
+   "A": 3,
+   "B": 2,
+   "A_artefact": "EV-713",
+   "B_artefact": "EV-711",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "",
+   "B_note": ""
+  },
+  {
+   "control": "MAN-4.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-722",
+   "B_artefact": "EV-722",
+   "agree": true
+  },
+  {
+   "control": "MAN-4.2",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-732",
+   "B_artefact": "EV-732",
+   "agree": true
+  },
+  {
+   "control": "MAN-4.3",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-742",
+   "B_artefact": "EV-742",
+   "agree": true
+  },
+  {
+   "control": "MAP-1.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-202",
+   "B_artefact": "EV-202",
+   "agree": true
+  },
+  {
+   "control": "MAP-1.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-212",
+   "B_artefact": "EV-212",
+   "agree": true
+  },
+  {
+   "control": "MAP-1.3",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-222",
+   "B_artefact": "EV-222",
+   "agree": true
+  },
+  {
+   "control": "MAP-1.4",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-232",
+   "B_artefact": "EV-232",
+   "agree": true
+  },
+  {
+   "control": "MAP-1.5",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-242",
+   "B_artefact": "EV-242",
+   "agree": true
+  },
+  {
+   "control": "MAP-1.6",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-251",
+   "B_artefact": "EV-251",
+   "agree": true
+  },
+  {
+   "control": "MAP-2.1",
+   "A": 2,
+   "B": 1,
+   "A_artefact": "EV-262",
+   "B_artefact": "EV-262",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "formal taxonomy and method documentation exist, but no measurement of coverage or consistency",
+   "B_note": "EV-262 shows method documentation for 5 of 6 systems, but QAP lacks it."
+  },
+  {
+   "control": "MAP-2.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-272",
+   "B_artefact": "EV-272",
+   "agree": true
+  },
+  {
+   "control": "MAP-2.3",
+   "A": 3,
+   "B": 2,
+   "A_artefact": "EV-282",
+   "B_artefact": "EV-280",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "methodology and TEVV coverage are documented and reviewed, but no evidence of independent review traceable to failures",
+   "B_note": "EV-280 shows methodology and TEVV plan documented, but no evidence of coverage or defect-escape metrics reviewed."
+  },
+  {
+   "control": "MAP-3.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-292",
+   "B_artefact": "EV-292",
+   "agree": true
+  },
+  {
+   "control": "MAP-3.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-301",
+   "B_artefact": "EV-300",
+   "agree": true
+  },
+  {
+   "control": "MAP-3.3",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-312",
+   "B_artefact": "EV-312",
+   "agree": true
+  },
+  {
+   "control": "MAP-3.4",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-322",
+   "B_artefact": "EV-320",
+   "agree": true
+  },
+  {
+   "control": "MAP-3.5",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-332",
+   "B_artefact": "EV-330",
+   "agree": true
+  },
+  {
+   "control": "MAP-4.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-341",
+   "B_artefact": "EV-340",
+   "agree": true
+  },
+  {
+   "control": "MAP-4.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-351",
+   "B_artefact": "EV-351",
+   "agree": true
+  },
+  {
+   "control": "MAP-5.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-360",
+   "B_artefact": "EV-362",
+   "agree": true
+  },
+  {
+   "control": "MAP-5.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-370",
+   "B_artefact": "EV-371",
+   "agree": true
+  },
+  {
+   "control": "MEA-1.1",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-400",
+   "B_artefact": "EV-403",
+   "agree": true
+  },
+  {
+   "control": "MEA-1.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-410",
+   "B_artefact": "EV-411",
+   "agree": true
+  },
+  {
+   "control": "MEA-1.3",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-420",
+   "B_artefact": "EV-421",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.1",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-430",
+   "B_artefact": "EV-432",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.10",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-520",
+   "B_artefact": "EV-522",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.11",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-530",
+   "B_artefact": "EV-531",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.12",
+   "A": 0,
+   "B": 0,
+   "A_artefact": "EV-540",
+   "B_artefact": "EV-540",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.13",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-550",
+   "B_artefact": "EV-552",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.2",
+   "A": "NA",
+   "B": "NA",
+   "A_artefact": "",
+   "B_artefact": "",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.3",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-450",
+   "B_artefact": "EV-453",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.4",
+   "A": 4,
+   "B": 4,
+   "A_artefact": "EV-463",
+   "B_artefact": "EV-463",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.5",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-471",
+   "B_artefact": "EV-471",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.6",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-482",
+   "B_artefact": "EV-482",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.7",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-491",
+   "B_artefact": "EV-491",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.8",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-502",
+   "B_artefact": "EV-502",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.9",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-511",
+   "B_artefact": "EV-511",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "",
+   "B_note": "Level 3 is satisfied as user comprehension and explanation-use rates are measured per release."
+  },
+  {
+   "control": "MEA-3.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-561",
+   "B_artefact": "EV-561",
+   "agree": true
+  },
+  {
+   "control": "MEA-3.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-571",
+   "B_artefact": "EV-571",
+   "agree": true
+  },
+  {
+   "control": "MEA-3.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-582",
+   "B_artefact": "EV-582",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "",
+   "B_note": "Level 3 is satisfied as feedback volume, appeal outcomes, and resolution times are measured."
+  },
+  {
+   "control": "MEA-4.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-590",
+   "B_artefact": "EV-590",
+   "agree": true
+  },
+  {
+   "control": "MEA-4.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-601",
+   "B_artefact": "EV-601",
+   "agree": true
+  },
+  {
+   "control": "MEA-4.3",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-612",
+   "B_artefact": "EV-612",
+   "agree": true
+  }
+ ],
+ "disagreements": [
+  {
+   "control": "GOV-3.2",
+   "A": 1,
+   "B": 0,
+   "A_artefact": "EV-120",
+   "B_artefact": "EV-120",
+   "agree": false,
+   "final": 0,
+   "rule": 1,
+   "A_note": "EV-120 partially satisfies level 1, but EV-121 and EV-122 show no AI-specific representation monitoring.",
+   "B_note": "EV-120 and EV-121 report only all-staff or technical roles, with no AI-specific breakdown."
+  },
+  {
+   "control": "GOV-5.2",
+   "A": 0,
+   "B": 1,
+   "A_artefact": "EV-170",
+   "B_artefact": "EV-171",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "EV-170 establishes absence of academic contact.",
+   "B_note": "Personal collaboration exists but lacks formal agreements."
+  },
+  {
+   "control": "MAN-3.2",
+   "A": 3,
+   "B": 2,
+   "A_artefact": "EV-713",
+   "B_artefact": "EV-711",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "",
+   "B_note": ""
+  },
+  {
+   "control": "MAP-2.1",
+   "A": 2,
+   "B": 1,
+   "A_artefact": "EV-262",
+   "B_artefact": "EV-262",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "formal taxonomy and method documentation exist, but no measurement of coverage or consistency",
+   "B_note": "EV-262 shows method documentation for 5 of 6 systems, but QAP lacks it."
+  },
+  {
+   "control": "MAP-2.3",
+   "A": 3,
+   "B": 2,
+   "A_artefact": "EV-282",
+   "B_artefact": "EV-280",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "methodology and TEVV coverage are documented and reviewed, but no evidence of independent review traceable to failures",
+   "B_note": "EV-280 shows methodology and TEVV plan documented, but no evidence of coverage or defect-escape metrics reviewed."
+  },
+  {
+   "control": "MEA-2.9",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-511",
+   "B_artefact": "EV-511",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "",
+   "B_note": "Level 3 is satisfied as user comprehension and explanation-use rates are measured per release."
+  },
+  {
+   "control": "MEA-3.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-582",
+   "B_artefact": "EV-582",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "",
+   "B_note": "Level 3 is satisfied as feedback volume, appeal outcomes, and resolution times are measured."
+  }
+ ]
+}
