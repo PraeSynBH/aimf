@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.4
+**Version**: 1.0.5
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -14,6 +14,89 @@ All notable changes to the AI Management Framework (AIMF) by PraeSyn will be doc
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.5] - 2026-10-18 (Complete Assessment Question Bank: 12 → 72 Controls)
+
+**Change Type**: Completeness correction (buyer-facing assessment instrument)
+**Rationale**: `implementation/AIMF-ASSESSMENT-GUIDE.md` carried **12 questions for 72
+controls**. Twelve worked examples are a marketing artifact, not an instrument: an assessor
+would write the other 60 controls' questions on the client's clock, which is exactly the
+unbilled work a fixed-price done-for-you assessment cannot absorb. v1.0.4 made the gap
+honest (the guide said "12 of the 72 controls", named them, and gave the derivation path
+for the rest); this release closes it.
+
+#### Added
+
+- **60 new control questions with evidence expectations** in
+  `implementation/AIMF-ASSESSMENT-GUIDE.md` § Assessment Questions, sourced from each
+  control's statement and implementation levels in `core/AIMF-CONTROL-CATALOG.csv` and its
+  objective in `core/AIMF-CONTROL-CATALOG.md`. The bank now has **72 rows for 72
+  controls**, grouped by audience:
+  - Leadership **24** — governance policy, accountability, oversight, resourcing, strategy,
+    benefit/cost/impact cases, risk response and third-party risk decisions.
+  - Technical **30** — system characterization, testing and measurement, production
+    monitoring, model and post-deployment management.
+  - Governance **6** — compliance monitoring, risk tolerance, requirements traceability,
+    independent evaluation, privacy, incident communication.
+  - Change Agent **12** — training/competency, team composition and representation, culture,
+    transparency communication, external engagement, stakeholder feedback.
+- Questions are written to be answered from an artefact an auditor could be shown (no "is
+  the culture good?" items), and each row names the artefact that carries a score above
+  ML1. **The twelve v1.0.4 rows are unchanged**, so assessments already run against them
+  stay comparable; the sections are no longer headed "(Sample)".
+- **`scripts/aimf_mappings.py` validates the bank.** `check` (and `generate`) now parses the
+  Assessment Questions tables and fails, non-zero, on: a catalog control with no question,
+  a duplicate row, an id absent from the catalog, an empty question or evidence cell, a
+  question that does not end in `?`, a coverage statement that does not state `72/72`, or a
+  stale "N of the 72 controls" claim. `report` prints the bank count.
+
+#### Changed
+
+- The partial-coverage statement is replaced by a complete-bank statement: 72/72 controls,
+  one question each, the audience-routing rule (default from the catalog `Dimension`, with
+  `GOV-1.4`, `MEA-1.3`, `MAP-1.5` and `MAN-4.3` held with Governance as compliance
+  records), and a short scoring note binding the 0-4 scale to the evidence the interviewee
+  produces in the session.
+- **Version stamps**: Assessment Guide header `1.0` → `1.0.5` (it had never been stamped
+  since v1.0.0), README title block and Framework Information, `QA-VERIFICATION-REPORT.md`
+  framework version and QA date, and this header.
+
+#### Not in this release
+
+- Nothing pushed or published. Publication remains the D2 decision on PRA-6431.
+- The bank is **coverage-complete, not psychometrically validated**. No inter-rater study
+  has been run; the guide's requirement to record the artefact scored is the mechanism that
+  makes two assessors comparable, and it is untested with real assessors. Do not quote this
+  release as validated reliability.
+
+#### Verified
+
+```
+$ cd documents/AIMF-Full-Documentation
+$ python3 scripts/aimf_mappings.py check          # exit 0
+OK: mapping documents, catalog and generated tables are consistent
+$ python3 scripts/aimf_mappings.py report
+controls: 72
+question bank: 72 of 72 controls have a question
+$ python3 -c "...parse the section..."            # 72 rows, 72 distinct ids, 24/30/6/12
+$ # drift detection exercised by mutation in a scratch copy:
+$ #   drop a row        -> FAIL: AIMF-ASSESSMENT-GUIDE.md: no question for MEA-4.3 (exit 1)
+$ #   duplicate a row   -> FAIL: ... duplicate question row for MEA-4.3 (exit 1)
+$ #   reinstate "12 of the 72" claim -> FAIL: ... stale partial-coverage claim (exit 1)
+$ # check also exits 0 from an unpacked copy of the v1.0.5 zip
+```
+
+Both zips are rebuilt from the packaged directory of this release, with dotfiles excluded
+(`zip -X -r … -x '*/.*'`), and are byte-identical to each other; sha256 and size are stated
+in the release comment and the git commit message.
+
+#### Distribution
+
+- `documents/AIMF-Full-Documentation-v1.0.5.zip` and the rolling
+  `documents/AIMF-Full-Documentation.zip` are rebuilt from the packaged directory of this
+  release and are byte-identical to each other. Both supersede the v1.0.4 bundles.
 
 ---
 

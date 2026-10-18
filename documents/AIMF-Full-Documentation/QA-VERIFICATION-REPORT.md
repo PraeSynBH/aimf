@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.4
+**Framework Version**: 1.0.5
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -76,10 +76,26 @@ Licensed under CC BY-NC-ND 4.0
 > only as `OLD`-column history in `change-control/**` and the pre-1.0.0 `CHANGELOG` entries.
 > Remaining `0-3` matches in the shipped bundle are historical or explicitly labelled
 > retired; `python3 scripts/aimf_mappings.py check` exits 0 from the packaged directory and
-> from an unpacked v1.0.4 bundle root. **Disclosed exception, unchanged:** the Assessment
-> Guide's question bank is still 12 sample questions for 72 controls (Defect B); it is
-> tracked as its own card and is *not* claimed complete by this report. See
+> from an unpacked v1.0.4 bundle root. **Disclosed exception at v1.0.4:** the Assessment
+> Guide's question bank was 12 sample questions for 72 controls (Defect B); it was
+> tracked as its own card and was *not* claimed complete by this report. Closed in v1.0.5
+> (see the addendum below). See
 > `CHANGELOG.md` → `[1.0.4]`.
+>
+> **v1.0.5 addendum (2026-10-18).** Defect B is closed.
+> `implementation/AIMF-ASSESSMENT-GUIDE.md` § Assessment Questions now carries **72
+> questions and 72 evidence expectations, one per catalog `Control_ID`** (Leadership 24,
+> Technical 30, Governance 6, Change Agent 12), up from 12. The partial-coverage statement
+> is replaced by a complete-bank statement and the audience-routing rule. The twelve
+> questions published in v1.0.4 are unchanged, so assessments already run with them remain
+> comparable. `python3 scripts/aimf_mappings.py check` now parses the bank and fails on a
+> control with no question, a duplicate row, an id absent from the catalog, an empty
+> evidence cell, or a stale "N of the 72" claim; the failure was exercised by mutation
+> (drop a row, duplicate a row, reinstate the partial claim) before the release was cut,
+> and the check exits 0 from the packaged directory and from an unpacked v1.0.5 bundle
+> root. What is *not* claimed: the bank is coverage-complete and answerable from evidence,
+> not psychometrically validated — two assessors converge only if each records the
+> artefact scored, which the guide now requires. See `CHANGELOG.md` → `[1.0.5]`.
 
 ---
 
@@ -472,7 +488,7 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 | **Total** | **49 files** | ✅ **Complete** |
 
 **Distribution bundle**: the shipped bundles
-(`documents/AIMF-Full-Documentation-v1.0.4.zip` and the rolling
+(`documents/AIMF-Full-Documentation-v1.0.5.zip` and the rolling
 `documents/AIMF-Full-Documentation.zip`) carry 80 regular files plus 16 directory
 entries. Note that `unzip -l`'s summary line counts directory entries as well, so its
 figure overstates the file count by one per directory; quote the file count from
@@ -480,8 +496,8 @@ figure overstates the file count by one per directory; quote the file count from
 `scripts/aimf_mappings.py` is one of those 80 files, so a recipient can run the drift
 check this report cites. The v1.0.1–v1.0.3 bundles carried 81 files because they included
 `AIMF-Full-Documentation/.claude/settings.local.json`, an agent-tooling permissions file
-with no place in a customer bundle; v1.0.4 excludes dotfiles from the archive (80 files,
-16 directories).
+with no place in a customer bundle; since v1.0.4 the archive is built with dotfiles
+excluded (80 files, 16 directories), and v1.0.5 keeps that count.
 
 ---
 
@@ -582,4 +598,4 @@ control-theme level and is labelled partial. See
 
 *Quality Assurance Verification Report completed January 26, 2026*
 
-**QA Status**: ✅ PASSED - READY FOR v1.0.4 REVIEW (pre-publication)
+**QA Status**: ✅ PASSED - READY FOR v1.0.5 REVIEW (pre-publication)

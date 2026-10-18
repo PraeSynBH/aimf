@@ -24,6 +24,12 @@ them in memory and fails (exit 1) if the file on disk has drifted, if a
 placeholder/unchecked task is present, if a referenced control id is missing
 from the catalog, or if an ISO 27001 reference uses pre-2022 numbering.
 
+It also validates the assessment question bank in
+``implementation/AIMF-ASSESSMENT-GUIDE.md``: every catalog control must have
+exactly one question row (and one evidence expectation) and the bank must not
+carry an id that is absent from the catalog, so the instrument cannot silently
+fall back to partial coverage.
+
 Usage
 -----
 This script ships inside the distribution bundle, so it runs from an unpacked
@@ -627,6 +633,77 @@ def render_dimension_stats(rows: list[dict]) -> str:
 
 
 # ---------------------------------------------------------------------------
+# assessment question bank (implementation/AIMF-ASSESSMENT-GUIDE.md)
+# ---------------------------------------------------------------------------
+# The bank is hand-authored prose in a markdown table, so it is validated
+# rather than generated: the table rows are the evidence that the instrument
+# covers the catalog.  The check exists because v1.0.0-v1.0.4 shipped a
+# 12-of-72 sample bank that read like a complete one.
+QUESTION_BANK_MD = DOCS / "implementation" / "AIMF-ASSESSMENT-GUIDE.md"
+BANK_HEADING = "## Assessment Questions"
+BANK_ROW_RE = re.compile(r"^(?:GOV|MAP|MEA|MAN)-\d+\.\d+$")
+BANK_COVERAGE_MARKER = "72/72"
+BANK_PARTIAL_CLAIM_RE = re.compile(r"\b\d+\s+of\s+the\s+72\s+controls\b", re.IGNORECASE)
+
+
+def bank_section(text: str) -> str:
+    """Return the text of the '## Assessment Questions' section, or ''."""
+    start = text.find(BANK_HEADING)
+    if start < 0:
+        return ""
+    rest = text[start + len(BANK_HEADING):]
+    nxt = re.search(r"^## ", rest, re.MULTILINE)
+    return rest[:nxt.start()] if nxt else rest
+
+
+def parse_question_bank(text: str) -> tuple[dict[str, tuple[str, str]], list[str]]:
+    """Extract ``{control_id: (question, evidence)}`` from the guide's tables."""
+    problems = []
+    section = bank_section(text)
+    if not section:
+        return {}, [f"{QUESTION_BANK_MD.name}: '{BANK_HEADING}' section not found"]
+    rows: dict[str, tuple[str, str]] = {}
+    for line in section.splitlines():
+        if not line.lstrip().startswith("|"):
+            continue
+        cells = [c.strip() for c in re.split(r"(?<!\\)\|", line.strip())[1:-1]]
+        if len(cells) < 3:
+            continue
+        cid = cells[0]
+        if not BANK_ROW_RE.match(cid):
+            continue
+        if cid in rows:
+            problems.append(f"{QUESTION_BANK_MD.name}: duplicate question row for {cid}")
+            continue
+        rows[cid] = (cells[1], cells[2])
+    return rows, problems
+
+
+def validate_question_bank(rows: list[dict], text: str) -> list[str]:
+    errs = []
+    bank, problems = parse_question_bank(text)
+    errs.extend(problems)
+    ids = {r["Control_ID"] for r in rows}
+    errs.extend(f"{QUESTION_BANK_MD.name}: no question for {cid}" for cid in sorted(ids - set(bank)))
+    errs.extend(f"{QUESTION_BANK_MD.name}: question for unknown control {cid}"
+                for cid in sorted(set(bank) - ids))
+    for cid, (question, evidence) in sorted(bank.items()):
+        if not question:
+            errs.append(f"{QUESTION_BANK_MD.name}: {cid} has an empty question")
+        elif not question.endswith("?"):
+            errs.append(f"{QUESTION_BANK_MD.name}: {cid} question does not end with '?'")
+        if not evidence:
+            errs.append(f"{QUESTION_BANK_MD.name}: {cid} has no evidence expectation")
+    if BANK_COVERAGE_MARKER not in bank_section(text):
+        errs.append(f"{QUESTION_BANK_MD.name}: coverage statement does not state "
+                    f"{BANK_COVERAGE_MARKER} - the claim must match the bank")
+    if BANK_PARTIAL_CLAIM_RE.search(bank_section(text)):
+        errs.append(f"{QUESTION_BANK_MD.name}: stale partial-coverage claim in the "
+                    f"question bank section")
+    return errs
+
+
+# ---------------------------------------------------------------------------
 # ISO 27001 CSV normalisation
 # ---------------------------------------------------------------------------
 def apply_iso27001(rows: list[dict]) -> list[dict]:
@@ -840,6 +917,10 @@ def validate(rows: list[dict], check_files: bool = True) -> list[str]:
         errs.append("core/AIMF-CONTROL-CATALOG.md: standards metadata drift - run "
                     "`python3 scripts/aimf_mappings.py generate`")
 
+    # 4c. the assessment question bank covers the catalog exactly
+    bank_text = QUESTION_BANK_MD.read_text(encoding="utf-8")
+    errs.extend(validate_question_bank(rows, bank_text))
+
     # 5. NIST document carries all 72 subcategory ids
     nist_doc = (MAPPINGS / "AIMF-NIST-RMF-MAPPING.md").read_text(encoding="utf-8")
     found = sorted(set(NIST_REF_RE.findall(nist_doc)), key=nist_sort_key)
@@ -906,6 +987,8 @@ def main() -> int:
         print(f"ISO 27001:2022 tagged: {tagged}, reviewed-no-analogue: {len(rows) - tagged}")
         print(f"NIST subcategories: {len({r['NIST_RMF_Subcategory'] for r in rows})}")
         print(f"ISO 42001 clauses: {len({c for r in rows for c in split_refs(r['ISO42001_Clauses'])})}")
+        bank, _ = parse_question_bank(QUESTION_BANK_MD.read_text(encoding="utf-8"))
+        print(f"question bank: {len(bank)} of {len(rows)} controls have a question")
         return 0
 
     errs = validate(rows)
