@@ -181,6 +181,19 @@ def main():
     print('   final == lower score %d, == higher score %d, neither %d (of %d parseable)'
           % (fmin, fmax, fneither, fmin + fmax + fneither))
 
+    print('\n7. ceiling of an evidence-bound pack (case B): split by primary deciding artefact')
+    same = [c for c in controls if rb[c].get('A_artefact') == rb[c].get('B_artefact')]
+    diff = [c for c in controls if rb[c].get('A_artefact') != rb[c].get('B_artefact')]
+    for label, subset in (('same primary artefact', same), ('different primary artefact', diff)):
+        ag = sum(1 for c in subset if rb[c]['agree'])
+        print('   %-25s n=%2d agree %2d (%.1f%%)'
+              % (label, len(subset), ag, 100 * ag / len(subset) if subset else 0))
+    print('   => binding the evidence fixes at most the %d different-artefact controls; '
+          '%d still split on the same artefact, which is the residual anchor problem'
+          % (len(diff), sum(1 for c in same if not rb[c]['agree'])))
+    print('      residual anchor controls: %s'
+          % ', '.join(sorted(c for c in same if not rb[c]['agree'])))
+
 
 if __name__ == '__main__':
     main()

@@ -53,6 +53,17 @@ Of the 27 parseable case-B disagreements, the adjudicated `final` score equals t
 
 Caveat, stated because it bounds the conclusion: this is **one** case pair per cell. It establishes a mechanism with large effect sizes; it does not establish a rate. A second held-out case would be needed before any of these numbers goes in a sales document.
 
+## 6. The ceiling of the fix — and what anchors are still for
+
+Splitting the same 30 case-B controls that split, by whether both assessors recorded the **same primary deciding artefact**:
+
+| | n | agree |
+|---|---|---|
+| Same primary artefact | 42 | **34 (81.0%)** |
+| Different primary artefact | 30 | **9 (30.0%)** |
+
+So evidence binding can move only the 30 different-artefact controls, and **8 controls split even when both sides read the same artefact** — `GOV-1.4, GOV-1.6, GOV-2.3, MAP-1.2, MAP-1.5, MAP-3.3, MAP-4.1, MEA-4.3`. Those eight are the only controls on which anchor wording is the binding constraint. Evidence binding alone therefore does not reach the 90% threshold; the remediation is two-part and each part is now sized: 30 controls of process work, 8 of anchor work.
+
 ---
 
 ## What this changes in the STARTINGPOINT
