@@ -6,7 +6,7 @@ Licensed under CC BY-NC-ND 4.0
 
 **QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.6
+**Framework Version**: 1.0.7
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -108,8 +108,11 @@ Licensed under CC BY-NC-ND 4.0
 > ships 72 distinct catalog control ids, set-equal to the catalog (no extras, no misses);
 > `check` fails on an empty anchor, an empty role, a repeated anchor, a broken anchor ladder
 > or generated-region drift, all exercised by mutation before the cut. Both checks pass from
-> inside the unpacked v1.0.6 bundle. **Not claimed:** inter-rater reliability — no blind
-> double-scoring run has been recorded, and both copies of the instrument say so. See
+> inside the unpacked v1.0.6 bundle. **Measured and not yet achieved:** inter-rater
+> reproducibility. Blind double-scoring of validation case AIMF-VAL-2026-A agreed on 45/72
+> controls (62.5%), below the 90% threshold; all 27 disagreements were adjudicated. The
+> instrument ships as specified and enforced, not validated, and the bank, the guide, the README
+> and `implementation/AIMF-INSTRUMENT-VALIDATION.md` all say so. See
 > `CHANGELOG.md` → `[1.0.6]`.
 
 ---

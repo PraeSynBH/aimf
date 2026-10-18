@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.6
+**Version**: 1.0.7
 **Publication Date**: January 29, 2026
 **Document Type**: Assessment Methodology
 **Status**: Pre-Publication (Working Draft)
@@ -47,6 +47,8 @@ Each control is assessed using the **5-level CMMI-based maturity scale** with a 
 | **4** | **ML5 - Optimizing** | Continuous improvement and innovation | All ML4 + systematic innovation; industry leadership; external recognition |
 
 **Key Principle**: ML1 scores as 0 to incentivize moving beyond ad-hoc processes. The assessment uses a **0-4 point scale** where ML3 (Defined) = 2 points represents the standard "implemented" level.
+
+**A sixth verdict exists, and it is not a point on this scale.** Where the evidence cannot decide a level, the control is recorded **`NA` (not assessable)** with a reason code — never 0, never the profile mean. Scoring an unmeasured control as 0 invents a gap; dropping it inflates the percentage. Both break comparability between engagements. See the **Scoring Protocol** (P3) below for the codes and the reporting rules.
 
 ### Scale Retirement and Conversion (0-3 → 0-4)
 
@@ -116,6 +118,190 @@ Does the control capability exist at all?
 | One-time innovation | ML4 (Score: 3) — ML5 requires **continuous** improvement pattern |
 
 **See**: [AIMF-MATURITY-LEVELS.md](AIMF-MATURITY-LEVELS.md) for detailed maturity level definitions and evidence criteria.
+
+---
+
+### Scoring Protocol
+
+This protocol is normative. An assessment that does not follow it is not an AIMF
+assessment and must not be reported as one.
+
+**The anchors govern.** Each of the 72 controls carries five behavioural anchors
+(`AIMF-ASSESSMENT-QUESTION-BANK.md`, `Anchor 0` … `Anchor 4`). Where a control's anchors and
+the decision tree above disagree, the anchor governs for that control, because the anchor is
+written against that control's evidence. The tree is a teaching aid for the shape of the
+scale, not a substitute for the per-control referent.
+
+#### P1. What counts as evidence
+
+An item is evidence for a control only if all four conditions hold:
+
+| Condition | Test |
+|---|---|
+| **Named** | It is an artefact with an identifier, title or system location that a second assessor can open. Oral assurance, a slide, a status report *about* an artefact, or an assessor's impression is context, not evidence. |
+| **Dated and current** | It carries a date and is inside the organisation's stated review cycle for that artefact type, or inside 12 months where no cycle is stated. An overdue artefact is evidence of a level-1 state, not a level-2 one. |
+| **In scope** | It covers the population being scored — every in-scope AI system rather than a pilot, every business unit rather than the best one, the whole period rather than one month. |
+| **Reproducible** | A second assessor with the same pack reaches the same artefact and the same reading of it. Screenshots without provenance, undated exports and reconstructed summaries fail this test. |
+
+A score of 2 or above requires at least one qualifying artefact for **every** element of that
+anchor. One missing element means the level below, no matter how good the rest looks.
+
+**Four tests the anchors rely on.** The anchors repeat the same phrases ("every in-scope
+system", "reviewed on cadence", "measured"). Unless those phrases are pinned down, two
+assessors can read the same pack and reach different levels — which is exactly what the first
+validation run measured (P7). The definitions below apply to every control:
+
+| Test | Definition | Consequence |
+|---|---|---|
+| **Coverage** | "Every in-scope system / role / policy / period" means 100% of the population recorded in the register, over the whole assessment period. A pilot, a subset, "most", or an open exception does **not** count as coverage. Where an anchor does not name a population, the population is all in-scope AI systems. | Any shortfall is partial coverage and scores **1**, even when the artefacts are otherwise good. |
+| **Cadence** | "Reviewed on cadence" means a stated interval with at least **two** minuted occurrences inside the last 12 months and a recorded next date. One occurrence, or a stated interval with no second occurrence, is not a cadence. | The level-3 clause fails and the control scores **2**. |
+| **Measure** | "Measured", "tracked" or "against target" means a named metric, a recorded value, a stated target, and a report to a named body at the cadence. A one-off study, a value with no target, or a dashboard nobody reviews does not satisfy a level-3 clause. | The level-3 clause fails and the control scores **2**. |
+| **One artefact, one clause** | Each clause of an anchor needs its own artefact. A single document may be cited for two clauses only if it separately evidences each of them. | A clause supported only by inference from another clause's artefact is unevidenced: score the level below. |
+
+#### P2. From evidence to a score
+
+1. Read the five anchors for the control before looking at the evidence. The anchors, not the
+   assessor's prior, define what each score looks like.
+2. The score is the **highest level whose anchor is fully evidenced**. Partial satisfaction of
+   a level scores the level below.
+3. **Two-level rule.** If the evidence supports both level *n* and level *n+1*, score *n*
+   unless the artefact named in the distinguishing clause of anchor *n+1* — the measurement,
+   the review against target, or the decision-change record — is itself present, current and
+   named. Record `boundary_note` giving both levels and the deciding artefact. The score may
+   still be a judgement, but the judgement is inspectable: a reviewer can see which artefact
+   carried it.
+4. **Absence must be established, not inferred.** A score of 0 requires that the pack shows
+   the artefact does not exist — the owner was asked, the register was searched, and the
+   negative result is recorded. "Not in the pack" is `NA` (P3), never 0.
+5. One artefact may decide several controls. Record the artefact id against each control it
+   decides; a score with no deciding artefact is a score with no referent and is returned to
+   the assessor.
+
+#### P3. Not assessable (`NA`)
+
+`NA` is a verdict in its own right, with its own reason code. It is never scored 0, never
+averaged in, and never replaced by the profile mean.
+
+| Code | Meaning | What clears it |
+|---|---|---|
+| **E1** | No artefact, and absence not established (the question was not answered or the record was never searched) | The owner's answer plus a search record |
+| **E2** | The artefact exists but is not available to the assessment (legal privilege, classification, retention) | A releasable summary or a reviewer with clearance |
+| **E3** | Artefacts conflict and no tie-break artefact exists | The artefact that resolves the conflict |
+| **E4** | Applicability is genuinely undetermined (the control may not apply to this system or profile) | A scoping decision recorded by the assessment lead |
+
+Two decisions this rule forces, because they are the ones assessors get wrong:
+
+- **Absence of practice is 0; absence of evidence is `NA`.** No human-subject evaluation has
+  ever been run and the control applies to systems in scope: that is 0. The organisation
+  conducts no human-subject research at all, so the control does not apply: that is E4.
+- **A withheld artefact is `NA`, not 0.** Scoring 0 because a red-team report is privileged
+  invents a gap the assessor did not observe.
+
+**Reporting.** Every `NA` is reported with its code, the control, and the artefact that would
+clear it. In arithmetic, `NA` controls leave both the numerator and the denominator, and the
+report states `n scored / n in scope`. If `NA` exceeds 20% of a profile's controls, no
+aggregate percentage is published: the report says **insufficient evidence** and lists the
+`NA` controls. Silently defaulting to 0 invents a gap; silently dropping `NA`s inflates the
+percentage; both are misreporting and both break comparability between engagements.
+
+**Clearing.** An `NA` may be cleared within 30 days of the assessment by supplying the named
+artefact. The score is then recorded against the date the evidence was added; no new
+assessment cycle is required, and the report shows both dates.
+
+#### P4. Blind double scoring
+
+Run whenever the result will be sold, published, or used to compare two engagements.
+
+**Preconditions.** The evidence pack is frozen and hashed; the AIMF version and anchor-set
+version are recorded on both sheets; both assessors are briefed on this protocol and nothing
+else about the other's work.
+
+Procedure:
+
+1. Two assessors score **all** in-scope controls from the same frozen pack.
+2. They work from separate worksheets and separate sessions. No conferring, no shared notes,
+   no sight of the other's sheet, no reconciling before submission.
+3. Each row records: control, score or `NA` (+ code), deciding artefact, boundary note.
+4. A control left blank is **not** agreement. Both assessors must produce a verdict for every
+   control, even if the verdict is `NA`.
+5. Agreement is an identical result — the same score, or `NA` with the same reason code.
+6. Publish: the agreement count and rate over controls scored, every disagreement with both
+   scores and both deciding artefacts, and every adjudication outcome. Nothing is rounded up,
+   and no disagreement is dropped as "obvious".
+
+#### P5. Adjudication
+
+Applied in this order, as written:
+
+1. **Differ by 1, same deciding artefact** → the lower score stands. The higher score asserts
+   more than the deciding artefact shows. Recorded as *resolved, lower stands*.
+2. **Differ by 1, different deciding artefacts** → a third adjudicator scores the control from
+   the same pack without seeing either sheet. The adjudicator's score stands. Majority voting
+   is not used: with two inputs there is no majority to take.
+3. **Differ by 2 or more** → mandatory adjudication by rule 2 mechanics, plus a written note.
+   If the anchors cannot settle the control after adjudication, the anchor is defective:
+   record an instrument change, bump the version, and re-run the affected controls. An anchor
+   that cannot settle a real case is a defect in the product, not a matter of taste.
+4. **`NA` vs a numeric score** → the adjudicator decides whether absence was established under
+   P3. If it was, the numeric score stands; if not, `NA` stands with its code.
+
+Every adjudication records: control, A's verdict, B's verdict, adjudicator, rule applied,
+final score, and a one-line reason. The final score enters the report; the disagreement stays
+in the assessment record.
+
+#### P6. When the instrument counts as reproducible
+
+The target is 72/72 controls agreeing. The published threshold is: a case is reproducible when
+at least **90% of scored controls agree** and **every** disagreement carries a recorded
+adjudication. Below 90%, the anchors for the disagreeing controls are treated as defective and
+revised before the next engagement. A measured 90% is evidence; an unmeasured claim is not.
+
+#### P7. Measured result (2026-10-18)
+
+The instrument has been blind-scored against one recorded case study: a frozen 72-control evidence
+pack (`AIMF-VAL-2026-A`, sha256 `c643fd60d973aa043331c7d10ce48949f314c0218ed966edd7a5a6fae8121b0e`),
+two assessors in separate sessions with no sight of each other's sheet (`anthropic/claude-sonnet-5.5`
+and `openai/gpt-4.1`), a third independent session adjudicating every disagreement.
+
+**Agreement: 51 of 72 controls (70.8%) on the anchor set shipped in this version.** That is below
+the 90% threshold in P6, so **this version of the instrument is not validated for reproducibility**,
+and any assessment produced with it must carry that sentence in its report.
+
+| Run | Instrument | Scoring brief | Agreement |
+|---|---|---|---|
+| 1 | v1.0.6 anchors | P1 without the four tests | 50/72 (69.4%) |
+| 2 | v1.0.6 anchors | P1 plus the coverage, cadence, measure and one-clause tests | 44/72 (61.1%) |
+| 3 | v1.0.6 anchors | Run-2 protocol plus a clause-by-clause scoring brief | 45/72 (62.5%) |
+| 4 | **v1.0.7 anchors** | Run-3 protocol, unchanged | **51/72 (70.8%)** |
+
+Run 4 is the same case, the same models, the same protocol and the same harness as run 3. The only
+input that changed is the anchor text for 12 controls, rewritten so that anchor 1 and anchor 2 stop
+relying on the words *partial*, *unevenly* and *comprehensive* and state a countable test instead —
+which fraction of the population in the dated scope register, and whether the artefact is approved
+and current. Agreement on those 12 controls moved from **0/12 to 6/12**; agreement on the 60
+untouched controls stayed at **45/60 (75.0%)**. The judgement moved where the text was changed and
+nowhere else, which is the reason to keep rewriting anchors rather than adding more procedure.
+
+Three findings, and they decide what happens next:
+
+1. **The failure is at the level 1 ↔ 2 boundary, not in the reader.** 17 of the 21 remaining
+   disagreements differ by exactly one level, and 12 of the 21 sit on the 1 ↔ 2 edge itself. In
+   run 3 a same-model pair (two independent sessions of one model) agreed on 43/72 (59.7%) — no
+   better than the cross-vendor pair, so the divergence is in the instrument, not the reader.
+2. **Definitions in the protocol do not fix anchor wording.** Runs 2 and 3 added the coverage,
+   cadence and measure tests to this protocol and the rate did not move, because the anchors that
+   use those words did not carry the definitions themselves. Editing the anchors (run 4) moved it.
+3. **The controls that stay judgemental are named, not excused.** Eighteen controls disagreed in
+   both run 3 and run 4: `GOV-1.3`, `GOV-1.4`, `GOV-2.3`, `GOV-3.2`, `GOV-5.2`, `MAN-3.2`,
+   `MAN-4.2`, `MAP-1.3`, `MAP-3.5`, `MEA-1.1`, `MEA-2.1`, `MEA-2.11`, `MEA-2.2`, `MEA-2.4`,
+   `MEA-2.6`, `MEA-2.8`, `MEA-3.1`, `MEA-4.3`. Nine of them are in the MEA dimension, which is the
+   next anchor rewrite. Until those score decisively, they are sold as discovery output rather than
+   as a fixed-price percentage.
+
+All 21 run-4 disagreements were adjudicated under P5 (rules 1-4; 9 by rule 1, 8 by rule 2, 3 by
+rule 3, 1 by rule 4), none left unresolved. Full record, the adjudication table, the method and its
+limits: `implementation/AIMF-INSTRUMENT-VALIDATION.md`.
+
 
 ---
 
@@ -233,7 +419,15 @@ The AIMF uses a four-audience assessment approach to ensure comprehensive covera
 - Assess each control in the profile using ML1-5 scale
 - Use evidence-based evaluation (see maturity level definitions)
 - Score: ML1=0, ML2=1, ML3=2, ML4=3, ML5=4
-- If multiple assessors: Average scores and round to nearest integer
+- Score against the control's anchors, following the **Scoring Protocol** (P1-P6) above. Where
+  two assessors score, they score blind and independently and their disagreements are
+  adjudicated (P4-P5) — **never averaged**. Averaging hides the disagreement instead of
+  resolving it, and produces a number that no assessor actually reached.
+- Record for each control: the score (or `NA` with its reason code), the deciding artefact,
+  and the boundary note where two levels were in play. A control scored without a deciding
+  artefact is returned to the assessor.
+- `NA` controls leave both the numerator and the denominator of every calculation below, and
+  are reported as "not assessed" (P3), never as 0.
 
 **Step 2: Profile Score Calculation**
 
@@ -722,6 +916,15 @@ Maturity Distribution:
 - ML3 (Defined):     ___ controls (___%) ← Target
 - ML2 (Developing):  ___ controls (___%)
 - ML1 (Initial):     ___ controls (___%)
+- Not assessed (NA): ___ controls (___%)  ← never counted as 0
+
+Not Assessable (list every NA with its reason code and the artefact that would clear it):
+- Control: ________  Code: [E1|E2|E3|E4]  Clearing artefact: ______________________
+- Controls scored: ______ of ______ in scope.  If NA >20%: aggregate percentages withheld, report "insufficient evidence".
+
+Instrument and method:
+- AIMF version scored: ________   Anchor set: ________
+- Blind double scoring: [ ] No [ ] Yes — agreement ____ / ____ controls (___%), adjudications: ____
 
 ───────────────────────────────────────────────────────────────
 GAP ANALYSIS
@@ -755,4 +958,4 @@ Next Assessment Date: ___________________________________________
 
 ---
 
-**Related Documents**: [Framework Overview](../core/AIMF-FRAMEWORK-OVERVIEW.md) | [Risk Baselines](AIMF-RISK-BASELINES.md) | [Maturity Levels](AIMF-MATURITY-LEVELS.md) | [Profiles Guide](AIMF-PROFILES-GUIDE.md) | [Control Catalog](../core/AIMF-CONTROL-CATALOG.csv)
+**Related Documents**: [Framework Overview](../core/AIMF-FRAMEWORK-OVERVIEW.md) | [Question Bank](AIMF-ASSESSMENT-QUESTION-BANK.md) | [Instrument Validation Record](AIMF-INSTRUMENT-VALIDATION.md) | [Risk Baselines](AIMF-RISK-BASELINES.md) | [Maturity Levels](AIMF-MATURITY-LEVELS.md) | [Profiles Guide](AIMF-PROFILES-GUIDE.md) | [Control Catalog](../core/AIMF-CONTROL-CATALOG.csv)

@@ -382,6 +382,22 @@ def validate(recs: list[dict], total: int, problems: list[str], check_files: boo
         errs.append(f"{BANK_MD.name}: asserts a retired or invented scale")
     if f"{len(recs)}/{total}" not in bank_text:
         errs.append(f"{BANK_MD.name}: coverage statement does not show {len(recs)}/{total}")
+
+    # The scoring protocol is part of the instrument: anchors without a decision
+    # procedure are a description, not a reproducible score. These headings are the
+    # normative sections; if one is deleted the anchors stop being enforceable, so
+    # the check fails rather than letting the guide quietly lose the rule.
+    guide_text = GUIDE_MD.read_text(encoding="utf-8") if GUIDE_MD.is_file() else ""
+    for needle, why in (
+        ("### Scoring Protocol", "the scoring protocol section"),
+        ("#### P3. Not assessable", "the not-assessable verdict and its reporting rules"),
+        ("#### P4. Blind double scoring", "the blind double-scoring procedure"),
+        ("#### P5. Adjudication", "the disagreement adjudication rules"),
+    ):
+        if needle not in guide_text:
+            errs.append(f"{GUIDE_MD.name}: {why} is missing ('{needle}')")
+    if "insufficient evidence" not in guide_text:
+        errs.append(f"{GUIDE_MD.name}: the NA reporting rule ('insufficient evidence') is missing")
     return errs
 
 

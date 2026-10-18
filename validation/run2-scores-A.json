@@ -1,0 +1,382 @@
+{
+ "assessor": "A",
+ "bank_sha256": "cc41c3d6e8d53c10c1ad5c724377a70cfd9c546d676e0c6c74f02a4e08b03773",
+ "controls_scored": 72,
+ "finished": "2026-10-18T12:17:11Z",
+ "fixture": "AIMF-VAL-2026-A",
+ "model": "anthropic/claude-sonnet-5.5",
+ "pack_sha256": "c643fd60d973aa043331c7d10ce48949f314c0218ed966edd7a5a6fae8121b0e",
+ "raw": {
+  "batch_1": "[{\"control\":\"GOV-1.1\",\"score\":1,\"deciding_artefact\":\"EV-016\",\"boundary_note\":\"EV-014 (approved, dated, all four BUs) and EV-015 (three regimes mapped, external counsel review per EV-017) support most of level 2. Two open exceptions with no date or approver (EV-016) mean in-scope systems are not fully covered, so level 2 fails. EV-015 records only a next review date of 2027-01-14: no stated interval and no minuted review occurrences. Whether the three mapped regimes are all the applicable ones is not evidenced.\"},\n{\"control\":\"GOV-1.2\",\"score\":1,\"deciding_artefact\":\"EV-022\",\"boundary_note\":\"The register has purpose and use case for 14 of 14 systems (EV-021), but only 11 of 14 have a risk class and only 9 of 14 have a linked approval ticket (EV-022). EV-023 shows two clinical pilots running ahead of registration, so the register is also incomplete. Level 2 fails on classification, approval-before-deployment and coverage.\"},\n{\"control\":\"GOV-1.3\",\"score\":1,\"deciding_artefact\":\"EV-032\",\"boundary_note\":\"EV-030 and EV-031 show AI risk integrated into the framework with an approved appetite statement, but the threshold is qualitative and there is one statement, not statements. No artefact shows a documented escalation path that staff can name (EV-033 records one escalation event, not a path). In the register, 2 of 6 AI risks have no owner and 2 have no escalation history (EV-032). Level 2 is not fully evidenced. No quantitative thresholds or dashboard, so level 3 is out of reach.\"},\n{\"control\":\"GOV-1.4\",\"score\":1,\"deciding_artefact\":\"EV-041\",\"boundary_note\":\"Level 2 fails on coverage and closure. Q1 covered 9 of 12 clauses (EV-041), so the whole period is not covered. 5 of 7 open findings have no target date (EV-042). The plan (EV-040) and per-clause KPIs (EV-043) are in place. Level 3 also fails: only a Q2 KPI report exists (EV-044), with no Q1 KPI report and no named receiving body. A score of 2 would need full-period coverage and dated closure tracking.\"},\n{\"control\":\"GOV-1.5\",\"score\":1,\"deciding_artefact\":\"EV-051\",\"boundary_note\":\"EV-050 acknowledges environmental impact in policy ('considered where material'), and EV-051 establishes that no system has been assessed. This matches anchor 1 exactly. The policy wording does not require an assessment, so level 2 fails on both the policy and the assessments.\"},\n{\"control\":\"GOV-1.6\",\"score\":1,\"deciding_artefact\":\"EV-062\",\"boundary_note\":\"EV-060 is a complete, approved procedure and EV-061 is one complete retirement record. Level 2 requires application to every retirement, but it was applied to 1 of 3 retirements since approval (EV-062), and the other two were switched off outside the procedure. No decommissioning register exists for level 3.\"},\n{\"control\":\"GOV-1.7\",\"score\":1,\"deciding_artefact\":\"EV-071\",\"boundary_note\":\"The addendum template is legal-approved (EV-070). Only 6 of 9 vendors have a signed addendum (EV-071). Risk assessments are complete for 5 of 9, with none reviewed since onboarding (EV-072). Ongoing monitoring is not evidenced, and the renewal addendum is 'best effort' under $50k (EV-073). Level 2 fails on coverage.\"},\n{\"control\":\"GOV-2.1\",\"score\":1,\"deciding_artefact\":\"EV-084\",\"boundary_note\":\"EV-080 is a formal RACI, but two activities have no named owner (EV-084), so it does not assign every AI risk role. EV-082 covers role descriptions for only three roles, against six roles in the RACI. 7 of 9 staff named the escalation path (EV-083), which is a pilot sample, not coverage. No ownership-coverage measure exists for level 3.\"},\n{\"control\":\"GOV-2.2\",\"score\":1,\"deciding_artefact\":\"EV-092\",\"boundary_note\":\"Training is mandatory and partly role-based (EV-090, EV-091), but completion is 78% and 41% (12 of 29 model owners). There is no competency assessment, only a click-through quiz (EV-092). The refresher cycle is set but untested (EV-093). Level 2 fails on competency assessment and coverage of every in-scope role.\"},\n{\"control\":\"GOV-2.3\",\"score\":1,\"deciding_artefact\":\"EV-103\",\"boundary_note\":\"EV-100 (charter), EV-101 (three quarterly minutes) and EV-102 (decisions log) show a chartered committee on a cadence with recorded decisions, which is more than anchor 1. Level 2 also requires the committee to review AI strategy, and EV-103 shows it does not. A next meeting date is not evidenced in the pack. Level 3 has no measure of items decided versus noted (6 of 9 decisions have action owners).\"},\n{\"control\":\"GOV-3.1\",\"score\":1,\"deciding_artefact\":\"EV-114\",\"boundary_note\":\"Required disciplines are documented (EV-110), which is more than anchor 1. Level 2 fails on two clauses. Composition review was completed for 1 of 4 projects (EV-113), and CTA's legal seat is an advisor who attended 2 of 9 reviews (EV-112). No inclusion metrics are collected (EV-114).\"},\n{\"control\":\"GOV-3.2\",\"score\":0,\"deciding_artefact\":\"EV-122\",\"boundary_note\":\"The absence of AI-role representation monitoring is established: the HR dashboard is not AI-specific (EV-120), the hiring review has no AI breakdown (EV-121), and no action plan or promotion analysis exists (EV-122). Level 1 needs a named non-discrimination policy artefact, and none is in the pack, so it is not inferred. Producing one would move the score to 1.\"}]\n",
+  "batch_2": "[{\"control\":\"GOV-4.1\",\"score\":1,\"deciding_artefact\":\"EV-132\",\"boundary_note\":\"EV-130 (2026-Q2 campaign, 4 town halls, intranet series) supports the awareness-communications clause of level 1. No separate leadership-statement artefact is named. Level 2 fails: EV-132 shows AI risk is absent from performance objectives and recognition criteria. Level 3 also fails: EV-131 has a single data point (62%) with no target or trend (EV-133).\"},{\"control\":\"GOV-4.2\",\"score\":1,\"deciding_artefact\":\"EV-141\",\"boundary_note\":\"EV-140 shows a channel exists (214 items in 2026). Level 2 fails: EV-141 shows backlog decisions with no link back to the feedback item. EV-142's release-note attribution is narrative, not a recorded decision log. EV-143 shows no defined response process. Monthly review (EV-141) is not a level 3 metric set.\"},{\"control\":\"GOV-4.3\",\"score\":1,\"deciding_artefact\":\"EV-150\",\"boundary_note\":\"EV-150 is a proactive public page but covers 5 of 14 systems (35%) and was last updated 2026-04, so level 2 coverage fails. EV-152 shows no transparency report and no correction process. EV-151 is internal only. Level 3 metrics are absent.\"},{\"control\":\"GOV-5.1\",\"score\":1,\"deciding_artefact\":\"EV-163\",\"boundary_note\":\"EV-160 (association working group, 2 of 4 meetings) and EV-162 (one consultation response, 2026-05) are recorded participation. Level 2 fails: EV-163 shows no documented engagement plan and no standards-body involvement. No engagement log with outcomes exists, so level 3 fails.\"},{\"control\":\"GOV-5.2\",\"score\":1,\"deciding_artefact\":\"EV-171\",\"boundary_note\":\"EV-171 is an informal, individual, personal collaboration with no agreement, which matches level 1 and contradicts the level 0 'no collaborations exist'. EV-170 confirms no agreements, partnerships or publications, so level 2 fails.\"},{\"control\":\"GOV-6.1\",\"score\":2,\"deciding_artefact\":\"EV-180\",\"boundary_note\":\"Level 2 is met: EV-180 (approved $420k line, 2.5 FTE, platform licence), EV-182 (platform deployed, holding register, RACI and policy library), and 2 of 2.5 FTE filled per EV-181. The 0.5 FTE vacancy is a boundary risk, but the anchor does not require full staffing. Level 3 is not met: EV-181 gives a spend figure ($290k Q1-Q3) with no plan comparison, capacity metric, review cadence or named reviewing body.\"},{\"control\":\"GOV-6.2\",\"score\":2,\"deciding_artefact\":\"EV-191\",\"boundary_note\":\"EV-190 is a funded plan with 5 milestones and a named owner. EV-191 (2026-07 minuted review) shows progress against milestones (2 of 5 complete, 1 slipped), which suffices at level 2 since that anchor requires no cadence. The pack does not itemise technology versus process investment, which is a residual weakness. Level 3 fails: no capability maturity metric or target, and EV-192 skills inventory is stale (2025-12).\"},{\"control\":\"MAN-1.1\",\"score\":1,\"deciding_artefact\":\"EV-622\",\"boundary_note\":\"EV-620 (procedure v2, 6 criteria, named approver) and EV-621 (records for all 14 registered systems) would support level 2. EV-622 shows two clinical pilots deployed without a decision record, an open exception, so coverage fails. EV-623 (9 approvals, 3 conditional, 2 rejections, reviewed quarterly) is present but cannot lift the score while level 2 is unmet.\"},{\"control\":\"MAN-1.2\",\"score\":2,\"deciding_artefact\":\"EV-632\",\"boundary_note\":\"Level 2 is met: EV-630 is a documented method (impact x likelihood x regulatory exposure) and EV-632 shows it drove named budget for 2 of the top 5 risks. Level 3 fails: allocation is traceable for only 2 of 5 top risks, and the other 3 have no recorded funding decision. EV-631 (rankings 2026-04 and 2026-07) shows a re-ranking cycle but not full traceability.\"},{\"control\":\"MAN-1.3\",\"score\":2,\"deciding_artefact\":\"EV-640\",\"boundary_note\":\"EV-640 gives all 5 top-ranked risks a plan with options, a named owner and a target date, which satisfies level 2. Level 3 fails: EV-641 shows 2 of 5 completed and 3 overdue with no update, and no completion-versus-plan target or residual-risk-reduction metric is recorded. EV-642 shows quarterly review, but the 2026-09 review deferred 3 plans without new dates.\"},{\"control\":\"MAN-1.4\",\"score\":1,\"deciding_artefact\":\"EV-653\",\"boundary_note\":\"EV-650 and EV-652 show CTA done properly: signed by the Chief Claims Officer 2026-03-30, with downstream acknowledgement 2026-04-02. EV-653 shows acceptance for only 4 of 14 systems and 3 production systems with no residual risk record, so level 2 coverage fails. No acceptance-currency register exists for level 3.\"},{\"control\":\"MAN-2.1\",\"score\":1,\"deciding_artefact\":\"EV-662\",\"boundary_note\":\"EV-660 and EV-661 show a full non-AI options analysis with rationale and approver for CTA only. EV-662 shows analyses for 2 of 14 systems and no alternatives section in the standard business case template, so level 2 'every proposal' fails. No redirect or rejection share is tracked.\"}]\n",
+  "batch_3": "[{\"control\":\"MAN-2.2\",\"score\":1,\"deciding_artefact\":\"EV-672\",\"boundary_note\":\"Level 2 needs every in-scope system; the plan and value review cover 1 of 14 (EV-672). EV-670 and EV-671 show CTA alone is further along (quarterly interval, two reviews), but coverage caps the score at 1. For CTA, level 3 would still fail: no value-vs-business-case comparison and no recorded next review date.\"},{\"control\":\"MAN-2.3\",\"score\":1,\"deciding_artefact\":\"EV-682\",\"boundary_note\":\"EV-680 is a documented procedure with recovery and lessons-learned log, but its scope over all 14 systems is not named and it has been exercised once (EV-681); EV-682 records 13 systems without exercise and 1 lessons entry. Coverage is unevidenced, so level 2 fails. No per-cycle metrics, so level 3 is absent.\"},{\"control\":\"MAN-2.4\",\"score\":2,\"deciding_artefact\":\"EV-692\",\"boundary_note\":\"Level 2: mechanism documented and tested for all 14 (EV-692, including 3 vendor-dependent), responsibility assigned to Model Owner (EV-690, named for CTA only; the other 13 are not named separately, a weak point). Level 3 fails: EV-693 has metric, values and a 30-minute target, but no named reporting body, one drill only, no cadence.\"},{\"control\":\"MAN-3.1\",\"score\":1,\"deciding_artefact\":\"EV-702\",\"boundary_note\":\"Quarterly schedule exists for 4 critical vendors (EV-700), but 5 AI vendors are unmonitored and have no contract review since onboarding (EV-702), and 2 of 6 issues are open past their date (EV-701). Level 2 coverage and issue closure are not fully met. No contractual-threshold review, so level 3 is absent.\"},{\"control\":\"MAN-3.2\",\"score\":1,\"deciding_artefact\":\"EV-711\",\"boundary_note\":\"Level 2 requires performance assessed on each update; 1 of 3 2026 updates (2026-09) was applied without evaluation (EV-711). Inventory covers all 14 (EV-710, EV-712) and monthly drift metrics exist (EV-713), but a missed evaluation is an open exception, so level 2 is not fully satisfied and level 3 cannot be reached.\"},{\"control\":\"MAN-4.1\",\"score\":1,\"deciding_artefact\":\"EV-722\",\"boundary_note\":\"Monitoring, appeals and a tested decommissioning plan are implemented for 1 of 14 systems; 4 others have monitoring only (EV-722). EV-720 and EV-721 show CTA at level 2 quality, but coverage is not met. No per-system coverage or resolution-time metrics, so level 3 is absent.\"},{\"control\":\"MAN-4.2\",\"score\":1,\"deciding_artefact\":\"EV-730\",\"boundary_note\":\"EV-730 and EV-731 evidence a backlog linked to monitoring findings and findings cited in release notes (only 2 of 9 releases named). No artefact shows stakeholder input integrated or best practices captured, so level 2 is not fully evidenced. EV-732 shows effect recorded for 7 of 9 releases with no target or reporting body, so level 3 fails.\"},{\"control\":\"MAN-4.3\",\"score\":1,\"deciding_artefact\":\"EV-741\",\"boundary_note\":\"Register exists (EV-740), but stakeholder communication is not defined: 1 of 3 notifiable incidents was left internal-only at the incident lead's discretion (EV-741), and there are no AI incident templates or time-to-notify target (EV-742). Recovery documentation is not evidenced in the pack. Level 2 fails; level 3 metrics absent.\"},{\"control\":\"MAP-1.1\",\"score\":1,\"deciding_artefact\":\"EV-202\",\"boundary_note\":\"CTA meets level 2 content (EV-200, EV-201), but only 2 of 14 systems have a full definition and the other 12 have a one-paragraph description (EV-202). Coverage is not met. No purpose-versus-use drift checks, so level 3 is absent.\"},{\"control\":\"MAP-1.2\",\"score\":1,\"deciding_artefact\":\"EV-211\",\"boundary_note\":\"EV-210 gives competencies per role family, not per AI project, and the staffing checklist is signed off for 1 of 4 projects (EV-211). Level 2 coverage is not met. No composition-versus-requirement metric (EV-212), so level 3 is absent.\"},{\"control\":\"MAP-1.3\",\"score\":1,\"deciding_artefact\":\"EV-221\",\"boundary_note\":\"Strategy is documented and board-approved (EV-220), but no mission review has been held since approval; the first is scheduled for 2027 (EV-221). A cadence needs a stated interval and at least two minuted occurrences, so level 2 fails. EV-222 KPIs show 2 of 4 on track, with no board reporting cadence evidenced, so level 3 is also unmet.\"},{\"control\":\"MAP-1.4\",\"score\":1,\"deciding_artefact\":\"EV-232\",\"boundary_note\":\"Business cases exist for 4 of 14 systems and value tracking for 2 (EV-232). CTA has a business case with value metrics and a post-deployment report (EV-230, EV-231), but coverage fails level 2. Realised-vs-modelled reporting each cycle is not evidenced for all systems.\"}]\n",
+  "batch_4": "[{\"control\":\"MAP-1.5\",\"score\":2,\"deciding_artefact\":\"EV-241\",\"boundary_note\":\"L2 met: EV-240 statement with 3 tolerances, 1 quantified, approved per EV-241 minutes 2026-03-04. The pack does not say whether the other 2 tolerances are infeasible to quantify. L3 fails: EV-242 is one report (2026-08), not a cadence, and covers 1 of 3 tolerances.\"},{\"control\":\"MAP-1.6\",\"score\":1,\"deciding_artefact\":\"EV-251\",\"boundary_note\":\"L2 fails: socio-technical requirements and stakeholder input exist (EV-250, EV-252), but traceability covers 96 of 148 and none of the 22 socio-technical requirements have tests. Stakeholder input is attributed in only 41 cases. Partial L2 scores 1.\"},{\"control\":\"MAP-2.1\",\"score\":1,\"deciding_artefact\":\"EV-262\",\"boundary_note\":\"Taxonomy applied to 14 of 14 systems (EV-260, EV-261), but method documentation exists for 6 of 14. L2 needs it per system, so partial L2 scores 1.\"},{\"control\":\"MAP-2.2\",\"score\":1,\"deciding_artefact\":\"EV-272\",\"boundary_note\":\"CTA meets L2 (EV-270 limits note, EV-271 config-enforced $25k routing), but other systems have no limits note (EV-272), so this is a subset, not coverage. EV-271 evidences enforcement of the oversight rule only, not the out-of-scope claim types or confidence thresholds.\"},{\"control\":\"MAP-2.3\",\"score\":1,\"deciding_artefact\":\"EV-281\",\"boundary_note\":\"EV-280 is a CTA-only methodology with limitations. The pack shows no methodology for other in-scope systems, and one of the 3 planned validations (drift re-validation) has no date or owner. L2 not fully met.\"},{\"control\":\"MAP-3.1\",\"score\":1,\"deciding_artefact\":\"EV-292\",\"boundary_note\":\"CTA meets L2 (EV-290), but only 3 of 14 systems have a benefits analysis and 11 have no validation method. A single validation run (EV-291, 2026-07) is not per-cycle tracking, so L3 is not reached either.\"},{\"control\":\"MAP-3.2\",\"score\":1,\"deciding_artefact\":\"EV-301\",\"boundary_note\":\"L2 fails: non-monetary costs are named but not quantified, and there is no link to the risk tolerance statement. EV-302 quarterly tracking is an L3 artefact, but L3 cannot be credited while L2 is unmet.\"},{\"control\":\"MAP-3.3\",\"score\":2,\"deciding_artefact\":\"EV-311\",\"boundary_note\":\"L2 met by EV-310 and EV-311 (7 of 7 changes approved). EV-312 shows per-release drift checks in 3 releases, but L3 needs MEASURE: no target is stated and no report to a named body is shown, so it stays at 2. L4 not met: no automated detection is evidenced and re-scoping happened once. The evidence is CTA-only, and scope statements for other systems are not shown in the pack.\"},{\"control\":\"MAP-3.4\",\"score\":1,\"deciding_artefact\":\"EV-322\",\"boundary_note\":\"L2 fails: a standard and an assessment process exist (EV-320), but there is no certification requirement and no refresher cycle. Assessment covers 34 of 61 adjusters (EV-321). Partial L2 scores 1.\"},{\"control\":\"MAP-3.5\",\"score\":1,\"deciding_artefact\":\"EV-330\",\"boundary_note\":\"EV-330 documents the procedure, and the one-off audit (EV-331, EV-332) shows effectiveness was assessed. No artefact evidences alignment with AI policy, so that L2 clause is unevidenced and the score drops a level. L3 not reached: only a 20-case audit is reported, with no per-system override, review and agreement rates. The 38% appropriate rate is unactioned.\"},{\"control\":\"MAP-4.1\",\"score\":1,\"deciding_artefact\":\"EV-341\",\"boundary_note\":\"L2 needs risk mapping including legal risk for every third-party AI component. The map covers 3 components (EV-340), legal review covers 3 of 9 vendors (EV-341), and the AI Risk Committee has not reviewed it (EV-342). Subset only.\"},{\"control\":\"MAP-4.2\",\"score\":1,\"deciding_artefact\":\"EV-351\",\"boundary_note\":\"8 controls are documented (EV-350) but only 3 of 8 have implementation evidence, and no effectiveness monitoring is recorded. Model-change notifications are untracked (EV-352). L2 not met.\"}]\n",
+  "batch_5": "[\n{\"control\":\"MAP-5.1\",\"score\":1,\"deciding_artefact\":\"EV-362\",\"boundary_note\":\"EV-360 and EV-361 show a documented assessment that fed decisions (two mitigations adopted), but only for CTA. Coverage is 1 of 14 systems with no mandated template, so level 2 is partial. No separate stakeholder-input artefact is in this pack.\"},\n{\"control\":\"MAP-5.2\",\"score\":1,\"deciding_artefact\":\"EV-371\",\"boundary_note\":\"Records exist for 4 of 6 planned sessions, so the programme is not fully recorded. EV-372 shows 3 changes, but EV-373 shows the member panel came from the existing customer council, not a sample of affected members. Level 2 is partial. No effectiveness metrics are present.\"},\n{\"control\":\"MEA-1.1\",\"score\":2,\"deciding_artefact\":\"EV-402\",\"boundary_note\":\"EV-400, EV-401 and EV-402 cover the framework, instrumentation and risk mapping. This pack has no separate metric-validation artefact, so 'validated' rests on the framework itself. Level 3 fails the cadence and measure rules: EV-403 is one quarterly report (2026-Q2), with no second minuted occurrence, no recorded next date and no target. The 100% figure counts 2 proxy metrics, while 22 of 24 are directly instrumented.\"},\n{\"control\":\"MEA-1.2\",\"score\":1,\"deciding_artefact\":\"EV-410\",\"boundary_note\":\"Level 2 requires every metric to be validated. Definition notes cover 4 of 9 (EV-410) and one validation study covers 1 metric (EV-411). EV-413 says re-validation was completed but names no scope, report or output. EV-412 is a level 3 artefact (FP/FN analysis and revision history for all 9) but cannot lift the score while level 2 is only partial.\"},\n{\"control\":\"MEA-1.3\",\"score\":2,\"deciding_artefact\":\"EV-421\",\"boundary_note\":\"EV-420 sets the requirement, and EV-421 and EV-422 record independence per engagement for CTA. The pack does not say whether other in-scope systems exist. Level 3 fails: no coverage metric is measured or reported to audit, and no external assessor is used.\"},\n{\"control\":\"MEA-2.1\",\"score\":1,\"deciding_artefact\":\"EV-432\",\"boundary_note\":\"Level 2 requires documentation and version control for every evaluation. EV-430 and EV-431 are good for current runs, but 3 of 12 legacy runs lack manifests, recorded as an open defect, so it is not 100%. The 9 of 12 reproducibility figure is level 3 evidence, but it has no target and no named reporting body.\"},\n{\"control\":\"MEA-2.10\",\"score\":1,\"deciding_artefact\":\"EV-522\",\"boundary_note\":\"EV-520 and EV-521 are strong for CTA, but a PIA exists for only 2 of 14 systems and privacy review is not gated in deployment. Level 2 coverage is not met.\"},\n{\"control\":\"MEA-2.11\",\"score\":1,\"deciding_artefact\":\"EV-534\",\"boundary_note\":\"CTA fairness work is level 3 quality (EV-530 to EV-533), but EV-534 shows no fairness evaluation for other in-scope systems. Level 2 requires one per system, so it fails coverage.\"},\n{\"control\":\"MEA-2.12\",\"score\":0,\"deciding_artefact\":\"EV-542\",\"boundary_note\":\"Absence is established and in scope: no energy, compute or carbon figures (EV-540), no target (EV-541), and no assessment for any of the 14 systems (EV-542). The sustainability report does not mention AI, so even level 1 'noted' is not met.\"},\n{\"control\":\"MEA-2.13\",\"score\":1,\"deciding_artefact\":\"EV-551\",\"boundary_note\":\"EV-550 shows a TEVV review with two process changes, but metric effectiveness is assessed for only 2 of 9 metrics (EV-551) and the review covers CTA only (EV-552). Level 2 is partial. The 62% coverage and 3 post-release defects are single values with no per-cycle tracking.\"},\n{\"control\":\"MEA-2.2\",\"score\":\"NA\",\"deciding_artefact\":\"\",\"boundary_note\":\"EV-440 records no human-subject evaluation in the period, so there is no study against which ethics review or consent can be judged. EV-441 and EV-442 show the process and records do not exist, which is a readiness gap. It would score 0 if a human-subject evaluation is run or later found in scope.\"},\n{\"control\":\"MEA-2.3\",\"score\":2,\"deciding_artefact\":\"EV-453\",\"boundary_note\":\"Level 2 is met: criteria were set before testing (EV-450), shown under deployment-like replay (EV-451), and the acceptance decisions are recorded (EV-453). The two criteria added after testing apply only from the next release and do not undermine level 2. Level 3 fails the measure rule: EV-453 has per-release values against criteria but no named body receiving the report. Score 3 if a named reviewing body is evidenced.\"}\n]\n",
+  "batch_6": "[\n{\"control\":\"MEA-2.4\",\"score\":2,\"deciding_artefact\":\"EV-460\",\"boundary_note\":\"L2 met: EV-460 covers all 14 in-scope systems (schema, latency, output distribution, drift, on-call alerts). EV-462 reports precision, recall and alert-to-action time monthly, but no target is stated and no minuted council reviews or next date are named, so the L3 measure/cadence clauses fail. EV-461 SLA covers acknowledgement, not alert-to-action. EV-463 (L4) cannot count without L3.\"},\n{\"control\":\"MEA-2.5\",\"score\":1,\"deciding_artefact\":\"EV-471\",\"boundary_note\":\"L2 needs validity and reliability with generalisability beyond the test set. EV-470 gives validity and test-retest (kappa 0.81). EV-471 shows one held-out region only, with two regions excluded. EV-472 shows labeler reliability not assessed. Partial L2 scores L1.\"},\n{\"control\":\"MEA-2.6\",\"score\":1,\"deciding_artefact\":\"EV-480\",\"boundary_note\":\"EV-480 (fail-safe tests) and EV-481 (3 residual risks, accepted by Model Owner) satisfy the content of L2. The L2 anchor requires coverage of every in-scope system, and no artefact names the systems evaluated, so that clause is unevidenced. If register coverage were shown this would be 2. EV-482 (no re-test) is not an L2 failure; L3 has no threshold tracking.\"},\n{\"control\":\"MEA-2.7\",\"score\":\"NA\",\"deciding_artefact\":\"\",\"boundary_note\":\"A red-team report exists (EV-490) but is withheld under legal privilege (EV-491). Its content, findings and resilience measures cannot be assessed (EV-492). Withheld artefact is NA, not 0 and not 1.\"},\n{\"control\":\"MEA-2.8\",\"score\":2,\"deciding_artefact\":\"EV-501\",\"boundary_note\":\"EV-500 (2026-04) assesses notice, adverse-action explanation and appeal. EV-501 shows approved notice and letters with top-2 reasons. EV-502 limits scope to CTA with no requirement for other systems, and the L2 anchor has no every-in-scope clause. L3 fails: no documentation completeness or affected-party comprehension measure. Accountability is evidenced only through the appeal element of EV-500.\"},\n{\"control\":\"MEA-2.9\",\"score\":2,\"deciding_artefact\":\"EV-511\",\"boundary_note\":\"L2 met: EV-510 gives the explanation method and handbook guidance, and EV-511 validates it (17 of 20 explanations rated actionable). L3 fails: no per-release comprehension or explanation-use rates. EV-511 is a one-off with no target and no date. EV-512 shows guidance stale since the 2026-07 refresh, a currency risk for L2.\"},\n{\"control\":\"MEA-3.1\",\"score\":2,\"deciding_artefact\":\"EV-560\",\"boundary_note\":\"L2 met: named owner, monthly cadence, 5 emergent-risk entries (EV-560), minutes for 8 of 9 months (EV-561). The skipped month and the lack of a recorded next date in the pack are weaknesses but do not fail the anchor's 'a review cadence' wording. L3 fails: no tracking coverage or time-to-log measure. EV-562 shows only 7 of 23 entries closed.\"},\n{\"control\":\"MEA-3.2\",\"score\":2,\"deciding_artefact\":\"EV-571\",\"boundary_note\":\"L2 met: EV-570 documents 3 alternative methods with stated limits, and EV-571 shows two methods used with records. L3 fails: no method-comparison results and no per-case confidence. EV-572 shows no guidance on choosing methods and no application to other risks.\"},\n{\"control\":\"MEA-3.3\",\"score\":2,\"deciding_artefact\":\"EV-582\",\"boundary_note\":\"L2 met: problem reporting (EV-580), appeal process (EV-581), monthly analysis by the product team (EV-582). L3 fails: volumes and appeal outcomes are counted, but there is no resolution-time measure, no target and no named reporting body. L4 fails: analysis is unpublished and not linked to system changes.\"},\n{\"control\":\"MEA-4.1\",\"score\":2,\"deciding_artefact\":\"EV-590\",\"boundary_note\":\"L2 met: tests run on 12,000 replayed production claims (EV-590), with clinical and adjuster input recorded (EV-591). L3 fails: no measured lab-versus-production gap. EV-592 shows benchmarks used only for model selection and not validated against CRHP data, which does not undo L2.\"},\n{\"control\":\"MEA-4.2\",\"score\":1,\"deciding_artefact\":\"EV-601\",\"boundary_note\":\"Review occurred once (2026-07) by the Clinical Advisory Panel and Internal Audit (EV-600). Independence from the build team is recorded only for Internal Audit. The domain-expert panel includes a member advising the CTA product team, with no recusal recorded, so independent expert validation is not fully evidenced. EV-602 minutes are not enough to reach L2.\"},\n{\"control\":\"MEA-4.3\",\"score\":2,\"deciding_artefact\":\"EV-611\",\"boundary_note\":\"L2 met: drift monitoring across all 14 systems (EV-610, EV-613) and RCA for both 2026 declines with fix retested (EV-611). RCA is evidenced for the 2 declines only, though EV-613 shows 6 systems with documented change events. L3 fails: EV-612 gives latency values (2 days, 6 days) with no stated target and no named receiving body.\"}\n]\n"
+ },
+ "scores": {
+  "GOV-1.1": {
+   "boundary_note": "EV-014 (approved, dated, all four BUs) and EV-015 (three regimes mapped, external counsel review per EV-017) support most of level 2. Two open exceptions with no date or approver (EV-016) mean in-scope systems are not fully covered, so level 2 fails. EV-015 records only a next review date of 2027-01-14: no stated interval and no minuted review occurrences. Whether the three mapped regimes are all the applicable ones is not evidenced.",
+   "deciding_artefact": "EV-016",
+   "score": 1
+  },
+  "GOV-1.2": {
+   "boundary_note": "The register has purpose and use case for 14 of 14 systems (EV-021), but only 11 of 14 have a risk class and only 9 of 14 have a linked approval ticket (EV-022). EV-023 shows two clinical pilots running ahead of registration, so the register is also incomplete. Level 2 fails on classification, approval-before-deployment and coverage.",
+   "deciding_artefact": "EV-022",
+   "score": 1
+  },
+  "GOV-1.3": {
+   "boundary_note": "EV-030 and EV-031 show AI risk integrated into the framework with an approved appetite statement, but the threshold is qualitative and there is one statement, not statements. No artefact shows a documented escalation path that staff can name (EV-033 records one escalation event, not a path). In the register, 2 of 6 AI risks have no owner and 2 have no escalation history (EV-032). Level 2 is not fully evidenced. No quantitative thresholds or dashboard, so level 3 is out of reach.",
+   "deciding_artefact": "EV-032",
+   "score": 1
+  },
+  "GOV-1.4": {
+   "boundary_note": "Level 2 fails on coverage and closure. Q1 covered 9 of 12 clauses (EV-041), so the whole period is not covered. 5 of 7 open findings have no target date (EV-042). The plan (EV-040) and per-clause KPIs (EV-043) are in place. Level 3 also fails: only a Q2 KPI report exists (EV-044), with no Q1 KPI report and no named receiving body. A score of 2 would need full-period coverage and dated closure tracking.",
+   "deciding_artefact": "EV-041",
+   "score": 1
+  },
+  "GOV-1.5": {
+   "boundary_note": "EV-050 acknowledges environmental impact in policy ('considered where material'), and EV-051 establishes that no system has been assessed. This matches anchor 1 exactly. The policy wording does not require an assessment, so level 2 fails on both the policy and the assessments.",
+   "deciding_artefact": "EV-051",
+   "score": 1
+  },
+  "GOV-1.6": {
+   "boundary_note": "EV-060 is a complete, approved procedure and EV-061 is one complete retirement record. Level 2 requires application to every retirement, but it was applied to 1 of 3 retirements since approval (EV-062), and the other two were switched off outside the procedure. No decommissioning register exists for level 3.",
+   "deciding_artefact": "EV-062",
+   "score": 1
+  },
+  "GOV-1.7": {
+   "boundary_note": "The addendum template is legal-approved (EV-070). Only 6 of 9 vendors have a signed addendum (EV-071). Risk assessments are complete for 5 of 9, with none reviewed since onboarding (EV-072). Ongoing monitoring is not evidenced, and the renewal addendum is 'best effort' under $50k (EV-073). Level 2 fails on coverage.",
+   "deciding_artefact": "EV-071",
+   "score": 1
+  },
+  "GOV-2.1": {
+   "boundary_note": "EV-080 is a formal RACI, but two activities have no named owner (EV-084), so it does not assign every AI risk role. EV-082 covers role descriptions for only three roles, against six roles in the RACI. 7 of 9 staff named the escalation path (EV-083), which is a pilot sample, not coverage. No ownership-coverage measure exists for level 3.",
+   "deciding_artefact": "EV-084",
+   "score": 1
+  },
+  "GOV-2.2": {
+   "boundary_note": "Training is mandatory and partly role-based (EV-090, EV-091), but completion is 78% and 41% (12 of 29 model owners). There is no competency assessment, only a click-through quiz (EV-092). The refresher cycle is set but untested (EV-093). Level 2 fails on competency assessment and coverage of every in-scope role.",
+   "deciding_artefact": "EV-092",
+   "score": 1
+  },
+  "GOV-2.3": {
+   "boundary_note": "EV-100 (charter), EV-101 (three quarterly minutes) and EV-102 (decisions log) show a chartered committee on a cadence with recorded decisions, which is more than anchor 1. Level 2 also requires the committee to review AI strategy, and EV-103 shows it does not. A next meeting date is not evidenced in the pack. Level 3 has no measure of items decided versus noted (6 of 9 decisions have action owners).",
+   "deciding_artefact": "EV-103",
+   "score": 1
+  },
+  "GOV-3.1": {
+   "boundary_note": "Required disciplines are documented (EV-110), which is more than anchor 1. Level 2 fails on two clauses. Composition review was completed for 1 of 4 projects (EV-113), and CTA's legal seat is an advisor who attended 2 of 9 reviews (EV-112). No inclusion metrics are collected (EV-114).",
+   "deciding_artefact": "EV-114",
+   "score": 1
+  },
+  "GOV-3.2": {
+   "boundary_note": "The absence of AI-role representation monitoring is established: the HR dashboard is not AI-specific (EV-120), the hiring review has no AI breakdown (EV-121), and no action plan or promotion analysis exists (EV-122). Level 1 needs a named non-discrimination policy artefact, and none is in the pack, so it is not inferred. Producing one would move the score to 1.",
+   "deciding_artefact": "EV-122",
+   "score": 0
+  },
+  "GOV-4.1": {
+   "boundary_note": "EV-130 (2026-Q2 campaign, 4 town halls, intranet series) supports the awareness-communications clause of level 1. No separate leadership-statement artefact is named. Level 2 fails: EV-132 shows AI risk is absent from performance objectives and recognition criteria. Level 3 also fails: EV-131 has a single data point (62%) with no target or trend (EV-133).",
+   "deciding_artefact": "EV-132",
+   "score": 1
+  },
+  "GOV-4.2": {
+   "boundary_note": "EV-140 shows a channel exists (214 items in 2026). Level 2 fails: EV-141 shows backlog decisions with no link back to the feedback item. EV-142's release-note attribution is narrative, not a recorded decision log. EV-143 shows no defined response process. Monthly review (EV-141) is not a level 3 metric set.",
+   "deciding_artefact": "EV-141",
+   "score": 1
+  },
+  "GOV-4.3": {
+   "boundary_note": "EV-150 is a proactive public page but covers 5 of 14 systems (35%) and was last updated 2026-04, so level 2 coverage fails. EV-152 shows no transparency report and no correction process. EV-151 is internal only. Level 3 metrics are absent.",
+   "deciding_artefact": "EV-150",
+   "score": 1
+  },
+  "GOV-5.1": {
+   "boundary_note": "EV-160 (association working group, 2 of 4 meetings) and EV-162 (one consultation response, 2026-05) are recorded participation. Level 2 fails: EV-163 shows no documented engagement plan and no standards-body involvement. No engagement log with outcomes exists, so level 3 fails.",
+   "deciding_artefact": "EV-163",
+   "score": 1
+  },
+  "GOV-5.2": {
+   "boundary_note": "EV-171 is an informal, individual, personal collaboration with no agreement, which matches level 1 and contradicts the level 0 'no collaborations exist'. EV-170 confirms no agreements, partnerships or publications, so level 2 fails.",
+   "deciding_artefact": "EV-171",
+   "score": 1
+  },
+  "GOV-6.1": {
+   "boundary_note": "Level 2 is met: EV-180 (approved $420k line, 2.5 FTE, platform licence), EV-182 (platform deployed, holding register, RACI and policy library), and 2 of 2.5 FTE filled per EV-181. The 0.5 FTE vacancy is a boundary risk, but the anchor does not require full staffing. Level 3 is not met: EV-181 gives a spend figure ($290k Q1-Q3) with no plan comparison, capacity metric, review cadence or named reviewing body.",
+   "deciding_artefact": "EV-180",
+   "score": 2
+  },
+  "GOV-6.2": {
+   "boundary_note": "EV-190 is a funded plan with 5 milestones and a named owner. EV-191 (2026-07 minuted review) shows progress against milestones (2 of 5 complete, 1 slipped), which suffices at level 2 since that anchor requires no cadence. The pack does not itemise technology versus process investment, which is a residual weakness. Level 3 fails: no capability maturity metric or target, and EV-192 skills inventory is stale (2025-12).",
+   "deciding_artefact": "EV-191",
+   "score": 2
+  },
+  "MAN-1.1": {
+   "boundary_note": "EV-620 (procedure v2, 6 criteria, named approver) and EV-621 (records for all 14 registered systems) would support level 2. EV-622 shows two clinical pilots deployed without a decision record, an open exception, so coverage fails. EV-623 (9 approvals, 3 conditional, 2 rejections, reviewed quarterly) is present but cannot lift the score while level 2 is unmet.",
+   "deciding_artefact": "EV-622",
+   "score": 1
+  },
+  "MAN-1.2": {
+   "boundary_note": "Level 2 is met: EV-630 is a documented method (impact x likelihood x regulatory exposure) and EV-632 shows it drove named budget for 2 of the top 5 risks. Level 3 fails: allocation is traceable for only 2 of 5 top risks, and the other 3 have no recorded funding decision. EV-631 (rankings 2026-04 and 2026-07) shows a re-ranking cycle but not full traceability.",
+   "deciding_artefact": "EV-632",
+   "score": 2
+  },
+  "MAN-1.3": {
+   "boundary_note": "EV-640 gives all 5 top-ranked risks a plan with options, a named owner and a target date, which satisfies level 2. Level 3 fails: EV-641 shows 2 of 5 completed and 3 overdue with no update, and no completion-versus-plan target or residual-risk-reduction metric is recorded. EV-642 shows quarterly review, but the 2026-09 review deferred 3 plans without new dates.",
+   "deciding_artefact": "EV-640",
+   "score": 2
+  },
+  "MAN-1.4": {
+   "boundary_note": "EV-650 and EV-652 show CTA done properly: signed by the Chief Claims Officer 2026-03-30, with downstream acknowledgement 2026-04-02. EV-653 shows acceptance for only 4 of 14 systems and 3 production systems with no residual risk record, so level 2 coverage fails. No acceptance-currency register exists for level 3.",
+   "deciding_artefact": "EV-653",
+   "score": 1
+  },
+  "MAN-2.1": {
+   "boundary_note": "EV-660 and EV-661 show a full non-AI options analysis with rationale and approver for CTA only. EV-662 shows analyses for 2 of 14 systems and no alternatives section in the standard business case template, so level 2 'every proposal' fails. No redirect or rejection share is tracked.",
+   "deciding_artefact": "EV-662",
+   "score": 1
+  },
+  "MAN-2.2": {
+   "boundary_note": "Level 2 needs every in-scope system; the plan and value review cover 1 of 14 (EV-672). EV-670 and EV-671 show CTA alone is further along (quarterly interval, two reviews), but coverage caps the score at 1. For CTA, level 3 would still fail: no value-vs-business-case comparison and no recorded next review date.",
+   "deciding_artefact": "EV-672",
+   "score": 1
+  },
+  "MAN-2.3": {
+   "boundary_note": "EV-680 is a documented procedure with recovery and lessons-learned log, but its scope over all 14 systems is not named and it has been exercised once (EV-681); EV-682 records 13 systems without exercise and 1 lessons entry. Coverage is unevidenced, so level 2 fails. No per-cycle metrics, so level 3 is absent.",
+   "deciding_artefact": "EV-682",
+   "score": 1
+  },
+  "MAN-2.4": {
+   "boundary_note": "Level 2: mechanism documented and tested for all 14 (EV-692, including 3 vendor-dependent), responsibility assigned to Model Owner (EV-690, named for CTA only; the other 13 are not named separately, a weak point). Level 3 fails: EV-693 has metric, values and a 30-minute target, but no named reporting body, one drill only, no cadence.",
+   "deciding_artefact": "EV-692",
+   "score": 2
+  },
+  "MAN-3.1": {
+   "boundary_note": "Quarterly schedule exists for 4 critical vendors (EV-700), but 5 AI vendors are unmonitored and have no contract review since onboarding (EV-702), and 2 of 6 issues are open past their date (EV-701). Level 2 coverage and issue closure are not fully met. No contractual-threshold review, so level 3 is absent.",
+   "deciding_artefact": "EV-702",
+   "score": 1
+  },
+  "MAN-3.2": {
+   "boundary_note": "Level 2 requires performance assessed on each update; 1 of 3 2026 updates (2026-09) was applied without evaluation (EV-711). Inventory covers all 14 (EV-710, EV-712) and monthly drift metrics exist (EV-713), but a missed evaluation is an open exception, so level 2 is not fully satisfied and level 3 cannot be reached.",
+   "deciding_artefact": "EV-711",
+   "score": 1
+  },
+  "MAN-4.1": {
+   "boundary_note": "Monitoring, appeals and a tested decommissioning plan are implemented for 1 of 14 systems; 4 others have monitoring only (EV-722). EV-720 and EV-721 show CTA at level 2 quality, but coverage is not met. No per-system coverage or resolution-time metrics, so level 3 is absent.",
+   "deciding_artefact": "EV-722",
+   "score": 1
+  },
+  "MAN-4.2": {
+   "boundary_note": "EV-730 and EV-731 evidence a backlog linked to monitoring findings and findings cited in release notes (only 2 of 9 releases named). No artefact shows stakeholder input integrated or best practices captured, so level 2 is not fully evidenced. EV-732 shows effect recorded for 7 of 9 releases with no target or reporting body, so level 3 fails.",
+   "deciding_artefact": "EV-730",
+   "score": 1
+  },
+  "MAN-4.3": {
+   "boundary_note": "Register exists (EV-740), but stakeholder communication is not defined: 1 of 3 notifiable incidents was left internal-only at the incident lead's discretion (EV-741), and there are no AI incident templates or time-to-notify target (EV-742). Recovery documentation is not evidenced in the pack. Level 2 fails; level 3 metrics absent.",
+   "deciding_artefact": "EV-741",
+   "score": 1
+  },
+  "MAP-1.1": {
+   "boundary_note": "CTA meets level 2 content (EV-200, EV-201), but only 2 of 14 systems have a full definition and the other 12 have a one-paragraph description (EV-202). Coverage is not met. No purpose-versus-use drift checks, so level 3 is absent.",
+   "deciding_artefact": "EV-202",
+   "score": 1
+  },
+  "MAP-1.2": {
+   "boundary_note": "EV-210 gives competencies per role family, not per AI project, and the staffing checklist is signed off for 1 of 4 projects (EV-211). Level 2 coverage is not met. No composition-versus-requirement metric (EV-212), so level 3 is absent.",
+   "deciding_artefact": "EV-211",
+   "score": 1
+  },
+  "MAP-1.3": {
+   "boundary_note": "Strategy is documented and board-approved (EV-220), but no mission review has been held since approval; the first is scheduled for 2027 (EV-221). A cadence needs a stated interval and at least two minuted occurrences, so level 2 fails. EV-222 KPIs show 2 of 4 on track, with no board reporting cadence evidenced, so level 3 is also unmet.",
+   "deciding_artefact": "EV-221",
+   "score": 1
+  },
+  "MAP-1.4": {
+   "boundary_note": "Business cases exist for 4 of 14 systems and value tracking for 2 (EV-232). CTA has a business case with value metrics and a post-deployment report (EV-230, EV-231), but coverage fails level 2. Realised-vs-modelled reporting each cycle is not evidenced for all systems.",
+   "deciding_artefact": "EV-232",
+   "score": 1
+  },
+  "MAP-1.5": {
+   "boundary_note": "L2 met: EV-240 statement with 3 tolerances, 1 quantified, approved per EV-241 minutes 2026-03-04. The pack does not say whether the other 2 tolerances are infeasible to quantify. L3 fails: EV-242 is one report (2026-08), not a cadence, and covers 1 of 3 tolerances.",
+   "deciding_artefact": "EV-241",
+   "score": 2
+  },
+  "MAP-1.6": {
+   "boundary_note": "L2 fails: socio-technical requirements and stakeholder input exist (EV-250, EV-252), but traceability covers 96 of 148 and none of the 22 socio-technical requirements have tests. Stakeholder input is attributed in only 41 cases. Partial L2 scores 1.",
+   "deciding_artefact": "EV-251",
+   "score": 1
+  },
+  "MAP-2.1": {
+   "boundary_note": "Taxonomy applied to 14 of 14 systems (EV-260, EV-261), but method documentation exists for 6 of 14. L2 needs it per system, so partial L2 scores 1.",
+   "deciding_artefact": "EV-262",
+   "score": 1
+  },
+  "MAP-2.2": {
+   "boundary_note": "CTA meets L2 (EV-270 limits note, EV-271 config-enforced $25k routing), but other systems have no limits note (EV-272), so this is a subset, not coverage. EV-271 evidences enforcement of the oversight rule only, not the out-of-scope claim types or confidence thresholds.",
+   "deciding_artefact": "EV-272",
+   "score": 1
+  },
+  "MAP-2.3": {
+   "boundary_note": "EV-280 is a CTA-only methodology with limitations. The pack shows no methodology for other in-scope systems, and one of the 3 planned validations (drift re-validation) has no date or owner. L2 not fully met.",
+   "deciding_artefact": "EV-281",
+   "score": 1
+  },
+  "MAP-3.1": {
+   "boundary_note": "CTA meets L2 (EV-290), but only 3 of 14 systems have a benefits analysis and 11 have no validation method. A single validation run (EV-291, 2026-07) is not per-cycle tracking, so L3 is not reached either.",
+   "deciding_artefact": "EV-292",
+   "score": 1
+  },
+  "MAP-3.2": {
+   "boundary_note": "L2 fails: non-monetary costs are named but not quantified, and there is no link to the risk tolerance statement. EV-302 quarterly tracking is an L3 artefact, but L3 cannot be credited while L2 is unmet.",
+   "deciding_artefact": "EV-301",
+   "score": 1
+  },
+  "MAP-3.3": {
+   "boundary_note": "L2 met by EV-310 and EV-311 (7 of 7 changes approved). EV-312 shows per-release drift checks in 3 releases, but L3 needs MEASURE: no target is stated and no report to a named body is shown, so it stays at 2. L4 not met: no automated detection is evidenced and re-scoping happened once. The evidence is CTA-only, and scope statements for other systems are not shown in the pack.",
+   "deciding_artefact": "EV-311",
+   "score": 2
+  },
+  "MAP-3.4": {
+   "boundary_note": "L2 fails: a standard and an assessment process exist (EV-320), but there is no certification requirement and no refresher cycle. Assessment covers 34 of 61 adjusters (EV-321). Partial L2 scores 1.",
+   "deciding_artefact": "EV-322",
+   "score": 1
+  },
+  "MAP-3.5": {
+   "boundary_note": "EV-330 documents the procedure, and the one-off audit (EV-331, EV-332) shows effectiveness was assessed. No artefact evidences alignment with AI policy, so that L2 clause is unevidenced and the score drops a level. L3 not reached: only a 20-case audit is reported, with no per-system override, review and agreement rates. The 38% appropriate rate is unactioned.",
+   "deciding_artefact": "EV-330",
+   "score": 1
+  },
+  "MAP-4.1": {
+   "boundary_note": "L2 needs risk mapping including legal risk for every third-party AI component. The map covers 3 components (EV-340), legal review covers 3 of 9 vendors (EV-341), and the AI Risk Committee has not reviewed it (EV-342). Subset only.",
+   "deciding_artefact": "EV-341",
+   "score": 1
+  },
+  "MAP-4.2": {
+   "boundary_note": "8 controls are documented (EV-350) but only 3 of 8 have implementation evidence, and no effectiveness monitoring is recorded. Model-change notifications are untracked (EV-352). L2 not met.",
+   "deciding_artefact": "EV-351",
+   "score": 1
+  },
+  "MAP-5.1": {
+   "boundary_note": "EV-360 and EV-361 show a documented assessment that fed decisions (two mitigations adopted), but only for CTA. Coverage is 1 of 14 systems with no mandated template, so level 2 is partial. No separate stakeholder-input artefact is in this pack.",
+   "deciding_artefact": "EV-362",
+   "score": 1
+  },
+  "MAP-5.2": {
+   "boundary_note": "Records exist for 4 of 6 planned sessions, so the programme is not fully recorded. EV-372 shows 3 changes, but EV-373 shows the member panel came from the existing customer council, not a sample of affected members. Level 2 is partial. No effectiveness metrics are present.",
+   "deciding_artefact": "EV-371",
+   "score": 1
+  },
+  "MEA-1.1": {
+   "boundary_note": "EV-400, EV-401 and EV-402 cover the framework, instrumentation and risk mapping. This pack has no separate metric-validation artefact, so 'validated' rests on the framework itself. Level 3 fails the cadence and measure rules: EV-403 is one quarterly report (2026-Q2), with no second minuted occurrence, no recorded next date and no target. The 100% figure counts 2 proxy metrics, while 22 of 24 are directly instrumented.",
+   "deciding_artefact": "EV-402",
+   "score": 2
+  },
+  "MEA-1.2": {
+   "boundary_note": "Level 2 requires every metric to be validated. Definition notes cover 4 of 9 (EV-410) and one validation study covers 1 metric (EV-411). EV-413 says re-validation was completed but names no scope, report or output. EV-412 is a level 3 artefact (FP/FN analysis and revision history for all 9) but cannot lift the score while level 2 is only partial.",
+   "deciding_artefact": "EV-410",
+   "score": 1
+  },
+  "MEA-1.3": {
+   "boundary_note": "EV-420 sets the requirement, and EV-421 and EV-422 record independence per engagement for CTA. The pack does not say whether other in-scope systems exist. Level 3 fails: no coverage metric is measured or reported to audit, and no external assessor is used.",
+   "deciding_artefact": "EV-421",
+   "score": 2
+  },
+  "MEA-2.1": {
+   "boundary_note": "Level 2 requires documentation and version control for every evaluation. EV-430 and EV-431 are good for current runs, but 3 of 12 legacy runs lack manifests, recorded as an open defect, so it is not 100%. The 9 of 12 reproducibility figure is level 3 evidence, but it has no target and no named reporting body.",
+   "deciding_artefact": "EV-432",
+   "score": 1
+  },
+  "MEA-2.10": {
+   "boundary_note": "EV-520 and EV-521 are strong for CTA, but a PIA exists for only 2 of 14 systems and privacy review is not gated in deployment. Level 2 coverage is not met.",
+   "deciding_artefact": "EV-522",
+   "score": 1
+  },
+  "MEA-2.11": {
+   "boundary_note": "CTA fairness work is level 3 quality (EV-530 to EV-533), but EV-534 shows no fairness evaluation for other in-scope systems. Level 2 requires one per system, so it fails coverage.",
+   "deciding_artefact": "EV-534",
+   "score": 1
+  },
+  "MEA-2.12": {
+   "boundary_note": "Absence is established and in scope: no energy, compute or carbon figures (EV-540), no target (EV-541), and no assessment for any of the 14 systems (EV-542). The sustainability report does not mention AI, so even level 1 'noted' is not met.",
+   "deciding_artefact": "EV-542",
+   "score": 0
+  },
+  "MEA-2.13": {
+   "boundary_note": "EV-550 shows a TEVV review with two process changes, but metric effectiveness is assessed for only 2 of 9 metrics (EV-551) and the review covers CTA only (EV-552). Level 2 is partial. The 62% coverage and 3 post-release defects are single values with no per-cycle tracking.",
+   "deciding_artefact": "EV-551",
+   "score": 1
+  },
+  "MEA-2.2": {
+   "boundary_note": "EV-440 records no human-subject evaluation in the period, so there is no study against which ethics review or consent can be judged. EV-441 and EV-442 show the process and records do not exist, which is a readiness gap. It would score 0 if a human-subject evaluation is run or later found in scope.",
+   "deciding_artefact": "",
+   "score": "NA"
+  },
+  "MEA-2.3": {
+   "boundary_note": "Level 2 is met: criteria were set before testing (EV-450), shown under deployment-like replay (EV-451), and the acceptance decisions are recorded (EV-453). The two criteria added after testing apply only from the next release and do not undermine level 2. Level 3 fails the measure rule: EV-453 has per-release values against criteria but no named body receiving the report. Score 3 if a named reviewing body is evidenced.",
+   "deciding_artefact": "EV-453",
+   "score": 2
+  },
+  "MEA-2.4": {
+   "boundary_note": "L2 met: EV-460 covers all 14 in-scope systems (schema, latency, output distribution, drift, on-call alerts). EV-462 reports precision, recall and alert-to-action time monthly, but no target is stated and no minuted council reviews or next date are named, so the L3 measure/cadence clauses fail. EV-461 SLA covers acknowledgement, not alert-to-action. EV-463 (L4) cannot count without L3.",
+   "deciding_artefact": "EV-460",
+   "score": 2
+  },
+  "MEA-2.5": {
+   "boundary_note": "L2 needs validity and reliability with generalisability beyond the test set. EV-470 gives validity and test-retest (kappa 0.81). EV-471 shows one held-out region only, with two regions excluded. EV-472 shows labeler reliability not assessed. Partial L2 scores L1.",
+   "deciding_artefact": "EV-471",
+   "score": 1
+  },
+  "MEA-2.6": {
+   "boundary_note": "EV-480 (fail-safe tests) and EV-481 (3 residual risks, accepted by Model Owner) satisfy the content of L2. The L2 anchor requires coverage of every in-scope system, and no artefact names the systems evaluated, so that clause is unevidenced. If register coverage were shown this would be 2. EV-482 (no re-test) is not an L2 failure; L3 has no threshold tracking.",
+   "deciding_artefact": "EV-480",
+   "score": 1
+  },
+  "MEA-2.7": {
+   "boundary_note": "A red-team report exists (EV-490) but is withheld under legal privilege (EV-491). Its content, findings and resilience measures cannot be assessed (EV-492). Withheld artefact is NA, not 0 and not 1.",
+   "deciding_artefact": "",
+   "score": "NA"
+  },
+  "MEA-2.8": {
+   "boundary_note": "EV-500 (2026-04) assesses notice, adverse-action explanation and appeal. EV-501 shows approved notice and letters with top-2 reasons. EV-502 limits scope to CTA with no requirement for other systems, and the L2 anchor has no every-in-scope clause. L3 fails: no documentation completeness or affected-party comprehension measure. Accountability is evidenced only through the appeal element of EV-500.",
+   "deciding_artefact": "EV-501",
+   "score": 2
+  },
+  "MEA-2.9": {
+   "boundary_note": "L2 met: EV-510 gives the explanation method and handbook guidance, and EV-511 validates it (17 of 20 explanations rated actionable). L3 fails: no per-release comprehension or explanation-use rates. EV-511 is a one-off with no target and no date. EV-512 shows guidance stale since the 2026-07 refresh, a currency risk for L2.",
+   "deciding_artefact": "EV-511",
+   "score": 2
+  },
+  "MEA-3.1": {
+   "boundary_note": "L2 met: named owner, monthly cadence, 5 emergent-risk entries (EV-560), minutes for 8 of 9 months (EV-561). The skipped month and the lack of a recorded next date in the pack are weaknesses but do not fail the anchor's 'a review cadence' wording. L3 fails: no tracking coverage or time-to-log measure. EV-562 shows only 7 of 23 entries closed.",
+   "deciding_artefact": "EV-560",
+   "score": 2
+  },
+  "MEA-3.2": {
+   "boundary_note": "L2 met: EV-570 documents 3 alternative methods with stated limits, and EV-571 shows two methods used with records. L3 fails: no method-comparison results and no per-case confidence. EV-572 shows no guidance on choosing methods and no application to other risks.",
+   "deciding_artefact": "EV-571",
+   "score": 2
+  },
+  "MEA-3.3": {
+   "boundary_note": "L2 met: problem reporting (EV-580), appeal process (EV-581), monthly analysis by the product team (EV-582). L3 fails: volumes and appeal outcomes are counted, but there is no resolution-time measure, no target and no named reporting body. L4 fails: analysis is unpublished and not linked to system changes.",
+   "deciding_artefact": "EV-582",
+   "score": 2
+  },
+  "MEA-4.1": {
+   "boundary_note": "L2 met: tests run on 12,000 replayed production claims (EV-590), with clinical and adjuster input recorded (EV-591). L3 fails: no measured lab-versus-production gap. EV-592 shows benchmarks used only for model selection and not validated against CRHP data, which does not undo L2.",
+   "deciding_artefact": "EV-590",
+   "score": 2
+  },
+  "MEA-4.2": {
+   "boundary_note": "Review occurred once (2026-07) by the Clinical Advisory Panel and Internal Audit (EV-600). Independence from the build team is recorded only for Internal Audit. The domain-expert panel includes a member advising the CTA product team, with no recusal recorded, so independent expert validation is not fully evidenced. EV-602 minutes are not enough to reach L2.",
+   "deciding_artefact": "EV-601",
+   "score": 1
+  },
+  "MEA-4.3": {
+   "boundary_note": "L2 met: drift monitoring across all 14 systems (EV-610, EV-613) and RCA for both 2026 declines with fix retested (EV-611). RCA is evidenced for the 2 declines only, though EV-613 shows 6 systems with documented change events. L3 fails: EV-612 gives latency values (2 days, 6 days) with no stated target and no named receiving body.",
+   "deciding_artefact": "EV-611",
+   "score": 2
+  }
+ },
+ "started": "2026-10-18T12:06:41Z",
+ "temperature": 0.0,
+ "transport": "hermes"
+}

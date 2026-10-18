@@ -1,0 +1,5 @@
+C: 12/72 scored
+C: 24/72 scored
+C: 36/72 scored
+C: 48/72 scored
+model google/gemini-2.5-flash failed after 2 attempts: 

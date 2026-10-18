@@ -1,0 +1,7 @@
+A4: 12/72 scored
+A4: 24/72 scored
+A4: 36/72 scored
+A4: 48/72 scored
+A4: 60/72 scored
+A4: 72/72 scored
+wrote run4/scores-A4.json: 72 controls

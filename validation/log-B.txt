@@ -1,0 +1,7 @@
+B: 12/72 scored
+B: 24/72 scored
+B: 36/72 scored
+B: 48/72 scored
+B: 60/72 scored
+B: 72/72 scored
+wrote scores-B.json: 72 controls

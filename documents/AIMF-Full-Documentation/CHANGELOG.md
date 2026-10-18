@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.6
+**Version**: 1.0.7
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -16,6 +16,73 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [1.0.7] - 2026-10-18 (Scoring protocol in the shipped artifact; 1↔2 anchors rewritten; measured 70.8%)
+
+**Change Type**: Instrument correction (reproducibility), release-gate repair
+**Rationale**: v1.0.6 shipped 360 anchors but no written decision procedure, and the first blind
+double-scoring of the validation case measured what that costs: two assessors agreed on 45 of 72
+controls (62.5%). The Diagnosis in that run was specific — the divergence is concentrated on the
+level 1 ↔ 2 edge and is caused by the anchors, not by the assessors. v1.0.7 puts the protocol in the
+artifact, rewrites the anchors on that edge, and re-measures with the same case, models and harness
+so the movement is attributable to the instrument change. It is not a claim of validation: 70.8% is
+below the 90% publication threshold, and the guide says so in the section a buyer reads.
+
+#### Added
+
+- **`implementation/AIMF-ASSESSMENT-GUIDE.md` § Scoring Protocol (P1-P8)** — now inside the shipped
+  bundle, not only the working tree. Evidence sufficiency (named, dated and current, in scope,
+  reproducible) with the four tests that pin the words the anchors repeat (coverage, cadence,
+  measure, one artefact one clause); the two-level rule and its boundary note; the **`NA` (not
+  assessable)** verdict with reason codes E1-E4 and the rules that it is never 0, never averaged in,
+  and leaves both numerator and denominator; the blind double-scoring procedure (P4); adjudication
+  rules 1-4 (P5); the ≥90% reproducibility threshold (P6); and the measured result (P7).
+- **`implementation/AIMF-INSTRUMENT-VALIDATION.md`** — the measurement as a buyer-facing document:
+  method, the frozen case, agreement rates for every pair, all adjudicated disagreements, the
+  diagnosis, the limits, and the run-4 re-measurement.
+- `validation/` (repository, not shipped in the bundle) — the frozen evidence pack
+  `AIMF-VAL-2026-A` (72 controls, 2-4 dated artefacts each), `score_pack.py` (one assessor, one
+  session, no shared context), `compare_scores.py` (agreement and P5 adjudication),
+  `fix_1_2_boundary_anchors.py` (the anchor edit, with before/after text), `run4/` (the
+  re-measurement sheets, logs and comparison) and `verify_release.sh` (the P8 in-zip release gate).
+
+#### Changed
+
+- **Twelve controls had anchor 1 and anchor 2 rewritten** (`GOV-1.1`, `GOV-1.3`, `GOV-2.3`,
+  `GOV-3.2`, `MAN-4.3`, `MAP-1.6`, `MAP-3.1`, `MAP-3.2`, `MAP-3.4`, `MEA-2.2`, `MEA-2.6`,
+  `MEA-3.1`). The words *partial*, *unevenly* and *comprehensive* are gone from the level-1 and
+  level-2 cells; in their place, anchor 1 names the countable test the artefact fails (coverage of
+  the population in the dated scope register, approval and currency, or a named missing element) and
+  anchor 2 names the same artefact passing those tests with no open exception. Monotonicity and the
+  `Level 2 evidence plus…` / `Level 3 evidence plus…` ladder for anchors 3 and 4 are unchanged, and
+  `check` still enforces both.
+- **Phase 3 Step 1 no longer averages multiple assessors.** Averaging hides a disagreement instead of
+  resolving it and produces a number no assessor reached; disagreements are adjudicated per P5, and
+  each row records the score or `NA`, the deciding artefact and the boundary note.
+- The Assessment Record template carries an `NA` row, the `NA` list with reason codes and clearing
+  artefacts, `n scored / n in scope`, the AIMF version scored, and the blind double-scoring result.
+- `scripts/aimf_question_bank.py` `check` now also fails when the scoring protocol sections are
+  missing from the Assessment Guide, so the artifact cannot ship anchors without the procedure that
+  makes them decisive.
+
+#### Measured (case `AIMF-VAL-2026-A`, 72 controls)
+
+| Run | Instrument | Agreement |
+|---|---|---|
+| 3 | v1.0.6 anchors, run-3 brief | 45/72 (62.5%) |
+| 4 | **v1.0.7 anchors**, same brief, same models, same harness | **51/72 (70.8%)** |
+
+On the 12 rewritten controls agreement moved 0/12 → 6/12; on the 60 untouched controls it stayed at
+45/60 (75.0%). All 21 run-4 disagreements were adjudicated, none unresolved. **The instrument is not
+validated for reproducibility**: 70.8% is below the 90% threshold, and the 18 controls that stay
+judgemental are named in the validation record.
+
+#### Release gate (P8)
+
+Both zips are rebuilt from the packaged directory of this release with dotfiles excluded
+(`zip -X -r … -x '*/.*'`) and are byte-identical to each other. Counts, `check` and the protocol
+presence assertions were run **from inside the unpacked zip**, not the working tree
+(`bash validation/verify_release.sh documents/AIMF-Full-Documentation-v1.0.7.zip`).
 
 ## [1.0.6] - 2026-10-18 (Assessment Question Bank: one instrument document, per-control anchors)
 
@@ -47,6 +114,20 @@ numbers — which is precisely the claim a fixed-price assessment sells.
   four-control override table, and renders both the bank document and the compact question
   tables in the Assessment Guide. Coverage counts in both documents are generated, not typed:
   `report` and the tally are computed from the catalog.
+- **`implementation/AIMF-ASSESSMENT-GUIDE.md` § Scoring Protocol (P1-P7)** — the decision
+  procedure the anchors need to be worth anything: evidence sufficiency (named, dated/current,
+  in scope, reproducible) with four tests that pin the words the anchors repeat (coverage,
+  cadence, measure, one-artefact-one-clause); the two-level rule and its boundary note; the
+  **`NA` (not assessable)** verdict with four reason codes and the rule that it is never 0 and
+  never averaged in; the blind double-scoring procedure; adjudication rules 1-4; and the
+  reproducibility threshold (≥90% of scored controls agree, every disagreement adjudicated).
+- **`implementation/AIMF-INSTRUMENT-VALIDATION.md`** — the measured record: method, the frozen
+  validation case, the agreement rates, all 27 adjudicated disagreements, the diagnosis and the
+  limits of the measurement.
+- **`validation/`** (repository, not shipped in the bundle) — the frozen evidence pack
+  `AIMF-VAL-2026-A` (72 controls, 2-4 dated artefacts each), `score_pack.py` (one assessor,
+  one session, no shared context), `compare_scores.py` (agreement + P5 adjudication rules) and
+  `verify_release.sh` (the P8 in-zip release gate).
 - Row-level `Role` for every control — the role accountable for producing the evidence
   (`python3 scripts/aimf_question_bank.py report` → 26 distinct roles across the four audiences).
 
@@ -57,6 +138,15 @@ numbers — which is precisely the claim a fixed-price assessment sells.
   are rendered by `scripts/aimf_question_bank.py`, replacing the hand-written tables and the
   hand-written routing paragraph. The guide keeps the scale, the decision tree, the process
   and the interpretation; the anchors live in the bank it now points to.
+- Phase 3 Step 1 no longer averages multiple assessors ("average scores and round to nearest
+  integer" is removed). Averaging hides a disagreement instead of resolving it and produces a
+  number no assessor reached; disagreements are adjudicated per P5, and each row must record the
+  score or `NA`, the deciding artefact and the boundary note. `NA` controls leave both numerator
+  and denominator.
+- The Assessment Record template now carries an `NA` row, the `NA` list with reason codes and
+  clearing artefacts, the `n scored / n in scope` statement, the AIMF version scored, and the
+  blind double-scoring result.
+- The Maturity Scoring Scale section states that `NA` is a verdict, not a point on the scale.
 - `scripts/aimf_mappings.py` delegates to `aimf_question_bank.validate`, so
   `check` now also fails on: a missing or unknown control row, an empty question, evidence,
   role or anchor, a repeated anchor within a row, a broken anchor ladder, a coverage count
@@ -72,15 +162,23 @@ numbers — which is precisely the claim a fixed-price assessment sells.
   zip**, and were exercised by mutation before the cut: deleting a row (caught as "no row for
   catalog control"), blanking an anchor or a role, breaking the ladder on one row, and
   editing a generated table by hand (caught as drift) each produced a non-zero exit.
+- The validator also fails if the guide loses the protocol: deleting the Scoring Protocol
+  section, or the P3/P4/P5 headings, or the "insufficient evidence" reporting rule, each produced
+  a non-zero exit from `check`.
+- Blind double-scoring of validation case AIMF-VAL-2026-A: 45/72 controls agreed (62.5%) between
+  two independently run assessors; 27 disagreements, all adjudicated under P5, none unresolved.
+  The rate is below the 90% threshold, so the instrument is shipped as **specified and enforced,
+  not yet validated** — see `implementation/AIMF-INSTRUMENT-VALIDATION.md`.
 - Bank rows in the shipped bundle: 72 distinct catalog control ids, set-equal to the catalog
   (no extras, no misses); 360 anchors, none empty.
 
 #### Not claimed
 
-- **Inter-rater reliability is not measured.** The anchors are specified; no blind
-  double-scoring run has been recorded against them, so the bank is a decisive instrument in
-  form but not a validated psychometric one. The bank document says so where a buyer will
-  read it, and both copies state it.
+- **Reproducibility is measured and not achieved.** Blind double-scoring of the validation case
+  agreed on 45/72 controls (62.5%), below the 90% threshold. The anchors are specified and
+  enforced; they are not yet validated. The bank, the guide and the validation record all say so
+  where a buyer will read it, and the next pass is anchor wording at the 1↔2 boundary — not more
+  protocol.
 - Nothing published or pushed: publication is a board decision (STARTINGPOINT §7, D2).
 
 ## [1.0.5] - 2026-10-18 (Complete Assessment Question Bank: 12 → 72 Controls)

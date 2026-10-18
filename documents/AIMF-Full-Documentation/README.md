@@ -1,6 +1,6 @@
 # AI Management Framework (AIMF) by PraeSyn
 
-**Version 1.0.6** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
+**Version 1.0.7** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
 
 ---
 
@@ -110,6 +110,7 @@ Organized across 4 NIST AI RMF functions:
 | **[AIMF-RISK-BASELINES.md](implementation/AIMF-RISK-BASELINES.md)** | B1/B2/B3 tier definitions and selection | Governance, Technical |
 | **[AIMF-ASSESSMENT-GUIDE.md](implementation/AIMF-ASSESSMENT-GUIDE.md)** | Assessment methodology, scale and scoring protocol | Assessors, Auditors |
 | **[AIMF-ASSESSMENT-QUESTION-BANK.md](implementation/AIMF-ASSESSMENT-QUESTION-BANK.md)** | The 72-control question bank: question, evidence, role and behavioural anchors (0-4) per control | Assessors, Auditors |
+| **[AIMF-INSTRUMENT-VALIDATION.md](implementation/AIMF-INSTRUMENT-VALIDATION.md)** | Measured inter-rater result for the instrument: method, agreement rate, adjudications, limits | Assessors, Auditors, Buyers |
 | **[AIMF-PROFILES-GUIDE.md](implementation/AIMF-PROFILES-GUIDE.md)** | Profile selection and customization | All audiences |
 | **[Tier Transition Guides](implementation/maturity-level-guides/)** | Step-by-step tier advancement guidance | Implementers |
 
@@ -181,7 +182,7 @@ Use the [AIMF Assessment Guide](implementation/AIMF-ASSESSMENT-GUIDE.md) to:
 2. Determine your current maturity level (1-5)
 3. Identify strengths and gaps
 
-Score each control with the [AIMF Assessment Question Bank](implementation/AIMF-ASSESSMENT-QUESTION-BANK.md): one question, one evidence expectation and five behavioural anchors (0-4 / ML1-ML5) for all 72 controls, so two assessors given the same evidence reach the same number.
+Score each control with the [AIMF Assessment Question Bank](implementation/AIMF-ASSESSMENT-QUESTION-BANK.md): one question, one evidence expectation and five behavioural anchors (0-4 / ML1-ML5) for all 72 controls, scored under the guide's written Scoring Protocol so that two assessors given the same evidence reach the same number. That is the target and it is not yet met: the blind double-scoring of the validation case agreed on 51 of 72 controls (70.8%) — up from 45/72 (62.5%) before the level-1/level-2 anchors were rewritten — see [AIMF-INSTRUMENT-VALIDATION.md](implementation/AIMF-INSTRUMENT-VALIDATION.md).
 
 ### Step 2: Select Your Profile
 
@@ -314,7 +315,7 @@ Our mission is to make AI governance accessible, practical, and effective for or
 
 ## Framework Information
 
-- **Version**: 1.0.6
+- **Version**: 1.0.7
 - **Release Date**: October 18, 2026
 - **License**: CC BY-NC-ND 4.0
 - **Copyright**: © 2026 PraeSyn, LLC
