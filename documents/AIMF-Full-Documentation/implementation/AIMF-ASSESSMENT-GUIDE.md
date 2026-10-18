@@ -48,6 +48,40 @@ Each control is assessed using the **5-level CMMI-based maturity scale** with a 
 
 **Key Principle**: ML1 scores as 0 to incentivize moving beyond ad-hoc processes. The assessment uses a **0-4 point scale** where ML3 (Defined) = 2 points represents the standard "implemented" level.
 
+### Scale Retirement and Conversion (0-3 → 0-4)
+
+The 0-3 assessment scale is **retired**. It was removed in [1.0.0] by
+`change-control/20260129143000-CHANGE-PLAN-TIER-TO-BASELINE.md` and the migration was
+completed in this release: as of v1.0.4 **no shipped document defines or asserts a scoring
+scale other than 0-4 / ML1-ML5**. The only remaining `0-3` occurrences in the bundle are
+historical records — the `OLD` column of the `change-control/` change logs, the
+`CHANGELOG` entries for releases before 1.0.0, and the conversion table below. If a
+document you are reading still presents `0-3` as a live scale, it is out of date and should
+be reported.
+
+The 0-3 lens had four buckets for a five-level model, which is why it could never express
+ML4 or ML5:
+
+| Old 0-3 score | Old level name | 0-4 score | Maturity level |
+|---------------|----------------|-----------|----------------|
+| 0 | Not Present | 0 | ML1 - Initial |
+| 1 | Ad-Hoc | 0 | ML1 - Initial |
+| 2 | Developing | 1 | ML2 - Developing |
+| 3 | Established | 2 | ML3 - Defined |
+| *(unreachable)* | — | 3 | ML4 - Managed |
+| *(unreachable)* | — | 4 | ML5 - Optimizing |
+
+Read the table left to right when re-reading old audit notes; read it right to left when
+converting a current score back into an old 0-3 workbook. Two cautions:
+
+- **Old `0` and old `1` both convert to 0 (ML1).** The old lens distinguished "capability
+  absent" from "capability informal"; the 0-4 lens folds both into ML1 because the
+  discriminating question at ML1→ML2 is *documentation*, not intent.
+- **Do not up-convert an old `3` to ML4.** Old `3 Established` is ML3 *Defined* (score 2).
+  ML4 (score 3) requires evidence the old lens never asked for — tracked quantitative
+  metrics, reviewed and used in decisions. A control previously scored 3 must be
+  re-assessed, not promoted.
+
 ### Maturity Assessment Decision Tree
 
 ```
@@ -325,6 +359,18 @@ Calculate against parent's target maturity
 ---
 
 ## Assessment Questions
+
+### Coverage of this question bank
+
+**This is a partial bank: 12 of the 72 controls have a mapped question here** (GOV-1.1,
+GOV-2.3, GOV-4.1, GOV-6.1, MAP-1.2, MAP-1.5, MEA-2.4, MEA-2.6, MEA-2.10, MEA-3.3, MAN-2.4,
+MAN-4.3). It is published as worked examples of the format — control ID, question, and the
+evidence an assessor should look for — not as a complete instrument. For the other 60
+controls, the assessor derives the question from the control's statement and evidence
+criteria in `core/AIMF-CONTROL-CATALOG.csv` and its objective in
+`core/AIMF-CONTROL-CATALOG.md`, and records the question used in the assessment workbook so
+two assessors can reproduce the score. A complete 72-control bank is tracked as its own
+work item against this release; until it ships, do not quote this section as full coverage.
 
 ### Sample Assessment Questions by Audience
 

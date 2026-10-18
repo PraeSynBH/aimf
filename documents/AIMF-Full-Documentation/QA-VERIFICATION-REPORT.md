@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.3
+**Framework Version**: 1.0.4
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -65,6 +65,21 @@ Licensed under CC BY-NC-ND 4.0
 > The Consistency and Standards Compliance rows of the Executive Summary table remain
 > ⚠️ PARTIAL only for the ISO 27001 Annex A depth item; this addendum supersedes them for
 > the count and L2 dimensions. See `CHANGELOG.md` → `[1.0.3]`.
+>
+> **v1.0.4 addendum (2026-10-18).** The bundle previously shipped two live assessment
+> scales: `implementation/AIMF-ASSESSMENT-GUIDE.md` (0-4 / ML1-ML5) and the four function
+> documents plus three implementation documents (0-3 / four levels). The 0-3 lens could
+> not express ML4 or ML5, so a control read from `functions/` was structurally capped at
+> "Established". v1.0.4 migrates every live document to 0-4 / ML1-ML5, adds a single
+> conversion table for archived audit notes (old `0` and `1` → ML1; old `2` → ML2; old
+> `3 "Established"` → ML3 = 2 and must be re-assessed, not promoted), and leaves `0-3`
+> only as `OLD`-column history in `change-control/**` and the pre-1.0.0 `CHANGELOG` entries.
+> Remaining `0-3` matches in the shipped bundle are historical or explicitly labelled
+> retired; `python3 scripts/aimf_mappings.py check` exits 0 from the packaged directory and
+> from an unpacked v1.0.4 bundle root. **Disclosed exception, unchanged:** the Assessment
+> Guide's question bank is still 12 sample questions for 72 controls (Defect B); it is
+> tracked as its own card and is *not* claimed complete by this report. See
+> `CHANGELOG.md` → `[1.0.4]`.
 
 ---
 
@@ -457,13 +472,16 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 | **Total** | **49 files** | ✅ **Complete** |
 
 **Distribution bundle**: the shipped bundles
-(`documents/AIMF-Full-Documentation-v1.0.1.zip` and the rolling
-`documents/AIMF-Full-Documentation.zip`) carry 81 regular files plus 17 directory
+(`documents/AIMF-Full-Documentation-v1.0.4.zip` and the rolling
+`documents/AIMF-Full-Documentation.zip`) carry 80 regular files plus 16 directory
 entries. Note that `unzip -l`'s summary line counts directory entries as well, so its
 figure overstates the file count by one per directory; quote the file count from
 `unzip -Z1 … | grep -vc '/$'`, not from `unzip -l`. The generator
-`scripts/aimf_mappings.py` is one of those 81 files, so a recipient can run the drift
-check this report cites.
+`scripts/aimf_mappings.py` is one of those 80 files, so a recipient can run the drift
+check this report cites. The v1.0.1–v1.0.3 bundles carried 81 files because they included
+`AIMF-Full-Documentation/.claude/settings.local.json`, an agent-tooling permissions file
+with no place in a customer bundle; v1.0.4 excludes dotfiles from the archive (80 files,
+16 directories).
 
 ---
 
@@ -564,4 +582,4 @@ control-theme level and is labelled partial. See
 
 *Quality Assurance Verification Report completed January 26, 2026*
 
-**QA Status**: ✅ PASSED - READY FOR v1.0.3 REVIEW (pre-publication)
+**QA Status**: ✅ PASSED - READY FOR v1.0.4 REVIEW (pre-publication)

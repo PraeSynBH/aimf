@@ -275,15 +275,18 @@ As the change agent, you need to:
 
 Use these assessments to confirm you're ready for Maturity Level 2→3 progression and to track progress over 18 months.
 
-**Scoring**: Same 0-3 scale:
-- 0 = Not Present
-- 1 = Ad-Hoc
-- 2 = Developing (Maturity Level 2 target)
-- 3 = Established (Maturity Level 3 target)
+**Scoring**: canonical 0-4 / ML1-ML5 scale (see `../AIMF-ASSESSMENT-GUIDE.md`):
+- 0 = ML1 - Initial
+- 1 = ML2 - Developing (this guide's starting point)
+- 2 = ML3 - Defined (this guide's target)
+- 3 = ML4 - Managed
+- 4 = ML5 - Optimizing
 
-**Maturity Level 3 Target**: Most questions should score **3** ("Established" - organization-wide and consistent).
+**Maturity Level 3 Target**: Most questions should score **2** (ML3 - Defined, organization-wide and consistent).
 
-If most questions currently score 2 ("Developing"), you're at solid Maturity Level 2 and ready for this guide.
+If most questions currently score 1 (ML2 - Developing), you're at solid Maturity Level 2 and ready for this guide.
+
+> **Scale note**: the retired 0-3 lens scored this quiz 0-3 with "3 = Established". "Established, organization-wide" is ML3 = **2** on the canonical scale, so the ML2 baseline above is **1** and the ML3 target is **2**. Old quiz notes convert with the table in `../AIMF-ASSESSMENT-GUIDE.md`.
 
 ---
 
@@ -301,7 +304,7 @@ If most questions currently score 2 ("Developing"), you're at solid Maturity Lev
 - Resource allocation (budget, people) follows strategic priorities
 - Regular reviews ensure alignment
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 
 ---
 
@@ -315,7 +318,7 @@ If most questions currently score 2 ("Developing"), you're at solid Maturity Lev
 - AI compliance requirements tracked in GRC platform
 - AI incidents escalate through standard enterprise incident management
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 
 ---
 

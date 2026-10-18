@@ -164,7 +164,7 @@ After README.md, review these for context:
    - Time: 30 minutes
 
 2. **AIMF-ASSESSMENT-GUIDE.md** (implementation/)
-   - Assessment methodology and scoring (0-3 scale)
+   - Assessment methodology and scoring (0-4 / ML1-ML5 scale)
    - Time: 30 minutes
 
 3. **AIMF-PROFILES-GUIDE.md** (implementation/)

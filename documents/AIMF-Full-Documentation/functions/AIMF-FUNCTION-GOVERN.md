@@ -329,23 +329,27 @@ The GOVERN function informs and enables all other functions:
 
 ### Scoring Methodology
 
-Each GOVERN control is assessed on a 0-3 scale:
+Each GOVERN control is assessed on the canonical **0-4 point scale / ML1-ML5** — the same instrument defined in `implementation/AIMF-ASSESSMENT-GUIDE.md`:
 
-| Score | Level | Description |
-|-------|-------|-------------|
-| 0 | Not Present | No capability exists |
-| 1 | Ad-Hoc | Informal, inconsistent implementation |
-| 2 | Developing | Documented but not consistently applied |
-| 3 | Established | Documented, consistent, organization-wide |
+| Score | Maturity Level | Description |
+|-------|----------------|-------------|
+| 0 | ML1 - Initial | No governance capability, or ad-hoc and individual-dependent with no documentation |
+| 1 | ML2 - Developing | Governance documented but not consistently applied |
+| 2 | ML3 - Defined | Documented and consistently applied organization-wide (>90%), with training and audit |
+| 3 | ML4 - Managed | All of ML3 plus quantitative metrics on governance effectiveness, reviewed and used in decisions |
+| 4 | ML5 - Optimizing | All of ML4 plus systematic continuous improvement of governance practice |
 
-### Tier Alignment
+The retired 0-3 lens scored a GOVERN control no higher than "Established" (ML3 = 2 points); ML4 and ML5 were unreachable under it. The `0-3` → `0-4` conversion is tabulated in `implementation/AIMF-ASSESSMENT-GUIDE.md`.
 
-| Score Range | Tier Alignment |
-|-------------|----------------|
-| 0-1 | Below B1 requirements; remediation needed |
-| 1-2 | Appropriate for B1; developing toward B2 |
-| 2-3 | Appropriate for B2; developing toward B3 |
-| 3 with B3 enhancements | Appropriate for B3 |
+### Baseline Alignment
+
+| Score | Maturity Level | Baseline Alignment |
+|-------|----------------|--------------------|
+| 0 | ML1 - Initial | Below B1 requirements; remediation needed |
+| 1 | ML2 - Developing | Approaching B1; not yet sufficient for B2 |
+| 2 | ML3 - Defined | Appropriate for B1 and B2 |
+| 3 | ML4 - Managed | Appropriate for B2; developing toward B3 |
+| 4 | ML5 - Optimizing | Appropriate for B3 |
 
 ---
 

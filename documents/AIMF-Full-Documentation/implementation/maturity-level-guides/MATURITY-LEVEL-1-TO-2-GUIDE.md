@@ -257,15 +257,21 @@ Before starting implementation, have each audience complete their assessment ind
 - **Governance**: Focus on policies, controls, and risk management
 - **Change Agent** (you): Focus on organizational readiness and culture
 
-Each question scores 0-3:
-- **0 = Not Present**: Capability doesn't exist
-- **1 = Ad-Hoc**: Exists informally, not documented
-- **2 = Developing**: Documented but inconsistent
-- **3 = Established**: Organization-wide and consistent
+Each question is scored on the canonical **0-4 point scale / ML1-ML5** used throughout the framework (see `../AIMF-ASSESSMENT-GUIDE.md`):
 
-**Maturity Level 2 Target**: Most questions should score **2** ("Developing"). A few may score 1 (still working on documentation). Few should score 0.
+- **0 = ML1 - Initial**: Capability doesn't exist, or exists informally and undocumented
+- **1 = ML2 - Developing**: Documented but inconsistent
+- **2 = ML3 - Defined**: Organization-wide and consistent
+- **3 = ML4 - Managed**: All of ML3, plus quantitative metrics tracked and reviewed
+- **4 = ML5 - Optimizing**: All of ML4, plus systematic continuous improvement
 
-If most questions currently score 0-1, you're solidly Maturity Level 1 and this guide is right for you.
+**Maturity Level 2 Target**: Most questions should score **1** (ML2 - Developing). A few may score 0 (still working on documentation). Scores of 2 or higher mean the organization is already past this guide's target on that question.
+
+If most questions currently score 0 (ML1), you're solidly Maturity Level 1 and this guide is right for you.
+
+> **Scale note**: the retired 0-3 lens scored this quiz 0-3 with "3 = Established". Under the
+> canonical scale "Established, organization-wide" is ML3 = **2**, which is why the ML2 target
+> above is **1**, not 2. Old quiz notes convert with the table in `../AIMF-ASSESSMENT-GUIDE.md`.
 
 ---
 
@@ -278,14 +284,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Question**: Has leadership established an organizational AI strategy that identifies priority use cases and resource allocation?
 
 **Scoring Rubric**:
-- **Score 0**: No AI strategy. AI use is uncoordinated and ad-hoc.
-- **Score 1**: Informal discussions about AI priorities, but no documented strategy.
-- **Score 2**: AI strategy documented, but not yet communicated organization-wide or under active review.
-- **Score 3**: AI strategy documented, communicated, and guides resource allocation decisions.
+- **Score 0 (ML1 - Initial)**: No AI strategy. AI use is uncoordinated and ad-hoc. At most informal discussions about AI priorities, but no documented strategy.
+- **Score 1 (ML2 - Developing)**: AI strategy documented, but not yet communicated organization-wide or under active review.
+- **Score 2 (ML3 - Defined)**: AI strategy documented, communicated, and guides resource allocation decisions.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Strategy document, executive presentation, resource allocation decisions tied to AI priorities
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -295,14 +302,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Question**: Has the organization established governance structures (committee, working group, or designated role) for AI oversight?
 
 **Scoring Rubric**:
-- **Score 0**: No AI governance structure. No one is formally responsible for AI oversight.
-- **Score 1**: Informal accountability (someone cares about AI governance), but no formal structure or charter.
-- **Score 2**: Governance structure exists (committee or role) with charter, but meetings are inconsistent or attendance is poor.
-- **Score 3**: Governance structure meets regularly with consistent attendance and documented decisions.
+- **Score 0 (ML1 - Initial)**: No AI governance structure. No one is formally responsible for AI oversight. At most informal accountability (someone cares about AI governance), but no formal structure or charter.
+- **Score 1 (ML2 - Developing)**: Governance structure exists (committee or role) with charter, but meetings are inconsistent or attendance is poor.
+- **Score 2 (ML3 - Defined)**: Governance structure meets regularly with consistent attendance and documented decisions.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Charter document, meeting calendar, meeting minutes, role descriptions
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -312,14 +320,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Question**: Has leadership allocated dedicated budget and FTE for AI capabilities (not just AI projects, but the infrastructure and governance)?
 
 **Scoring Rubric**:
-- **Score 0**: No dedicated AI resources. AI work happens in spare time or within project budgets.
-- **Score 1**: Informal resource allocation (borrowed time from other roles), but not dedicated in budget.
-- **Score 2**: Budget allocated for AI, but FTE assignments are partial or shared.
-- **Score 3**: Dedicated AI budget and at least 0.5 FTE formally assigned to AI program management or governance.
+- **Score 0 (ML1 - Initial)**: No dedicated AI resources. AI work happens in spare time or within project budgets. At most informal resource allocation (borrowed time from other roles), but not dedicated in budget.
+- **Score 1 (ML2 - Developing)**: Budget allocated for AI, but FTE assignments are partial or shared.
+- **Score 2 (ML3 - Defined)**: Dedicated AI budget and at least 0.5 FTE formally assigned to AI program management or governance.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Budget line items, job descriptions, org chart showing AI roles
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -329,14 +338,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Question**: Are there clear accountability structures for AI system outcomes (success, failure, incidents)?
 
 **Scoring Rubric**:
-- **Score 0**: No one is accountable for AI outcomes. It's unclear who would be responsible if an AI system caused harm.
-- **Score 1**: Implicit accountability (team that built it is probably responsible), but not documented.
-- **Score 2**: Accountability is documented for some AI systems, but not consistently applied.
-- **Score 3**: All AI systems have documented owners/sponsors who are accountable for outcomes.
+- **Score 0 (ML1 - Initial)**: No one is accountable for AI outcomes. It's unclear who would be responsible if an AI system caused harm. At most implicit accountability (team that built it is probably responsible), but not documented.
+- **Score 1 (ML2 - Developing)**: Accountability is documented for some AI systems, but not consistently applied.
+- **Score 2 (ML3 - Defined)**: All AI systems have documented owners/sponsors who are accountable for outcomes.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: System ownership records, incident response plan with escalation paths, RACI matrix
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -346,14 +356,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Question**: Does leadership regularly receive updates on AI-related risks and incidents?
 
 **Scoring Rubric**:
-- **Score 0**: Leadership receives no AI risk information. Risks are invisible.
-- **Score 1**: AI risks mentioned informally in meetings, but no structured reporting.
-- **Score 2**: Risk reporting exists but is infrequent (less than quarterly) or inconsistent in format.
-- **Score 3**: Structured AI risk reporting to leadership occurs at least quarterly with consistent format.
+- **Score 0 (ML1 - Initial)**: Leadership receives no AI risk information. Risks are invisible. At most AI risks mentioned informally in meetings, but no structured reporting.
+- **Score 1 (ML2 - Developing)**: Risk reporting exists but is infrequent (less than quarterly) or inconsistent in format.
+- **Score 2 (ML3 - Defined)**: Structured AI risk reporting to leadership occurs at least quarterly with consistent format.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Executive dashboard, board/leadership meeting agenda items, risk register
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -363,26 +374,27 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Question**: Does leadership actively engage with external stakeholders (customers, partners, regulators) on AI trust and transparency?
 
 **Scoring Rubric**:
-- **Score 0**: No external engagement on AI. Organization doesn't communicate about AI practices.
-- **Score 1**: Ad-hoc responses to customer questions, but no proactive transparency.
-- **Score 2**: Some transparency (website disclosures, FAQs), but not comprehensive or regularly updated.
-- **Score 3**: Regular external communication about AI practices, policies, and principles.
+- **Score 0 (ML1 - Initial)**: No external engagement on AI. Organization doesn't communicate about AI practices. At most ad-hoc responses to customer questions, but no proactive transparency.
+- **Score 1 (ML2 - Developing)**: Some transparency (website disclosures, FAQs), but not comprehensive or regularly updated.
+- **Score 2 (ML3 - Defined)**: Regular external communication about AI practices, policies, and principles.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Public AI transparency page, customer-facing AI documentation, regulatory filings
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
 
-**Leadership Assessment Total**: ___/18 points
-**Leadership Score**: (Total/18) × 100 = ___%
+**Leadership Assessment Total**: ___/24 points
+**Leadership Score**: (Total/24) × 100 = ___%
 
 **Interpretation**:
-- **0-39%**: Significant leadership gaps - AI governance not yet prioritized
-- **40-59%**: Early leadership awareness - commitment emerging
-- **60-79%**: Developing leadership support - structure taking shape
-- **80-100%**: Strong leadership foundation - ready for Maturity Level 3
+- **0-24%** (average ML1 - Initial): Significant leadership gaps - AI governance not yet prioritized
+- **25-49%** (average ML2 - Developing): Early leadership awareness - commitment emerging
+- **50-74%** (average ML3 - Defined): Developing leadership support - structure taking shape
+- **75-100%** (average ML4 - Managed or above): Strong leadership foundation - ready for Maturity Level 3
 
 ---
 
@@ -397,14 +409,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF MAP 1.1
 
 **Scoring Rubric**:
-- **Score 0**: No inventory. Organization doesn't know what AI systems are in use.
-- **Score 1**: Informal awareness (people know what they're using), but no centralized list or database.
-- **Score 2**: Inventory exists and is documented, but it's incomplete or not regularly updated.
-- **Score 3**: Comprehensive, maintained AI inventory with regular updates and completeness validation.
+- **Score 0 (ML1 - Initial)**: No inventory. Organization doesn't know what AI systems are in use. At most informal awareness (people know what they're using), but no centralized list or database.
+- **Score 1 (ML2 - Developing)**: Inventory exists and is documented, but it's incomplete or not regularly updated.
+- **Score 2 (ML3 - Defined)**: Comprehensive, maintained AI inventory with regular updates and completeness validation.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Inventory spreadsheet/database, update process, validation procedures
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -416,14 +429,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 8, NIST AI RMF GOVERN 1.1
 
 **Scoring Rubric**:
-- **Score 0**: No documented process. Each team/individual follows their own approach.
-- **Score 1**: Some teams have documented their process informally (wikis, READMEs), but no org-wide standard.
-- **Score 2**: Organization-wide process documented, but adoption is inconsistent.
-- **Score 3**: Documented process followed consistently with enforcement mechanisms (code reviews, checklists).
+- **Score 0 (ML1 - Initial)**: No documented process. Each team/individual follows their own approach. At most some teams have documented their process informally (wikis, READMEs), but no org-wide standard.
+- **Score 1 (ML2 - Developing)**: Organization-wide process documented, but adoption is inconsistent.
+- **Score 2 (ML3 - Defined)**: Documented process followed consistently with enforcement mechanisms (code reviews, checklists).
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Process documentation, templates, completed examples from recent projects
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -435,14 +449,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 8.2, NIST AI RMF MAP 3.2
 
 **Scoring Rubric**:
-- **Score 0**: No data management process. Data is ad-hoc and undocumented.
-- **Score 1**: Teams track their own data informally, but no standardized approach.
-- **Score 2**: Data management processes documented, but tooling and compliance are inconsistent.
-- **Score 3**: Standardized data management with tooling support and regular audits.
+- **Score 0 (ML1 - Initial)**: No data management process. Data is ad-hoc and undocumented. At most teams track their own data informally, but no standardized approach.
+- **Score 1 (ML2 - Developing)**: Data management processes documented, but tooling and compliance are inconsistent.
+- **Score 2 (ML3 - Defined)**: Standardized data management with tooling support and regular audits.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Data catalog, data lineage documentation, data quality metrics
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -454,14 +469,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF MANAGE 2.3
 
 **Scoring Rubric**:
-- **Score 0**: No deployment process. Models move to production ad-hoc or don't make it to production at all.
-- **Score 1**: Teams have informal deployment practices, but no documented standard.
-- **Score 2**: Deployment process documented, but not yet automated or consistently followed.
-- **Score 3**: Deployment process documented and consistently followed, with approvals and gating.
+- **Score 0 (ML1 - Initial)**: No deployment process. Models move to production ad-hoc or don't make it to production at all. At most teams have informal deployment practices, but no documented standard.
+- **Score 1 (ML2 - Developing)**: Deployment process documented, but not yet automated or consistently followed.
+- **Score 2 (ML3 - Defined)**: Deployment process documented and consistently followed, with approvals and gating.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Deployment checklists, approval workflows, deployment logs
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -473,14 +489,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF MEASURE 2.1, 2.11
 
 **Scoring Rubric**:
-- **Score 0**: No monitoring. Once deployed, models run until they break visibly.
-- **Score 1**: Ad-hoc monitoring (someone checks occasionally), but no systematic approach.
-- **Score 2**: Monitoring implemented for some models, but not all, and alerts may not be actionable.
-- **Score 3**: Systematic monitoring for all production models with alerting and response procedures.
+- **Score 0 (ML1 - Initial)**: No monitoring. Once deployed, models run until they break visibly. At most ad-hoc monitoring (someone checks occasionally), but no systematic approach.
+- **Score 1 (ML2 - Developing)**: Monitoring implemented for some models, but not all, and alerts may not be actionable.
+- **Score 2 (ML3 - Defined)**: Systematic monitoring for all production models with alerting and response procedures.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Monitoring dashboards, alerting configuration, incident response logs
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -492,14 +509,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF GOVERN 1.6, MAP 5.1
 
 **Scoring Rubric**:
-- **Score 0**: No model documentation beyond code comments, if that.
-- **Score 1**: Some documentation exists (READMEs, notebooks), but inconsistent and incomplete.
-- **Score 2**: Documentation standard exists (model cards or similar), but adoption is inconsistent.
-- **Score 3**: All models have standardized documentation created as part of development workflow.
+- **Score 0 (ML1 - Initial)**: No model documentation beyond code comments, if that. At most some documentation exists (READMEs, notebooks), but inconsistent and incomplete.
+- **Score 1 (ML2 - Developing)**: Documentation standard exists (model cards or similar), but adoption is inconsistent.
+- **Score 2 (ML3 - Defined)**: All models have standardized documentation created as part of development workflow.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Model card examples, documentation templates, repository standards
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -511,14 +529,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 8.5
 
 **Scoring Rubric**:
-- **Score 0**: No version control. Can't reproduce past model versions.
-- **Score 1**: Code is versioned (Git), but data and models are not consistently tracked.
-- **Score 2**: Code, data, and models are versioned, but reproducibility is not regularly validated.
-- **Score 3**: Full version control with validated reproducibility (can recreate any production model).
+- **Score 0 (ML1 - Initial)**: No version control. Can't reproduce past model versions. At most code is versioned (Git), but data and models are not consistently tracked.
+- **Score 1 (ML2 - Developing)**: Code, data, and models are versioned, but reproducibility is not regularly validated.
+- **Score 2 (ML3 - Defined)**: Full version control with validated reproducibility (can recreate any production model).
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Git repositories, data versioning system, model registry
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -530,14 +549,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF MEASURE 2.1-2.13
 
 **Scoring Rubric**:
-- **Score 0**: No testing beyond basic accuracy on training data.
-- **Score 1**: Some testing (accuracy, basic performance), but not systematic or comprehensive.
-- **Score 2**: Testing framework documented (what to test, acceptance criteria), but not consistently applied.
-- **Score 3**: Comprehensive testing consistently applied with documented results and approval gates.
+- **Score 0 (ML1 - Initial)**: No testing beyond basic accuracy on training data. At most some testing (accuracy, basic performance), but not systematic or comprehensive.
+- **Score 1 (ML2 - Developing)**: Testing framework documented (what to test, acceptance criteria), but not consistently applied.
+- **Score 2 (ML3 - Defined)**: Comprehensive testing consistently applied with documented results and approval gates.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Test plans, test results, bias assessment reports, security scan results
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -549,14 +569,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF MANAGE 4.1-4.3
 
 **Scoring Rubric**:
-- **Score 0**: No incident response plan. Issues are handled reactively with no process.
-- **Score 1**: Teams handle incidents informally, but no documented process or escalation path.
-- **Score 2**: Incident response process documented, but not tested or regularly updated.
-- **Score 3**: Incident response process documented, tested, and integrated with broader IT incident management.
+- **Score 0 (ML1 - Initial)**: No incident response plan. Issues are handled reactively with no process. At most teams handle incidents informally, but no documented process or escalation path.
+- **Score 1 (ML2 - Developing)**: Incident response process documented, but not tested or regularly updated.
+- **Score 2 (ML3 - Defined)**: Incident response process documented, tested, and integrated with broader IT incident management.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Incident response playbook, recent incident records, tabletop exercise results
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -568,26 +589,27 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 7.2
 
 **Scoring Rubric**:
-- **Score 0**: No AI/ML training provided. Skills developed through individual initiative only.
-- **Score 1**: Informal knowledge sharing (lunch-and-learns, Slack channels), but no structured training.
-- **Score 2**: Training program exists (courses, workshops), but participation is optional and inconsistent.
-- **Score 3**: Structured training program with required courses for AI practitioners and broad awareness training for others.
+- **Score 0 (ML1 - Initial)**: No AI/ML training provided. Skills developed through individual initiative only. At most informal knowledge sharing (lunch-and-learns, Slack channels), but no structured training.
+- **Score 1 (ML2 - Developing)**: Training program exists (courses, workshops), but participation is optional and inconsistent.
+- **Score 2 (ML3 - Defined)**: Structured training program with required courses for AI practitioners and broad awareness training for others.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Training curriculum, completion records, onboarding materials
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
 
-**Technical Assessment Total**: ___/30 points
-**Technical Score**: (Total/30) × 100 = ___%
+**Technical Assessment Total**: ___/40 points
+**Technical Score**: (Total/40) × 100 = ___%
 
 **Interpretation**:
-- **0-39%**: Significant technical gaps - foundational MLOps work needed
-- **40-59%**: Early technical practices - documentation and process emerging
-- **60-79%**: Developing technical capability - ready to scale with tooling
-- **80-100%**: Strong technical foundation - ready for automation and enterprise standards
+- **0-24%** (average ML1 - Initial): Significant technical gaps - foundational MLOps work needed
+- **25-49%** (average ML2 - Developing): Early technical practices - documentation and process emerging
+- **50-74%** (average ML3 - Defined): Developing technical capability - ready to scale with tooling
+- **75-100%** (average ML4 - Managed or above): Strong technical foundation - ready for automation and enterprise standards
 
 ---
 
@@ -602,14 +624,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 5.2, NIST AI RMF GOVERN 1.1
 
 **Scoring Rubric**:
-- **Score 0**: No AI-specific policies exist. General IT policies may apply but aren't tailored for AI.
-- **Score 1**: Some AI policy thinking has occurred (principles drafted), but nothing formally approved.
-- **Score 2**: AI policies documented and approved, but not yet communicated organization-wide or enforced.
-- **Score 3**: AI policies documented, communicated, and actively enforced with compliance checks.
+- **Score 0 (ML1 - Initial)**: No AI-specific policies exist. General IT policies may apply but aren't tailored for AI. At most some AI policy thinking has occurred (principles drafted), but nothing formally approved.
+- **Score 1 (ML2 - Developing)**: AI policies documented and approved, but not yet communicated organization-wide or enforced.
+- **Score 2 (ML3 - Defined)**: AI policies documented, communicated, and actively enforced with compliance checks.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Policy documents, approval records, policy acknowledgment tracking
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -621,14 +644,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 6.1, NIST AI RMF MAP function
 
 **Scoring Rubric**:
-- **Score 0**: No AI risk assessment conducted. AI risks are not formally identified.
-- **Score 1**: AI risks have been discussed informally, but no structured assessment.
-- **Score 2**: AI risk assessment conducted once, but not yet integrated into ongoing risk management.
-- **Score 3**: AI risk assessment conducted and integrated into regular enterprise risk management cycles.
+- **Score 0 (ML1 - Initial)**: No AI risk assessment conducted. AI risks are not formally identified. At most AI risks have been discussed informally, but no structured assessment.
+- **Score 1 (ML2 - Developing)**: AI risk assessment conducted once, but not yet integrated into ongoing risk management.
+- **Score 2 (ML3 - Defined)**: AI risk assessment conducted and integrated into regular enterprise risk management cycles.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Risk assessment report, risk register entries, treatment plans
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -640,14 +664,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF GOVERN 1.2, 3.1
 
 **Scoring Rubric**:
-- **Score 0**: No AI ethics consideration. Ethics is not formally part of AI decision-making.
-- **Score 1**: Some teams or individuals consider ethics, but no organizational framework.
-- **Score 2**: Ethics principles documented, but not yet operationalized (no implementation guidance or enforcement).
-- **Score 3**: Ethics principles documented with implementation guidance and integrated into AI development lifecycle.
+- **Score 0 (ML1 - Initial)**: No AI ethics consideration. Ethics is not formally part of AI decision-making. At most some teams or individuals consider ethics, but no organizational framework.
+- **Score 1 (ML2 - Developing)**: Ethics principles documented, but not yet operationalized (no implementation guidance or enforcement).
+- **Score 2 (ML3 - Defined)**: Ethics principles documented with implementation guidance and integrated into AI development lifecycle.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Ethics framework document, ethics review process, ethics checklist
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -659,14 +684,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 8.2, NIST AI RMF MAP 3.3-3.4
 
 **Scoring Rubric**:
-- **Score 0**: No data governance for AI. Training data is used without formal governance.
-- **Score 1**: General data governance exists, but not adapted for AI-specific concerns (training data, lineage, bias).
-- **Score 2**: AI-specific data governance policies documented, but enforcement is inconsistent.
-- **Score 3**: AI data governance policies documented, enforced, and integrated with technical data management practices.
+- **Score 0 (ML1 - Initial)**: No data governance for AI. Training data is used without formal governance. At most general data governance exists, but not adapted for AI-specific concerns (training data, lineage, bias).
+- **Score 1 (ML2 - Developing)**: AI-specific data governance policies documented, but enforcement is inconsistent.
+- **Score 2 (ML3 - Defined)**: AI data governance policies documented, enforced, and integrated with technical data management practices.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Data governance policy, data classification scheme, data access controls
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -678,14 +704,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF GOVERN 1.1
 
 **Scoring Rubric**:
-- **Score 0**: No tracking of AI compliance obligations. Organization may not be aware of what applies.
-- **Score 1**: Informal awareness of some obligations (EU AI Act, customer requirements), but no tracking system.
-- **Score 2**: Compliance obligations documented, but gap analysis and remediation plans are incomplete.
-- **Score 3**: Compliance obligations tracked with gap analysis, remediation plans, and regular reviews.
+- **Score 0 (ML1 - Initial)**: No tracking of AI compliance obligations. Organization may not be aware of what applies. At most informal awareness of some obligations (EU AI Act, customer requirements), but no tracking system.
+- **Score 1 (ML2 - Developing)**: Compliance obligations documented, but gap analysis and remediation plans are incomplete.
+- **Score 2 (ML3 - Defined)**: Compliance obligations tracked with gap analysis, remediation plans, and regular reviews.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Compliance register, gap analysis, remediation project plans
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -697,14 +724,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF GOVERN 6.1-6.2
 
 **Scoring Rubric**:
-- **Score 0**: No evaluation of third-party AI risks. Vendors are onboarded without AI-specific review.
-- **Score 1**: Some awareness of third-party AI risks, but no formal assessment process.
-- **Score 2**: Third-party AI assessment process documented, but not yet consistently applied.
-- **Score 3**: All third-party AI vendors and systems assessed using documented process with risk acceptance/mitigation.
+- **Score 0 (ML1 - Initial)**: No evaluation of third-party AI risks. Vendors are onboarded without AI-specific review. At most some awareness of third-party AI risks, but no formal assessment process.
+- **Score 1 (ML2 - Developing)**: Third-party AI assessment process documented, but not yet consistently applied.
+- **Score 2 (ML3 - Defined)**: All third-party AI vendors and systems assessed using documented process with risk acceptance/mitigation.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Vendor assessment questionnaire, vendor risk register, contract AI clauses
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -716,14 +744,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF GOVERN 1.6, MAP 5.1
 
 **Scoring Rubric**:
-- **Score 0**: No documentation requirements for AI systems.
-- **Score 1**: Informal expectation that systems should be documented, but no standard or enforcement.
-- **Score 2**: Documentation requirements exist (templates provided), but compliance is inconsistent.
-- **Score 3**: Documentation requirements mandated with compliance checks before production deployment.
+- **Score 0 (ML1 - Initial)**: No documentation requirements for AI systems. At most informal expectation that systems should be documented, but no standard or enforcement.
+- **Score 1 (ML2 - Developing)**: Documentation requirements exist (templates provided), but compliance is inconsistent.
+- **Score 2 (ML3 - Defined)**: Documentation requirements mandated with compliance checks before production deployment.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Documentation standards, templates, completed examples, approval gates
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -735,26 +764,27 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF Trustworthy AI Characteristic: Accountable and Transparent
 
 **Scoring Rubric**:
-- **Score 0**: No transparency or explainability requirements. Black box models are acceptable.
-- **Score 1**: Some discussion of explainability, but no formal requirements.
-- **Score 2**: Explainability requirements documented, but not yet consistently applied or validated.
-- **Score 3**: Explainability requirements enforced based on risk level with validation before deployment.
+- **Score 0 (ML1 - Initial)**: No transparency or explainability requirements. Black box models are acceptable. At most some discussion of explainability, but no formal requirements.
+- **Score 1 (ML2 - Developing)**: Explainability requirements documented, but not yet consistently applied or validated.
+- **Score 2 (ML3 - Defined)**: Explainability requirements enforced based on risk level with validation before deployment.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Explainability standards, risk-based thresholds, explainability validation reports
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
 
-**Governance Assessment Total**: ___/24 points
-**Governance Score**: (Total/24) × 100 = ___%
+**Governance Assessment Total**: ___/32 points
+**Governance Score**: (Total/32) × 100 = ___%
 
 **Interpretation**:
-- **0-39%**: Significant governance gaps - policy and framework work needed
-- **40-59%**: Early governance foundation - policies emerging
-- **60-79%**: Developing governance capability - enforcement and consistency needed
-- **80-100%**: Strong governance foundation - ready for enterprise integration
+- **0-24%** (average ML1 - Initial): Significant governance gaps - policy and framework work needed
+- **25-49%** (average ML2 - Developing): Early governance foundation - policies emerging
+- **50-74%** (average ML3 - Defined): Developing governance capability - enforcement and consistency needed
+- **75-100%** (average ML4 - Managed or above): Strong governance foundation - ready for enterprise integration
 
 ---
 
@@ -769,14 +799,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 7.3, NIST AI RMF GOVERN 4.1
 
 **Scoring Rubric**:
-- **Score 0**: Very limited awareness. AI is understood only by small teams actively using it.
-- **Score 1**: Growing awareness among early adopters, but most of organization is unaware.
-- **Score 2**: Organization-wide awareness campaign has occurred, but retention and behavior change are inconsistent.
-- **Score 3**: Broad, sustained organizational awareness with AI literacy integrated into onboarding and training.
+- **Score 0 (ML1 - Initial)**: Very limited awareness. AI is understood only by small teams actively using it. At most growing awareness among early adopters, but most of organization is unaware.
+- **Score 1 (ML2 - Developing)**: Organization-wide awareness campaign has occurred, but retention and behavior change are inconsistent.
+- **Score 2 (ML3 - Defined)**: Broad, sustained organizational awareness with AI literacy integrated into onboarding and training.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Training attendance records, survey results, communication campaigns
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -788,14 +819,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF MAP 1.2
 
 **Scoring Rubric**:
-- **Score 0**: AI projects are siloed within technical teams with minimal business or governance involvement.
-- **Score 1**: Some cross-functional engagement happens reactively (legal consulted when there's an issue).
-- **Score 2**: Cross-functional teams are assembled for AI projects, but collaboration is ad-hoc and not formalized.
-- **Score 3**: Cross-functional collaboration is standard practice with defined roles and regular touchpoints.
+- **Score 0 (ML1 - Initial)**: AI projects are siloed within technical teams with minimal business or governance involvement. At most some cross-functional engagement happens reactively (legal consulted when there's an issue).
+- **Score 1 (ML2 - Developing)**: Cross-functional teams are assembled for AI projects, but collaboration is ad-hoc and not formalized.
+- **Score 2 (ML3 - Defined)**: Cross-functional collaboration is standard practice with defined roles and regular touchpoints.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Project team rosters, collaboration frameworks, RACI matrices
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -807,14 +839,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 5.1
 
 **Scoring Rubric**:
-- **Score 0**: No executive sponsorship. AI maturity work happens bottom-up without leadership backing.
-- **Score 1**: An executive cares about AI maturity, but hasn't publicly committed resources or time.
-- **Score 2**: Executive sponsor identified and has committed to supporting AI maturity work.
-- **Score 3**: Executive sponsor is visibly championing AI maturity with regular communication and resource allocation.
+- **Score 0 (ML1 - Initial)**: No executive sponsorship. AI maturity work happens bottom-up without leadership backing. At most an executive cares about AI maturity, but hasn't publicly committed resources or time.
+- **Score 1 (ML2 - Developing)**: Executive sponsor identified and has committed to supporting AI maturity work.
+- **Score 2 (ML3 - Defined)**: Executive sponsor is visibly championing AI maturity with regular communication and resource allocation.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Executive communications, resource allocation decisions, executive participation in governance
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -826,14 +859,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF GOVERN 4.2
 
 **Scoring Rubric**:
-- **Score 0**: Culture either discourages AI experimentation OR encourages unconstrained experimentation without risk consideration.
-- **Score 1**: Culture is permissive, but no active encouragement or framework for safe experimentation.
-- **Score 2**: Organization encourages AI experimentation and has provided some guidance, but risk management is inconsistent.
-- **Score 3**: Balanced culture: active encouragement of AI innovation with clear risk guardrails and support.
+- **Score 0 (ML1 - Initial)**: Culture either discourages AI experimentation OR encourages unconstrained experimentation without risk consideration. At most culture is permissive, but no active encouragement or framework for safe experimentation.
+- **Score 1 (ML2 - Developing)**: Organization encourages AI experimentation and has provided some guidance, but risk management is inconsistent.
+- **Score 2 (ML3 - Defined)**: Balanced culture: active encouragement of AI innovation with clear risk guardrails and support.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Innovation programs, sandboxes for experimentation, experimentation policies
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -845,14 +879,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 10.2
 
 **Scoring Rubric**:
-- **Score 0**: No knowledge sharing. Teams repeat each other's mistakes and solutions.
-- **Score 1**: Informal knowledge sharing (Slack, hallway conversations), but nothing structured.
-- **Score 2**: Knowledge sharing mechanisms exist (wikis, communities of practice), but participation is inconsistent.
-- **Score 3**: Structured knowledge management with post-project reviews, documented lessons, and active communities.
+- **Score 0 (ML1 - Initial)**: No knowledge sharing. Teams repeat each other's mistakes and solutions. At most informal knowledge sharing (Slack, hallway conversations), but nothing structured.
+- **Score 1 (ML2 - Developing)**: Knowledge sharing mechanisms exist (wikis, communities of practice), but participation is inconsistent.
+- **Score 2 (ML3 - Defined)**: Structured knowledge management with post-project reviews, documented lessons, and active communities.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Knowledge repository, community of practice meeting records, retrospective documentation
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -864,14 +899,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF GOVERN 5.1-5.2
 
 **Scoring Rubric**:
-- **Score 0**: No stakeholder engagement. AI decisions made internally without external input.
-- **Score 1**: Reactive engagement (respond to stakeholder questions), but no proactive outreach.
-- **Score 2**: Proactive engagement planned or beginning, but not yet systematic or comprehensive.
-- **Score 3**: Systematic stakeholder engagement with regular touchpoints and feedback integration.
+- **Score 0 (ML1 - Initial)**: No stakeholder engagement. AI decisions made internally without external input. At most reactive engagement (respond to stakeholder questions), but no proactive outreach.
+- **Score 1 (ML2 - Developing)**: Proactive engagement planned or beginning, but not yet systematic or comprehensive.
+- **Score 2 (ML3 - Defined)**: Systematic stakeholder engagement with regular touchpoints and feedback integration.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Stakeholder engagement plan, customer advisory board, survey results
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -883,14 +919,15 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: ISO 42001 Clause 6.2
 
 **Scoring Rubric**:
-- **Score 0**: No roadmap. AI maturity progression is not planned.
-- **Score 1**: Informal ideas about what to improve, but no documented roadmap.
-- **Score 2**: Roadmap documented, but not yet socialized or approved for resource allocation.
-- **Score 3**: AI maturity roadmap documented, approved, and tracked with regular progress reviews.
+- **Score 0 (ML1 - Initial)**: No roadmap. AI maturity progression is not planned. At most informal ideas about what to improve, but no documented roadmap.
+- **Score 1 (ML2 - Developing)**: Roadmap documented, but not yet socialized or approved for resource allocation.
+- **Score 2 (ML3 - Defined)**: AI maturity roadmap documented, approved, and tracked with regular progress reviews.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Roadmap document, project plans, governance review of progress
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
@@ -902,26 +939,27 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 **Framework Mapping**: NIST AI RMF GOVERN 3.1-3.2
 
 **Scoring Rubric**:
-- **Score 0**: No consideration of diversity in AI teams or system design.
-- **Score 1**: Awareness that diversity matters, but no formal approach to achieving it.
-- **Score 2**: Diversity goals set for AI teams, but progress is slow or inconsistent.
-- **Score 3**: Active diversity initiatives for AI teams with representation in decision-making and system design reviews.
+- **Score 0 (ML1 - Initial)**: No consideration of diversity in AI teams or system design. At most awareness that diversity matters, but no formal approach to achieving it.
+- **Score 1 (ML2 - Developing)**: Diversity goals set for AI teams, but progress is slow or inconsistent.
+- **Score 2 (ML3 - Defined)**: Active diversity initiatives for AI teams with representation in decision-making and system design reviews.
+- **Score 3 (ML4 - Managed)**: All of the above, plus tracked quantitative metrics on this capability, reviewed on a defined cadence and used in decisions.
+- **Score 4 (ML5 - Optimizing)**: All of ML4, plus systematic continuous improvement of this capability, with external benchmarking or recognized industry leadership.
 
 **Evidence to Look For**: Diversity metrics, inclusive design practices, diverse review panels
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 **Notes**:
 
 ---
 
-**Change Agent Assessment Total**: ___/24 points
-**Change Agent Score**: (Total/24) × 100 = ___%
+**Change Agent Assessment Total**: ___/32 points
+**Change Agent Score**: (Total/32) × 100 = ___%
 
 **Interpretation**:
-- **0-39%**: Significant cultural gaps - stakeholder engagement and awareness work needed
-- **40-59%**: Early cultural readiness - sponsorship and collaboration emerging
-- **60-79%**: Developing change capability - ready to scale initiatives
-- **80-100%**: Strong change foundation - ready for enterprise-wide transformation
+- **0-24%** (average ML1 - Initial): Significant cultural gaps - stakeholder engagement and awareness work needed
+- **25-49%** (average ML2 - Developing): Early cultural readiness - sponsorship and collaboration emerging
+- **50-74%** (average ML3 - Defined): Developing change capability - ready to scale initiatives
+- **75-100%** (average ML4 - Managed or above): Strong change foundation - ready for enterprise-wide transformation
 
 ---
 
@@ -936,11 +974,11 @@ If most questions currently score 0-1, you're solidly Maturity Level 1 and this 
 - Change Agent: ___%
 
 **Overall maturity level Determination**:
-Your organization is at **Maturity Level 1** if most scores are **below 40%** (indicating "Not Present" or "Ad-Hoc" for most capabilities).
+Your organization is at **Maturity Level 1** if most scores are **below 25%** (average ML1 - Initial: capability absent or informal and undocumented for most questions).
 
 **Current maturity level**: Maturity Level 1 (Initial)
 
-**Target**: Bring all audience scores to **40-60% range** (indicating "Developing" capabilities) to solidly achieve Maturity Level 2.
+**Target**: Bring all audience scores to the **25-49% range** (average ML2 - Developing: documented but inconsistent) to solidly achieve Maturity Level 2; 50-74% (ML3 - Defined) means the organization is past this guide's target.
 
 **Priorities**: Focus implementation efforts on the **lowest-scoring audience(s)** first, as they're the limiting factor for overall maturity.
 

@@ -160,7 +160,7 @@ Licensed under CC BY-NC-ND 4.0
 
 ### Maturity Baseline (as of [Date])
 
-**Assessment Methodology**: [0-3 scoring, self-assessment, external audit, etc.]
+**Assessment Methodology**: [0-4 / ML1-ML5 scoring, self-assessment, external audit, etc.]
 
 | Dimension | Current Level | Target Level (End State) | Gap |
 |-----------|--------------|-------------------------|-----|

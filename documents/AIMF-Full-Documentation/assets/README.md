@@ -209,7 +209,7 @@ mermaid.initialize({ startOnLoad: true });
 **Contents**:
 - Assessment scope and methodology
 - Control-by-control assessment questions
-- Scoring rubric (0-3 scale)
+- Scoring rubric (0-4 / ML1-ML5 scale)
 - Evidence requirements
 - Maturity level calculation
 - Gap analysis and recommendations

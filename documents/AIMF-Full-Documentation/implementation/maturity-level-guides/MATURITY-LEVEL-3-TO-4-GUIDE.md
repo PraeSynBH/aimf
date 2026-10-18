@@ -284,14 +284,20 @@ As the change agent, your messaging challenge is:
 
 Use these assessments to validate Maturity Level 3 maturity and plan Maturity Level 4 progression.
 
-**Scoring**:
-- 0 = Not Present
-- 1 = Ad-Hoc
-- 2 = Developing (Maturity Level 2)
-- 3 = Established (Maturity Level 3 target)
-- **Use +/- modifiers**: 3+ means "solidly Maturity Level 3, some Maturity Level 4 capabilities emerging"
+**Scoring**: canonical 0-4 / ML1-ML5 scale (see `../AIMF-ASSESSMENT-GUIDE.md`):
+- 0 = ML1 - Initial
+- 1 = ML2 - Developing
+- 2 = ML3 - Defined (this guide's starting point)
+- 3 = ML4 - Managed (this guide's target)
+- 4 = ML5 - Optimizing
+- **Use +/- modifiers** for partial levels: 2+ means "solidly ML3 - Defined, with some ML4 capabilities emerging"
 
-**Maturity Level 4 Readiness**: If most questions score 3 or 3+, you're ready for Maturity Level 4 progression.
+**Maturity Level 4 Readiness**: If most questions score 3 (ML4 - Managed), you're ready for Maturity Level 4 progression.
+
+> **Scale note**: the retired 0-3 lens scored this quiz 0-3 with "3 = Established" and used
+> "3+" for emerging ML4 capability. On the canonical scale "Established" is ML3 = **2** and
+> ML4 is its own score, **3** — which is why ML4 readiness is now stated as score 3 rather
+> than "3+". Old quiz notes convert with the table in `../AIMF-ASSESSMENT-GUIDE.md`.
 
 ---
 
@@ -307,7 +313,7 @@ Use these assessments to validate Maturity Level 3 maturity and plan Maturity Le
 - Resource allocation based on measured value and strategic importance
 - Post-decision reviews compare actual outcomes to projections
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 
 ---
 
@@ -321,7 +327,7 @@ Use these assessments to validate Maturity Level 3 maturity and plan Maturity Le
 - Alerts for portfolio-level issues (e.g., multiple systems underperforming)
 - Historical trends show AI maturity progression
 
-**Your Score**: ___ (0-3)
+**Your Score**: ___ (0-4)
 
 ---
 

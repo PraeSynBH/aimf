@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.3
+**Version**: 1.0.4
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -14,6 +14,93 @@ All notable changes to the AI Management Framework (AIMF) by PraeSyn will be doc
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.4] - 2026-10-18 (Assessment Scale Unification: 0-3 → 0-4 / ML1-ML5)
+
+**Change Type**: Correctness correction (documentation, buyer-facing assessment instrument)
+**Rationale**: The bundle shipped **two live assessment scales**. `implementation/AIMF-ASSESSMENT-GUIDE.md`
+defined 0-4 points / ML1-ML5, and the four function documents plus three implementation
+documents still defined a 0-3 / four-level lens (`0 Not Present, 1 Ad-Hoc, 2 Developing,
+3 Established`). This is not two views of one model: the framework decided the 0-4 scale in
+`[1.0.0]` (`0-3 assessment scale (replaced by 0-4 scale with explicit maturity levels)`,
+`change-control/QUICK-REFERENCE-WHATS-CHANGED.md` OLD → NEW table) and the migration was
+never finished. The live 0-3 lens could not express **ML4 (Managed)** or **ML5 (Optimizing)**
+at all — a control scored from `functions/` was structurally capped at "Established" (ML3).
+
+This matters commercially, not cosmetically: the fixed-price assessment is the recommended
+paid rung, and its defensibility rests on two assessors producing one number. Two scales and
+a cap at ML3 make that impossible.
+
+#### Changed
+
+- **The four function documents now score on the canonical 0-4 / ML1-ML5 scale**, each with
+  the same five rows as the Assessment Guide and a pointer to it:
+  `functions/AIMF-FUNCTION-GOVERN.md`, `-MAP.md`, `-MEASURE.md`, `-MANAGE.md`.
+  - GOVERN's `Tier Alignment` table became `Baseline Alignment`, re-expressed against the
+    five scores (0 ML1 = below B1 … 4 ML5 = appropriate for B3) instead of the retired
+    0-1 / 1-2 / 2-3 tier ranges.
+  - Each document states that the retired 0-3 lens capped its controls at ML3.
+- **`implementation/AIMF-ASSESSMENT-GUIDE.md` gained `Scale Retirement and Conversion (0-3 → 0-4)`**:
+  a single conversion table (`old 0-3 score → old level name → 0-4 score → maturity level`)
+  and the statement that 0-3 is retired, so old audit notes stay readable. Two cautions are
+  stated: old `0` and old `1` both convert to 0 (ML1), and an old `3 "Established"` is
+  ML3 = 2 — it must be **re-assessed**, not promoted to ML4.
+- **The three transition guides' readiness quizzes were migrated** rather than left as a
+  third scale: `MATURITY-LEVEL-1-TO-2-GUIDE.md` (32 per-question rubric ladders rebuilt as
+  0-4: old "absent" and old "informal/undocumented" merged into ML1, old 2 → ML2, old 3 →
+  ML3, plus ML4/ML5 steps), `MATURITY-LEVEL-2-TO-3-GUIDE.md`, `MATURITY-LEVEL-3-TO-4-GUIDE.md`.
+  Targets were re-expressed on the canonical scale (ML2 target = 1, ML3 target = 2, ML4
+  readiness = 3); the L3→4 guide's "3+ means ML4 emerging" workaround is gone because ML4
+  is now its own score.
+- **Live references corrected**: `AIMF-V1.0-REVIEW-PLAN.md` and `assets/README.md`
+  ("Assessment methodology and scoring (0-3 scale)" → 0-4 / ML1-ML5);
+  `profiles/implementation-profiles/profile-implementation-template.md` fill-in prompt.
+- **Historical occurrences labelled as history**: the `[1.0.0] - 2026-01-25` migration note
+  now reads "maintains 0-3 scoring scale (superseded in [1.0.0] - 2026-01-29 …; 0-3 is
+  retired)". `change-control/**` and the earlier `CHANGELOG` entries keep 0-3 only as
+  `OLD`-column history; no row presents it as current.
+- **The archive no longer ships agent tooling.** v1.0.1–v1.0.3 included
+  `AIMF-Full-Documentation/.claude/settings.local.json` (a local permissions file for an
+  AI coding assistant). v1.0.4 is built with dotfiles excluded: 80 regular files and 16
+  directory entries, down from 81/17. Nothing a reader consumes changed by removing it.
+- **Version stamps**: README 1.0.3 → 1.0.4 (title block and Framework Information),
+  `QA-VERIFICATION-REPORT.md` framework version and QA date, and this header.
+
+#### Not in this release
+
+- **Defect B — the question bank.** The Assessment Guide still carries 12 sample questions
+  for 72 controls. That is a separate, larger gap (writing 60 controls' worth of questions
+  and evidence expectations) and is tracked as its own card against this release, not
+  mixed into a scale correction. The guide now states its coverage explicitly (12 of 72,
+  with the 12 named IDs and the derivation path for the remaining 60) so the "Sample"
+  heading can no longer be read as an implied complete bank.
+- The legacy `#### Implementation by Tier` headings inside the function documents (content
+  is `Baseline 1/2/3`) are untouched here; that is a naming cleanup, not a scale defect.
+
+#### Verified
+
+```
+$ cd documents/AIMF-Full-Documentation
+$ grep -rn '0-3' --include='*.md' . | grep -viE '\$[0-9]|[0-9]-[0-9]{1,3}[%K]|hours|FTE'
+   # only: CHANGELOG history, change-control OLD columns, and the explicit
+   # "retired / conversion" statements introduced by this release
+$ grep -rn '0-4 point scale' implementation/AIMF-ASSESSMENT-GUIDE.md | wc -l
+$ python3 scripts/aimf_mappings.py check   # exit 0, from the packaged dir and from an
+                                           # unpacked copy of the rebuilt zip
+```
+
+Both zips were rebuilt from the packaged directory of this release and are byte-identical
+to each other; sha256 and size are stated in the release comment and the git commit message.
+
+#### Distribution
+
+- `documents/AIMF-Full-Documentation-v1.0.4.zip` and the rolling
+  `documents/AIMF-Full-Documentation.zip` are rebuilt from the packaged directory of this
+  release and are byte-identical to each other. Both supersede the v1.0.3 bundles.
+- Not pushed, not published, no public repository — that still waits on the D2 decision on
+  PRA-6431.
 
 ---
 
@@ -473,7 +560,7 @@ Control_ID, Domain_L1, Domain_L2, Domain_L3, Function, Category, Subcategory, Co
 - Control IDs remain stable (no breaking changes)
 - CSV format expanded from 12 to 20 columns (backward compatible for core columns)
 - Profile system is new; previous implementations can map to Balanced or High-Assurance profiles
-- Assessment methodology enhanced but maintains 0-3 scoring scale
+- Assessment methodology enhanced but maintains 0-3 scoring scale (superseded in [1.0.0] - 2026-01-29 by the 0-4 / ML1-ML5 scale; 0-3 is retired and must not be used for new assessments — see `implementation/AIMF-ASSESSMENT-GUIDE.md#scale-retirement-and-conversion-03--04`)
 
 ### Credits and Acknowledgments
 

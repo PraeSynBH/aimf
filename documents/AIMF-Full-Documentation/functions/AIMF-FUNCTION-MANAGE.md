@@ -436,14 +436,17 @@ MANAGE function provides:
 
 ### Scoring Methodology
 
-Each MANAGE control is assessed on a 0-3 scale:
+Each MANAGE control is assessed on the canonical **0-4 point scale / ML1-ML5** — the same instrument defined in `implementation/AIMF-ASSESSMENT-GUIDE.md`:
 
-| Score | Level | Description |
-|-------|-------|-------------|
-| 0 | Not Present | No risk management capability exists |
-| 1 | Ad-Hoc | Reactive, inconsistent risk management |
-| 2 | Developing | Documented but inconsistently applied |
-| 3 | Established | Systematic, organization-wide risk management |
+| Score | Maturity Level | Description |
+|-------|----------------|-------------|
+| 0 | ML1 - Initial | No risk-management capability, or ad-hoc and individual-dependent with no documentation |
+| 1 | ML2 - Developing | Risk response documented but inconsistently applied |
+| 2 | ML3 - Defined | Systematic, organization-wide risk management, documented, trained and audited |
+| 3 | ML4 - Managed | All of ML3 plus quantitative metrics on response timeliness and effectiveness, reviewed and used in decisions |
+| 4 | ML5 - Optimizing | All of ML4 plus systematic continuous improvement of risk response practice |
+
+The retired 0-3 lens scored a MANAGE control no higher than "Established" (ML3 = 2 points); ML4 and ML5 were unreachable under it. The `0-3` → `0-4` conversion is tabulated in `implementation/AIMF-ASSESSMENT-GUIDE.md`.
 
 ### Key Assessment Questions
 

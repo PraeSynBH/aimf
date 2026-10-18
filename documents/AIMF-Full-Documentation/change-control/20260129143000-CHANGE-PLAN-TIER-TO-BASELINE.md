@@ -4,7 +4,8 @@
 **Change Type**: Major Conceptual Revision
 **Framework Version**: 1.0 (No version increment - pre-publication refinement)
 **Date Created**: 2026-01-29
-**Status**: Planning
+**Status**: Planning — **superseded** (executed in [1.0.0]; see `20260129143000-COMPLETION-REPORT.md`)
+**Outcome**: the assessment-scale decision was resolved as **0-4 points / ML1-ML5** (ML1=0 … ML5=4), per `QUICK-REFERENCE-WHATS-CHANGED.md`. Rows in this plan that name a `1-5` scale record the pre-decision proposal, not the shipped model.
 **Estimated Effort**: 26-38 hours (4-6 working days)
 
 ---
