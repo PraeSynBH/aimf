@@ -35,6 +35,7 @@ This document provides a comprehensive quality assurance checklist for AIMF v1.0
 
 ### Implementation Guides
 - [x] AIMF-ASSESSMENT-GUIDE.md
+- [x] AIMF-ASSESSMENT-QUESTION-BANK.md
 - [x] AIMF-RISK-BASELINES.md
 - [x] AIMF-PROFILES-GUIDE.md
 

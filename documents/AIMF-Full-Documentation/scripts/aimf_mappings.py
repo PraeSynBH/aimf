@@ -28,7 +28,12 @@ It also validates the assessment question bank in
 ``implementation/AIMF-ASSESSMENT-GUIDE.md``: every catalog control must have
 exactly one question row (and one evidence expectation) and the bank must not
 carry an id that is absent from the catalog, so the instrument cannot silently
-fall back to partial coverage.
+fall back to partial coverage.  Since v1.0.6 it additionally delegates to
+``aimf_question_bank.validate``, which checks the generated instrument
+(``implementation/AIMF-ASSESSMENT-QUESTION-BANK.md``): one row per control with
+a role and five behavioural anchors, the anchor ladder intact, the derived
+audience and coverage counts matching the catalog, and no generated-region
+drift between the bank and this guide.
 
 Usage
 -----
@@ -920,6 +925,18 @@ def validate(rows: list[dict], check_files: bool = True) -> list[str]:
     # 4c. the assessment question bank covers the catalog exactly
     bank_text = QUESTION_BANK_MD.read_text(encoding="utf-8")
     errs.extend(validate_question_bank(rows, bank_text))
+
+    # 4d. the generated instrument: anchors, roles, derived audiences, coverage
+    #     counts.  Rendered from the catalog plus the authored bank source, so
+    #     a bank edit cannot ship with the tables, counts or anchors out of step.
+    try:
+        import aimf_question_bank as question_bank
+    except ImportError:
+        errs.append("scripts/aimf_question_bank.py is missing - the assessment "
+                    "question bank cannot be validated")
+    else:
+        bank_records, bank_problems = question_bank.records()
+        errs.extend(question_bank.validate(bank_records, len(rows), bank_problems))
 
     # 5. NIST document carries all 72 subcategory ids
     nist_doc = (MAPPINGS / "AIMF-NIST-RMF-MAPPING.md").read_text(encoding="utf-8")

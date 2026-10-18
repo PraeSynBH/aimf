@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.5
+**Framework Version**: 1.0.6
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -96,6 +96,21 @@ Licensed under CC BY-NC-ND 4.0
 > root. What is *not* claimed: the bank is coverage-complete and answerable from evidence,
 > not psychometrically validated — two assessors converge only if each records the
 > artefact scored, which the guide now requires. See `CHANGELOG.md` → `[1.0.5]`.
+>
+> **v1.0.6 addendum (2026-10-18).** The instrument is now a document, not a section. Defect B
+> was closed at coverage level in v1.0.5; v1.0.6 closes the *specification* level:
+> `implementation/AIMF-ASSESSMENT-QUESTION-BANK.md` carries one row per control for all 72
+> catalog controls with `Control`, `Question`, `Evidence`, `Role`, derived `Audience` and
+> **`Anchor 0` … `Anchor 4`** — 360 behavioural anchors, none empty — and the Assessment
+> Guide's question tables are rendered from the same source. Coverage counts in both
+> documents are generated from `core/AIMF-CONTROL-CATALOG.csv` by
+> `scripts/aimf_question_bank.py`, so a count cannot be typed wrong. Validation: the bank
+> ships 72 distinct catalog control ids, set-equal to the catalog (no extras, no misses);
+> `check` fails on an empty anchor, an empty role, a repeated anchor, a broken anchor ladder
+> or generated-region drift, all exercised by mutation before the cut. Both checks pass from
+> inside the unpacked v1.0.6 bundle. **Not claimed:** inter-rater reliability — no blind
+> double-scoring run has been recorded, and both copies of the instrument say so. See
+> `CHANGELOG.md` → `[1.0.6]`.
 
 ---
 
@@ -192,6 +207,11 @@ disclosed rather than asserted.
 - ✅ assets/README.md
 
 **Total Files Verified**: 49 files (1 CSV + 48 Markdown)
+
+> **Note (v1.0.6).** This inventory is the v1.0.1-era snapshot and is not re-tallied; the
+> measured count that matters for a release is the bundle count in §10. Added since it was
+> written: `implementation/AIMF-ASSESSMENT-QUESTION-BANK.md` (v1.0.6, the 72-control
+> instrument) and its authored source `implementation/AIMF-ASSESSMENT-QUESTION-BANK.csv`.
 
 **Finding**: ✅ All required files present and complete
 
@@ -479,7 +499,7 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 |----------|-------|--------|
 | Core Documentation | 5 files | ✅ Complete |
 | Function Guides | 4 files | ✅ Complete |
-| Implementation Guides | 8 files | ✅ Complete |
+| Implementation Guides | 8 files (v1.0.1-era snapshot, see note) | ✅ Complete |
 | Framework Profiles | 9 files | ✅ Complete |
 | Standards Mappings | 10 files | ✅ Complete |
 | Supplemental Docs | 4 files | ✅ Complete |
@@ -488,16 +508,18 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 | **Total** | **49 files** | ✅ **Complete** |
 
 **Distribution bundle**: the shipped bundles
-(`documents/AIMF-Full-Documentation-v1.0.5.zip` and the rolling
-`documents/AIMF-Full-Documentation.zip`) carry 80 regular files plus 16 directory
+(`documents/AIMF-Full-Documentation-v1.0.6.zip` and the rolling
+`documents/AIMF-Full-Documentation.zip`) carry 83 regular files plus 16 directory
 entries. Note that `unzip -l`'s summary line counts directory entries as well, so its
 figure overstates the file count by one per directory; quote the file count from
-`unzip -Z1 … | grep -vc '/$'`, not from `unzip -l`. The generator
-`scripts/aimf_mappings.py` is one of those 80 files, so a recipient can run the drift
-check this report cites. The v1.0.1–v1.0.3 bundles carried 81 files because they included
+`unzip -Z1 … | grep -vc '/$'`, not from `unzip -l`. Both generators —
+`scripts/aimf_mappings.py` and the bank renderer `scripts/aimf_question_bank.py` — and the
+authored bank source `implementation/AIMF-ASSESSMENT-QUESTION-BANK.csv` are among those 83
+files, so a recipient can run both drift checks this report cites. The v1.0.1–v1.0.3 bundles carried 81 files because they included
 `AIMF-Full-Documentation/.claude/settings.local.json`, an agent-tooling permissions file
 with no place in a customer bundle; since v1.0.4 the archive is built with dotfiles
-excluded (80 files, 16 directories), and v1.0.5 keeps that count.
+excluded — 80 files at v1.0.4/v1.0.5, and 83 at v1.0.6 with the question-bank document, its
+authored source and the bank renderer added (16 directory entries throughout).
 
 ---
 

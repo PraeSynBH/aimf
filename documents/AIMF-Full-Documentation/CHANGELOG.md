@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.5
+**Version**: 1.0.6
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -16,6 +16,72 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [1.0.6] - 2026-10-18 (Assessment Question Bank: one instrument document, per-control anchors)
+
+**Change Type**: Instrument completion (buyer-facing assessment)
+**Rationale**: v1.0.5 closed the *coverage* gap — 72 questions for 72 controls — but the
+questions lived as four hand-maintained tables inside the Assessment Guide, carried no
+role for the assessor to ask, had no written answer-anchors, and stated their coverage
+counts in prose that a hand edit could contradict. A question says what to look for; only an
+anchor says what a given answer scores. Without anchors the 0-4 scale is applied from
+recollection, so two assessors can look at the same evidence and write two different
+numbers — which is precisely the claim a fixed-price assessment sells.
+
+#### Added
+
+- **`implementation/AIMF-ASSESSMENT-QUESTION-BANK.md`** — the instrument as a first-class
+  document: one row per control for all 72 catalog controls, with `Control`, `Question`,
+  `Evidence`, `Role`, `Audience` and **`Anchor 0` … `Anchor 4`** (360 behavioural anchors),
+  grouped by audience. Anchor 0 describes absence, anchor 1 a partial artefact, anchor 2 the
+  artefact in force organization-wide, anchor 3 adds a measurement of whether the control
+  works, anchor 4 adds improvement driven by that measurement and repeated across cycles. The
+  ladder is monotone by construction — every anchor 3 opens "Level 2 evidence plus…", every
+  anchor 4 "Level 3 evidence plus…" — so a level cannot be awarded without the evidence for
+  the level below.
+- **`implementation/AIMF-ASSESSMENT-QUESTION-BANK.csv`** — the authored source of the bank
+  (question, evidence, role and the five anchors per control).
+- **`scripts/aimf_question_bank.py`** — generator and validator. It joins the authored source
+  to `core/AIMF-CONTROL-CATALOG.csv`, **derives every row's audience from the catalog
+  dimension** (D1 Leadership, D2 Governance, D3 Technical, D4 Change Agent) with a documented
+  four-control override table, and renders both the bank document and the compact question
+  tables in the Assessment Guide. Coverage counts in both documents are generated, not typed:
+  `report` and the tally are computed from the catalog.
+- Row-level `Role` for every control — the role accountable for producing the evidence
+  (24 distinct roles across the four audiences).
+
+#### Changed
+
+- **`implementation/AIMF-ASSESSMENT-GUIDE.md`** § Assessment Questions is now a generated
+  region: the compact tables (control, question, evidence, role) and the coverage statement
+  are rendered by `scripts/aimf_question_bank.py`, replacing the hand-written tables and the
+  hand-written routing paragraph. The guide keeps the scale, the decision tree, the process
+  and the interpretation; the anchors live in the bank it now points to.
+- `scripts/aimf_mappings.py` delegates to `aimf_question_bank.validate`, so
+  `check` now also fails on: a missing or unknown control row, an empty question, evidence,
+  role or anchor, a repeated anchor within a row, a broken anchor ladder, a coverage count
+  that disagrees with the catalog, or generated-region drift between the bank and the guide.
+- Version stamps: README, Assessment Guide, QA report and CHANGELOG at 1.0.6.
+
+#### Verification
+
+- `python3 scripts/aimf_mappings.py check` → `OK: mapping documents, catalog and generated
+  tables are consistent` (exit 0); `python3 scripts/aimf_question_bank.py check` →
+  `OK: question bank covers 72/72 controls with 5 anchors each and no drift`.
+- Both checks were run from the packaged directory **and from inside the unpacked v1.0.6
+  zip**, and were exercised by mutation before the cut: deleting a row (caught as "no row for
+  catalog control"), blanking an anchor or a role, breaking the ladder on one row, and
+  editing a generated table by hand (caught as drift) each produced a non-zero exit.
+- Bank rows in the shipped bundle: 72 distinct catalog control ids, set-equal to the catalog
+  (no extras, no misses); 360 anchors, none empty.
+
+#### Not claimed
+
+- **Inter-rater reliability is not measured.** The anchors are specified; no blind
+  double-scoring run has been recorded against them, so the bank is a decisive instrument in
+  form but not a validated psychometric one. The bank document says so where a buyer will
+  read it, and both copies state it.
+- Nothing published or pushed: publication is a board decision (STARTINGPOINT §7, D2).
 
 ## [1.0.5] - 2026-10-18 (Complete Assessment Question Bank: 12 → 72 Controls)
 
