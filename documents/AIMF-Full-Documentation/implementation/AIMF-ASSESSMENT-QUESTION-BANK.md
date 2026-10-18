@@ -123,7 +123,7 @@ audience for every row:
 
 ## The bank
 
-Rows are grouped by audience and then ordered by catalog ID. Where a control could not be
+Rows are grouped by audience and, within an audience, follow catalog order (GOVERN, then MAP, MEASURE, MANAGE). Where a control could not be
 expressed as one question it would appear as two rows with the reason stated; no control
 required that split — each row below is a single question answered by a single role.
 
