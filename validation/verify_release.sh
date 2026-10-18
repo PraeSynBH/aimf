@@ -51,13 +51,34 @@ done
 
 echo
 echo "== validation record"
-if [ -f implementation/AIMF-INSTRUMENT-VALIDATION.md ]; then
-  grep -m1 -E '^\*\*Current result' implementation/AIMF-INSTRUMENT-VALIDATION.md || echo "MISSING headline result"
-else
-  echo "MISSING record"
-fi
-printf 'P7 measured line: '
-grep -m1 -E '^\*\*Agreement: [0-9]+ of 72 controls' implementation/AIMF-ASSESSMENT-GUIDE.md || echo "MISSING"
+python3 - <<'PY'
+import re, sys
+
+record = open('implementation/AIMF-INSTRUMENT-VALIDATION.md').read()
+guide = open('implementation/AIMF-ASSESSMENT-GUIDE.md').read()
+
+pat = re.compile(r'(\d{1,2})/72 controls agreed \(([\d.]+)%\)|(\d{1,2}) of 72 controls \(([\d.]+)%\)')
+def first(text):
+    m = pat.search(text)
+    if not m:
+        return None
+    n = m.group(1) or m.group(3)
+    pct = m.group(2) or m.group(4)
+    return int(n), float(pct)
+
+r, g = first(record), first(guide)
+print(f"validation record headline: {r}")
+print(f"guide P7 measured line:     {g}")
+if r is None:
+    sys.exit("FAIL: validation record states no measured result")
+if g is None:
+    sys.exit("FAIL: the Assessment Guide has no P7 measured result")
+if r != g:
+    sys.exit(f"FAIL: record says {r}, guide says {g} - the artifact contradicts itself")
+if 'not validated' not in guide and 'not validated for reproducibility' not in guide:
+    sys.exit("FAIL: guide states a result without the not-validated sentence")
+print(f"OK: both documents state {r[0]}/72 ({r[1]}%) and the guide carries the not-validated sentence")
+PY
 printf 'anchor set sha (in zip): '
 python3 - <<'PY'
 import hashlib
