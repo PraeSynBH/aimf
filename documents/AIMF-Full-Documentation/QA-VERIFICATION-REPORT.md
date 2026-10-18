@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6; guide completion and bundle-wide placeholder/link sweep verified 2026-10-18 against v1.0.9)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6; guide completion and bundle-wide placeholder/link sweep verified 2026-10-18 against v1.0.9; guide heading repair verified 2026-10-18 against v1.0.10)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.9
+**Framework Version**: 1.0.10
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -130,6 +130,15 @@ Licensed under CC BY-NC-ND 4.0
 > v1.0.9 bundle root: `check` exits 0 with `placeholder sweep: 56 .md files scanned, 0 findings`,
 > and mutation of the sweep (an author note, an unfilled value, a broken link re-injected) fails it three
 > times out of three. No question, anchor or scale changed. See `CHANGELOG.md` → `[1.0.9]`.
+>
+> **v1.0.10 addendum (2026-10-18).** One heading from the v1.0.9 authoring pass was wrapped across
+> two lines (`### Templates Referenced in` plus a bare `This Guide` paragraph) and rendered as a
+> truncated heading in the 2→3 guide. The sweep cannot see it — it is not an author note, an
+> unfilled value or a broken link — so it was found by proofreading the v1.0.9 files. The heading now
+> reads `### Templates Referenced in This Guide`, and a pass over every heading in `implementation/`
+> for dangling prepositions and for one-to-three-word paragraphs directly beneath a heading found no
+> second occurrence. No counts, questions, anchors or mappings changed; `check` still exits 0 and
+> `report` still shows 0 sweep findings over 56 `.md` files. See `CHANGELOG.md` → `[1.0.10]`.
 
 
 ---
@@ -528,7 +537,7 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 | **Total** | **49 files** | ✅ **Complete** |
 
 **Distribution bundle**: the shipped bundles
-(`documents/AIMF-Full-Documentation-v1.0.9.zip` and the rolling
+(`documents/AIMF-Full-Documentation-v1.0.10.zip` and the rolling
 `documents/AIMF-Full-Documentation.zip`) carry 84 regular files plus 16 directory
 entries. Note that `unzip -l`'s summary line counts directory entries as well, so its
 figure overstates the file count by one per directory; quote the file count from
@@ -646,4 +655,4 @@ control-theme level and is labelled partial. See
 
 *Quality Assurance Verification Report completed January 26, 2026*
 
-**QA Status**: ✅ PASSED - READY FOR v1.0.9 REVIEW (pre-publication)
+**QA Status**: ✅ PASSED - READY FOR v1.0.10 REVIEW (pre-publication)

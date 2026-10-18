@@ -1,6 +1,6 @@
 # AI Management Framework (AIMF) by PraeSyn
 
-**Version 1.0.9** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
+**Version 1.0.10** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
 
 ---
 
@@ -315,7 +315,7 @@ Our mission is to make AI governance accessible, practical, and effective for or
 
 ## Framework Information
 
-- **Version**: 1.0.9
+- **Version**: 1.0.10
 - **Release Date**: October 18, 2026
 - **License**: CC BY-NC-ND 4.0
 - **Copyright**: © 2026 PraeSyn, LLC

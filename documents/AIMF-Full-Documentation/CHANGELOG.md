@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.9
+**Version**: 1.0.10
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -14,6 +14,37 @@ All notable changes to the AI Management Framework (AIMF) by PraeSyn will be doc
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.10] - 2026-10-18 (Heading wrap repaired; v1.0.9 content re-read line by line)
+
+**Change Type**: Content repair
+**Rationale**: v1.0.9 wrote the three unfinished maturity-level guides, but one heading came out of
+that pass wrapped across two lines — `### Templates Referenced in` followed by a bare `This Guide`
+paragraph — so the section rendered as a truncated heading in the shipped bundle. Found on a
+proofread of the v1.0.9 files, not by `check`: the sweep catches author notes, unfilled values and
+broken links, and a heading broken across a blank line is none of those.
+
+#### Fixed
+
+- `implementation/maturity-level-guides/MATURITY-LEVEL-2-TO-3-GUIDE.md`: the section 8 heading now
+  reads `### Templates Referenced in This Guide`, matching the Maturity Level 1→2 guide, and the
+  stray `This Guide` paragraph is gone.
+- A sweep of every heading in `implementation/` for dangling prepositions and for one-to-three-word
+  paragraphs directly under a heading found no other occurrence. `MATURITY-LEVEL-4-TO-5-GUIDE.md`
+  keeps its deliberate `### Where You Are:` / `The Top 5%` heading-and-answer pair, which reads
+  correctly as written and is left alone.
+
+#### Verified
+
+- No question, anchor, scale, control, count or mapping changed. `check` exits 0; `report` reads
+  72 controls, 72 of 72 questions, 19 ISO 42001 clauses, 72 NIST subcategories, and
+  `placeholder sweep: 56 .md files scanned, 0 findings`.
+- Version stamps reconciled to 1.0.10 in the README, this changelog and the QA verification report.
+- Both zips rebuilt from the packaged directory, byte-identical to each other, sha256 and size
+  stated in the closing comment on PRA-6442. Nothing pushed or published; publication remains
+  Ben's decision on PRA-6431.
 
 ---
 

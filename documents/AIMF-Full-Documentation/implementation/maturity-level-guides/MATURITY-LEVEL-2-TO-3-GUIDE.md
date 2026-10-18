@@ -1197,9 +1197,7 @@ The platform does not replace the surrounding enterprise systems; it has to inte
 
 The templates below are the ones the actions in §6 refer to. Where a document already ships in this bundle, the link is to it; where it does not, the field list is given so a template can be built without inventing one.
 
-### Templates Referenced in
-
-This Guide
+### Templates Referenced in This Guide
 
 | Template | Used by | Minimum content |
 |---|---|---|
