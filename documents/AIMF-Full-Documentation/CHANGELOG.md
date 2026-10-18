@@ -48,7 +48,7 @@ numbers — which is precisely the claim a fixed-price assessment sells.
   tables in the Assessment Guide. Coverage counts in both documents are generated, not typed:
   `report` and the tally are computed from the catalog.
 - Row-level `Role` for every control — the role accountable for producing the evidence
-  (24 distinct roles across the four audiences).
+  (`python3 scripts/aimf_question_bank.py report` → 26 distinct roles across the four audiences).
 
 #### Changed
 
