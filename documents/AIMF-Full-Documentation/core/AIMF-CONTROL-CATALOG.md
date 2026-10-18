@@ -41,7 +41,7 @@ For the machine-readable version, see [AIMF-CONTROL-CATALOG.csv](AIMF-CONTROL-CA
 - [Measurement & Evaluation](#measurement--evaluation) (5 controls)
 - [Trustworthy AI Characteristics](#trustworthy-ai-characteristics) (4 controls)
 
-**Domain L4: Organizational Culture & Capabilities** (17 controls)
+**Domain L4: Organizational Culture & Capabilities** (16 controls)
 - [Workforce Development & Training](#workforce-development--training) (2 controls)
 - [Stakeholder Engagement & Communication](#stakeholder-engagement--communication) (2 controls)
 - [Strategic Alignment & Context](#strategic-alignment--context) (4 controls)
@@ -1096,7 +1096,7 @@ Each control includes:
 
 # Domain L4: Organizational Culture & Capabilities
 
-*17 controls for workforce development, stakeholder engagement, strategy, and risk response*
+*16 controls for workforce development, stakeholder engagement, strategy, and risk response*
 
 ---
 

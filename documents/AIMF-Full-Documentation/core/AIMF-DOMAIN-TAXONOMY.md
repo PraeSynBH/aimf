@@ -19,8 +19,13 @@ This document defines the 3-level domain taxonomy used to organize the 72 AIMF c
 
 **Taxonomy Levels**:
 - **Level 1 (L1)**: 4 high-level domains aligned with the 4 AIMF capability dimensions
-- **Level 2 (L2)**: 20 mid-level categories representing key capability areas
+- **Level 2 (L2)**: 19 mid-level categories representing key capability areas
 - **Level 3 (L3)**: 72 detailed subcategories (1:1 mapping with individual controls)
+
+The 19 L2 category names below are exactly the 19 distinct `Domain_L2` values carried by
+`core/AIMF-CONTROL-CATALOG.csv`, and the controls listed under each category are exactly
+the catalog's controls for that `Domain_L2` value. The L2 layer is reconciled: a category
+appears here only if the catalog files controls under it.
 
 ---
 
@@ -125,16 +130,6 @@ This document defines the 3-level domain taxonomy used to organize the 72 AIMF c
 
 **Total Controls**: 1
 
-### L2 Category: Data Lifecycle Management
-
-**Description**: Data collection, curation, storage, retention, and disposal practices throughout AI system lifecycle.
-
-| L3 Subcategory | Control ID | Control Name |
-|----------------|------------|--------------|
-| (Covered by other controls) | - | - |
-
-**Total Controls**: 0 (implicit in other controls)
-
 ### L2 Category: Third-Party Data Governance
 
 **Description**: Management of data risks from third-party sources, vendors, and external datasets.
@@ -146,6 +141,16 @@ This document defines the 3-level domain taxonomy used to organize the 72 AIMF c
 | Third-Party Monitoring | MAN-3.1 | Third-Party AI Ongoing Monitoring |
 
 **Total Controls**: 3
+
+*Category note — data lifecycle management.* Collection, curation, storage, retention and
+disposal are treated in this taxonomy as cross-cutting practices within the domain rather
+than as a separate L2 category, because no AIMF control is scoped to lifecycle management
+alone and inventing one would change the 72-control set. The lifecycle controls that do
+exist are filed where their subject matter sits: `GOV-1.3 AI Lifecycle Governance` and
+`GOV-1.6 AI System Decommissioning Policies` under Governance & Accountability →
+Policies & Procedures, and `MAP-4.1` / `MAP-4.2` under Third-Party Data Governance above.
+Before v1.0.3 this taxonomy carried a separate "Data Lifecycle Management" category with
+zero controls, which is why the taxonomy listed 20 L2 names against the catalog's 19.
 
 **Domain L2 Total**: 6 controls
 
@@ -322,10 +327,10 @@ This document defines the 3-level domain taxonomy used to organize the 72 AIMF c
 | Domain L1 | L2 Categories | Total Controls | Percentage |
 |-----------|---------------|----------------|------------|
 | **Governance & Accountability** | 5 | 19 | 26% |
-| **Data Management & Privacy** | 4 | 6 | 8% |
+| **Data Management & Privacy** | 3 | 6 | 8% |
 | **Technical Operations & MLOps** | 6 | 31 | 43% |
 | **Organizational Culture & Capabilities** | 5 | 16 | 22% |
-| **TOTAL** | **20** | **72** | **100%** |
+| **TOTAL** | **19** | **72** | **100%** |
 
 ---
 

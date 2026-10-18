@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.2
+**Framework Version**: 1.0.3
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -38,9 +38,33 @@ Licensed under CC BY-NC-ND 4.0
 > inconsistency are therefore historical as of this addendum; the total row of the
 > Executive Summary table above reads ⚠️ PARTIAL and is superseded by this note for the
 > count dimension, while the ISO 27001 partial item still stands. One consistency gap
-> remains open and is tracked separately: the taxonomy defines 20 L2 category names
-> against 19 distinct `Domain_L2` values in the catalog CSV. See
-> `CHANGELOG.md` → `[1.0.2]`.
+> was left open at v1.0.2 and is tracked separately: the taxonomy defined 20 L2 category
+> names against 19 distinct `Domain_L2` values in the catalog CSV. See
+> `CHANGELOG.md` → `[1.0.2]`, and the v1.0.3 addendum below, which closes it.
+
+---
+
+> **v1.0.3 addendum (2026-10-18).** The L2 consistency gap disclosed in the v1.0.2
+> addendum above is closed. The unmatched name was `Data Lifecycle Management` — a
+> category the taxonomy defined with a placeholder row and `Total Controls: 0`, for which
+> no catalog row carries that `Domain_L2` value. It has been removed from
+> `core/AIMF-DOMAIN-TAXONOMY.md` (its subject matter is retained as a category note under
+> Third-Party Data Governance, pointing to GOV-1.3, GOV-1.6, MAP-4.1 and MAP-4.2), and the
+> taxonomy's counts now read 19 L2 categories with 3 in Data Management & Privacy.
+> The control set is untouched: no control row was added, removed or re-categorised, and
+> `core/AIMF-CONTROL-CATALOG.csv` is byte-unchanged in this release.
+>
+> Verified: `grep -E "^### L2 Category:" core/AIMF-DOMAIN-TAXONOMY.md | sed 's/^### L2
+> Category: //' | sort -u | wc -l` → 19 and
+> `python3 -c "import csv;print(len({r['Domain_L2'] for r in csv.DictReader(open('core/AIMF-CONTROL-CATALOG.csv'))}))"`
+> → 19, with the `(L1, L2) → control IDs` map parsed from both documents comparing
+> identical group by group (72 distinct IDs on each side).
+> `python3 scripts/aimf_mappings.py check` exits 0 from an unpacked v1.0.3 bundle root.
+> A residual "17 controls" for the Organizational Culture & Capabilities domain in
+> `core/AIMF-CONTROL-CATALOG.md` (correct figure: 16) was also corrected in this release.
+> The Consistency and Standards Compliance rows of the Executive Summary table remain
+> ⚠️ PARTIAL only for the ISO 27001 Annex A depth item; this addendum supersedes them for
+> the count and L2 dimensions. See `CHANGELOG.md` → `[1.0.3]`.
 
 ---
 
@@ -540,4 +564,4 @@ control-theme level and is labelled partial. See
 
 *Quality Assurance Verification Report completed January 26, 2026*
 
-**QA Status**: ✅ PASSED - READY FOR v1.0.2 REVIEW (pre-publication)
+**QA Status**: ✅ PASSED - READY FOR v1.0.3 REVIEW (pre-publication)

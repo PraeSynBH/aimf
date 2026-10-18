@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.2
+**Version**: 1.0.3
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -14,6 +14,85 @@ All notable changes to the AI Management Framework (AIMF) by PraeSyn will be doc
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.3] - 2026-10-18 (L2 Taxonomy / Catalog Reconciliation)
+
+**Change Type**: Correctness correction (documentation)
+**Rationale**: `core/AIMF-DOMAIN-TAXONOMY.md` defined **20** L2 category names while
+`core/AIMF-CONTROL-CATALOG.csv` carries **19** distinct `Domain_L2` values. The two
+documents agreed on every control (the same 72 `Control_ID`s, function split
+19/18/22/13), so this was a layer-name disagreement rather than a control disagreement —
+but a buyer comparing the taxonomy to the catalog saw two different category structures
+for the same framework. The divergence was disclosed in `[1.0.2]` above and deliberately
+not papered over there. This release reconciles the layer.
+
+The unmatched pair was found by comparing the taxonomy's (L1 domain, L2 category) map to
+the catalog's `(Domain_L1, Domain_L2)` groups: **"Data Lifecycle Management"** under
+Data Management & Privacy — a category defined in the taxonomy with the placeholder row
+`(Covered by other controls) | - | -` and **`Total Controls: 0`** — has no counterpart in
+the catalog, because no catalog row carries that `Domain_L2` value. Every other category
+matched exactly, control for control.
+
+#### Changed
+
+- **Removed the empty "Data Lifecycle Management" L2 category** from
+  `core/AIMF-DOMAIN-TAXONOMY.md`. The CSV is authoritative for the control set and the
+  taxonomy is authoritative for how that set is grouped; a category that groups no
+  controls is not part of the shipped grouping. Data Management & Privacy now defines 3 L2
+  categories (Data Quality & Integrity, Data Privacy & Protection, Third-Party Data
+  Governance) and the taxonomy total is 19.
+- **The lifecycle subject matter is retained, as prose rather than a phantom category.** A
+  *Category note — data lifecycle management* under Third-Party Data Governance records
+  that collection, curation, storage, retention and disposal are cross-cutting practices
+  in this domain and points to the controls that actually carry them: `GOV-1.3 AI
+  Lifecycle Governance` and `GOV-1.6 AI System Decommissioning Policies` (Policies &
+  Procedures) and `MAP-4.1` / `MAP-4.2` (Third-Party Data Governance).
+- **Rejected alternative**: adding `Data Lifecycle Management` to the catalog. That would
+  have required creating a 73rd control, or reassigning existing controls out of
+  categories that the catalog, the human-readable catalog guide and the generated mapping
+  tables already use. Neither is a layer-name correction, and the first would break the
+  72-control set that every other document and mapping depends on.
+- **Counts corrected in the taxonomy**: overview "20 mid-level categories" → 19; Summary
+  Statistics Data Management & Privacy 4 → 3 L2 categories and TOTAL 20 → 19. Per-domain
+  control counts are unchanged (19 / 6 / 31 / 16 = 72).
+- **Stale "17 controls" corrected in `core/AIMF-CONTROL-CATALOG.md`** — the quick
+  navigation and the Domain L4 section intro said 17 while the same file's own summary
+  and the catalog say 16. `[1.0.2]` claimed this correction; the file had not fully
+  received it. Fixed here (adjacent correction, disclosed because it is the same class of
+  defect).
+- **Version stamps**: README 1.0.2 → 1.0.3 (title block and Framework Information),
+  `QA-VERIFICATION-REPORT.md` framework version, and this header.
+
+#### Verified
+
+Both layers now name the same 19 categories, and the control set is untouched:
+
+```
+$ cd documents/AIMF-Full-Documentation
+$ grep -E "^### L2 Category:" core/AIMF-DOMAIN-TAXONOMY.md | sed 's/^### L2 Category: //' | sort -u | wc -l
+19
+$ python3 -c "import csv;print(len({r['Domain_L2'] for r in csv.DictReader(open('core/AIMF-CONTROL-CATALOG.csv'))}))"
+19
+$ python3 -c "import csv;print(len({r['Control_ID'] for r in csv.DictReader(open('core/AIMF-CONTROL-CATALOG.csv'))}))"
+72
+```
+
+Beyond the counts, the taxonomy's `(L1, L2) → control IDs` map was parsed out of the two
+documents and compared group by group: **19 categories on each side, identical
+membership, no category present on one side only, 72 distinct control IDs on both sides.**
+`core/AIMF-CONTROL-CATALOG.csv` itself is byte-unchanged in this release, as are the
+NIST / ISO 42001 / ISO 27001 / EO 14179 mappings. `python3 scripts/aimf_mappings.py check`
+was run from an unpacked v1.0.3 bundle root and exits 0.
+
+#### Distribution
+
+- `documents/AIMF-Full-Documentation-v1.0.3.zip` and the rolling
+  `documents/AIMF-Full-Documentation.zip` are rebuilt from the packaged directory of this
+  release and are byte-identical to each other. Both supersede the v1.0.2 bundles.
+- Tagged `aimf-v1.0.3` locally. Not pushed, not published, no public repository — that
+  still waits on the D2 decision on PRA-6431.
 
 ---
 
@@ -56,10 +135,6 @@ against the control IDs listed in the taxonomy and the catalog guide.
 
 #### Known remaining (not corrected here, tracked separately)
 
-- The taxonomy defines 20 L2 category names; the catalog CSV carries 19 distinct
-  `Domain_L2` values. One taxonomy category name has no catalog counterpart, so the two
-  documents disagree on the L2 layer even though they agree on all 72 control IDs. This
-  needs a taxonomy/catalog reconciliation, not a number edit.
 - `change-control/20260129143000-*.md` (the January 2026 baseline change plans and
   questionnaire) still state `B3 = 73 controls`. Those are dated planning records of what
   was decided before the change was completed — the completed outcome (72 controls) is
@@ -435,7 +510,9 @@ Full license: [LICENSE.md](LICENSE.md)
 
 | Version | Release Date | Status | Key Changes |
 |---------|--------------|--------|-------------|
-| 1.0.1   | 2026-10-17   | Current | Standards mapping completion; ISO/IEC 27001:2022 catalog normalisation; generated mapping tables with a drift validator |
+| 1.0.3   | 2026-10-18   | Current | L2 taxonomy/catalog reconciliation — 20 L2 names → 19, matching the 19 `Domain_L2` values in the catalog; empty "Data Lifecycle Management" category removed |
+| 1.0.2   | 2026-10-18   | Superseded | Control count, release status and header corrections |
+| 1.0.1   | 2026-10-17   | Superseded | Standards mapping completion; ISO/IEC 27001:2022 catalog normalisation; generated mapping tables with a drift validator |
 | 1.0.0   | 2026-01-25   | Superseded | Initial public release |
 
 ---
@@ -464,6 +541,6 @@ See [AIMF-FUTURE-PROFILES.md](supplemental/AIMF-FUTURE-PROFILES.md) for detailed
 
 ---
 
-**Last Updated**: October 17, 2026
-**Framework Version**: 1.0.1 (Pre-Publication)
+**Last Updated**: October 18, 2026
+**Framework Version**: 1.0.3 (Pre-Publication)
 **Maintained by**: PraeSyn, LLC
