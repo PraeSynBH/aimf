@@ -199,6 +199,9 @@ def main():
     ap.add_argument("--via", default="hermes", choices=["hermes", "openrouter"])
     ap.add_argument("--batch", type=int, default=12)
     ap.add_argument("--temperature", type=float, default=0.0)
+    ap.add_argument("--fixture", default="AIMF-VAL-2026-A",
+                    help="fixture id recorded in the output (A or B)")
+
     ap.add_argument("--limit", type=int, default=0, help="debug: score first N controls")
     args = ap.parse_args()
 
@@ -244,7 +247,7 @@ def main():
         print(f"{args.assessor}: MISSING {absent}", file=sys.stderr)
 
     out = {
-        "fixture": "AIMF-VAL-2026-A",
+        "fixture": args.fixture,
         "assessor": args.assessor,
         "model": args.model,
         "transport": args.via,

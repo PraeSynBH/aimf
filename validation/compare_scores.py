@@ -37,6 +37,8 @@ def main():
     ap.add_argument("--adjudicator")
     ap.add_argument("--json", default=None)
     ap.add_argument("--md", default=None)
+    ap.add_argument("--case", default="AIMF-VAL-2026-A",
+                    help="fixture id used in the markdown title")
     args = ap.parse_args()
 
     a, da = load(args.a)
@@ -113,7 +115,7 @@ def main():
         json.dump(out, open(args.json, "w"), indent=1)
     if args.md:
         lines = [
-            "# Blind double-scoring result — AIMF-VAL-2026-A",
+            "# Blind double-scoring result — " + args.case,
             "",
             f"- Controls scored: {summary['controls_scored']}",
             f"- Agreement: {agree}/{summary['controls_scored']} "
