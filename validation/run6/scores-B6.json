@@ -1,0 +1,454 @@
+{
+ "assessor": "B6",
+ "bank_sha256": "b6f9a6a19bfd25381657d33776812edf6f524e9ab9edd35727cb57c4600915bd",
+ "controls_scored": 72,
+ "finished": "2026-10-18T14:38:29Z",
+ "fixture": "AIMF-VAL-2026-A",
+ "model": "openai/gpt-4.1",
+ "pack_sha256": "c643fd60d973aa043331c7d10ce48949f314c0218ed966edd7a5a6fae8121b0e",
+ "raw": {
+  "batch_1": "[\n  {\n    \"control\": \"GOV-1.1\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-016\",\n    \"failed_clause\": \"level 2 needs policy to cover every system in the scope register with no open exceptions; two open exceptions in the register\",\n    \"boundary_note\": \"Policy and mapping exist, approved and in-date, but open exceptions mean not all in-scope systems are covered\"\n  },\n  {\n    \"control\": \"GOV-1.2\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-021\",\n    \"failed_clause\": \"level 2 needs every in-scope AI system registered with risk class and approved before deployment; 3 of 14 systems lack risk class, 5 of 14 lack approval\",\n    \"boundary_note\": \"Register and approvals exist but not for all systems; partial coverage only\"\n  },\n  {\n    \"control\": \"GOV-1.3\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-032\",\n    \"failed_clause\": \"level 2 needs every register entry to have a named owner and dated escalation record; 2 of 6 have no escalation history, and 2 of 6 have no owner\",\n    \"boundary_note\": \"Risk appetite statement and register exist, but not all entries have required fields\"\n  },\n  {\n    \"control\": \"GOV-1.4\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-041\",\n    \"failed_clause\": \"level 2 needs every clause in the dated AI policy monitored in each period's report, and every finding in the tracker to have owner and target date; Q1 report covers 9 of 12 clauses, and 5 of 7 open findings lack target dates\",\n    \"boundary_note\": \"Monitoring plan and tracker exist, but not all clauses or findings are covered\"\n  },\n  {\n    \"control\": \"GOV-1.5\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-051\",\n    \"failed_clause\": \"level 2 needs assessments for material systems; none exist for any registered system\",\n    \"boundary_note\": \"Policy requires consideration, but no assessments performed\"\n  },\n  {\n    \"control\": \"GOV-1.6\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-062\",\n    \"failed_clause\": \"level 2 needs procedure applied to every retirement; only 1 of 3 systems retired under the procedure\",\n    \"boundary_note\": \"Procedure exists and is complete, but not applied to all retirements\"\n  },\n  {\n    \"control\": \"GOV-1.7\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-072\",\n    \"failed_clause\": \"level 2 needs documented risk assessment, AI-specific contract, and monitoring for every arrangement; 3 of 9 vendors lack addendum, 4 of 9 lack risk assessment\",\n    \"boundary_note\": \"Template and register exist, but not all vendors covered\"\n  },\n  {\n    \"control\": \"GOV-2.1\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-084\",\n    \"failed_clause\": \"level 2 needs a formal RACI assigning every AI risk role; two activities have no named owner\",\n    \"boundary_note\": \"RACI and role descriptions exist, but not all activities assigned\"\n  },\n  {\n    \"control\": \"GOV-2.2\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-092\",\n    \"failed_clause\": \"level 2 needs competency assessment; only a click-through quiz is used, no practical or competence assessment\",\n    \"boundary_note\": \"Role-based training exists, but no competency assessment\"\n  },\n  {\n    \"control\": \"GOV-2.3\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-102\",\n    \"failed_clause\": \"level 2 needs every decision in the log to have a named action owner and due date; 3 of 9 decisions lack an owner\",\n    \"boundary_note\": \"Charter, minutes, and log exist, but not all decisions have owners\"\n  },\n  {\n    \"control\": \"GOV-3.1\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-113\",\n    \"failed_clause\": \"level 2 needs composition review and inclusion metrics for every team; only 1 of 4 projects reviewed, no inclusion metrics\",\n    \"boundary_note\": \"Standard and some records exist, but not for all teams and no metrics\"\n  },\n  {\n    \"control\": \"GOV-3.2\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-120\",\n    \"failed_clause\": \"level 2 needs AI-role-specific representation monitoring and action plan; only all-staff data, no AI-specific breakdown or action plan\",\n    \"boundary_note\": \"Representation data exists, but not for AI roles and no action plan\"\n  }\n]",
+  "batch_2": "[{\"control\":\"GOV-4.1\",\"score\":1,\"deciding_artefact\":\"EV-130\",\"failed_clause\":\"level 2 needs a systematic culture programme integrating AI risk into performance expectations and recognition, with documented activities; EV-132 shows this is absent\",\"boundary_note\":\"EV-130 and EV-131 show awareness activity and survey, but EV-132 confirms no integration into performance or recognition, so level 2 fails.\"},\n{\"control\":\"GOV-4.2\",\"score\":1,\"deciding_artefact\":\"EV-140\",\"failed_clause\":\"level 2 needs systematic feedback collection with defined response process and a decision log linking feedback to changes; EV-141 and EV-142 show no systematic linkage or response process\",\"boundary_note\":\"Feedback is collected and reviewed, but no systematic linkage to decisions or defined response process, so level 2 fails.\"},\n{\"control\":\"GOV-4.3\",\"score\":1,\"deciding_artefact\":\"EV-150\",\"failed_clause\":\"level 2 needs a proactive transparency communication programme with published reporting covering every in-scope AI system; EV-150 covers only 5 of 14 systems, and EV-152 confirms no transparency report\",\"boundary_note\":\"Partial coverage and no published report, so level 2 fails.\"},\n{\"control\":\"GOV-5.1\",\"score\":1,\"deciding_artefact\":\"EV-160\",\"failed_clause\":\"level 2 needs active, recorded participation against a documented engagement plan; EV-163 confirms no plan or follow-up record\",\"boundary_note\":\"Participation is ad hoc and unplanned, so level 2 fails.\"},\n{\"control\":\"GOV-5.2\",\"score\":0,\"deciding_artefact\":\"EV-170\",\"failed_clause\":\"level 0 requires no academic contact, no agreement, no publication, and the pack states the absence; EV-170 confirms this\",\"boundary_note\":\"EV-170 explicitly states absence of all required artefacts, so level 0 is satisfied.\"},\n{\"control\":\"GOV-6.1\",\"score\":2,\"deciding_artefact\":\"EV-180\",\"failed_clause\":\"level 3 needs spend-versus-plan and governance capacity metrics reviewed each cycle; no review artefact present\",\"boundary_note\":\"EV-180 and EV-181 show budget, spend, and FTE, but no evidence of review of spend-versus-plan or capacity metrics.\"},\n{\"control\":\"GOV-6.2\",\"score\":2,\"deciding_artefact\":\"EV-191\",\"failed_clause\":\"level 3 needs capability maturity metrics tracked against the plan each cycle; no such metrics are named\",\"boundary_note\":\"EV-190 and EV-191 show a funded plan and review, but no capability maturity metrics tracked.\"},\n{\"control\":\"MAN-1.1\",\"score\":1,\"deciding_artefact\":\"EV-622\",\"failed_clause\":\"level 2 needs every deployment in the list to have a decision record with approver sign-off; EV-622 shows two pilots without a record\",\"boundary_note\":\"EV-621 and EV-622 show a gap in coverage, so level 2 fails.\"},\n{\"control\":\"MAN-1.2\",\"score\":2,\"deciding_artefact\":\"EV-630\",\"failed_clause\":\"level 3 needs allocation decisions traceable to the top risks, reviewed each cycle; EV-632 shows only 2 of 5 top risks funded, others have plans but no funding decision\",\"boundary_note\":\"EV-630 and EV-631 show prioritisation and register, but not all top risks have traceable allocation decisions.\"},\n{\"control\":\"MAN-1.3\",\"score\":2,\"deciding_artefact\":\"EV-640\",\"failed_clause\":\"level 3 needs completion-versus-plan and residual-risk reduction metrics each cycle; EV-641 and EV-642 show incomplete plans and deferred reviews\",\"boundary_note\":\"Response plans exist for all top risks, but review and completion tracking is incomplete.\"},\n{\"control\":\"MAN-1.4\",\"score\":1,\"deciding_artefact\":\"EV-653\",\"failed_clause\":\"level 2 needs residual risk documented and accepted for every in-scope system before deployment; EV-653 shows 3 production systems with no record\",\"boundary_note\":\"EV-650 and EV-652 show some coverage, but not all systems, so level 2 fails.\"},\n{\"control\":\"MAN-2.1\",\"score\":1,\"deciding_artefact\":\"EV-662\",\"failed_clause\":\"level 2 needs a cost-benefit options analysis including a non-AI alternative for every proposal; EV-662 shows only 2 of 14 systems have this\",\"boundary_note\":\"Options analysis is not systematic, so level 2 fails.\"}\n]",
+  "batch_3": "[\n  {\n    \"control\": \"MAN-2.2\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-672\",\n    \"failed_clause\": \"level 2 needs value-sustainment programme and maintenance strategy covering every in-scope system; only 1 of 14 systems covered\",\n    \"boundary_note\": \"Coverage fails: only 1 of 14 systems has maintenance and value review\"\n  },\n  {\n    \"control\": \"MAN-2.3\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-682\",\n    \"failed_clause\": \"level 2 needs documented emergent-risk procedures covering recovery and lessons learned for every in-scope system; only 1 of 14 systems covered\",\n    \"boundary_note\": \"Coverage fails: procedure and log applied to only 1 of 14 systems\"\n  },\n  {\n    \"control\": \"MAN-2.4\",\n    \"score\": 2,\n    \"deciding_artefact\": \"EV-692\",\n    \"failed_clause\": \"level 3 needs measured time-to-deactivate from a live drill, reported against target, for every system; time-to-deactivate is measured and reported (EV-693)\",\n    \"boundary_note\": \"All systems covered, including vendor-dependent; time-to-deactivate measured and reported\"\n  },\n  {\n    \"control\": \"MAN-3.1\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-702\",\n    \"failed_clause\": \"level 2 needs third-party AI monitoring scheduled and applied to every in-scope vendor; 5 lower-spend vendors not covered\",\n    \"boundary_note\": \"Coverage fails: monitoring not applied to all vendors\"\n  },\n  {\n    \"control\": \"MAN-3.2\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-711\",\n    \"failed_clause\": \"level 2 needs every vendor model update in the change log to have a dated re-evaluation before reliance; 1 update in 2026-09 was applied without evaluation\",\n    \"boundary_note\": \"One vendor model update relied on without re-evaluation\"\n  },\n  {\n    \"control\": \"MAN-4.1\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-722\",\n    \"failed_clause\": \"level 2 needs post-deployment monitoring, appeal and decommissioning plans implemented and tested for every in-scope system; only 1 of 14 systems covered\",\n    \"boundary_note\": \"Coverage fails: only 1 of 14 systems has all plans implemented\"\n  },\n  {\n    \"control\": \"MAN-4.2\",\n    \"score\": 2,\n    \"deciding_artefact\": \"EV-731\",\n    \"failed_clause\": \"level 3 needs improvement throughput and measured effect per release tracked; measured effect recorded for 7 of 9 releases, not all\",\n    \"boundary_note\": \"Partial coverage of measured effect per release\"\n  },\n  {\n    \"control\": \"MAN-4.3\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-741\",\n    \"failed_clause\": \"level 2 needs AI incident programme covering every in-scope system, with dated entries, owner, status, and defined stakeholder communication; 1 incident not communicated to stakeholders\",\n    \"boundary_note\": \"Not all incidents communicated to stakeholders as required\"\n  },\n  {\n    \"control\": \"MAP-1.1\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-202\",\n    \"failed_clause\": \"level 2 needs every AI system to have documented purpose, beneficial use, deployment setting and legal/regulatory review; only 2 of 14 systems covered\",\n    \"boundary_note\": \"Coverage fails: only 2 of 14 systems have full documentation and legal review\"\n  },\n  {\n    \"control\": \"MAP-1.2\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-211\",\n    \"failed_clause\": \"level 2 needs documented competency requirements per AI project and team composition reviewed against them; only 1 of 4 projects signed off\",\n    \"boundary_note\": \"Coverage fails: only 1 of 4 projects reviewed against competency requirements\"\n  },\n  {\n    \"control\": \"MAP-1.3\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-221\",\n    \"failed_clause\": \"level 2 needs at least one minuted review in last 12 months; next review is scheduled, not yet held\",\n    \"boundary_note\": \"No minuted review in last 12 months\"\n  },\n  {\n    \"control\": \"MAP-1.4\",\n    \"score\": 1,\n    \"deciding_artefact\": \"EV-232\",\n    \"failed_clause\": \"level 2 needs every AI system to have a business case with value metrics and post-deployment value tracking; only 4 of 14 systems have business cases, 2 have value tracking\",\n    \"boundary_note\": \"Coverage fails: only 4 of 14 systems have business cases, 2 have value tracking\"\n  }\n]",
+  "batch_4": "[{\"control\":\"MAP-1.5\",\"score\":2,\"deciding_artefact\":\"EV-241\",\"failed_clause\":\"level 3 needs actual exposures tracked against each tolerance on a stated cadence; only one report, not a cadence\",\"boundary_note\":\"Cadence not met: only one performance report, not two or more on a stated interval.\"},\n{\"control\":\"MAP-1.6\",\"score\":1,\"deciding_artefact\":\"EV-251\",\"failed_clause\":\"level 2 needs every in-scope system to have socio-technical requirements with traceability to test evidence; 22 socio-technical requirements have no linked tests\",\"boundary_note\":\"Traceability matrix shows socio-technical requirements lack test linkage, so level 2 fails.\"},\n{\"control\":\"MAP-2.1\",\"score\":1,\"deciding_artefact\":\"EV-262\",\"failed_clause\":\"level 2 needs method documentation per system; only 6 of 14 systems have it\",\"boundary_note\":\"Coverage not met: method documentation missing for 8 of 14 systems.\"},\n{\"control\":\"MAP-2.2\",\"score\":1,\"deciding_artefact\":\"EV-272\",\"failed_clause\":\"level 2 needs knowledge limits, out-of-scope behaviour, and oversight requirement documented and enforced for every system; only CTA has this, others rely on vendor docs\",\"boundary_note\":\"Coverage not met: only CTA has required documentation and config evidence.\"},\n{\"control\":\"MAP-2.3\",\"score\":1,\"deciding_artefact\":\"EV-281\",\"failed_clause\":\"level 2 needs methodology, TEVV approach, and known limitations documented for every in-scope system; only CTA is covered\",\"boundary_note\":\"Coverage not met: evidence only for CTA, not all in-scope systems.\"},\n{\"control\":\"MAP-3.1\",\"score\":1,\"deciding_artefact\":\"EV-292\",\"failed_clause\":\"level 2 needs benefits analysis with baseline and validation method for every in-scope system; only 3 of 14 systems have this\",\"boundary_note\":\"Coverage not met: 11 of 14 systems lack required analysis.\"},\n{\"control\":\"MAP-3.2\",\"score\":1,\"deciding_artefact\":\"EV-301\",\"failed_clause\":\"level 2 needs total-cost analysis including non-monetary costs and explicit link to risk tolerance for every system; only CTA covered, no link to risk tolerance\",\"boundary_note\":\"Coverage and linkage not met: only CTA covered, no explicit link to risk tolerance.\"},\n{\"control\":\"MAP-3.3\",\"score\":2,\"deciding_artefact\":\"EV-311\",\"failed_clause\":\"level 3 needs scope-drift checks measured per release; evidence of checks per release is present, so level 3 is satisfied\",\"boundary_note\":\"Cadence and measurement for scope-drift checks evidenced.\"},\n{\"control\":\"MAP-3.4\",\"score\":1,\"deciding_artefact\":\"EV-321\",\"failed_clause\":\"level 2 needs formal proficiency requirements, assessment, and certification for every operator role; only 34 of 61 assessed, no certification requirement\",\"boundary_note\":\"Coverage and certification not met: not all operators assessed, no certification.\"},\n{\"control\":\"MAP-3.5\",\"score\":1,\"deciding_artefact\":\"EV-332\",\"failed_clause\":\"level 2 needs a procedure covering every system, citing policy, naming reviewer/override rights, and effectiveness assessment with owners/due dates; findings not actioned, no cadence, coverage unclear\",\"boundary_note\":\"Effectiveness assessment not actioned, cadence and coverage not met.\"},\n{\"control\":\"MAP-4.1\",\"score\":1,\"deciding_artefact\":\"EV-341\",\"failed_clause\":\"level 2 needs systematic third-party risk mapping including legal risk for every third-party AI component; only 3 of 9 vendors have legal review\",\"boundary_note\":\"Coverage not met: legal review missing for 6 of 9 vendors.\"},\n{\"control\":\"MAP-4.2\",\"score\":1,\"deciding_artefact\":\"EV-351\",\"failed_clause\":\"level 2 needs documented controls implemented and effectiveness monitored for every third-party AI component; only 3 of 8 controls implemented, no effectiveness testing\",\"boundary_note\":\"Coverage and effectiveness monitoring not met: only partial implementation, no testing.\"}\n]",
+  "batch_5": "[{\"control\":\"MAP-5.1\",\"score\":1,\"deciding_artefact\":\"EV-362\",\"failed_clause\":\"level 2 needs an impact assessment for every in-scope system; only 1 of 14 systems covered\",\"boundary_note\":\"Coverage shortfall: only 1/14 systems have an assessment, so cannot reach level 2\"},\n{\"control\":\"MAP-5.2\",\"score\":1,\"deciding_artefact\":\"EV-371\",\"failed_clause\":\"level 2 needs a systematic engagement programme with records for all planned sessions; only 4 of 6 sessions have records\",\"boundary_note\":\"Coverage shortfall: not all planned sessions have records, so cannot reach level 2\"},\n{\"control\":\"MEA-1.1\",\"score\":3,\"deciding_artefact\":\"EV-403\",\"failed_clause\":\"level 4 needs measurement science revised or automated from effectiveness data, with external validation; none named\",\"boundary_note\":\"Level 3 satisfied by coverage report reviewed by named body; no evidence of external validation or science revision\"},\n{\"control\":\"MEA-1.2\",\"score\":1,\"deciding_artefact\":\"EV-410\",\"failed_clause\":\"level 2 needs every metric in the register to carry a validation record; only 4 of 9 metrics have this\",\"boundary_note\":\"Validation record missing for 5/9 metrics, so cannot reach level 2\"},\n{\"control\":\"MEA-1.3\",\"score\":2,\"deciding_artefact\":\"EV-421\",\"failed_clause\":\"level 3 needs coverage measured and reported to audit; no such report named\",\"boundary_note\":\"Independent assessment and documentation present, but no coverage measurement or report to audit\"},\n{\"control\":\"MEA-2.1\",\"score\":2,\"deciding_artefact\":\"EV-431\",\"failed_clause\":\"level 3 needs reproducibility measured (share of evaluations a third party could rerun without help); none named\",\"boundary_note\":\"All evaluations have manifests, but no measurement of reproducibility share until audit in 2026-09 (EV-432), which is not reported as a metric\"},\n{\"control\":\"MEA-2.10\",\"score\":1,\"deciding_artefact\":\"EV-522\",\"failed_clause\":\"level 2 needs comprehensive privacy evaluation per in-scope system; only 2 of 14 systems have a PIA\",\"boundary_note\":\"Coverage shortfall: only 2/14 systems have privacy impact assessments\"},\n{\"control\":\"MEA-2.11\",\"score\":1,\"deciding_artefact\":\"EV-534\",\"failed_clause\":\"level 2 needs every system in scope to have a fairness evaluation; only one system covered\",\"boundary_note\":\"Coverage shortfall: only one system has fairness evaluation\"},\n{\"control\":\"MEA-2.12\",\"score\":0,\"deciding_artefact\":\"EV-542\",\"failed_clause\":\"level 1 needs environmental considerations noted; none exist for any system\",\"boundary_note\":\"Absence established: no assessment or tracking for any system\"},\n{\"control\":\"MEA-2.13\",\"score\":1,\"deciding_artefact\":\"EV-552\",\"failed_clause\":\"level 2 needs systematic TEVV effectiveness evaluation for the organisation's testing programme; only CTA's testing is covered\",\"boundary_note\":\"Coverage shortfall: only CTA's testing is reviewed, not the whole programme\"},\n{\"control\":\"MEA-2.2\",\"score\":\"NA\",\"deciding_artefact\":\"\",\"failed_clause\":\"no human-subject evaluation in the period; control not applicable\",\"boundary_note\":\"No studies run, so control is NA\"},\n{\"control\":\"MEA-2.3\",\"score\":3,\"deciding_artefact\":\"EV-453\",\"failed_clause\":\"level 4 needs continuous demonstration and automated measurement, with criteria revised from production evidence; none named\",\"boundary_note\":\"Level 3 satisfied by results-versus-criteria tracked per release and acceptance decisions recorded; no evidence of continuous demonstration or automated measurement\"}]",
+  "batch_6": "[{\"control\":\"MEA-2.4\",\"score\":4,\"deciding_artefact\":\"EV-463\",\"failed_clause\":\"\",\"boundary_note\":\"\"},\n{\"control\":\"MEA-2.5\",\"score\":1,\"deciding_artefact\":\"EV-470\",\"failed_clause\":\"level 2 needs validity and reliability demonstrated including generalisability beyond the test set; generalisability only assessed on one region, reliability across labelers not assessed\",\"boundary_note\":\"EV-470 and EV-471 show only partial generalisability and no reliability across labelers; level 2 not fully satisfied\"},\n{\"control\":\"MEA-2.6\",\"score\":2,\"deciding_artefact\":\"EV-481\",\"failed_clause\":\"level 3 needs residual safety risk and open mitigation items tracked against thresholds; no tracking or thresholds evidenced\",\"boundary_note\":\"EV-480 and EV-481 satisfy level 2; EV-482 confirms no periodic re-test or tracking\"},\n{\"control\":\"MEA-2.7\",\"score\":\"NA\",\"deciding_artefact\":\"\",\"failed_clause\":\"level 2 needs comprehensive security evaluation with adversarial or red-team testing and resilience documentation per system; report contents not available to assessment\",\"boundary_note\":\"EV-490 and EV-491 confirm existence of report but not its content; cannot confirm coverage or resilience documentation\"},\n{\"control\":\"MEA-2.8\",\"score\":1,\"deciding_artefact\":\"EV-500\",\"failed_clause\":\"level 2 needs both a dated transparency/accountability risk assessment naming affected population and decision points, and a separate adequacy test with findings; only assessment for CTA, no adequacy test\",\"boundary_note\":\"EV-500 and EV-502 show assessment only for CTA, no adequacy test artefact\"},\n{\"control\":\"MEA-2.9\",\"score\":2,\"deciding_artefact\":\"EV-511\",\"failed_clause\":\"level 3 needs measured user comprehension and explanation-use rates per release; only a one-off interpretability study, not per release\",\"boundary_note\":\"EV-511 is a one-off study, not per-release measurement\"},\n{\"control\":\"MEA-3.1\",\"score\":1,\"deciding_artefact\":\"EV-561\",\"failed_clause\":\"level 2 needs every review month in the period to have dated minutes; one month skipped with no note\",\"boundary_note\":\"EV-561 shows 8 of 9 months have minutes; one gap drops to level 1\"},\n{\"control\":\"MEA-3.2\",\"score\":2,\"deciding_artefact\":\"EV-570\",\"failed_clause\":\"level 3 needs method-comparison results and stated confidence per hard-to-assess case; not evidenced\",\"boundary_note\":\"EV-570 and EV-571 show alternative methods and limits, but no method-comparison results or confidence per case\"},\n{\"control\":\"MEA-3.3\",\"score\":1,\"deciding_artefact\":\"EV-582\",\"failed_clause\":\"level 2 needs a record showing analysis of feedback produced a named change or decision with the date; analysis not linked to system changes in a recorded way\",\"boundary_note\":\"EV-582 confirms analysis is not linked to system changes\"},\n{\"control\":\"MEA-4.1\",\"score\":2,\"deciding_artefact\":\"EV-590\",\"failed_clause\":\"level 3 needs performance gap between lab and production measured and reported; not evidenced\",\"boundary_note\":\"EV-590 and EV-591 show context alignment and deployment data, but no gap measurement\"},\n{\"control\":\"MEA-4.2\",\"score\":2,\"deciding_artefact\":\"EV-600\",\"failed_clause\":\"level 3 needs review coverage and resolution outcome of disagreements measured; not evidenced\",\"boundary_note\":\"EV-600 and EV-601 show systematic expert validation and independence, but no measurement of coverage or disagreement resolution\"},\n{\"control\":\"MEA-4.3\",\"score\":2,\"deciding_artefact\":\"EV-611\",\"failed_clause\":\"level 3 needs detection latency and change-to-action time recorded per change event against a stated target, reported to a named reviewing body on a stated cadence; no stated target or named reviewing body\",\"boundary_note\":\"EV-612 measures latency and time, but no target or reviewing body\"}]"
+ },
+ "scores": {
+  "GOV-1.1": {
+   "boundary_note": "Policy and mapping exist, approved and in-date, but open exceptions mean not all in-scope systems are covered",
+   "deciding_artefact": "EV-016",
+   "failed_clause": "level 2 needs policy to cover every system in the scope register with no open exceptions; two open exceptions in the register",
+   "score": 1
+  },
+  "GOV-1.2": {
+   "boundary_note": "Register and approvals exist but not for all systems; partial coverage only",
+   "deciding_artefact": "EV-021",
+   "failed_clause": "level 2 needs every in-scope AI system registered with risk class and approved before deployment; 3 of 14 systems lack risk class, 5 of 14 lack approval",
+   "score": 1
+  },
+  "GOV-1.3": {
+   "boundary_note": "Risk appetite statement and register exist, but not all entries have required fields",
+   "deciding_artefact": "EV-032",
+   "failed_clause": "level 2 needs every register entry to have a named owner and dated escalation record; 2 of 6 have no escalation history, and 2 of 6 have no owner",
+   "score": 1
+  },
+  "GOV-1.4": {
+   "boundary_note": "Monitoring plan and tracker exist, but not all clauses or findings are covered",
+   "deciding_artefact": "EV-041",
+   "failed_clause": "level 2 needs every clause in the dated AI policy monitored in each period's report, and every finding in the tracker to have owner and target date; Q1 report covers 9 of 12 clauses, and 5 of 7 open findings lack target dates",
+   "score": 1
+  },
+  "GOV-1.5": {
+   "boundary_note": "Policy requires consideration, but no assessments performed",
+   "deciding_artefact": "EV-051",
+   "failed_clause": "level 2 needs assessments for material systems; none exist for any registered system",
+   "score": 1
+  },
+  "GOV-1.6": {
+   "boundary_note": "Procedure exists and is complete, but not applied to all retirements",
+   "deciding_artefact": "EV-062",
+   "failed_clause": "level 2 needs procedure applied to every retirement; only 1 of 3 systems retired under the procedure",
+   "score": 1
+  },
+  "GOV-1.7": {
+   "boundary_note": "Template and register exist, but not all vendors covered",
+   "deciding_artefact": "EV-072",
+   "failed_clause": "level 2 needs documented risk assessment, AI-specific contract, and monitoring for every arrangement; 3 of 9 vendors lack addendum, 4 of 9 lack risk assessment",
+   "score": 1
+  },
+  "GOV-2.1": {
+   "boundary_note": "RACI and role descriptions exist, but not all activities assigned",
+   "deciding_artefact": "EV-084",
+   "failed_clause": "level 2 needs a formal RACI assigning every AI risk role; two activities have no named owner",
+   "score": 1
+  },
+  "GOV-2.2": {
+   "boundary_note": "Role-based training exists, but no competency assessment",
+   "deciding_artefact": "EV-092",
+   "failed_clause": "level 2 needs competency assessment; only a click-through quiz is used, no practical or competence assessment",
+   "score": 1
+  },
+  "GOV-2.3": {
+   "boundary_note": "Charter, minutes, and log exist, but not all decisions have owners",
+   "deciding_artefact": "EV-102",
+   "failed_clause": "level 2 needs every decision in the log to have a named action owner and due date; 3 of 9 decisions lack an owner",
+   "score": 1
+  },
+  "GOV-3.1": {
+   "boundary_note": "Standard and some records exist, but not for all teams and no metrics",
+   "deciding_artefact": "EV-113",
+   "failed_clause": "level 2 needs composition review and inclusion metrics for every team; only 1 of 4 projects reviewed, no inclusion metrics",
+   "score": 1
+  },
+  "GOV-3.2": {
+   "boundary_note": "Representation data exists, but not for AI roles and no action plan",
+   "deciding_artefact": "EV-120",
+   "failed_clause": "level 2 needs AI-role-specific representation monitoring and action plan; only all-staff data, no AI-specific breakdown or action plan",
+   "score": 1
+  },
+  "GOV-4.1": {
+   "boundary_note": "EV-130 and EV-131 show awareness activity and survey, but EV-132 confirms no integration into performance or recognition, so level 2 fails.",
+   "deciding_artefact": "EV-130",
+   "failed_clause": "level 2 needs a systematic culture programme integrating AI risk into performance expectations and recognition, with documented activities; EV-132 shows this is absent",
+   "score": 1
+  },
+  "GOV-4.2": {
+   "boundary_note": "Feedback is collected and reviewed, but no systematic linkage to decisions or defined response process, so level 2 fails.",
+   "deciding_artefact": "EV-140",
+   "failed_clause": "level 2 needs systematic feedback collection with defined response process and a decision log linking feedback to changes; EV-141 and EV-142 show no systematic linkage or response process",
+   "score": 1
+  },
+  "GOV-4.3": {
+   "boundary_note": "Partial coverage and no published report, so level 2 fails.",
+   "deciding_artefact": "EV-150",
+   "failed_clause": "level 2 needs a proactive transparency communication programme with published reporting covering every in-scope AI system; EV-150 covers only 5 of 14 systems, and EV-152 confirms no transparency report",
+   "score": 1
+  },
+  "GOV-5.1": {
+   "boundary_note": "Participation is ad hoc and unplanned, so level 2 fails.",
+   "deciding_artefact": "EV-160",
+   "failed_clause": "level 2 needs active, recorded participation against a documented engagement plan; EV-163 confirms no plan or follow-up record",
+   "score": 1
+  },
+  "GOV-5.2": {
+   "boundary_note": "EV-170 explicitly states absence of all required artefacts, so level 0 is satisfied.",
+   "deciding_artefact": "EV-170",
+   "failed_clause": "level 0 requires no academic contact, no agreement, no publication, and the pack states the absence; EV-170 confirms this",
+   "score": 0
+  },
+  "GOV-6.1": {
+   "boundary_note": "EV-180 and EV-181 show budget, spend, and FTE, but no evidence of review of spend-versus-plan or capacity metrics.",
+   "deciding_artefact": "EV-180",
+   "failed_clause": "level 3 needs spend-versus-plan and governance capacity metrics reviewed each cycle; no review artefact present",
+   "score": 2
+  },
+  "GOV-6.2": {
+   "boundary_note": "EV-190 and EV-191 show a funded plan and review, but no capability maturity metrics tracked.",
+   "deciding_artefact": "EV-191",
+   "failed_clause": "level 3 needs capability maturity metrics tracked against the plan each cycle; no such metrics are named",
+   "score": 2
+  },
+  "MAN-1.1": {
+   "boundary_note": "EV-621 and EV-622 show a gap in coverage, so level 2 fails.",
+   "deciding_artefact": "EV-622",
+   "failed_clause": "level 2 needs every deployment in the list to have a decision record with approver sign-off; EV-622 shows two pilots without a record",
+   "score": 1
+  },
+  "MAN-1.2": {
+   "boundary_note": "EV-630 and EV-631 show prioritisation and register, but not all top risks have traceable allocation decisions.",
+   "deciding_artefact": "EV-630",
+   "failed_clause": "level 3 needs allocation decisions traceable to the top risks, reviewed each cycle; EV-632 shows only 2 of 5 top risks funded, others have plans but no funding decision",
+   "score": 2
+  },
+  "MAN-1.3": {
+   "boundary_note": "Response plans exist for all top risks, but review and completion tracking is incomplete.",
+   "deciding_artefact": "EV-640",
+   "failed_clause": "level 3 needs completion-versus-plan and residual-risk reduction metrics each cycle; EV-641 and EV-642 show incomplete plans and deferred reviews",
+   "score": 2
+  },
+  "MAN-1.4": {
+   "boundary_note": "EV-650 and EV-652 show some coverage, but not all systems, so level 2 fails.",
+   "deciding_artefact": "EV-653",
+   "failed_clause": "level 2 needs residual risk documented and accepted for every in-scope system before deployment; EV-653 shows 3 production systems with no record",
+   "score": 1
+  },
+  "MAN-2.1": {
+   "boundary_note": "Options analysis is not systematic, so level 2 fails.",
+   "deciding_artefact": "EV-662",
+   "failed_clause": "level 2 needs a cost-benefit options analysis including a non-AI alternative for every proposal; EV-662 shows only 2 of 14 systems have this",
+   "score": 1
+  },
+  "MAN-2.2": {
+   "boundary_note": "Coverage fails: only 1 of 14 systems has maintenance and value review",
+   "deciding_artefact": "EV-672",
+   "failed_clause": "level 2 needs value-sustainment programme and maintenance strategy covering every in-scope system; only 1 of 14 systems covered",
+   "score": 1
+  },
+  "MAN-2.3": {
+   "boundary_note": "Coverage fails: procedure and log applied to only 1 of 14 systems",
+   "deciding_artefact": "EV-682",
+   "failed_clause": "level 2 needs documented emergent-risk procedures covering recovery and lessons learned for every in-scope system; only 1 of 14 systems covered",
+   "score": 1
+  },
+  "MAN-2.4": {
+   "boundary_note": "All systems covered, including vendor-dependent; time-to-deactivate measured and reported",
+   "deciding_artefact": "EV-692",
+   "failed_clause": "level 3 needs measured time-to-deactivate from a live drill, reported against target, for every system; time-to-deactivate is measured and reported (EV-693)",
+   "score": 2
+  },
+  "MAN-3.1": {
+   "boundary_note": "Coverage fails: monitoring not applied to all vendors",
+   "deciding_artefact": "EV-702",
+   "failed_clause": "level 2 needs third-party AI monitoring scheduled and applied to every in-scope vendor; 5 lower-spend vendors not covered",
+   "score": 1
+  },
+  "MAN-3.2": {
+   "boundary_note": "One vendor model update relied on without re-evaluation",
+   "deciding_artefact": "EV-711",
+   "failed_clause": "level 2 needs every vendor model update in the change log to have a dated re-evaluation before reliance; 1 update in 2026-09 was applied without evaluation",
+   "score": 1
+  },
+  "MAN-4.1": {
+   "boundary_note": "Coverage fails: only 1 of 14 systems has all plans implemented",
+   "deciding_artefact": "EV-722",
+   "failed_clause": "level 2 needs post-deployment monitoring, appeal and decommissioning plans implemented and tested for every in-scope system; only 1 of 14 systems covered",
+   "score": 1
+  },
+  "MAN-4.2": {
+   "boundary_note": "Partial coverage of measured effect per release",
+   "deciding_artefact": "EV-731",
+   "failed_clause": "level 3 needs improvement throughput and measured effect per release tracked; measured effect recorded for 7 of 9 releases, not all",
+   "score": 2
+  },
+  "MAN-4.3": {
+   "boundary_note": "Not all incidents communicated to stakeholders as required",
+   "deciding_artefact": "EV-741",
+   "failed_clause": "level 2 needs AI incident programme covering every in-scope system, with dated entries, owner, status, and defined stakeholder communication; 1 incident not communicated to stakeholders",
+   "score": 1
+  },
+  "MAP-1.1": {
+   "boundary_note": "Coverage fails: only 2 of 14 systems have full documentation and legal review",
+   "deciding_artefact": "EV-202",
+   "failed_clause": "level 2 needs every AI system to have documented purpose, beneficial use, deployment setting and legal/regulatory review; only 2 of 14 systems covered",
+   "score": 1
+  },
+  "MAP-1.2": {
+   "boundary_note": "Coverage fails: only 1 of 4 projects reviewed against competency requirements",
+   "deciding_artefact": "EV-211",
+   "failed_clause": "level 2 needs documented competency requirements per AI project and team composition reviewed against them; only 1 of 4 projects signed off",
+   "score": 1
+  },
+  "MAP-1.3": {
+   "boundary_note": "No minuted review in last 12 months",
+   "deciding_artefact": "EV-221",
+   "failed_clause": "level 2 needs at least one minuted review in last 12 months; next review is scheduled, not yet held",
+   "score": 1
+  },
+  "MAP-1.4": {
+   "boundary_note": "Coverage fails: only 4 of 14 systems have business cases, 2 have value tracking",
+   "deciding_artefact": "EV-232",
+   "failed_clause": "level 2 needs every AI system to have a business case with value metrics and post-deployment value tracking; only 4 of 14 systems have business cases, 2 have value tracking",
+   "score": 1
+  },
+  "MAP-1.5": {
+   "boundary_note": "Cadence not met: only one performance report, not two or more on a stated interval.",
+   "deciding_artefact": "EV-241",
+   "failed_clause": "level 3 needs actual exposures tracked against each tolerance on a stated cadence; only one report, not a cadence",
+   "score": 2
+  },
+  "MAP-1.6": {
+   "boundary_note": "Traceability matrix shows socio-technical requirements lack test linkage, so level 2 fails.",
+   "deciding_artefact": "EV-251",
+   "failed_clause": "level 2 needs every in-scope system to have socio-technical requirements with traceability to test evidence; 22 socio-technical requirements have no linked tests",
+   "score": 1
+  },
+  "MAP-2.1": {
+   "boundary_note": "Coverage not met: method documentation missing for 8 of 14 systems.",
+   "deciding_artefact": "EV-262",
+   "failed_clause": "level 2 needs method documentation per system; only 6 of 14 systems have it",
+   "score": 1
+  },
+  "MAP-2.2": {
+   "boundary_note": "Coverage not met: only CTA has required documentation and config evidence.",
+   "deciding_artefact": "EV-272",
+   "failed_clause": "level 2 needs knowledge limits, out-of-scope behaviour, and oversight requirement documented and enforced for every system; only CTA has this, others rely on vendor docs",
+   "score": 1
+  },
+  "MAP-2.3": {
+   "boundary_note": "Coverage not met: evidence only for CTA, not all in-scope systems.",
+   "deciding_artefact": "EV-281",
+   "failed_clause": "level 2 needs methodology, TEVV approach, and known limitations documented for every in-scope system; only CTA is covered",
+   "score": 1
+  },
+  "MAP-3.1": {
+   "boundary_note": "Coverage not met: 11 of 14 systems lack required analysis.",
+   "deciding_artefact": "EV-292",
+   "failed_clause": "level 2 needs benefits analysis with baseline and validation method for every in-scope system; only 3 of 14 systems have this",
+   "score": 1
+  },
+  "MAP-3.2": {
+   "boundary_note": "Coverage and linkage not met: only CTA covered, no explicit link to risk tolerance.",
+   "deciding_artefact": "EV-301",
+   "failed_clause": "level 2 needs total-cost analysis including non-monetary costs and explicit link to risk tolerance for every system; only CTA covered, no link to risk tolerance",
+   "score": 1
+  },
+  "MAP-3.3": {
+   "boundary_note": "Cadence and measurement for scope-drift checks evidenced.",
+   "deciding_artefact": "EV-311",
+   "failed_clause": "level 3 needs scope-drift checks measured per release; evidence of checks per release is present, so level 3 is satisfied",
+   "score": 2
+  },
+  "MAP-3.4": {
+   "boundary_note": "Coverage and certification not met: not all operators assessed, no certification.",
+   "deciding_artefact": "EV-321",
+   "failed_clause": "level 2 needs formal proficiency requirements, assessment, and certification for every operator role; only 34 of 61 assessed, no certification requirement",
+   "score": 1
+  },
+  "MAP-3.5": {
+   "boundary_note": "Effectiveness assessment not actioned, cadence and coverage not met.",
+   "deciding_artefact": "EV-332",
+   "failed_clause": "level 2 needs a procedure covering every system, citing policy, naming reviewer/override rights, and effectiveness assessment with owners/due dates; findings not actioned, no cadence, coverage unclear",
+   "score": 1
+  },
+  "MAP-4.1": {
+   "boundary_note": "Coverage not met: legal review missing for 6 of 9 vendors.",
+   "deciding_artefact": "EV-341",
+   "failed_clause": "level 2 needs systematic third-party risk mapping including legal risk for every third-party AI component; only 3 of 9 vendors have legal review",
+   "score": 1
+  },
+  "MAP-4.2": {
+   "boundary_note": "Coverage and effectiveness monitoring not met: only partial implementation, no testing.",
+   "deciding_artefact": "EV-351",
+   "failed_clause": "level 2 needs documented controls implemented and effectiveness monitored for every third-party AI component; only 3 of 8 controls implemented, no effectiveness testing",
+   "score": 1
+  },
+  "MAP-5.1": {
+   "boundary_note": "Coverage shortfall: only 1/14 systems have an assessment, so cannot reach level 2",
+   "deciding_artefact": "EV-362",
+   "failed_clause": "level 2 needs an impact assessment for every in-scope system; only 1 of 14 systems covered",
+   "score": 1
+  },
+  "MAP-5.2": {
+   "boundary_note": "Coverage shortfall: not all planned sessions have records, so cannot reach level 2",
+   "deciding_artefact": "EV-371",
+   "failed_clause": "level 2 needs a systematic engagement programme with records for all planned sessions; only 4 of 6 sessions have records",
+   "score": 1
+  },
+  "MEA-1.1": {
+   "boundary_note": "Level 3 satisfied by coverage report reviewed by named body; no evidence of external validation or science revision",
+   "deciding_artefact": "EV-403",
+   "failed_clause": "level 4 needs measurement science revised or automated from effectiveness data, with external validation; none named",
+   "score": 3
+  },
+  "MEA-1.2": {
+   "boundary_note": "Validation record missing for 5/9 metrics, so cannot reach level 2",
+   "deciding_artefact": "EV-410",
+   "failed_clause": "level 2 needs every metric in the register to carry a validation record; only 4 of 9 metrics have this",
+   "score": 1
+  },
+  "MEA-1.3": {
+   "boundary_note": "Independent assessment and documentation present, but no coverage measurement or report to audit",
+   "deciding_artefact": "EV-421",
+   "failed_clause": "level 3 needs coverage measured and reported to audit; no such report named",
+   "score": 2
+  },
+  "MEA-2.1": {
+   "boundary_note": "All evaluations have manifests, but no measurement of reproducibility share until audit in 2026-09 (EV-432), which is not reported as a metric",
+   "deciding_artefact": "EV-431",
+   "failed_clause": "level 3 needs reproducibility measured (share of evaluations a third party could rerun without help); none named",
+   "score": 2
+  },
+  "MEA-2.10": {
+   "boundary_note": "Coverage shortfall: only 2/14 systems have privacy impact assessments",
+   "deciding_artefact": "EV-522",
+   "failed_clause": "level 2 needs comprehensive privacy evaluation per in-scope system; only 2 of 14 systems have a PIA",
+   "score": 1
+  },
+  "MEA-2.11": {
+   "boundary_note": "Coverage shortfall: only one system has fairness evaluation",
+   "deciding_artefact": "EV-534",
+   "failed_clause": "level 2 needs every system in scope to have a fairness evaluation; only one system covered",
+   "score": 1
+  },
+  "MEA-2.12": {
+   "boundary_note": "Absence established: no assessment or tracking for any system",
+   "deciding_artefact": "EV-542",
+   "failed_clause": "level 1 needs environmental considerations noted; none exist for any system",
+   "score": 0
+  },
+  "MEA-2.13": {
+   "boundary_note": "Coverage shortfall: only CTA's testing is reviewed, not the whole programme",
+   "deciding_artefact": "EV-552",
+   "failed_clause": "level 2 needs systematic TEVV effectiveness evaluation for the organisation's testing programme; only CTA's testing is covered",
+   "score": 1
+  },
+  "MEA-2.2": {
+   "boundary_note": "No studies run, so control is NA",
+   "deciding_artefact": "",
+   "failed_clause": "no human-subject evaluation in the period; control not applicable",
+   "score": "NA"
+  },
+  "MEA-2.3": {
+   "boundary_note": "Level 3 satisfied by results-versus-criteria tracked per release and acceptance decisions recorded; no evidence of continuous demonstration or automated measurement",
+   "deciding_artefact": "EV-453",
+   "failed_clause": "level 4 needs continuous demonstration and automated measurement, with criteria revised from production evidence; none named",
+   "score": 3
+  },
+  "MEA-2.4": {
+   "boundary_note": "",
+   "deciding_artefact": "EV-463",
+   "failed_clause": "",
+   "score": 4
+  },
+  "MEA-2.5": {
+   "boundary_note": "EV-470 and EV-471 show only partial generalisability and no reliability across labelers; level 2 not fully satisfied",
+   "deciding_artefact": "EV-470",
+   "failed_clause": "level 2 needs validity and reliability demonstrated including generalisability beyond the test set; generalisability only assessed on one region, reliability across labelers not assessed",
+   "score": 1
+  },
+  "MEA-2.6": {
+   "boundary_note": "EV-480 and EV-481 satisfy level 2; EV-482 confirms no periodic re-test or tracking",
+   "deciding_artefact": "EV-481",
+   "failed_clause": "level 3 needs residual safety risk and open mitigation items tracked against thresholds; no tracking or thresholds evidenced",
+   "score": 2
+  },
+  "MEA-2.7": {
+   "boundary_note": "EV-490 and EV-491 confirm existence of report but not its content; cannot confirm coverage or resilience documentation",
+   "deciding_artefact": "",
+   "failed_clause": "level 2 needs comprehensive security evaluation with adversarial or red-team testing and resilience documentation per system; report contents not available to assessment",
+   "score": "NA"
+  },
+  "MEA-2.8": {
+   "boundary_note": "EV-500 and EV-502 show assessment only for CTA, no adequacy test artefact",
+   "deciding_artefact": "EV-500",
+   "failed_clause": "level 2 needs both a dated transparency/accountability risk assessment naming affected population and decision points, and a separate adequacy test with findings; only assessment for CTA, no adequacy test",
+   "score": 1
+  },
+  "MEA-2.9": {
+   "boundary_note": "EV-511 is a one-off study, not per-release measurement",
+   "deciding_artefact": "EV-511",
+   "failed_clause": "level 3 needs measured user comprehension and explanation-use rates per release; only a one-off interpretability study, not per release",
+   "score": 2
+  },
+  "MEA-3.1": {
+   "boundary_note": "EV-561 shows 8 of 9 months have minutes; one gap drops to level 1",
+   "deciding_artefact": "EV-561",
+   "failed_clause": "level 2 needs every review month in the period to have dated minutes; one month skipped with no note",
+   "score": 1
+  },
+  "MEA-3.2": {
+   "boundary_note": "EV-570 and EV-571 show alternative methods and limits, but no method-comparison results or confidence per case",
+   "deciding_artefact": "EV-570",
+   "failed_clause": "level 3 needs method-comparison results and stated confidence per hard-to-assess case; not evidenced",
+   "score": 2
+  },
+  "MEA-3.3": {
+   "boundary_note": "EV-582 confirms analysis is not linked to system changes",
+   "deciding_artefact": "EV-582",
+   "failed_clause": "level 2 needs a record showing analysis of feedback produced a named change or decision with the date; analysis not linked to system changes in a recorded way",
+   "score": 1
+  },
+  "MEA-4.1": {
+   "boundary_note": "EV-590 and EV-591 show context alignment and deployment data, but no gap measurement",
+   "deciding_artefact": "EV-590",
+   "failed_clause": "level 3 needs performance gap between lab and production measured and reported; not evidenced",
+   "score": 2
+  },
+  "MEA-4.2": {
+   "boundary_note": "EV-600 and EV-601 show systematic expert validation and independence, but no measurement of coverage or disagreement resolution",
+   "deciding_artefact": "EV-600",
+   "failed_clause": "level 3 needs review coverage and resolution outcome of disagreements measured; not evidenced",
+   "score": 2
+  },
+  "MEA-4.3": {
+   "boundary_note": "EV-612 measures latency and time, but no target or reviewing body",
+   "deciding_artefact": "EV-611",
+   "failed_clause": "level 3 needs detection latency and change-to-action time recorded per change event against a stated target, reported to a named reviewing body on a stated cadence; no stated target or named reviewing body",
+   "score": 2
+  }
+ },
+ "started": "2026-10-18T14:37:39Z",
+ "temperature": 0.0,
+ "transport": "openrouter"
+}

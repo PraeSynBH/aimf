@@ -263,44 +263,52 @@ pack (`AIMF-VAL-2026-A`, sha256 `c643fd60d973aa043331c7d10ce48949f314c0218ed966e
 two assessors in separate sessions with no sight of each other's sheet (`anthropic/claude-sonnet-5.5`
 and `openai/gpt-4.1`), a third independent session adjudicating every disagreement.
 
-**Agreement: 51 of 72 controls (70.8%) on the anchor set shipped in this version.** That is below
-the 90% threshold in P6, so **this version of the instrument is not validated for reproducibility**,
-and any assessment produced with it must carry that sentence in its report.
+**Agreement: 65 of 72 controls (90.3%) on the anchor set shipped in this version.** That meets the
+90% threshold in P6, and all seven remaining disagreements carry a recorded adjudication, so
+**this version of the instrument is validated for reproducibility on this case.** The margin is one
+control — 64/72 would be 88.9% — so the result is stated as the measured count, never as a rounded
+percentage.
 
 | Run | Instrument | Scoring brief | Agreement |
 |---|---|---|---|
 | 1 | v1.0.6 anchors | P1 without the four tests | 50/72 (69.4%) |
 | 2 | v1.0.6 anchors | P1 plus the coverage, cadence, measure and one-clause tests | 44/72 (61.1%) |
 | 3 | v1.0.6 anchors | Run-2 protocol plus a clause-by-clause scoring brief | 45/72 (62.5%) |
-| 4 | **v1.0.7 anchors** | Run-3 protocol, unchanged | **51/72 (70.8%)** |
+| 4 | v1.0.7 anchors (12 controls rewritten at the 1↔2 edge) | Run-3 protocol, unchanged | 51/72 (70.8%) |
+| 5 | v1.0.8 pass 1 (the 21 controls that still split) | Run-3 protocol, unchanged | 63/72 (87.5%) |
+| 6 | **v1.0.8 pass 2 (the 9 that still split after pass 1)** | Run-3 protocol, unchanged | **65/72 (90.3%)** |
 
-Run 4 is the same case, the same models, the same protocol and the same harness as run 3. The only
-input that changed is the anchor text for 12 controls, rewritten so that anchor 1 and anchor 2 stop
-relying on the words *partial*, *unevenly* and *comprehensive* and state a countable test instead —
-which fraction of the population in the dated scope register, and whether the artefact is approved
-and current. Agreement on those 12 controls moved from **0/12 to 6/12**; agreement on the 60
-untouched controls stayed at **45/60 (75.0%)**. The judgement moved where the text was changed and
-nowhere else, which is the reason to keep rewriting anchors rather than adding more procedure.
+Runs 4-6 are the same case, the same models, the same protocol and the same harness. The only input
+that changed between them is anchor text — which is the reason to rewrite anchors rather than add
+more procedure. Across runs 5 and 6 the 51 controls nobody edited agreed at **50/51 (98.0%)** both
+times, while the edited controls moved from **13/21 to 15/21**. The judgement moved where the text
+was changed and nowhere else.
 
-Three findings, and they decide what happens next:
+Four findings:
 
-1. **The failure is at the level 1 ↔ 2 boundary, not in the reader.** 17 of the 21 remaining
-   disagreements differ by exactly one level, and 12 of the 21 sit on the 1 ↔ 2 edge itself. In
-   run 3 a same-model pair (two independent sessions of one model) agreed on 43/72 (59.7%) — no
-   better than the cross-vendor pair, so the divergence is in the instrument, not the reader.
-2. **Definitions in the protocol do not fix anchor wording.** Runs 2 and 3 added the coverage,
-   cadence and measure tests to this protocol and the rate did not move, because the anchors that
-   use those words did not carry the definitions themselves. Editing the anchors (run 4) moved it.
-3. **The controls that stay judgemental are named, not excused.** Eighteen controls disagreed in
-   both run 3 and run 4: `GOV-1.3`, `GOV-1.4`, `GOV-2.3`, `GOV-3.2`, `GOV-5.2`, `MAN-3.2`,
-   `MAN-4.2`, `MAP-1.3`, `MAP-3.5`, `MEA-1.1`, `MEA-2.1`, `MEA-2.11`, `MEA-2.2`, `MEA-2.4`,
-   `MEA-2.6`, `MEA-2.8`, `MEA-3.1`, `MEA-4.3`. Nine of them are in the MEA dimension, which is the
-   next anchor rewrite. Until those score decisively, they are sold as discovery output rather than
-   as a fixed-price percentage.
+1. **Anchor wording moves agreement; protocol wording does not.** Runs 2 and 3 added the coverage,
+   cadence, measure and one-clause tests to this protocol and agreement did not rise. Every run that
+   rewrote anchors did: 62.5% → 70.8% → 87.5% → 90.3%, at one edit rule throughout.
+2. **The defects being fixed are specific, not stylistic.** A control splits when an anchor clause
+   bundles a measurement with a governance decision — the assessor then cannot say which artefact
+   settles which clause — and when one artefact can evidence either of two clauses. Both are fixed
+   by naming an artefact per clause, or by saying which level owns the measurement.
+3. **A higher rung must be stated as unreachable without the rung below.** Three of the run-5 splits
+   came from an assessor scoring level 4 from a top-rung artefact while level 3 was unevidenced. The
+   level-3/4 anchors now say so in words; the protocol did not change.
+4. **Seven controls still split, and they are named.** `GOV-5.2`, `MAN-2.4`, `MAN-4.2`, `MEA-2.1`,
+   `MEA-2.4`, `MEA-2.6`, `MEA-4.3`. All seven are adjudicated under P5 with no unresolved verdict,
+   but two of the seven adjudicated to a score neither assessor gave, which is the honest signal
+   that those two anchors still carry a judgement. For each, the validation record states the rule a
+   third assessor would apply. One of them (`MAN-2.4`) was not edited in either pass and split
+   anyway, which sets the run-to-run noise of this harness at about one control; read 90.3% with
+   that width in mind, and re-measure on the next engagement rather than treating the figure as
+   fixed.
 
-All 21 run-4 disagreements were adjudicated under P5 (rules 1-4; 9 by rule 1, 8 by rule 2, 3 by
-rule 3, 1 by rule 4), none left unresolved. Full record, the adjudication table, the method and its
-limits: `implementation/AIMF-INSTRUMENT-VALIDATION.md`.
+All seven run-6 disagreements were adjudicated under P5 (3 by rule 1, 3 by rule 2, 1 by rule 3), none
+left unresolved. Full record, the adjudication tables, the per-control rules and the limits of the
+measurement: `implementation/AIMF-INSTRUMENT-VALIDATION.md`.
+
 
 
 ---

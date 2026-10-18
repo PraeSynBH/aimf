@@ -75,9 +75,21 @@ if g is None:
     sys.exit("FAIL: the Assessment Guide has no P7 measured result")
 if r != g:
     sys.exit(f"FAIL: record says {r}, guide says {g} - the artifact contradicts itself")
-if 'not validated' not in guide and 'not validated for reproducibility' not in guide:
-    sys.exit("FAIL: guide states a result without the not-validated sentence")
-print(f"OK: both documents state {r[0]}/72 ({r[1]}%) and the guide carries the not-validated sentence")
+
+# P6: below 90% the guide must carry the not-validated sentence; at or above 90% it must
+# carry the validated one. Both directions are gated so the sentence cannot be dropped
+# without a measured number that earns it.
+if r[1] >= 90.0:
+    if 'not validated' in guide:
+        sys.exit("FAIL: guide is at or above the P6 threshold but still says not validated")
+    if 'validated for reproducibility' not in guide:
+        sys.exit("FAIL: guide clears the threshold without stating that it is validated")
+    state = "validated for reproducibility"
+else:
+    if 'not validated' not in guide:
+        sys.exit("FAIL: guide is below the P6 threshold without the not-validated sentence")
+    state = "not validated"
+print(f"OK: both documents state {r[0]}/72 ({r[1]}%) and the guide says {state}")
 PY
 printf 'anchor set sha (in zip): '
 python3 - <<'PY'

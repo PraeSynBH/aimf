@@ -182,7 +182,7 @@ Use the [AIMF Assessment Guide](implementation/AIMF-ASSESSMENT-GUIDE.md) to:
 2. Determine your current maturity level (1-5)
 3. Identify strengths and gaps
 
-Score each control with the [AIMF Assessment Question Bank](implementation/AIMF-ASSESSMENT-QUESTION-BANK.md): one question, one evidence expectation and five behavioural anchors (0-4 / ML1-ML5) for all 72 controls, scored under the guide's written Scoring Protocol so that two assessors given the same evidence reach the same number. That is the target and it is not yet met: the blind double-scoring of the validation case agreed on 51 of 72 controls (70.8%) — up from 45/72 (62.5%) before the level-1/level-2 anchors were rewritten — see [AIMF-INSTRUMENT-VALIDATION.md](implementation/AIMF-INSTRUMENT-VALIDATION.md).
+Score each control with the [AIMF Assessment Question Bank](implementation/AIMF-ASSESSMENT-QUESTION-BANK.md): one question, one evidence expectation and five behavioural anchors (0-4 / ML1-ML5) for all 72 controls, scored under the guide's written Scoring Protocol so that two assessors given the same evidence reach the same number. The blind double-scoring of the validation case agreed on 65 of 72 controls (90.3%) — above the 90% publication threshold in the protocol, up from 45/72 (62.5%) before the behavioural anchors were rewritten, and still short of the 72/72 target: seven controls still split and are named in [AIMF-INSTRUMENT-VALIDATION.md](implementation/AIMF-INSTRUMENT-VALIDATION.md).
 
 ### Step 2: Select Your Profile
 

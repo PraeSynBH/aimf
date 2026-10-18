@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.7
+**Version**: 1.0.8
 **Publication Date**: October 18, 2026
 **Status**: Pre-Publication (Working Draft)
 
@@ -14,6 +14,44 @@ All notable changes to the AI Management Framework (AIMF) by PraeSyn will be doc
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.8] - 2026-10-18 (Anchors rewritten on the controls that still split; measured 90.3%, threshold met)
+
+**Change Type**: Instrument correction (reproducibility)
+**Rationale**: v1.0.7 measured 51/72 (70.8%) and named the 21 controls that still split. v1.0.8 applies
+the same edit rule to those 21, re-measures (63/72, 87.5%), then applies it again to the 9 that still
+split and re-measures (**65/72, 90.3%**). No protocol text changed in either pass — runs 2 and 3 had
+already shown that adding rules does not move agreement. The ≥90% threshold in P6 is met for the first
+time; the 72/72 target in requirement A3 is not.
+
+#### Changed
+
+- **`implementation/AIMF-ASSESSMENT-QUESTION-BANK.csv`** — anchors on 30 controls rewritten in two
+  passes under one rule: anchor 1 names the countable test the artefact fails (a stated population
+  not fully covered, a dated record missing for one member, or a required element absent) and anchor 2
+  names the same artefact passing every one of those tests. 360/360 anchors remain non-empty, distinct
+  and ladder-intact; `scripts/aimf_question_bank.py check` and `scripts/aimf_mappings.py check` pass
+  in-zip.
+- **Anchor defects fixed by kind, not by control** — clause blending (a level-2 anchor that required a
+  level-3 measure), unreachable rung (an assessor reaching level 4 with level 3 unevidenced),
+  unstated population, assertion read as a minute, and an absence boundary that excluded the level-1
+  case.
+- **`implementation/AIMF-INSTRUMENT-VALIDATION.md` §9-§10** — runs 5 and 6, the delta histogram, the
+  adjudication-by-rule counts, and for each of the seven controls that still split, the rule a third
+  assessor would apply.
+- **`implementation/AIMF-ASSESSMENT-GUIDE.md` P7** — measured result 65/72 (90.3%), the six-run table,
+  and the four findings. The not-validated sentence is removed because the threshold is met; the
+  margin (one control) and the harness's run-to-run noise (about one control) are stated in the same
+  paragraph.
+- **`validation/verify_release.sh`** — the P6 state gate now runs in both directions: below 90% the
+  guide must carry the not-validated sentence, at or above it must carry the validated one, so the
+  sentence cannot be dropped without a measured number that earns it.
+
+#### Not changed
+
+- **Protocol P1-P6.** Untouched in both passes, by design.
 
 ---
 

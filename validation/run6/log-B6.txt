@@ -1,0 +1,7 @@
+B6: 12/72 scored
+B6: 24/72 scored
+B6: 36/72 scored
+B6: 48/72 scored
+B6: 60/72 scored
+B6: 72/72 scored
+wrote run6/scores-B6.json: 72 controls

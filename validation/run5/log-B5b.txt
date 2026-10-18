@@ -1,0 +1,7 @@
+B5: 12/72 scored
+B5: 24/72 scored
+B5: 36/72 scored
+B5: 48/72 scored
+B5: 60/72 scored
+B5: 72/72 scored
+wrote run5/scores-B5.json: 72 controls

@@ -1,0 +1,7 @@
+D5: 12/72 scored
+D5: 24/72 scored
+D5: 36/72 scored
+D5: 48/72 scored
+D5: 60/72 scored
+D5: 72/72 scored
+wrote run5/scores-D5.json: 72 controls

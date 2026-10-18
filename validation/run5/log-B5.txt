@@ -1,0 +1,32 @@
+B5: 12/72 scored
+B5: 24/72 scored
+B5: 36/72 scored
+B5: 48/72 scored
+B5: 60/72 scored
+batch 6 parse failure: Illegal trailing comma before end of array: line 12 column 315 (char 3401)
+[{"control":"MEA-2.4","score":4,"deciding_artefact":"EV-463","failed_clause":"","boundary_note":""},
+{"control":"MEA-2.5","score":1,"deciding_artefact":"EV-470","failed_clause":"level 2 needs validity and reliability demonstrated and documented, including generalisability beyond the test set; generalisability and reliability not fully evidenced for all systems","boundary_note":"EV-471 shows generalisability only for one region, not all; EV-472 shows reliability across labelers not assessed"},
+{"control":"MEA-2.6","score":2,"deciding_artefact":"EV-481","failed_clause":"level 3 needs residual safety risk and open mitigation items tracked against thresholds; no tracking or thresholds evidenced","boundary_note":"EV-482 confirms no periodic re-test or tracking"},
+{"control":"MEA-2.7","score":"NA","deciding_artefact":"","failed_clause":"level 2 needs comprehensive security evaluation with adversarial or red-team testing and resilience documentation per system; report contents not available to assessment","boundary_note":"EV-491: report is referenced but not available, so cannot confirm content or coverage"},
+{"control":"MEA-2.8","score":1,"deciding_artefact":"EV-500","failed_clause":"level 2 needs both a dated transparency/accountability risk assessment naming affected population and decision points, and a separate adequacy test with findings; only assessment present, no adequacy test","boundary_note":"EV-502: assessment covers CTA only, not all systems"},
+{"control":"MEA-2.9","score":2,"deciding_artefact":"EV-511","failed_clause":"level 3 needs measured user comprehension and explanation-use rates per release; only a one-off interpretability study, not per release","boundary_note":"EV-512: guidance not updated since model refresh"},
+{"control":"MEA-3.1","score":1,"deciding_artefact":"EV-561","failed_clause":"level 2 needs every review month in the period to have dated minutes; one month skipped with no note","boundary_note":"EV-561: 8 of 9 months have minutes, one missin
+Traceback (most recent call last):
+  File "/Users/benh/Programming/Business/ai_framework/framework-and-training/validation/score_pack.py", line 266, in <module>
+    main()
+    ~~~~^^
+  File "/Users/benh/Programming/Business/ai_framework/framework-and-training/validation/score_pack.py", line 222, in main
+    rows = parse(raw)
+  File "/Users/benh/Programming/Business/ai_framework/framework-and-training/validation/score_pack.py", line 190, in parse
+    return json.loads(txt[start:end + 1])
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Illegal trailing comma before end of array: line 12 column 315 (char 3401)
