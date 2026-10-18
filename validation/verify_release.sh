@@ -51,8 +51,18 @@ done
 
 echo
 echo "== validation record"
-[ -f implementation/AIMF-INSTRUMENT-VALIDATION.md ] && \
-  grep -m1 -E '^Agreement|agreement' implementation/AIMF-INSTRUMENT-VALIDATION.md || echo "MISSING record"
+if [ -f implementation/AIMF-INSTRUMENT-VALIDATION.md ]; then
+  grep -m1 -E '^\*\*Current result' implementation/AIMF-INSTRUMENT-VALIDATION.md || echo "MISSING headline result"
+else
+  echo "MISSING record"
+fi
+printf 'P7 measured line: '
+grep -m1 -E '^\*\*Agreement: [0-9]+ of 72 controls' implementation/AIMF-ASSESSMENT-GUIDE.md || echo "MISSING"
+printf 'anchor set sha (in zip): '
+python3 - <<'PY'
+import hashlib
+print(hashlib.sha256(open('implementation/AIMF-ASSESSMENT-QUESTION-BANK.csv','rb').read()).hexdigest())
+PY
 
 echo
 echo "OK: in-zip verification complete"

@@ -1,9 +1,13 @@
 # Instrument validation record — case AIMF-VAL-2026-A
 
-**Result: 45/72 controls agreed (62.5%). The 72/72 target in requirement A3 is not met.**
-Published as measured on 2026-10-18, against AIMF v1.0.6.
+**Current result (v1.0.7): 51/72 controls agreed (70.8%). The 72/72 target in requirement A3 is not met.**
+**Baseline (v1.0.6, same case, same harness): 45/72 (62.5%).**
 
-This record exists because an unmeasured claim of reproducibility is worthless. The run below is
+Published as measured on 2026-10-18. §1-§7 record the v1.0.6 measurement and its diagnosis; §8
+records the re-run against the v1.0.7 anchors and what changed. Both are published because the
+comparison is the evidence: the anchor rewrite moved the number, and did not move it far enough.
+
+This record exists because an unmeasured claim of reproducibility is worthless. The runs below are
 the measurement, including the parts that failed.
 
 ---
