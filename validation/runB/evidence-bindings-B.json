@@ -1,0 +1,1006 @@
+{
+ "control_count": 72,
+ "controls": {
+  "GOV-1.1": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-015",
+    "EV-016",
+    "EV-017"
+   ],
+   "mandatory": [
+    "EV-014",
+    "EV-015",
+    "EV-016",
+    "EV-017"
+   ],
+   "primary": "EV-014"
+  },
+  "GOV-1.2": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-021",
+    "EV-022",
+    "EV-023"
+   ],
+   "mandatory": [
+    "EV-020",
+    "EV-021",
+    "EV-022",
+    "EV-023"
+   ],
+   "primary": "EV-020"
+  },
+  "GOV-1.3": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-031",
+    "EV-032",
+    "EV-033"
+   ],
+   "mandatory": [
+    "EV-030",
+    "EV-031",
+    "EV-032",
+    "EV-033"
+   ],
+   "primary": "EV-030"
+  },
+  "GOV-1.4": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-041",
+    "EV-042",
+    "EV-043",
+    "EV-044",
+    "EV-045",
+    "EV-046"
+   ],
+   "mandatory": [
+    "EV-040",
+    "EV-041",
+    "EV-042",
+    "EV-043",
+    "EV-044",
+    "EV-045",
+    "EV-046"
+   ],
+   "primary": "EV-040"
+  },
+  "GOV-1.5": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-051",
+    "EV-052",
+    "EV-053"
+   ],
+   "mandatory": [
+    "EV-050",
+    "EV-051",
+    "EV-052",
+    "EV-053"
+   ],
+   "primary": "EV-050"
+  },
+  "GOV-1.6": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-061",
+    "EV-062",
+    "EV-063"
+   ],
+   "mandatory": [
+    "EV-060",
+    "EV-061",
+    "EV-062",
+    "EV-063"
+   ],
+   "primary": "EV-060"
+  },
+  "GOV-1.7": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-071",
+    "EV-072",
+    "EV-073"
+   ],
+   "mandatory": [
+    "EV-070",
+    "EV-071",
+    "EV-072",
+    "EV-073"
+   ],
+   "primary": "EV-070"
+  },
+  "GOV-2.1": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-082",
+    "EV-083",
+    "EV-084"
+   ],
+   "mandatory": [
+    "EV-080",
+    "EV-082",
+    "EV-083",
+    "EV-084"
+   ],
+   "primary": "EV-080"
+  },
+  "GOV-2.2": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-091",
+    "EV-092",
+    "EV-093",
+    "EV-094"
+   ],
+   "mandatory": [
+    "EV-090",
+    "EV-091",
+    "EV-092",
+    "EV-093",
+    "EV-094"
+   ],
+   "primary": "EV-090"
+  },
+  "GOV-2.3": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-101",
+    "EV-102",
+    "EV-103"
+   ],
+   "mandatory": [
+    "EV-100",
+    "EV-101",
+    "EV-102",
+    "EV-103"
+   ],
+   "primary": "EV-100"
+  },
+  "GOV-3.1": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-112",
+    "EV-113",
+    "EV-114"
+   ],
+   "mandatory": [
+    "EV-110",
+    "EV-112",
+    "EV-113",
+    "EV-114"
+   ],
+   "primary": "EV-110"
+  },
+  "GOV-3.2": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-121",
+    "EV-122"
+   ],
+   "mandatory": [
+    "EV-120",
+    "EV-121",
+    "EV-122"
+   ],
+   "primary": "EV-120"
+  },
+  "GOV-4.1": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-131",
+    "EV-132",
+    "EV-133"
+   ],
+   "mandatory": [
+    "EV-130",
+    "EV-131",
+    "EV-132",
+    "EV-133"
+   ],
+   "primary": "EV-130"
+  },
+  "GOV-4.2": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-141",
+    "EV-142",
+    "EV-143"
+   ],
+   "mandatory": [
+    "EV-140",
+    "EV-141",
+    "EV-142",
+    "EV-143"
+   ],
+   "primary": "EV-140"
+  },
+  "GOV-4.3": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-151",
+    "EV-152",
+    "EV-153"
+   ],
+   "mandatory": [
+    "EV-150",
+    "EV-151",
+    "EV-152",
+    "EV-153"
+   ],
+   "primary": "EV-150"
+  },
+  "GOV-5.1": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-162",
+    "EV-163"
+   ],
+   "mandatory": [
+    "EV-160",
+    "EV-162",
+    "EV-163"
+   ],
+   "primary": "EV-160"
+  },
+  "GOV-5.2": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-171",
+    "EV-172"
+   ],
+   "mandatory": [
+    "EV-170",
+    "EV-171",
+    "EV-172"
+   ],
+   "primary": "EV-170"
+  },
+  "GOV-6.1": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-181",
+    "EV-182"
+   ],
+   "mandatory": [
+    "EV-180",
+    "EV-181",
+    "EV-182"
+   ],
+   "primary": "EV-180"
+  },
+  "GOV-6.2": {
+   "dimension": "GOV",
+   "level_artefacts": [
+    "EV-191",
+    "EV-192"
+   ],
+   "mandatory": [
+    "EV-190",
+    "EV-191",
+    "EV-192"
+   ],
+   "primary": "EV-190"
+  },
+  "MAN-1.1": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-621",
+    "EV-622",
+    "EV-623"
+   ],
+   "mandatory": [
+    "EV-620",
+    "EV-621",
+    "EV-622",
+    "EV-623"
+   ],
+   "primary": "EV-620"
+  },
+  "MAN-1.2": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-631",
+    "EV-632"
+   ],
+   "mandatory": [
+    "EV-630",
+    "EV-631",
+    "EV-632"
+   ],
+   "primary": "EV-630"
+  },
+  "MAN-1.3": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-641",
+    "EV-642"
+   ],
+   "mandatory": [
+    "EV-640",
+    "EV-641",
+    "EV-642"
+   ],
+   "primary": "EV-640"
+  },
+  "MAN-1.4": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-652",
+    "EV-653"
+   ],
+   "mandatory": [
+    "EV-650",
+    "EV-652",
+    "EV-653"
+   ],
+   "primary": "EV-650"
+  },
+  "MAN-2.1": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-661",
+    "EV-662"
+   ],
+   "mandatory": [
+    "EV-660",
+    "EV-661",
+    "EV-662"
+   ],
+   "primary": "EV-660"
+  },
+  "MAN-2.2": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-671",
+    "EV-672"
+   ],
+   "mandatory": [
+    "EV-670",
+    "EV-671",
+    "EV-672"
+   ],
+   "primary": "EV-670"
+  },
+  "MAN-2.3": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-681",
+    "EV-682"
+   ],
+   "mandatory": [
+    "EV-680",
+    "EV-681",
+    "EV-682"
+   ],
+   "primary": "EV-680"
+  },
+  "MAN-2.4": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-691",
+    "EV-692",
+    "EV-693"
+   ],
+   "mandatory": [
+    "EV-690",
+    "EV-691",
+    "EV-692",
+    "EV-693"
+   ],
+   "primary": "EV-690"
+  },
+  "MAN-3.1": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-701",
+    "EV-702"
+   ],
+   "mandatory": [
+    "EV-700",
+    "EV-701",
+    "EV-702"
+   ],
+   "primary": "EV-700"
+  },
+  "MAN-3.2": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-711",
+    "EV-712",
+    "EV-713"
+   ],
+   "mandatory": [
+    "EV-710",
+    "EV-711",
+    "EV-712",
+    "EV-713"
+   ],
+   "primary": "EV-710"
+  },
+  "MAN-4.1": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-721",
+    "EV-722"
+   ],
+   "mandatory": [
+    "EV-720",
+    "EV-721",
+    "EV-722"
+   ],
+   "primary": "EV-720"
+  },
+  "MAN-4.2": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-731",
+    "EV-732"
+   ],
+   "mandatory": [
+    "EV-730",
+    "EV-731",
+    "EV-732"
+   ],
+   "primary": "EV-730"
+  },
+  "MAN-4.3": {
+   "dimension": "MAN",
+   "level_artefacts": [
+    "EV-741",
+    "EV-742"
+   ],
+   "mandatory": [
+    "EV-740",
+    "EV-741",
+    "EV-742"
+   ],
+   "primary": "EV-740"
+  },
+  "MAP-1.1": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-201",
+    "EV-202"
+   ],
+   "mandatory": [
+    "EV-200",
+    "EV-201",
+    "EV-202"
+   ],
+   "primary": "EV-200"
+  },
+  "MAP-1.2": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-211",
+    "EV-212"
+   ],
+   "mandatory": [
+    "EV-210",
+    "EV-211",
+    "EV-212"
+   ],
+   "primary": "EV-210"
+  },
+  "MAP-1.3": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-221",
+    "EV-222"
+   ],
+   "mandatory": [
+    "EV-220",
+    "EV-221",
+    "EV-222"
+   ],
+   "primary": "EV-220"
+  },
+  "MAP-1.4": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-231",
+    "EV-232"
+   ],
+   "mandatory": [
+    "EV-230",
+    "EV-231",
+    "EV-232"
+   ],
+   "primary": "EV-230"
+  },
+  "MAP-1.5": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-241",
+    "EV-242"
+   ],
+   "mandatory": [
+    "EV-240",
+    "EV-241",
+    "EV-242"
+   ],
+   "primary": "EV-240"
+  },
+  "MAP-1.6": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-251",
+    "EV-252"
+   ],
+   "mandatory": [
+    "EV-250",
+    "EV-251",
+    "EV-252"
+   ],
+   "primary": "EV-250"
+  },
+  "MAP-2.1": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-261",
+    "EV-262"
+   ],
+   "mandatory": [
+    "EV-260",
+    "EV-261",
+    "EV-262"
+   ],
+   "primary": "EV-260"
+  },
+  "MAP-2.2": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-271",
+    "EV-272"
+   ],
+   "mandatory": [
+    "EV-270",
+    "EV-271",
+    "EV-272"
+   ],
+   "primary": "EV-270"
+  },
+  "MAP-2.3": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-281",
+    "EV-282"
+   ],
+   "mandatory": [
+    "EV-280",
+    "EV-281",
+    "EV-282"
+   ],
+   "primary": "EV-280"
+  },
+  "MAP-3.1": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-291",
+    "EV-292"
+   ],
+   "mandatory": [
+    "EV-290",
+    "EV-291",
+    "EV-292"
+   ],
+   "primary": "EV-290"
+  },
+  "MAP-3.2": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-301",
+    "EV-302"
+   ],
+   "mandatory": [
+    "EV-300",
+    "EV-301",
+    "EV-302"
+   ],
+   "primary": "EV-300"
+  },
+  "MAP-3.3": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-311",
+    "EV-312"
+   ],
+   "mandatory": [
+    "EV-310",
+    "EV-311",
+    "EV-312"
+   ],
+   "primary": "EV-310"
+  },
+  "MAP-3.4": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-321",
+    "EV-322"
+   ],
+   "mandatory": [
+    "EV-320",
+    "EV-321",
+    "EV-322"
+   ],
+   "primary": "EV-320"
+  },
+  "MAP-3.5": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-331",
+    "EV-332"
+   ],
+   "mandatory": [
+    "EV-330",
+    "EV-331",
+    "EV-332"
+   ],
+   "primary": "EV-330"
+  },
+  "MAP-4.1": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-341",
+    "EV-342"
+   ],
+   "mandatory": [
+    "EV-340",
+    "EV-341",
+    "EV-342"
+   ],
+   "primary": "EV-340"
+  },
+  "MAP-4.2": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-351",
+    "EV-352"
+   ],
+   "mandatory": [
+    "EV-350",
+    "EV-351",
+    "EV-352"
+   ],
+   "primary": "EV-350"
+  },
+  "MAP-5.1": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-361",
+    "EV-362"
+   ],
+   "mandatory": [
+    "EV-360",
+    "EV-361",
+    "EV-362"
+   ],
+   "primary": "EV-360"
+  },
+  "MAP-5.2": {
+   "dimension": "MAP",
+   "level_artefacts": [
+    "EV-371",
+    "EV-372",
+    "EV-373"
+   ],
+   "mandatory": [
+    "EV-370",
+    "EV-371",
+    "EV-372",
+    "EV-373"
+   ],
+   "primary": "EV-370"
+  },
+  "MEA-1.1": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-401",
+    "EV-402",
+    "EV-403"
+   ],
+   "mandatory": [
+    "EV-400",
+    "EV-401",
+    "EV-402",
+    "EV-403"
+   ],
+   "primary": "EV-400"
+  },
+  "MEA-1.2": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-411",
+    "EV-412",
+    "EV-413"
+   ],
+   "mandatory": [
+    "EV-410",
+    "EV-411",
+    "EV-412",
+    "EV-413"
+   ],
+   "primary": "EV-410"
+  },
+  "MEA-1.3": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-421",
+    "EV-422"
+   ],
+   "mandatory": [
+    "EV-420",
+    "EV-421",
+    "EV-422"
+   ],
+   "primary": "EV-420"
+  },
+  "MEA-2.1": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-431",
+    "EV-432"
+   ],
+   "mandatory": [
+    "EV-430",
+    "EV-431",
+    "EV-432"
+   ],
+   "primary": "EV-430"
+  },
+  "MEA-2.10": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-521",
+    "EV-522"
+   ],
+   "mandatory": [
+    "EV-520",
+    "EV-521",
+    "EV-522"
+   ],
+   "primary": "EV-520"
+  },
+  "MEA-2.11": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-531",
+    "EV-532",
+    "EV-533",
+    "EV-534"
+   ],
+   "mandatory": [
+    "EV-530",
+    "EV-531",
+    "EV-532",
+    "EV-533",
+    "EV-534"
+   ],
+   "primary": "EV-530"
+  },
+  "MEA-2.12": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-541",
+    "EV-542"
+   ],
+   "mandatory": [
+    "EV-540",
+    "EV-541",
+    "EV-542"
+   ],
+   "primary": "EV-540"
+  },
+  "MEA-2.13": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-551",
+    "EV-552"
+   ],
+   "mandatory": [
+    "EV-550",
+    "EV-551",
+    "EV-552"
+   ],
+   "primary": "EV-550"
+  },
+  "MEA-2.2": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-441",
+    "EV-442"
+   ],
+   "mandatory": [
+    "EV-440",
+    "EV-441",
+    "EV-442"
+   ],
+   "primary": "EV-440"
+  },
+  "MEA-2.3": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-451",
+    "EV-452",
+    "EV-453"
+   ],
+   "mandatory": [
+    "EV-450",
+    "EV-451",
+    "EV-452",
+    "EV-453"
+   ],
+   "primary": "EV-450"
+  },
+  "MEA-2.4": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-461",
+    "EV-462",
+    "EV-463"
+   ],
+   "mandatory": [
+    "EV-460",
+    "EV-461",
+    "EV-462",
+    "EV-463"
+   ],
+   "primary": "EV-460"
+  },
+  "MEA-2.5": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-471",
+    "EV-472"
+   ],
+   "mandatory": [
+    "EV-470",
+    "EV-471",
+    "EV-472"
+   ],
+   "primary": "EV-470"
+  },
+  "MEA-2.6": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-481",
+    "EV-482",
+    "EV-483"
+   ],
+   "mandatory": [
+    "EV-480",
+    "EV-481",
+    "EV-482",
+    "EV-483"
+   ],
+   "primary": "EV-480"
+  },
+  "MEA-2.7": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-491",
+    "EV-492"
+   ],
+   "mandatory": [
+    "EV-490",
+    "EV-491",
+    "EV-492"
+   ],
+   "primary": "EV-490"
+  },
+  "MEA-2.8": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-501",
+    "EV-502"
+   ],
+   "mandatory": [
+    "EV-500",
+    "EV-501",
+    "EV-502"
+   ],
+   "primary": "EV-500"
+  },
+  "MEA-2.9": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-511",
+    "EV-512"
+   ],
+   "mandatory": [
+    "EV-510",
+    "EV-511",
+    "EV-512"
+   ],
+   "primary": "EV-510"
+  },
+  "MEA-3.1": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-561",
+    "EV-562"
+   ],
+   "mandatory": [
+    "EV-560",
+    "EV-561",
+    "EV-562"
+   ],
+   "primary": "EV-560"
+  },
+  "MEA-3.2": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-571",
+    "EV-572"
+   ],
+   "mandatory": [
+    "EV-570",
+    "EV-571",
+    "EV-572"
+   ],
+   "primary": "EV-570"
+  },
+  "MEA-3.3": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-581",
+    "EV-582"
+   ],
+   "mandatory": [
+    "EV-580",
+    "EV-581",
+    "EV-582"
+   ],
+   "primary": "EV-580"
+  },
+  "MEA-4.1": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-591",
+    "EV-592"
+   ],
+   "mandatory": [
+    "EV-590",
+    "EV-591",
+    "EV-592"
+   ],
+   "primary": "EV-590"
+  },
+  "MEA-4.2": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-601",
+    "EV-602"
+   ],
+   "mandatory": [
+    "EV-600",
+    "EV-601",
+    "EV-602"
+   ],
+   "primary": "EV-600"
+  },
+  "MEA-4.3": {
+   "dimension": "MEA",
+   "level_artefacts": [
+    "EV-611",
+    "EV-612",
+    "EV-613"
+   ],
+   "mandatory": [
+    "EV-610",
+    "EV-611",
+    "EV-612",
+    "EV-613"
+   ],
+   "primary": "EV-610"
+  }
+ },
+ "derivation": "mechanical: EV bullets under each '### <control>' heading, pack order preserved; no score sheet was read",
+ "fixture": "AIMF-VAL-2026-B",
+ "pack": "AIMF-VAL-2026-B-EVIDENCE-PACK.md",
+ "pack_sha256": "2513cb0afe87a0f4a9b50192883529f8eaabe81223a3ec33eb742041414c6a91",
+ "sha256": "aeb3bc10f802a30b1862515b3a2597dc7d6b11992bbe7c6ff3a84a81c59aa944"
+}

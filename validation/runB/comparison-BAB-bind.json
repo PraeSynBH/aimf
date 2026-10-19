@@ -1,0 +1,1131 @@
+{
+ "summary": {
+  "controls_scored": 72,
+  "agree": 41,
+  "agreement_rate": 0.5694,
+  "disagreements": 31,
+  "by_rule": {
+   "1": 10,
+   "2": 11,
+   "3": 6,
+   "4": 4
+  },
+  "final_after_adjudication": {
+   "0": 1,
+   "1": 6,
+   "2": 3,
+   "None": 21
+  },
+  "unresolved": [
+   "GOV-2.2",
+   "GOV-4.1",
+   "GOV-4.2",
+   "GOV-5.2",
+   "MAN-1.3",
+   "MAN-2.3",
+   "MAN-3.1",
+   "MAN-4.2",
+   "MAN-4.3",
+   "MAP-1.3",
+   "MAP-2.3",
+   "MAP-3.2",
+   "MAP-3.4",
+   "MAP-3.5",
+   "MEA-1.3",
+   "MEA-2.11",
+   "MEA-2.4",
+   "MEA-3.1",
+   "MEA-3.3",
+   "MEA-4.2",
+   "MEA-4.3"
+  ],
+  "assessors": {
+   "A": {
+    "model": "anthropic/claude-sonnet-5.5",
+    "transport": "openrouter",
+    "pack_sha256": "2513cb0afe87a0f4a9b50192883529f8eaabe81223a3ec33eb742041414c6a91"
+   },
+   "B": {
+    "model": "openai/gpt-4.1",
+    "transport": "openrouter",
+    "pack_sha256": "2513cb0afe87a0f4a9b50192883529f8eaabe81223a3ec33eb742041414c6a91"
+   }
+  }
+ },
+ "rows": [
+  {
+   "control": "GOV-1.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-015",
+   "B_artefact": "EV-015",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-022",
+   "B_artefact": "EV-022",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.3",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-031",
+   "B_artefact": "EV-031",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.4",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-044",
+   "B_artefact": "EV-041",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.5",
+   "A": 1,
+   "B": 0,
+   "A_artefact": "EV-051",
+   "B_artefact": "EV-051",
+   "agree": false,
+   "final": 0,
+   "rule": 1,
+   "A_note": "Level 1 is met: EV-050 acknowledges environmental impact in policy and EV-051 shows no system assessed. EV-052 and EV-053 do not separate AI energy use, so there is nothing for level 3.",
+   "B_note": "Policy clause exists but no assessment for any system; evidence establishes absence"
+  },
+  {
+   "control": "GOV-1.6",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-062",
+   "B_artefact": "EV-061",
+   "agree": true
+  },
+  {
+   "control": "GOV-1.7",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-071",
+   "B_artefact": "EV-072",
+   "agree": true
+  },
+  {
+   "control": "GOV-2.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-084",
+   "B_artefact": "EV-080",
+   "agree": true
+  },
+  {
+   "control": "GOV-2.2",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-091",
+   "B_artefact": "EV-092",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "The curriculum is role-based (EV-090), but incomplete coverage scores level 1 under the coverage definition. Level 3 tracking against targets is not evidenced: EV-091 gives completion counts with no stated targets.",
+   "B_note": "Completion and competency are tracked, but no report against targets; evidence supports level 2 but not level 3"
+  },
+  {
+   "control": "GOV-2.3",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-102",
+   "B_artefact": "EV-102",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "The meeting cadence part of level 2 is met: EV-101 shows all four quarterly meetings held, with attendance and quorum recorded. The decision-log gap alone drops the score to 1. EV-103 shows strategy oversight, but level 3 measures of items decided are not evidenced.",
+   "B_note": "Committee charter, minutes, and decision log exist, but no measure of AI items decided or cycle report; evidence supports level 2 but not level 3"
+  },
+  {
+   "control": "GOV-3.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-114",
+   "B_artefact": "EV-113",
+   "agree": true
+  },
+  {
+   "control": "GOV-3.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-120",
+   "B_artefact": "EV-120",
+   "agree": true
+  },
+  {
+   "control": "GOV-4.1",
+   "A": 1,
+   "B": 3,
+   "A_artefact": "EV-132",
+   "B_artefact": "EV-133",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "Level 1 is met by EV-130 (campaign). Level 3 would also fail: EV-131/EV-133 give survey values and two data points but no stated targets and no report to a named body. Near-miss rate is not tracked.",
+   "B_note": "Survey metrics tracked against targets (EV-133), but no evidence of interventions triggered by dips or repeated cycles"
+  },
+  {
+   "control": "GOV-4.2",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-142",
+   "B_artefact": "EV-141",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Level 2 is met: EV-140 (intake), EV-141 (monthly review), EV-142 (bidirectional decision log) and EV-143 (response process, with the unanswered backlog recorded). The monthly review is minuted 9 of 9, but it reviews items, not metrics against targets, so the artefact that distinguishes level 3 is absent.",
+   "B_note": "Feedback metrics reviewed on cadence (EV-141), but no real-time/public transparency or repeated influence"
+  },
+  {
+   "control": "GOV-4.3",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-150",
+   "B_artefact": "EV-150",
+   "agree": true
+  },
+  {
+   "control": "GOV-5.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-163",
+   "B_artefact": "EV-160",
+   "agree": true
+  },
+  {
+   "control": "GOV-5.2",
+   "A": 1,
+   "B": 0,
+   "A_artefact": "EV-171",
+   "B_artefact": "EV-170",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Level 0 does not apply because EV-171 shows dated individual academic contact (a 2026 co-authored paper) with no institutional agreement. That is level 1 by the anchor's own wording. The conference paper sits slightly awkwardly against anchor 1's 'no publication' clause, but agreement and knowledge-exchange are both missing, which keeps the level at 1.",
+   "B_note": "EV-170 states no partnership, agreement, or programme exists; only informal contact evidenced (EV-171)"
+  },
+  {
+   "control": "GOV-6.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-180",
+   "B_artefact": "EV-180",
+   "agree": true
+  },
+  {
+   "control": "GOV-6.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-191",
+   "B_artefact": "EV-191",
+   "agree": true
+  },
+  {
+   "control": "MAN-1.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-621",
+   "B_artefact": "EV-621",
+   "agree": true
+  },
+  {
+   "control": "MAN-1.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-632",
+   "B_artefact": "EV-632",
+   "agree": true
+  },
+  {
+   "control": "MAN-1.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-640",
+   "B_artefact": "EV-642",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Level 2 is met: all 5 top-ranked risks have plans with options, a named owner and a date (EV-640). Quarterly status review (EV-642) is not a metric against target. The overdue vendor-concentration plan is re-dated, not a level-2 failure.",
+   "B_note": "Completion-versus-plan and residual-risk reduction metrics reviewed each cycle (EV-642), but no effectiveness measurement or plan revision"
+  },
+  {
+   "control": "MAN-1.4",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-653",
+   "B_artefact": "EV-650",
+   "agree": true
+  },
+  {
+   "control": "MAN-2.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-662",
+   "B_artefact": "EV-662",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "EV-660 and EV-661 show a high-quality level-2 example for VIC-2, but coverage is partial, so the score is 1. The template amendment is intent for SDE and LDA, which is not rewarded.",
+   "B_note": "Options analysis and rationale for 4 of 6 systems (EV-660, EV-661, EV-662), but no review of redirected/rejected proposals"
+  },
+  {
+   "control": "MAN-2.2",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-671",
+   "B_artefact": "EV-671",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "Level 2 is met for all six systems. Level 3 fails the MEASURE and CADENCE tests: a quarterly interval exists, but there is no target, no named body and no next date. Level 4 has no predictive or automated artefact.",
+   "B_note": "Level 3 satisfied: maintenance plan and value metrics tracked and reviewed quarterly for all systems, with decisions recorded. No evidence of predictive modelling or automated optimisation."
+  },
+  {
+   "control": "MAN-2.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-680",
+   "B_artefact": "EV-682",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "The procedure is system-agnostic and was applied to two different systems' incidents. The set does not state an explicit scope register, so the level 2 coverage clause is accepted on that basis only. Level 3 measurement is absent; the procedure changes in EV-682 are not predictive or automated, so level 4 is not reached.",
+   "B_note": "Level 3 satisfied: emergent-risk detections, response times and lessons closed measured and reviewed per cycle, with procedure changes recorded. No evidence of predictive detection or automated response."
+  },
+  {
+   "control": "MAN-2.4",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-692",
+   "B_artefact": "EV-692",
+   "agree": true
+  },
+  {
+   "control": "MAN-3.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-702",
+   "B_artefact": "EV-700",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "The critical vendors are well monitored (quarterly schedule, issues logged and closed, one open with owner and date). Coverage is partial (3 of 6 vendors), so the score is level 1. No contractual-threshold review is named for level 3.",
+   "B_note": "Level 2 satisfied: monitoring schedule, controls applied, performance tracked, issues logged and closed for critical vendors. No coverage for all vendors, so level 3 fails."
+  },
+  {
+   "control": "MAN-3.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-711",
+   "B_artefact": "EV-711",
+   "agree": true
+  },
+  {
+   "control": "MAN-4.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-722",
+   "B_artefact": "EV-722",
+   "agree": true
+  },
+  {
+   "control": "MAN-4.2",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-731",
+   "B_artefact": "EV-732",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Level 2 is met: every release in the log cites its trigger. Throughput is reported quarterly, but the measured-effect clause fails coverage. No external recognition is named for level 4.",
+   "B_note": "Level 3 satisfied: improvement throughput and measured effect per release tracked and reported. No evidence of optimisation or external recognition."
+  },
+  {
+   "control": "MAN-4.3",
+   "A": 1,
+   "B": 3,
+   "A_artefact": "EV-740",
+   "B_artefact": "EV-742",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "Communication and notification are well evidenced (EV-741, EV-742, with the breach recorded), but a level 2 clause lacks its own artefact, so the score is level 1. The level 3 metrics cannot lift the score past that.",
+   "B_note": "Level 3 satisfied: incident metrics (counts, time-to-notify, recurrence) reviewed on cadence, notification performance reported. No evidence of incident-driven change or automated detection."
+  },
+  {
+   "control": "MAP-1.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-202",
+   "B_artefact": "EV-202",
+   "agree": true
+  },
+  {
+   "control": "MAP-1.2",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-211",
+   "B_artefact": "EV-211",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "The framework (EV-210) is documented but covers role families, not each project. Coverage is 4 of 6, so the score is level 1. Level 3 composition-versus-requirement metrics are absent.",
+   "B_note": "Level 2 satisfied: documented competency requirements per project, team composition reviewed against them, gaps recorded. No metrics tracked or reported."
+  },
+  {
+   "control": "MAP-1.3",
+   "A": 1,
+   "B": 3,
+   "A_artefact": "EV-221",
+   "B_artefact": "EV-222",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "EV-220 ties the four themes to the mission, but the review is asserted rather than evidenced by minutes. KPIs (EV-222) belong to level 3 and cannot lift the score past a failed level 2.",
+   "B_note": "Level 3 satisfied: strategic KPIs tracked and reported to board on cadence. No evidence of strategy revisions traceable to KPI movement."
+  },
+  {
+   "control": "MAP-1.4",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-232",
+   "B_artefact": "EV-232",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "VIC-2 is well evidenced, including realised 22% versus modelled 25%, but that is one system. Coverage fails, so the score is level 1.",
+   "B_note": "Level 2 satisfied: business case with value metrics and post-deployment value tracking for most systems, but not all."
+  },
+  {
+   "control": "MAP-1.5",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-242",
+   "B_artefact": "EV-242",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "The L2/L3 distinguishing artefact (EV-242) is present, but it fails the coverage test (2 of 4 tolerances). The Q3 report's breach dated 2026-05 falls in Q2, which is an unresolved inconsistency. Score held at ML3.",
+   "B_note": "Level 3 satisfied: exposures tracked against tolerance on cadence, breach escalated. Level 4 requires evidence of tolerance re-setting after breach, not present."
+  },
+  {
+   "control": "MAP-1.6",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-251",
+   "B_artefact": "EV-251",
+   "agree": true
+  },
+  {
+   "control": "MAP-2.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-262",
+   "B_artefact": "EV-262",
+   "agree": true
+  },
+  {
+   "control": "MAP-2.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-272",
+   "B_artefact": "EV-272",
+   "agree": true
+  },
+  {
+   "control": "MAP-2.3",
+   "A": "NA",
+   "B": 2,
+   "A_artefact": "",
+   "B_artefact": "EV-282",
+   "agree": false,
+   "rule": 4,
+   "final": null,
+   "A_note": "VIC-2 alone meets level 2 content. Level 3 fails regardless, because no coverage or escape metrics are named. The choice is between ML2 and ML3 depending on scope, which the set cannot establish, so NA rather than 0.",
+   "B_note": "Methodology and TEVV plan documented and reviewed, but no evidence of metrics review per release."
+  },
+  {
+   "control": "MAP-3.1",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-292",
+   "B_artefact": "EV-292",
+   "agree": true
+  },
+  {
+   "control": "MAP-3.2",
+   "A": "NA",
+   "B": 1,
+   "A_artefact": "",
+   "B_artefact": "EV-300",
+   "agree": false,
+   "rule": 4,
+   "final": null,
+   "A_note": "Level 3 fails regardless: EV-302 records a single quarter's actuals, with no two minuted reviews and no next date. The score is therefore ML2 or lower, and the set cannot say which, so NA.",
+   "B_note": "Total-cost model and non-monetary costs documented for VIC-2 only."
+  },
+  {
+   "control": "MAP-3.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-312",
+   "B_artefact": "EV-312",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "Per-release checks occurred and one drift was re-scoped, but the MEASURE definition is unmet. The L3 distinguishing artefact is present but fails the measure test, so the score is held at ML3. The anchor for level 2 does not require per-system coverage.",
+   "B_note": "Scope-drift checks measured per release and acted upon, but no evidence of automated drift detection."
+  },
+  {
+   "control": "MAP-3.4",
+   "A": "NA",
+   "B": 2,
+   "A_artefact": "",
+   "B_artefact": "EV-322",
+   "agree": false,
+   "rule": 4,
+   "final": null,
+   "A_note": "The inspector role meets level 2 content: a standard, recorded assessments for 38 of 38, and a certification step. Level 3 fails regardless, since there is no threshold or report. The choice between ML2 and ML3 depends on role coverage, which cannot be established from the set.",
+   "B_note": "Formal requirements, assessment, and certification process evidenced; tracking/reporting not evidenced."
+  },
+  {
+   "control": "MAP-3.5",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-330",
+   "B_artefact": "EV-332",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "The L1 anchor expressly places a procedure that does not cite the policy clause at level 1. The effectiveness assessment is a single occurrence, the first one (2026-08), so no cadence exists. Override, review and agreement rates are not reported per system.",
+   "B_note": "Oversight procedure, log, and effectiveness assessment evidenced; measurement/reporting of rates not evidenced."
+  },
+  {
+   "control": "MAP-4.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-341",
+   "B_artefact": "EV-341",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "The map is documented and reviewed quarterly, but the level 2 coverage test fails on an open exception. No coverage or reassessment metrics are named for level 3.",
+   "B_note": "Systematic mapping and legal review for most vendors; tracking metrics and closure to plan not evidenced."
+  },
+  {
+   "control": "MAP-4.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-351",
+   "B_artefact": "EV-351",
+   "agree": true
+  },
+  {
+   "control": "MAP-5.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-362",
+   "B_artefact": "EV-362",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "EV-360 and EV-361 show a documented assessment that fed a Steering Committee decision for VIC-2, which is well above level 1 for that system. The open exception (3 systems) blocks level 2. There is no coverage or mitigation-completion metric, so level 3 is also unsupported.",
+   "B_note": "Evidence shows impact assessment and stakeholder input feeding decision for VIC-2 and PDM, but coverage is incomplete (SDE, LDA, QAP overdue) and no mitigation-completion metric is tracked."
+  },
+  {
+   "control": "MAP-5.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-371",
+   "B_artefact": "EV-372",
+   "agree": true
+  },
+  {
+   "control": "MEA-1.1",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-403",
+   "B_artefact": "EV-403",
+   "agree": true
+  },
+  {
+   "control": "MEA-1.2",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-410",
+   "B_artefact": "EV-410",
+   "agree": true
+  },
+  {
+   "control": "MEA-1.3",
+   "A": 2,
+   "B": 4,
+   "A_artefact": "EV-421",
+   "B_artefact": "EV-422",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "Level 2: EV-420 (charter scope and audit plan), EV-421 (signed independence statement) and EV-422 (independence recorded in the engagement letter). External assessors (EV-422) are a level-4-type artefact, but level 3 is missing, so the two-level rule keeps the score at 2.",
+   "B_note": "External metrology laboratory engaged, independence documented, reports present, programme changes traceable to findings."
+  },
+  {
+   "control": "MEA-2.1",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-432",
+   "B_artefact": "EV-432",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.10",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-522",
+   "B_artefact": "EV-522",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.11",
+   "A": 1,
+   "B": 3,
+   "A_artefact": "EV-532",
+   "B_artefact": "EV-533",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "Level 1 is met: EV-530 shows a grouped analysis with 3 metrics. EV-533 (results per release against thresholds) is a level-3 artefact, but level 2 fails on the open Brno disparity, so the score stays at 1. The one-system scope question is secondary because level 2 already fails.",
+   "B_note": "Fairness results tracked per group and release, mitigations recorded, but no intersectional analysis or public reporting."
+  },
+  {
+   "control": "MEA-2.12",
+   "A": 0,
+   "B": 0,
+   "A_artefact": "EV-540",
+   "B_artefact": "EV-540",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.13",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-550",
+   "B_artefact": "EV-550",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.2",
+   "A": "NA",
+   "B": "NA",
+   "A_artefact": "EV-440",
+   "B_artefact": "",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.3",
+   "A": 3,
+   "B": 3,
+   "A_artefact": "EV-453",
+   "B_artefact": "EV-453",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.4",
+   "A": 2,
+   "B": 4,
+   "A_artefact": "EV-460",
+   "B_artefact": "EV-463",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "EV-463 shows a threshold re-set with before-and-after alert-to-action time (6.2 h to 3.5 h), but level 4 is unreachable until the level-3 dated report and its named review exist. Level 2 and level 3 boundary: the review cadence artefact is missing.",
+   "B_note": "Level 4 is satisfied: EV-463 records dated changes to alert thresholds from measured incident data, before-and-after alert-to-action times, and traceability to the motivating report (EV-462)."
+  },
+  {
+   "control": "MEA-2.5",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-471",
+   "B_artefact": "EV-470",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.6",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-482",
+   "B_artefact": "EV-482",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.7",
+   "A": "NA",
+   "B": "NA",
+   "A_artefact": "",
+   "B_artefact": "",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.8",
+   "A": 1,
+   "B": 1,
+   "A_artefact": "EV-500",
+   "B_artefact": "EV-502",
+   "agree": true
+  },
+  {
+   "control": "MEA-2.9",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-511",
+   "B_artefact": "EV-511",
+   "agree": true
+  },
+  {
+   "control": "MEA-3.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-560",
+   "B_artefact": "EV-561",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Minutes coverage is complete (EV-561), but each clause needs its own artefact and system coverage cannot be inferred from the entry count.",
+   "B_note": "EV-560, EV-561, EV-562 show log, review, and closure, but do not measure tracking coverage or time-to-log."
+  },
+  {
+   "control": "MEA-3.2",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-571",
+   "B_artefact": "EV-571",
+   "agree": true
+  },
+  {
+   "control": "MEA-3.3",
+   "A": "NA",
+   "B": 2,
+   "A_artefact": "",
+   "B_artefact": "EV-582",
+   "agree": false,
+   "rule": 4,
+   "final": null,
+   "A_note": "The channel, volume and feedback-to-change log (EV-582) are strong, but the appeal clause is unaddressed, so the score is NA rather than 0 or 1. Establishing that the appeal process exists would support level 2, and establishing that it does not would support 0 or 1.",
+   "B_note": "EV-580, EV-581, EV-582 show channel, appeal process, and feedback-to-change log, but do not measure volume, outcomes, or resolution times."
+  },
+  {
+   "control": "MEA-4.1",
+   "A": 2,
+   "B": 2,
+   "A_artefact": "EV-590",
+   "B_artefact": "EV-590",
+   "agree": true
+  },
+  {
+   "control": "MEA-4.2",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-601",
+   "B_artefact": "EV-602",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "External validation exists (EV-600), but level 4 needs level 3 and the programme revision from disagreements is not evidenced. The Plant Quality Board conflict is noted but mitigated.",
+   "B_note": "EV-600, EV-601, EV-602 show independent review, coverage, and disagreement resolution, but not external validation with programme revision."
+  },
+  {
+   "control": "MEA-4.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-611",
+   "B_artefact": "EV-612",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "EV-612 gives the targets (3 and 10 days) and a named body, but per-event recording and the minuted cadence are missing, so level 3 fails. Level 4 is unreachable and no predictive modelling is evidenced.",
+   "B_note": "EV-610, EV-611, EV-612, EV-613 show detection, root cause, corrective action, measured latency and reporting, but not predictive modelling."
+  }
+ ],
+ "disagreements": [
+  {
+   "control": "GOV-1.5",
+   "A": 1,
+   "B": 0,
+   "A_artefact": "EV-051",
+   "B_artefact": "EV-051",
+   "agree": false,
+   "final": 0,
+   "rule": 1,
+   "A_note": "Level 1 is met: EV-050 acknowledges environmental impact in policy and EV-051 shows no system assessed. EV-052 and EV-053 do not separate AI energy use, so there is nothing for level 3.",
+   "B_note": "Policy clause exists but no assessment for any system; evidence establishes absence"
+  },
+  {
+   "control": "GOV-2.2",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-091",
+   "B_artefact": "EV-092",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "The curriculum is role-based (EV-090), but incomplete coverage scores level 1 under the coverage definition. Level 3 tracking against targets is not evidenced: EV-091 gives completion counts with no stated targets.",
+   "B_note": "Completion and competency are tracked, but no report against targets; evidence supports level 2 but not level 3"
+  },
+  {
+   "control": "GOV-2.3",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-102",
+   "B_artefact": "EV-102",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "The meeting cadence part of level 2 is met: EV-101 shows all four quarterly meetings held, with attendance and quorum recorded. The decision-log gap alone drops the score to 1. EV-103 shows strategy oversight, but level 3 measures of items decided are not evidenced.",
+   "B_note": "Committee charter, minutes, and decision log exist, but no measure of AI items decided or cycle report; evidence supports level 2 but not level 3"
+  },
+  {
+   "control": "GOV-4.1",
+   "A": 1,
+   "B": 3,
+   "A_artefact": "EV-132",
+   "B_artefact": "EV-133",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "Level 1 is met by EV-130 (campaign). Level 3 would also fail: EV-131/EV-133 give survey values and two data points but no stated targets and no report to a named body. Near-miss rate is not tracked.",
+   "B_note": "Survey metrics tracked against targets (EV-133), but no evidence of interventions triggered by dips or repeated cycles"
+  },
+  {
+   "control": "GOV-4.2",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-142",
+   "B_artefact": "EV-141",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Level 2 is met: EV-140 (intake), EV-141 (monthly review), EV-142 (bidirectional decision log) and EV-143 (response process, with the unanswered backlog recorded). The monthly review is minuted 9 of 9, but it reviews items, not metrics against targets, so the artefact that distinguishes level 3 is absent.",
+   "B_note": "Feedback metrics reviewed on cadence (EV-141), but no real-time/public transparency or repeated influence"
+  },
+  {
+   "control": "GOV-5.2",
+   "A": 1,
+   "B": 0,
+   "A_artefact": "EV-171",
+   "B_artefact": "EV-170",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Level 0 does not apply because EV-171 shows dated individual academic contact (a 2026 co-authored paper) with no institutional agreement. That is level 1 by the anchor's own wording. The conference paper sits slightly awkwardly against anchor 1's 'no publication' clause, but agreement and knowledge-exchange are both missing, which keeps the level at 1.",
+   "B_note": "EV-170 states no partnership, agreement, or programme exists; only informal contact evidenced (EV-171)"
+  },
+  {
+   "control": "MAN-1.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-640",
+   "B_artefact": "EV-642",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Level 2 is met: all 5 top-ranked risks have plans with options, a named owner and a date (EV-640). Quarterly status review (EV-642) is not a metric against target. The overdue vendor-concentration plan is re-dated, not a level-2 failure.",
+   "B_note": "Completion-versus-plan and residual-risk reduction metrics reviewed each cycle (EV-642), but no effectiveness measurement or plan revision"
+  },
+  {
+   "control": "MAN-2.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-662",
+   "B_artefact": "EV-662",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "EV-660 and EV-661 show a high-quality level-2 example for VIC-2, but coverage is partial, so the score is 1. The template amendment is intent for SDE and LDA, which is not rewarded.",
+   "B_note": "Options analysis and rationale for 4 of 6 systems (EV-660, EV-661, EV-662), but no review of redirected/rejected proposals"
+  },
+  {
+   "control": "MAN-2.2",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-671",
+   "B_artefact": "EV-671",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "Level 2 is met for all six systems. Level 3 fails the MEASURE and CADENCE tests: a quarterly interval exists, but there is no target, no named body and no next date. Level 4 has no predictive or automated artefact.",
+   "B_note": "Level 3 satisfied: maintenance plan and value metrics tracked and reviewed quarterly for all systems, with decisions recorded. No evidence of predictive modelling or automated optimisation."
+  },
+  {
+   "control": "MAN-2.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-680",
+   "B_artefact": "EV-682",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "The procedure is system-agnostic and was applied to two different systems' incidents. The set does not state an explicit scope register, so the level 2 coverage clause is accepted on that basis only. Level 3 measurement is absent; the procedure changes in EV-682 are not predictive or automated, so level 4 is not reached.",
+   "B_note": "Level 3 satisfied: emergent-risk detections, response times and lessons closed measured and reviewed per cycle, with procedure changes recorded. No evidence of predictive detection or automated response."
+  },
+  {
+   "control": "MAN-3.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-702",
+   "B_artefact": "EV-700",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "The critical vendors are well monitored (quarterly schedule, issues logged and closed, one open with owner and date). Coverage is partial (3 of 6 vendors), so the score is level 1. No contractual-threshold review is named for level 3.",
+   "B_note": "Level 2 satisfied: monitoring schedule, controls applied, performance tracked, issues logged and closed for critical vendors. No coverage for all vendors, so level 3 fails."
+  },
+  {
+   "control": "MAN-4.2",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-731",
+   "B_artefact": "EV-732",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Level 2 is met: every release in the log cites its trigger. Throughput is reported quarterly, but the measured-effect clause fails coverage. No external recognition is named for level 4.",
+   "B_note": "Level 3 satisfied: improvement throughput and measured effect per release tracked and reported. No evidence of optimisation or external recognition."
+  },
+  {
+   "control": "MAN-4.3",
+   "A": 1,
+   "B": 3,
+   "A_artefact": "EV-740",
+   "B_artefact": "EV-742",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "Communication and notification are well evidenced (EV-741, EV-742, with the breach recorded), but a level 2 clause lacks its own artefact, so the score is level 1. The level 3 metrics cannot lift the score past that.",
+   "B_note": "Level 3 satisfied: incident metrics (counts, time-to-notify, recurrence) reviewed on cadence, notification performance reported. No evidence of incident-driven change or automated detection."
+  },
+  {
+   "control": "MAP-1.2",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-211",
+   "B_artefact": "EV-211",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "The framework (EV-210) is documented but covers role families, not each project. Coverage is 4 of 6, so the score is level 1. Level 3 composition-versus-requirement metrics are absent.",
+   "B_note": "Level 2 satisfied: documented competency requirements per project, team composition reviewed against them, gaps recorded. No metrics tracked or reported."
+  },
+  {
+   "control": "MAP-1.3",
+   "A": 1,
+   "B": 3,
+   "A_artefact": "EV-221",
+   "B_artefact": "EV-222",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "EV-220 ties the four themes to the mission, but the review is asserted rather than evidenced by minutes. KPIs (EV-222) belong to level 3 and cannot lift the score past a failed level 2.",
+   "B_note": "Level 3 satisfied: strategic KPIs tracked and reported to board on cadence. No evidence of strategy revisions traceable to KPI movement."
+  },
+  {
+   "control": "MAP-1.4",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-232",
+   "B_artefact": "EV-232",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "VIC-2 is well evidenced, including realised 22% versus modelled 25%, but that is one system. Coverage fails, so the score is level 1.",
+   "B_note": "Level 2 satisfied: business case with value metrics and post-deployment value tracking for most systems, but not all."
+  },
+  {
+   "control": "MAP-1.5",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-242",
+   "B_artefact": "EV-242",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "The L2/L3 distinguishing artefact (EV-242) is present, but it fails the coverage test (2 of 4 tolerances). The Q3 report's breach dated 2026-05 falls in Q2, which is an unresolved inconsistency. Score held at ML3.",
+   "B_note": "Level 3 satisfied: exposures tracked against tolerance on cadence, breach escalated. Level 4 requires evidence of tolerance re-setting after breach, not present."
+  },
+  {
+   "control": "MAP-2.3",
+   "A": "NA",
+   "B": 2,
+   "A_artefact": "",
+   "B_artefact": "EV-282",
+   "agree": false,
+   "rule": 4,
+   "final": null,
+   "A_note": "VIC-2 alone meets level 2 content. Level 3 fails regardless, because no coverage or escape metrics are named. The choice is between ML2 and ML3 depending on scope, which the set cannot establish, so NA rather than 0.",
+   "B_note": "Methodology and TEVV plan documented and reviewed, but no evidence of metrics review per release."
+  },
+  {
+   "control": "MAP-3.2",
+   "A": "NA",
+   "B": 1,
+   "A_artefact": "",
+   "B_artefact": "EV-300",
+   "agree": false,
+   "rule": 4,
+   "final": null,
+   "A_note": "Level 3 fails regardless: EV-302 records a single quarter's actuals, with no two minuted reviews and no next date. The score is therefore ML2 or lower, and the set cannot say which, so NA.",
+   "B_note": "Total-cost model and non-monetary costs documented for VIC-2 only."
+  },
+  {
+   "control": "MAP-3.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-312",
+   "B_artefact": "EV-312",
+   "agree": false,
+   "final": 2,
+   "rule": 1,
+   "A_note": "Per-release checks occurred and one drift was re-scoped, but the MEASURE definition is unmet. The L3 distinguishing artefact is present but fails the measure test, so the score is held at ML3. The anchor for level 2 does not require per-system coverage.",
+   "B_note": "Scope-drift checks measured per release and acted upon, but no evidence of automated drift detection."
+  },
+  {
+   "control": "MAP-3.4",
+   "A": "NA",
+   "B": 2,
+   "A_artefact": "",
+   "B_artefact": "EV-322",
+   "agree": false,
+   "rule": 4,
+   "final": null,
+   "A_note": "The inspector role meets level 2 content: a standard, recorded assessments for 38 of 38, and a certification step. Level 3 fails regardless, since there is no threshold or report. The choice between ML2 and ML3 depends on role coverage, which cannot be established from the set.",
+   "B_note": "Formal requirements, assessment, and certification process evidenced; tracking/reporting not evidenced."
+  },
+  {
+   "control": "MAP-3.5",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-330",
+   "B_artefact": "EV-332",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "The L1 anchor expressly places a procedure that does not cite the policy clause at level 1. The effectiveness assessment is a single occurrence, the first one (2026-08), so no cadence exists. Override, review and agreement rates are not reported per system.",
+   "B_note": "Oversight procedure, log, and effectiveness assessment evidenced; measurement/reporting of rates not evidenced."
+  },
+  {
+   "control": "MAP-4.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-341",
+   "B_artefact": "EV-341",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "The map is documented and reviewed quarterly, but the level 2 coverage test fails on an open exception. No coverage or reassessment metrics are named for level 3.",
+   "B_note": "Systematic mapping and legal review for most vendors; tracking metrics and closure to plan not evidenced."
+  },
+  {
+   "control": "MAP-5.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-362",
+   "B_artefact": "EV-362",
+   "agree": false,
+   "final": 1,
+   "rule": 1,
+   "A_note": "EV-360 and EV-361 show a documented assessment that fed a Steering Committee decision for VIC-2, which is well above level 1 for that system. The open exception (3 systems) blocks level 2. There is no coverage or mitigation-completion metric, so level 3 is also unsupported.",
+   "B_note": "Evidence shows impact assessment and stakeholder input feeding decision for VIC-2 and PDM, but coverage is incomplete (SDE, LDA, QAP overdue) and no mitigation-completion metric is tracked."
+  },
+  {
+   "control": "MEA-1.3",
+   "A": 2,
+   "B": 4,
+   "A_artefact": "EV-421",
+   "B_artefact": "EV-422",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "Level 2: EV-420 (charter scope and audit plan), EV-421 (signed independence statement) and EV-422 (independence recorded in the engagement letter). External assessors (EV-422) are a level-4-type artefact, but level 3 is missing, so the two-level rule keeps the score at 2.",
+   "B_note": "External metrology laboratory engaged, independence documented, reports present, programme changes traceable to findings."
+  },
+  {
+   "control": "MEA-2.11",
+   "A": 1,
+   "B": 3,
+   "A_artefact": "EV-532",
+   "B_artefact": "EV-533",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "Level 1 is met: EV-530 shows a grouped analysis with 3 metrics. EV-533 (results per release against thresholds) is a level-3 artefact, but level 2 fails on the open Brno disparity, so the score stays at 1. The one-system scope question is secondary because level 2 already fails.",
+   "B_note": "Fairness results tracked per group and release, mitigations recorded, but no intersectional analysis or public reporting."
+  },
+  {
+   "control": "MEA-2.4",
+   "A": 2,
+   "B": 4,
+   "A_artefact": "EV-460",
+   "B_artefact": "EV-463",
+   "agree": false,
+   "rule": 3,
+   "final": null,
+   "A_note": "EV-463 shows a threshold re-set with before-and-after alert-to-action time (6.2 h to 3.5 h), but level 4 is unreachable until the level-3 dated report and its named review exist. Level 2 and level 3 boundary: the review cadence artefact is missing.",
+   "B_note": "Level 4 is satisfied: EV-463 records dated changes to alert thresholds from measured incident data, before-and-after alert-to-action times, and traceability to the motivating report (EV-462)."
+  },
+  {
+   "control": "MEA-3.1",
+   "A": 1,
+   "B": 2,
+   "A_artefact": "EV-560",
+   "B_artefact": "EV-561",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "Minutes coverage is complete (EV-561), but each clause needs its own artefact and system coverage cannot be inferred from the entry count.",
+   "B_note": "EV-560, EV-561, EV-562 show log, review, and closure, but do not measure tracking coverage or time-to-log."
+  },
+  {
+   "control": "MEA-3.3",
+   "A": "NA",
+   "B": 2,
+   "A_artefact": "",
+   "B_artefact": "EV-582",
+   "agree": false,
+   "rule": 4,
+   "final": null,
+   "A_note": "The channel, volume and feedback-to-change log (EV-582) are strong, but the appeal clause is unaddressed, so the score is NA rather than 0 or 1. Establishing that the appeal process exists would support level 2, and establishing that it does not would support 0 or 1.",
+   "B_note": "EV-580, EV-581, EV-582 show channel, appeal process, and feedback-to-change log, but do not measure volume, outcomes, or resolution times."
+  },
+  {
+   "control": "MEA-4.2",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-601",
+   "B_artefact": "EV-602",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "External validation exists (EV-600), but level 4 needs level 3 and the programme revision from disagreements is not evidenced. The Plant Quality Board conflict is noted but mitigated.",
+   "B_note": "EV-600, EV-601, EV-602 show independent review, coverage, and disagreement resolution, but not external validation with programme revision."
+  },
+  {
+   "control": "MEA-4.3",
+   "A": 2,
+   "B": 3,
+   "A_artefact": "EV-611",
+   "B_artefact": "EV-612",
+   "agree": false,
+   "rule": 2,
+   "final": null,
+   "A_note": "EV-612 gives the targets (3 and 10 days) and a named body, but per-event recording and the minuted cadence are missing, so level 3 fails. Level 4 is unreachable and no predictive modelling is evidenced.",
+   "B_note": "EV-610, EV-611, EV-612, EV-613 show detection, root cause, corrective action, measured latency and reporting, but not predictive modelling."
+  }
+ ]
+}

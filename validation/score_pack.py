@@ -103,11 +103,21 @@ def load_pack(path):
     return blocks
 
 
-def build_prompt(controls, anchors, pack):
+BINDING_RULE = """EVIDENCE BINDING (this run only): each control below carries a MANDATORY
+EVIDENCE SET. Decide the score from that set and nothing else. For every level you
+consider awarding, name the artefact from the set that evidences it (level_evidence).
+deciding_artefact must be a member of the mandatory set. If the set cannot decide the
+control, score "NA" and name what is missing in failed_clause -- do not reach for an
+artefact outside the set."""
+
+
+def build_prompt(controls, anchors, pack, binding=None):
     parts = [SYSTEM, "\n--- controls to score ---\n"]
+    if binding:
+        parts.append(BINDING_RULE + "\n")
     for cid in controls:
         a = anchors[cid]
-        parts.append(
+        block = (
             f"### {cid}\n"
             f"Question: {a['question']}\n"
             f"Evidence expected: {a['evidence']}\n"
@@ -116,8 +126,15 @@ def build_prompt(controls, anchors, pack):
             f"Anchor 2: {a['anchor_2']}\n"
             f"Anchor 3: {a['anchor_3']}\n"
             f"Anchor 4: {a['anchor_4']}\n"
-            f"--- evidence pack ---\n{pack[cid]}\n"
         )
+        if binding:
+            b = binding["controls"][cid]
+            block += (
+                "MANDATORY EVIDENCE SET: " + ", ".join(b["mandatory"]) + "\n"
+                f"Primary artefact: {b['primary']}\n"
+            )
+        block += f"--- evidence pack ---\n{pack[cid]}\n"
+        parts.append(block)
     parts.append(
         "\nReturn the JSON array now, one row per control, same order as above."
     )
@@ -203,10 +220,26 @@ def main():
                     help="fixture id recorded in the output (A or B)")
 
     ap.add_argument("--limit", type=int, default=0, help="debug: score first N controls")
+    ap.add_argument("--binding", default="",
+                    help="evidence binding JSON (see runB/evidence_binding.py); "
+                         "enforces a per-control mandatory evidence set")
     args = ap.parse_args()
 
     anchors = load_anchors()
     pack = load_pack(args.pack)
+
+    binding = None
+    if args.binding:
+        binding = json.load(open(args.binding))
+        if binding.get("pack_sha256") != sha(args.pack):
+            sys.exit("binding was derived from a different pack "
+                     f"({binding.get('pack_sha256','?')[:12]} vs {sha(args.pack)[:12]}); "
+                     "re-derive it with runB/evidence_binding.py")
+        missing_b = [c for c in pack if c not in binding["controls"]]
+        if missing_b:
+            sys.exit(f"pack controls absent from binding: {missing_b}")
+        print(f"binding {args.binding}: {binding['control_count']} controls, "
+              f"sha256 {binding.get('sha256','')[:12]}", file=sys.stderr)
     controls = sorted(pack)
     if args.limit:
         controls = controls[:args.limit]
@@ -218,7 +251,7 @@ def main():
     started = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     for i in range(0, len(controls), args.batch):
         batch = controls[i:i + args.batch]
-        user = build_prompt(batch, anchors, pack)
+        user = build_prompt(batch, anchors, pack, binding)
         raw = call(args.model, user, args.via, args.temperature)
         raw_log[f"batch_{i // args.batch + 1}"] = raw
         try:
@@ -233,13 +266,23 @@ def main():
                 continue
             s = row.get("score")
             s = "NA" if str(s).strip().upper() in ("NA", "N/A", "NOT ASSESSABLE") else int(s)
+            dec = (row.get("deciding_artefact") or "").strip()
+            ok = None
+            if binding and s != "NA":
+                ok = dec in binding["controls"][cid]["mandatory"]
             scores[cid] = {
                 "score": s,
-                "deciding_artefact": (row.get("deciding_artefact") or "").strip(),
+                "deciding_artefact": dec,
                 "boundary_note": (row.get("boundary_note") or "").strip(),
                 "failed_clause": (row.get("failed_clause") or "").strip(),
+                "binding_ok": ok,
             }
         print(f"{args.assessor}: {len(scores)}/{len(controls)} scored",
+              file=sys.stderr)
+
+    violations = sorted(c for c, v in scores.items() if v.get("binding_ok") is False)
+    if binding:
+        print(f"{args.assessor}: binding violations {len(violations)}/{len(scores)} {violations}",
               file=sys.stderr)
 
     absent = [c for c in controls if c not in scores]
@@ -257,6 +300,10 @@ def main():
         "started": started,
         "finished": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "controls_scored": len(scores),
+        "binding": ({"file": os.path.basename(args.binding),
+                     "sha256": binding.get("sha256", ""),
+                     "pack_sha256": binding.get("pack_sha256", ""),
+                     "violations": violations} if binding else None),
         "scores": scores,
         "raw": raw_log,
     }

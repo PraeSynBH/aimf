@@ -1,0 +1,10 @@
+binding runB/evidence-bindings-B.json: 72 controls, sha256 aeb3bc10f802
+BB-bind: 12/72 scored
+BB-bind: 24/72 scored
+BB-bind: 36/72 scored
+BB-bind: 48/72 scored
+BB-bind: 60/72 scored
+BB-bind: 72/72 scored
+BB-bind: binding violations 0/72 []
+wrote runB/scores-BB-bind.json: 72 controls
+BB-bind exit=0
