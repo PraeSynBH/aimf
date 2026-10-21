@@ -6,7 +6,7 @@ Licensed under CC BY-NC-ND 4.0
 
 **Version**: 1.0
 **Publication Date**: January 29, 2026
-**Status**: Complete - dimension attribution for all 72 controls regenerated from the catalog
+**Status**: Complete - dimension attribution for all 72 controls regenerated from the catalog, with D2's composition set by an authorised framework change (Ben, 2026-10-21) recorded below
 **Document Type**: Cross-reference guide
 **Table source**: rendered from `core/AIMF-CONTROL-CATALOG.csv` by `scripts/aimf_mappings.py`
 
@@ -16,7 +16,19 @@ Licensed under CC BY-NC-ND 4.0
 
 ## What changed in this revision
 
-An earlier revision of this document carried its own hand-written dimension lists and a closing tally of "18 / 14 / 17 / 10 = 59" controls. Those numbers disagreed with the catalog and with the NIST AI RMF subcategory count. Both the lists and every count in this document are now generated from the catalog's `Dimension` and `Dimension_Secondary` columns, so the tally cannot drift again: 72 controls carry a primary dimension, 2 of them also carry a secondary dimension, and the four primary counts sum to 72.
+An earlier revision of this document carried its own hand-written dimension lists and a closing tally of "18 / 14 / 17 / 10 = 59" controls. Those numbers disagreed with the catalog and with the NIST AI RMF subcategory count. Both the lists and every count in this document are now generated from the catalog's `Dimension` and `Dimension_Secondary` columns, so the tally cannot drift again: 72 controls carry a primary dimension, 5 of them also carry a secondary dimension, and the four primary counts sum to 72.
+
+### D2 attribution history - a deliberate framework decision, not a derived count
+
+D2 (Data Governance & Management) is the one dimension whose composition is **not** a count derived from the control set. It is a framework decision, taken and authorised at three points, and a reviewer who recomputes it from first principles will get a different answer than the one below. Do not "correct" it back:
+
+| Revision | D2 primary | D2 secondary | What it was |
+|---|---|---|---|
+| pre-1.0.1 dimension document | 4 (`MAP-1.6`, `MAP-2.3`, `MEA-2.10`, `MEA-2.2`) | 3 (`MEA-2.1`, `MEA-2.11`, `MAN-3.2`) | the authored attribution, carried without a catalog source |
+| v1.0.1 | 2 (`MAP-1.6`, `MEA-2.10`) | 0 | catalog-truthful regeneration: the five unsourced attributions were removed because the catalog did not carry them, and D3 primary rose 30 → 32 |
+| **v1.0.12 (this revision)** | **4** | **3** | the pre-1.0.1 attribution **restored as an authorised framework change** (Ben, 2026-10-21; decision record `aimf-publication-decisions-20261021` §R1 row 3, `d2_dimension` = `reattribute`), written into the catalog as data rather than re-derived |
+
+So the lineage is **4 → 2 (v1.0.1, catalog-truthful) → 4 + 3 (v1.0.12, authorised framework change)**. The v1.0.1 removal was not a correction of an error and this restoration is not a reversal of one: the v1.0.1 catalog could not support the attribution, and the 2026-10-21 ruling authorises it explicitly. Two controls changed primary dimension to D2 (`MAP-2.3`, `MEA-2.2`); three controls that keep a D3 primary now also carry D2 as `Dimension_Secondary` (`MEA-2.1`, `MEA-2.11`, `MAN-3.2`). Every other control's attribution is unchanged.
 
 ---
 
@@ -76,18 +88,26 @@ No control carries D1 as its catalog `Dimension_Secondary`; dimension AI Governa
 
 ### D2: Data Governance & Management
 
-**Primary controls: 2** - the control's catalog `Dimension` is D2.
+**Primary controls: 4** - the control's catalog `Dimension` is D2.
 
 | Control ID | Control name | Function |
 |---|---|---|
 | MAP-1.6 | AI System Requirements | MAP |
+| MAP-2.3 | AI Scientific Rigor | MAP |
 | MEA-2.10 | AI Privacy Evaluation | MEASURE |
+| MEA-2.2 | AI Human Subject Testing | MEASURE |
 
-No control carries D2 as its catalog `Dimension_Secondary`; dimension Data Governance & Management is evidenced through its 2 primary controls.
+**Secondary controls: 3** - the control's catalog `Dimension_Secondary` is D2.
+
+| Control ID | Control name | Function | Primary dimension |
+|---|---|---|---|
+| MAN-3.2 | Pre-trained Model Management | MANAGE | D3 |
+| MEA-2.1 | AI Testing Documentation | MEASURE | D3 |
+| MEA-2.11 | AI Fairness and Bias Testing | MEASURE | D3 |
 
 ### D3: Technical Operations (MLOps)
 
-**Primary controls: 32** - the control's catalog `Dimension` is D3.
+**Primary controls: 30** - the control's catalog `Dimension` is D3.
 
 | Control ID | Control name | Function |
 |---|---|---|
@@ -100,7 +120,6 @@ No control carries D2 as its catalog `Dimension_Secondary`; dimension Data Gover
 | MAN-4.3 | AI Incident and Error Reporting | MANAGE |
 | MAP-2.1 | AI System Task Categorization | MAP |
 | MAP-2.2 | AI System Boundaries | MAP |
-| MAP-2.3 | AI Scientific Rigor | MAP |
 | MAP-3.3 | AI Application Scope | MAP |
 | MAP-3.5 | Human Oversight Design | MAP |
 | MEA-1.1 | AI Risk Measurement Selection | MEASURE |
@@ -110,7 +129,6 @@ No control carries D2 as its catalog `Dimension_Secondary`; dimension Data Gover
 | MEA-2.11 | AI Fairness and Bias Testing | MEASURE |
 | MEA-2.12 | AI Environmental Impact | MEASURE |
 | MEA-2.13 | AI Testing Effectiveness | MEASURE |
-| MEA-2.2 | AI Human Subject Testing | MEASURE |
 | MEA-2.3 | AI Performance Measurement | MEASURE |
 | MEA-2.4 | AI Production Monitoring | MEASURE |
 | MEA-2.5 | AI Validity and Reliability | MEASURE |
@@ -124,7 +142,7 @@ No control carries D2 as its catalog `Dimension_Secondary`; dimension Data Gover
 | MEA-4.2 | AI Results Expert Review | MEASURE |
 | MEA-4.3 | AI Performance Change Detection | MEASURE |
 
-No control carries D3 as its catalog `Dimension_Secondary`; dimension Technical Operations (MLOps) is evidenced through its 32 primary controls.
+No control carries D3 as its catalog `Dimension_Secondary`; dimension Technical Operations (MLOps) is evidenced through its 30 primary controls.
 
 ### D4: Organizational Culture & Change
 
@@ -162,23 +180,23 @@ No control carries D3 as its catalog `Dimension_Secondary`; dimension Technical 
 | Dimension | Primary controls | Secondary controls | Total related |
 |---|---|---|---|
 | D1: AI Governance & Risk Management | 26 | 0 | 26 |
-| D2: Data Governance & Management | 2 | 0 | 2 |
-| D3: Technical Operations (MLOps) | 32 | 0 | 32 |
+| D2: Data Governance & Management | 4 | 3 | 7 |
+| D3: Technical Operations (MLOps) | 30 | 0 | 30 |
 | D4: Organizational Culture & Change | 12 | 2 | 14 |
-| **Total** | **72** | **2** | **74 attributions** |
+| **Total** | **72** | **5** | **77 attributions** |
 
 | Function | Controls | Dimensions involved |
 |---|---|---|
 | GOVERN | 19 | D1, D4 |
 | MAP | 18 | D1, D2, D3, D4 |
 | MEASURE | 22 | D2, D3, D4 |
-| MANAGE | 13 | D1, D3 |
+| MANAGE | 13 | D1, D2, D3 |
 | **Total** | **72** | D1-D4 |
 <!-- END GENERATED:dimension-stats -->
 
 ### Where the dimension balance falls
 
-D1 and D3 together hold 58 of the 72 controls, which reflects the shape of the AIMF control set: governance and technical operations are where most *written* controls live. D2 holds 2 dedicated primary controls, and that is a real property of the framework rather than a gap being hidden - data governance is delivered through the governance and technical controls that also touch data, plus the enterprise data management an organisation already runs. D4 likewise holds 12 primary controls while carrying 2 secondary attributions, and it is the dimension most often under-resourced in practice, because culture controls are the easiest to declare met and the hardest to evidence.
+D1 and D3 together hold 56 of the 72 controls, which reflects the shape of the AIMF control set: governance and technical operations are where most *written* controls live. D2 holds 4 primary controls and 3 secondary attributions, and that composition is **a deliberate framework decision rather than a derived count** - it is the pre-1.0.1 attribution, restored by explicit authorisation on 2026-10-21 (see "D2 attribution history" above). Data governance in practice is also delivered through the governance and technical controls that touch data, plus the enterprise data management an organisation already runs, so the 4 primary controls understate the dimension's reach without overstating its dedicated content. D3 remains the largest single dimension at 30 primary controls, and it is the one from which the two D2 primary attributions and the three D2 secondary attributions are drawn. D4 holds 12 primary controls while carrying 2 secondary attributions, and it is the dimension most often under-resourced in practice, because culture controls are the easiest to declare met and the hardest to evidence.
 
 ---
 

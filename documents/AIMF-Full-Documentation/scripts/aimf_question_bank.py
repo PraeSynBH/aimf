@@ -248,8 +248,34 @@ def render_guide_tables(recs: list[dict], total: int) -> str:
     return "\n".join(out)
 
 
+def d2_composition() -> tuple[list[str], list[str]]:
+    """D2 primary and secondary control IDs, read from the catalog rather than typed in.
+
+    The Governance audience is derived from the catalog dimension, so the sentence that
+    explains why the table is the size it is must move with the catalog too.  It said
+    "only two controls" for four releases; a hand-typed count here is the same drift
+    class the generated blocks exist to remove (PRA-6387).
+    """
+    rows = am.load_catalog()
+    primary = [r["Control_ID"] for r in rows if r["Dimension"].strip() == "D2"]
+    secondary = [r["Control_ID"] for r in rows if r["Dimension_Secondary"].strip() == "D2"]
+    return primary, secondary
+
+
 def render_guide_coverage(recs: list[dict], total: int) -> str:
     by_audience = OrderedDict((a, sum(1 for r in recs if r["audience"] == a)) for a in AUDIENCE_ORDER)
+    d2_primary, d2_secondary = d2_composition()
+    d2_sentence = (
+        f"so the Governance table holds {by_audience['Governance']} of {total}: the catalog "
+        f"attributes {len(d2_primary)} controls to `D2`\n"
+        f"({', '.join(f'`{c}`' for c in d2_primary)})"
+    )
+    if d2_secondary:
+        d2_sentence += (
+            f" and a further {len(d2_secondary)} carry D2 as a secondary dimension\n"
+            f"({', '.join(f'`{c}`' for c in d2_secondary)})"
+        )
+    d2_sentence += ".\n"
     return (
         f"**This bank covers {len(recs)}/{total} controls: one question, one evidence expectation and\n"
         f"one role for every `Control_ID` in `core/AIMF-CONTROL-CATALOG.csv`** (GOVERN "
@@ -267,8 +293,8 @@ def render_guide_coverage(recs: list[dict], total: int) -> str:
         f"catalog's `Dimension` (`D1` Leadership, `D2` Governance, `D3` Technical, `D4` Change Agent).\n"
         f"Four controls whose primary evidence is a compliance or audit record sit with Governance\n"
         f"rather than their dimension's audience - `GOV-1.4`, `MAP-1.5`, `MEA-1.3` and `MAN-4.3` -\n"
-        f"so the Governance table is short: the catalog attributes only two controls to `D2`\n"
-        f"(`MAP-1.6`, `MEA-2.10`). The rule and the wording of each override are generated in\n"
+        f"{d2_sentence}"
+        f"The rule and the wording of each override are generated in\n"
         f"[AIMF-ASSESSMENT-QUESTION-BANK.md](AIMF-ASSESSMENT-QUESTION-BANK.md). An assessor may ask\n"
         f"any question of any audience provided the same evidence is scored.\n"
         f"\n"

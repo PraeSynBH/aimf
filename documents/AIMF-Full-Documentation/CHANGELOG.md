@@ -4,8 +4,8 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.11
-**Publication Date**: October 18, 2026
+**Version**: 1.0.12
+**Publication Date**: October 21, 2026
 **Status**: Pre-Publication (Working Draft)
 
 ---
@@ -16,6 +16,55 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [1.0.12] - 2026-10-21 (D2 re-attributed as an authorised framework change; working draft re-cut)
+
+**Change Type**: Framework attribution change + generated-artifact refresh
+**Rationale**: the catalog carried only two controls in D2 (Data Governance & Management) of 72,
+because the v1.0.1 regeneration removed five D2 attributions the catalog did not source. Ben ruled on
+2026-10-21 (`d2_dimension` = `reattribute`, interaction `6254f20d`, decision record
+`aimf-publication-decisions-20261021` on PRA-6356 §R1 row 3 / §R3) that the pre-1.0.1 attribution is
+the authorised one and must be restored. This is a **framework change**, not a correction of a data
+defect, and it is recorded as such in `mappings/AIMF-DIMENSION-MAPPING.md` so a later reviewer does
+not derive it back down to two.
+
+#### Changed
+
+- **`core/AIMF-CONTROL-CATALOG.csv`** — five rows, `Dimension` / `Dimension_Secondary` only:
+  `MAP-2.3` and `MEA-2.2` move from D3 primary to **D2 primary**; `MEA-2.1`, `MEA-2.11` and
+  `MAN-3.2` keep their D3 primary and gain **D2 secondary**. No other control's attribution changed.
+- **Primary split** — before: D1 26 / D2 2 / D3 32 / D4 12. After: **D1 26 / D2 4 / D3 30 / D4 12**
+  (72 rows; D2 +2, D3 −2, sum unchanged). `Dimension_Secondary`: D2 3, D4 2, blank 67; total
+  attributions 74 → 77.
+- **Derived tables regenerated** — `mappings/AIMF-NIST-RMF-MAPPING.md`,
+  `AIMF-ISO42001-MAPPING.md`, `AIMF-ISO27001-MAPPING.md`, `AIMF-DIMENSION-MAPPING.md`,
+  `AIMF-EXECUTIVE-ORDER-14179-MAPPING.md`, `core/AIMF-CONTROL-CATALOG.md`, plus the two question-bank
+  documents, all from the catalog. `python3 scripts/aimf_mappings.py check` exits 0.
+- **Audience effect in the assessment instrument** — the bank's audience is derived from the catalog
+  dimension, so `MAP-2.3` and `MEA-2.2` move from the Technical table to the Governance table:
+  Leadership 24 / Technical 28 / Governance 8 / Change Agent 12 (was 24 / 30 / 6 / 12). Questions,
+  evidence expectations, roles and anchors are unchanged.
+- **`mappings/AIMF-DIMENSION-MAPPING.md`** — the "D2 holds 2 dedicated primary controls" reconciliation
+  note is replaced by a "D2 attribution history" section recording the lineage `4 → 2 (v1.0.1,
+  catalog-truthful) → 4 + 3 (v1.0.12, authorised framework change, Ben 2026-10-21)`.
+- **`scripts/aimf_question_bank.py`** — the generated coverage paragraph computed the D2 count by hand
+  ("the catalog attributes only two controls"); it now reads the D2 primary and secondary lists from
+  the catalog, so the sentence cannot go stale again.
+- **`AIMF-MAPPING-COMPLETENESS.md`** — register re-attested for v1.0.12, dimension row carries the
+  authorised attribution, and the E8 quoted output matches the current mapping status lines.
+
+#### Not changed
+
+- No control text, description, maturity level, question, evidence expectation, role, anchor, ISO
+  42001 clause, NIST subcategory or ISO 27001 attribution. The question bank CSV is byte-identical.
+- No change to the measured validation result (65/72 same-model-family, 43/72 cross-vendor): the
+  instrument's questions and anchors did not move.
+
+#### Release status
+
+- **This is a working draft, not a publication.** `publication_disposition` is
+  `publish_after_iso27001` (PRA-6356 §R1): the publication gate holds until the ISO/IEC 27001 mapping
+  reaches clause-level fidelity. The repository has no git remote and nothing has been pushed.
 
 ## [1.0.11] - 2026-10-18 (Held-out validation published in the artifact; version label repaired)
 

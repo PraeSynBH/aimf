@@ -1,6 +1,6 @@
 # AI Management Framework (AIMF) by PraeSyn
 
-**Version 1.0.11** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
+**Version 1.0.12** | **© 2026 PraeSyn, LLC** | Licensed under [CC BY-NC-ND 4.0](LICENSE.md)
 
 ---
 
@@ -135,7 +135,7 @@ check ships with this bundle: from an unpacked bundle root run
 
 | Document | Standard | Status |
 |----------|----------|--------|
-| **[AIMF-DIMENSION-MAPPING.md](mappings/AIMF-DIMENSION-MAPPING.md)** | Internal | Complete — dimension attribution regenerated from the catalog for all 72 controls |
+| **[AIMF-DIMENSION-MAPPING.md](mappings/AIMF-DIMENSION-MAPPING.md)** | Internal | Complete — dimension attribution regenerated from the catalog for all 72 controls; D2 carries 4 primary + 3 secondary under the 2026-10-21 authorised framework change |
 | **[AIMF-ISO42001-MAPPING.md](mappings/AIMF-ISO42001-MAPPING.md)** | ISO 42001 | Complete — all 19 catalog-attributed clause references mapped, each to an AIMF control |
 | **[AIMF-NIST-RMF-MAPPING.md](mappings/AIMF-NIST-RMF-MAPPING.md)** | NIST AI RMF | Complete — all 72 subcategories (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13) mapped to AIMF controls |
 | **[AIMF-ISO27001-MAPPING.md](mappings/AIMF-ISO27001-MAPPING.md)** | ISO 27001 | Partial — mapped at public Annex A control-theme level; 54/72 controls carry an ISO/IEC 27001:2022 reference and 18 are recorded as no-analogue |
@@ -315,8 +315,8 @@ Our mission is to make AI governance accessible, practical, and effective for or
 
 ## Framework Information
 
-- **Version**: 1.0.11
-- **Release Date**: October 18, 2026
+- **Version**: 1.0.12
+- **Release Date**: October 21, 2026
 - **License**: CC BY-NC-ND 4.0
 - **Copyright**: © 2026 PraeSyn, LLC
 - **Status**: Pre-Publication (Working Draft)

@@ -4,7 +4,7 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**Version**: 1.0.1
+**Version**: 1.0.12
 **Document Type**: Verification Register
 **Status**: Verified 2026-10-17 against repository state at commit `e46481d` (v1.0.1)
 **Supersedes**: the standards-mapping completeness claims previously carried by
@@ -31,6 +31,18 @@ skeletons. Release v1.0.1 (`f76f757`) completed those four documents and normali
 control catalog. This revision re-verifies every row against the v1.0.1 tree and is the
 register of record. The status of each file below is taken from its own content and
 matches that file's `**Status**` header.
+
+**Revision note (v1.0.12).** The v1.0.1 issue of this register was the register of record
+for ten releases without being re-attested: it described the tree at `e46481d` while the line
+shipped 1.0.11. This revision re-runs every evidence command below against the v1.0.12 tree and
+re-attests the register to the version that ships. The substantive change since v1.0.1 is one
+attribution decision: D2 (Data Governance & Management) now carries **4 primary + 3 secondary**
+controls instead of 2, restored as an **authorised framework change** on 2026-10-21 (Ben; decision
+record `aimf-publication-decisions-20261021` on PRA-6356 §R1 row 3), not as a correction of a data
+defect. Every standards-mapping claim in this register — NIST 72/72, ISO 42001 19 clauses, ISO 27001
+54 tagged + 18 reviewed-no-analogue, EO 14179 23 controls — is unchanged by that edit and is
+re-evidenced here. Nothing in this register treats the D2 attribution as derived from a count: it is
+a framework decision and the dimension mapping says so in its own words.
 
 ---
 
@@ -73,7 +85,7 @@ the numbered commands in [Evidence commands](#evidence-commands); each command w
 | `mappings/AIMF-ISO27001-MAPPING.md` | ISO/IEC 27001:2022 | **Partial** — mapped at public Annex A control-theme level; 72 AIMF control IDs; 54 controls carry a 2022 Annex A reference and 18 are recorded as no-analogue findings. Deep Annex A fidelity is **not** claimed | E5, E6, E8 |
 | `mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md` | EO 14179 | **Complete detailed mapping** — every provision and each of the three follow-on federal actions mapped; 23 AIMF control IDs; 0 "Required Research" markers | E6, E8 |
 | `mappings/AIMF-EXECUTIVE-ORDER-14110-MAPPING.md` | EO 14110 | **Complete detailed mapping** — but note the order was **rescinded 2025-01-20** by EO 14179; retained for historical traceability only | header |
-| `mappings/AIMF-DIMENSION-MAPPING.md` | Internal (4 dimensions) | **Complete** — dimension attribution regenerated from the catalog for all 72 controls; 72 AIMF control IDs | E6, E8 |
+| `mappings/AIMF-DIMENSION-MAPPING.md` | Internal (4 dimensions) | **Complete** — dimension attribution regenerated from the catalog for all 72 controls; D2 carries 4 primary + 3 secondary under the 2026-10-21 authorised framework change (Ben), recorded as a framework decision rather than a derived count; 72 AIMF control IDs | E6, E8 |
 | `mappings/GOVERN-FUNCTION-MATURITY-MAPPING.md` | NIST GOVERN + ISO 42001 | **Complete detailed mapping** — all 19 GOVERN subcategory IDs present | E8 |
 | `mappings/MAP-FUNCTION-MATURITY-MAPPING.md` | NIST MAP + ISO 42001 | **Complete detailed mapping** — all 18 MAP subcategory IDs present | E8 |
 | `mappings/MEASURE-FUNCTION-MATURITY-MAPPING.md` | NIST MEASURE + ISO 42001 | **Complete detailed mapping** — all 22 MEASURE subcategory IDs present | E8 |
@@ -109,7 +121,8 @@ Only one mapping is short of complete, and it is disclosed rather than asserted:
 ## Evidence commands
 
 Run from `documents/AIMF-Full-Documentation/`. Outputs below are verbatim from
-2026-10-17 at commit `e46481d`.
+the v1.0.12 re-verification on 2026-10-21; the figures they print are unchanged from
+the 2026-10-17 run at commit `e46481d` except where a row says otherwise.
 
 **E1 — distinct NIST subcategories covered in the catalog, total and per function**
 ```
@@ -206,7 +219,7 @@ missing from function union: []  extra: []
 $ for f in mappings/*.md; do
     printf "%-55s research=%s  %s\n" "$f" "$(grep -c 'Required Research' "$f")" \
       "$(grep -m1 -E '^\*\*Status\*\*' "$f")"; done
-mappings/AIMF-DIMENSION-MAPPING.md                       research=0  **Status**: Complete - dimension attribution for all 72 controls regenerated from the catalog
+mappings/AIMF-DIMENSION-MAPPING.md                       research=0  **Status**: Complete - dimension attribution for all 72 controls regenerated from the catalog, with D2's composition set by an authorised framework change (Ben, 2026-10-21) recorded below
 mappings/AIMF-EXECUTIVE-ORDER-14110-MAPPING.md           research=0  **Status**: Complete detailed mapping
 mappings/AIMF-EXECUTIVE-ORDER-14179-MAPPING.md           research=0  **Status**: Complete - every EO 14179 provision and each of its three follow-on federal actions is mapped to the AIMF controls that support readiness
 mappings/AIMF-ISO27001-MAPPING.md                        research=0  **Status**: Partial - mapped at public Annex A control-theme level; 54 of 72 AIMF controls carry an ISO/IEC 27001:2022 Annex A reference and 18 were reviewed as having no ISMS analogue

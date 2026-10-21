@@ -271,13 +271,13 @@ Top-level clause heading; sub-clauses below carry the control attribution.
 |---|---|---|---|
 | MAP-1.6 | AI System Requirements | MAP | D2 |
 | MAP-2.2 | AI System Boundaries | MAP | D3 |
-| MAP-2.3 | AI Scientific Rigor | MAP | D3 |
+| MAP-2.3 | AI Scientific Rigor | MAP | D2 |
 | MAP-3.5 | Human Oversight Design | MAP | D3 |
 | MAP-5.1 | AI Impact Assessment | MAP | D1 |
 | MEA-2.1 | AI Testing Documentation | MEASURE | D3 |
 | MEA-2.10 | AI Privacy Evaluation | MEASURE | D2 |
 | MEA-2.11 | AI Fairness and Bias Testing | MEASURE | D3 |
-| MEA-2.2 | AI Human Subject Testing | MEASURE | D3 |
+| MEA-2.2 | AI Human Subject Testing | MEASURE | D2 |
 | MEA-2.3 | AI Performance Measurement | MEASURE | D3 |
 | MEA-2.5 | AI Validity and Reliability | MEASURE | D3 |
 | MEA-2.6 | AI Safety Evaluation | MEASURE | D3 |
@@ -303,7 +303,7 @@ Top-level clause heading; sub-clauses below carry the control attribution.
 |---|---|---|---|
 | GOV-1.4 | AI Governance Compliance Monitoring | GOVERN | D1 |
 | MAN-4.3 | AI Incident and Error Reporting | MANAGE | D3 |
-| MAP-2.3 | AI Scientific Rigor | MAP | D3 |
+| MAP-2.3 | AI Scientific Rigor | MAP | D2 |
 | MEA-1.1 | AI Risk Measurement Selection | MEASURE | D3 |
 | MEA-1.2 | AI Metric Validation | MEASURE | D3 |
 | MEA-2.13 | AI Testing Effectiveness | MEASURE | D3 |

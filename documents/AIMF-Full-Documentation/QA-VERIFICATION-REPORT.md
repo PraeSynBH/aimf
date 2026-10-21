@@ -4,9 +4,9 @@
 **© 2026 PraeSyn, LLC. All rights reserved.**
 Licensed under CC BY-NC-ND 4.0
 
-**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6; guide completion and bundle-wide placeholder/link sweep verified 2026-10-18 against v1.0.9; guide heading repair verified 2026-10-18 against v1.0.10; held-out validation record and claim scoping verified 2026-10-18 against v1.0.11)
+**QA Date**: January 26, 2026 (standards-mapping claims corrected 2026-10-17; re-verified 2026-10-17 against v1.0.1; count and release-status checks re-verified 2026-10-18 against v1.0.2; L2 taxonomy/catalog reconciliation verified 2026-10-18 against v1.0.3; assessment-scale unification (0-3 -> 0-4 / ML1-ML5) verified 2026-10-18 against v1.0.4; question-bank completeness (72/72 controls) verified 2026-10-18 against v1.0.5; per-control anchors and generated bank (72/72 x 5 levels) verified 2026-10-18 against v1.0.6; guide completion and bundle-wide placeholder/link sweep verified 2026-10-18 against v1.0.9; guide heading repair verified 2026-10-18 against v1.0.10; held-out validation record and claim scoping verified 2026-10-18 against v1.0.11; D2 re-attribution (authorised framework change, Ben 2026-10-21) and the v1.0.12 re-cut verified 2026-10-21 against v1.0.12)
 **Reviewer**: Claude Code (Automated Quality Assurance)
-**Framework Version**: 1.0.11
+**Framework Version**: 1.0.12
 **Status**: ✅ PASSED WITH DISCLOSED EXCEPTIONS
 
 ---
@@ -154,6 +154,25 @@ Licensed under CC BY-NC-ND 4.0
 > subcategories and `placeholder sweep: 56 .md files scanned, 0 findings`, the record/guide
 > measured-result gate passes, and the in-zip bank sha is `b6f9a6a1`. No question, anchor, scale,
 > count or mapping changed. See `CHANGELOG.md` → `[1.0.11]`.
+
+> **v1.0.12 addendum (2026-10-21).** Dimension D2 was re-attributed by decision, and this report
+> records it as a framework change rather than a data correction. Ben ruled on 2026-10-21
+> (`d2_dimension` = `reattribute`, interaction `6254f20d`, decision record
+> `aimf-publication-decisions-20261021` on PRA-6356 §R1 row 3) that the pre-1.0.1 D2 attribution is
+> the authorised one: `MAP-2.3` and `MEA-2.2` return to **D2 primary**, and `MEA-2.1`, `MEA-2.11` and
+> `MAN-3.2` carry **D2 secondary** alongside their D3 primary. Five catalog rows changed, two columns
+> touched, no other control's attribution moved. Measured before the edit: 72 rows, primary
+> D1 26 / D2 2 / D3 32 / D4 12, `Dimension_Secondary` populated on 2 rows. After: primary
+> **D1 26 / D2 4 / D3 30 / D4 12** (sum 72) and `Dimension_Secondary` **D2 3, D4 2, blank 67**
+> (77 attributions). `python3 scripts/aimf_mappings.py check` exits 0 and the six derived mapping
+> tables plus both question-bank documents were regenerated from the catalog, not hand-edited.
+> Consequence for the instrument: audience is derived from the catalog dimension, so the Governance
+> table grows from 6 to 8 controls and Technical falls from 30 to 28; no question, evidence
+> expectation, role or anchor changed, and the measured validation result is untouched. The
+> dimension mapping now states the lineage `4 → 2 (v1.0.1, catalog-truthful) → 4 + 3 (v1.0.12,
+> authorised framework change)` so the attribution is not re-derived back to two. Re-verified from an
+> unpacked v1.0.12 bundle root: both `check` commands exit 0, `report` reads 72 controls, 72 of 72
+> questions, 19 ISO 42001 clauses and 72 NIST subcategories. See `CHANGELOG.md` → `[1.0.12]`.
 
 
 ---
@@ -552,7 +571,7 @@ item (ISO 27001 depth) is disclosed rather than asserted. See
 | **Total** | **49 files** | ✅ **Complete** |
 
 **Distribution bundle**: the shipped bundles
-(`documents/AIMF-Full-Documentation-v1.0.11.zip` and the rolling
+(`documents/AIMF-Full-Documentation-v1.0.12.zip` and the rolling
 `documents/AIMF-Full-Documentation.zip`) carry 84 regular files plus 16 directory
 entries. Note that `unzip -l`'s summary line counts directory entries as well, so its
 figure overstates the file count by one per directory; quote the file count from
@@ -670,4 +689,4 @@ control-theme level and is labelled partial. See
 
 *Quality Assurance Verification Report completed January 26, 2026*
 
-**QA Status**: ✅ PASSED - READY FOR v1.0.11 REVIEW (pre-publication)
+**QA Status**: ✅ PASSED - READY FOR v1.0.12 REVIEW (pre-publication)

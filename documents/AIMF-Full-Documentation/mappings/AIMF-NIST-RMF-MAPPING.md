@@ -127,7 +127,7 @@ Each function block lists its subcategories with the AIMF control that satisfies
 | MAP 1.6 | Context Establishment | MAP-1.6 | AI System Requirements | D2 | 2 to 3 |
 | MAP 2.1 | System Categorization | MAP-2.1 | AI System Task Categorization | D3 | 2 to 3 |
 | MAP 2.2 | System Categorization | MAP-2.2 | AI System Boundaries | D3 | 2 to 3 |
-| MAP 2.3 | System Categorization | MAP-2.3 | AI Scientific Rigor | D3 | 2 to 4 |
+| MAP 2.3 | System Categorization | MAP-2.3 | AI Scientific Rigor | D2 | 2 to 4 |
 | MAP 3.1 | Capabilities Assessment | MAP-3.1 | AI Benefits Documentation | D1 | 2 to 3 |
 | MAP 3.2 | Capabilities Assessment | MAP-3.2 | AI Cost Documentation | D1 | 2 to 3 |
 | MAP 3.3 | Capabilities Assessment | MAP-3.3 | AI Application Scope | D3 | 2 to 3 |
@@ -169,7 +169,7 @@ Each function block lists its subcategories with the AIMF control that satisfies
 | MEASURE 1.2 | Methods and Metrics | MEA-1.2 | AI Metric Validation | D3 | 3 to 4 |
 | MEASURE 1.3 | Methods and Metrics | MEA-1.3 | AI Independent Evaluation | D3 | 2 to 4 |
 | MEASURE 2.1 | Trustworthiness Evaluation | MEA-2.1 | AI Testing Documentation | D3 | 2 to 3 |
-| MEASURE 2.2 | Trustworthiness Evaluation | MEA-2.2 | AI Human Subject Testing | D3 | 2 to 4 |
+| MEASURE 2.2 | Trustworthiness Evaluation | MEA-2.2 | AI Human Subject Testing | D2 | 2 to 4 |
 | MEASURE 2.3 | Trustworthiness Evaluation | MEA-2.3 | AI Performance Measurement | D3 | 2 to 3 |
 | MEASURE 2.4 | Trustworthiness Evaluation | MEA-2.4 | AI Production Monitoring | D3 | 2 to 4 |
 | MEASURE 2.5 | Trustworthiness Evaluation | MEA-2.5 | AI Validity and Reliability | D3 | 2 to 3 |

@@ -1,6 +1,6 @@
 # Instrument validation record — cases AIMF-VAL-2026-A (fitting) and AIMF-VAL-2026-B (held out)
 
-**Current result (v1.0.11), held-out case B: same model, two independent sessions — 65/72 controls agreed (90.3%), so the ≥90% publication threshold in P6 is met within one model family; different vendors on the same held-out pack — 43/72 (59.7%), so it is not met across vendors.**
+**Current result (measured at v1.0.11; bank unchanged in v1.0.12, so the number carries forward), held-out case B: same model, two independent sessions — 65/72 controls agreed (90.3%), so the ≥90% publication threshold in P6 is met within one model family; different vendors on the same held-out pack — 43/72 (59.7%), so it is not met across vendors.**
 **The 72/72 target in requirement A3 is not met on either case.** Case-A baselines on the same
 harness: **v1.0.6 45/72 (62.5%)**, **v1.0.7 51/72 (70.8%)**, **v1.0.8 65/72 (90.3%)** — case A is the
 fitting case and those figures are a regression series, not validation. §11 records the held-out
@@ -413,7 +413,7 @@ for it existed, scored blind with no anchor edit permitted afterwards.
 |---|---|
 | Fixture | `AIMF-VAL-2026-B` — Northwind Precision Components, precision manufacturing, B3 baseline, 3 plants, 6 registered AI systems; different sector and a deliberately different maturity profile from case A (quality-system measurement strong; regulatory mapping, transparency, representation and environmental controls weak; one deliberately withheld artefact) |
 | Pack sha256 | `2513cb0afe87a0f4a9b50192883529f8eaabe81223a3ec33eb742041414c6a91` |
-| Bank sha256 scored | `b6f9a6a19bfd25381657d33776812edf6f524e9ab9edd35727cb57c4600915bd` — the same anchor set shipped in v1.0.8 through v1.0.11 |
+| Bank sha256 scored | `b6f9a6a19bfd25381657d33776812edf6f524e9ab9edd35727cb57c4600915bd` — the same anchor set shipped in v1.0.8 through v1.0.12 |
 | Freeze commit | `dc0d8e1` (2026-10-18 11:01 PDT / 18:01Z), pack hashed in the commit message **before any case-B score existed** |
 | Publication commit | `a4dbe71`, carrying the result and the six score sheets |
 | Anchor edits in the window | **none.** `git diff dc0d8e1 a4dbe71 -- implementation/AIMF-ASSESSMENT-QUESTION-BANK.csv` is empty; the bank sha256 is identical in all six score files |

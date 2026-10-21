@@ -597,7 +597,7 @@ Calculate against parent's target maturity
 <!-- BEGIN GENERATED:assessment-guide-coverage -->
 **This bank covers 72/72 controls: one question, one evidence expectation and
 one role for every `Control_ID` in `core/AIMF-CONTROL-CATALOG.csv`** (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13: Leadership 24,
-Technical 30, Governance 6, Change Agent 12). Every catalog control appears in exactly one audience table
+Technical 28, Governance 8, Change Agent 12). Every catalog control appears in exactly one audience table
 below, and `python3 scripts/aimf_mappings.py check` fails if the bank and the catalog
 disagree on the control set - a control with no question, a control appearing twice, or an
 ID that is not in the catalog.
@@ -606,8 +606,10 @@ Questions are routed to the audience that has to produce the evidence: by defaul
 catalog's `Dimension` (`D1` Leadership, `D2` Governance, `D3` Technical, `D4` Change Agent).
 Four controls whose primary evidence is a compliance or audit record sit with Governance
 rather than their dimension's audience - `GOV-1.4`, `MAP-1.5`, `MEA-1.3` and `MAN-4.3` -
-so the Governance table is short: the catalog attributes only two controls to `D2`
-(`MAP-1.6`, `MEA-2.10`). The rule and the wording of each override are generated in
+so the Governance table holds 8 of 72: the catalog attributes 4 controls to `D2`
+(`MAP-1.6`, `MAP-2.3`, `MEA-2.10`, `MEA-2.2`) and a further 3 carry D2 as a secondary dimension
+(`MAN-3.2`, `MEA-2.1`, `MEA-2.11`).
+The rule and the wording of each override are generated in
 [AIMF-ASSESSMENT-QUESTION-BANK.md](AIMF-ASSESSMENT-QUESTION-BANK.md). An assessor may ask
 any question of any audience provided the same evidence is scored.
 
@@ -661,7 +663,7 @@ described above, against that control's behavioural anchors.
 | MAP-4.2 | Are internal controls over third-party AI components documented, implemented and tested? | Control descriptions; implementation evidence; effectiveness test results | Chief Risk Officer |
 | MAP-5.1 | Is an impact assessment completed for affected individuals and groups, with findings feeding the decision? | Impact assessment; stakeholder input; mitigation decisions; impact report | Chief AI Officer |
 
-#### Technical Assessment (30 of 72 controls)
+#### Technical Assessment (28 of 72 controls)
 
 | Control | Question | Evidence to Look For | Role asked |
 |---|---|---|---|
@@ -673,7 +675,6 @@ described above, against that control's behavioural anchors.
 | MAN-4.2 | Are measurable improvements from monitoring fed back into system updates? | Improvement backlog; release notes tying changes to findings; stakeholder input | Head of ML Engineering |
 | MAP-2.1 | Is each system's task and method formally categorized, with the method documented? | Task taxonomy; method documentation; classification record | MLOps Lead |
 | MAP-2.2 | Are the system's knowledge limits and required human oversight documented and enforced? | Boundary documentation; out-of-scope behaviour; oversight requirement; guardrail configuration | Model Owner |
-| MAP-2.3 | Is the scientific methodology documented, including the TEVV approach and its known limitations? | Methodology document; TEVV plan; validity discussion; independent or peer review | Head of AI Quality (TEVV) |
 | MAP-3.3 | Is the application scope specified, and are scope changes controlled and approved? | Scope statement; change log; scope-drift monitoring; approval for each change | Platform Architect |
 | MAP-3.5 | Are human oversight processes designed, documented and shown to work in practice? | Oversight procedure; role assignments; override records; effectiveness assessment | Head of ML Engineering |
 | MEA-1.1 | Is there a defined set of risk metrics per AI system, and are they wired into a measurement process? | Measurement framework; metric definitions; instrumentation or dashboard configuration | Head of Data Science |
@@ -682,7 +683,6 @@ described above, against that control's behavioural anchors.
 | MEA-2.11 | Is bias tested across the affected populations with multiple metrics, and are mitigations recorded? | Fairness results by group; metric definitions; mitigation records; retest cadence | Head of Data Science |
 | MEA-2.12 | Is the environmental impact of training and running the system measured and documented? | Energy or compute estimates; carbon figures; sustainability assessment; efficiency targets | MLOps Lead |
 | MEA-2.13 | Is the effectiveness of the testing programme itself evaluated? | TEVV review; coverage analysis; defects found after test; process changes made | Head of AI Quality (TEVV) |
-| MEA-2.2 | Do human-subject evaluations use ethics review, informed consent and representative sampling? | Ethics or IRB approval; consent records; sampling rationale; participant protections | Head of Data Science |
 | MEA-2.3 | Are performance and assurance criteria defined before testing and demonstrated under deployment-like conditions? | Acceptance criteria; results under deployment conditions; sign-off against the criteria | Head of AI Quality (TEVV) |
 | MEA-2.4 | Is AI system functionality monitored in production? | Monitoring dashboards; alert configurations; runbooks | MLOps Lead |
 | MEA-2.5 | Is validity and reliability demonstrated, including generalizability beyond the test set? | Validation report; out-of-distribution tests; reliability statistics; drift evidence | Head of Data Science |
@@ -696,7 +696,7 @@ described above, against that control's behavioural anchors.
 | MEA-4.2 | Are measurement results reviewed by domain experts who are independent of the build team? | Review records; reviewer independence; disagreements and their resolution | Head of AI Quality (TEVV) |
 | MEA-4.3 | Are performance changes detected and investigated, with root cause and action recorded? | Trend reports; drift alerts; root cause analyses; corrective actions | MLOps Lead |
 
-#### Governance Assessment (6 of 72 controls)
+#### Governance Assessment (8 of 72 controls)
 
 | Control | Question | Evidence to Look For | Role asked |
 |---|---|---|---|
@@ -704,8 +704,10 @@ described above, against that control's behavioural anchors.
 | MAN-4.3 | Are AI incidents communicated to relevant stakeholders? | Incident records; communication logs | Compliance Officer |
 | MAP-1.5 | Are organizational risk tolerances for AI formally defined? | Risk appetite statements; approval records | Compliance Officer |
 | MAP-1.6 | Are socio-technical requirements elicited with stakeholder input and traced into testing? | Requirements specification; traceability matrix; stakeholder input records | Data Governance Lead |
+| MAP-2.3 | Is the scientific methodology documented, including the TEVV approach and its known limitations? | Methodology document; TEVV plan; validity discussion; independent or peer review | Head of AI Quality (TEVV) |
 | MEA-1.3 | Are internal experts and independent assessors involved in evaluation, with independence documented? | Assessment scope; assessor independence statement; assessment reports; external review | Head of Internal Audit |
 | MEA-2.10 | Are privacy risks examined and documented for AI systems? | Privacy impact assessments; privacy review records | Privacy Officer |
+| MEA-2.2 | Do human-subject evaluations use ethics review, informed consent and representative sampling? | Ethics or IRB approval; consent records; sampling rationale; participant protections | Head of Data Science |
 
 #### Change Agent Assessment (12 of 72 controls)
 
