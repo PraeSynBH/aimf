@@ -6,7 +6,9 @@ Licensed under CC BY-NC-ND 4.0
 
 **Version**: 1.0.12
 **Document Type**: Verification Register
-**Status**: Verified 2026-10-17 against repository state at commit `e46481d` (v1.0.1)
+**Status**: Verified 2026-10-21 against repository state at commit `9f08387` (v1.0.12) - every
+evidence command below was re-run from that tree; the only text differing between that commit
+and the tagged release is this Status line, and the release bundles are built from that tree
 **Supersedes**: the standards-mapping completeness claims previously carried by
 README.md, QA-VERIFICATION-REPORT.md and QUALITY-ASSURANCE-CHECKLIST.md
 
