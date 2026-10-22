@@ -150,7 +150,7 @@ def check_register_attestation() -> None:
     record("G3 register_attestation", PASS, f"register re-attested for v{ver} ({date})")
 
 
-# --- G4: the ISO 27001 mapping's claim is arithmetically true and self-consistent
+# --- G4: the ISO 27001 mapping's claim is true, and it meets the gate condition -
 def check_iso27001_claim() -> None:
     text = ISO27001.read_text()
     status = first(r"^\*\*Status\*\*:\s*(\w+)", text)
@@ -179,11 +179,22 @@ def check_iso27001_claim() -> None:
         problems.append(f"{len(blank)} catalogue rows carry a blank ISO27001_Controls cell")
     if status.lower().startswith("complete") and "licensed copy" in text:
         problems.append("status says Complete while the scope limitation still disclaims licensed-source depth")
+
+    # The gate condition itself. Ben's decision `publish_after_iso27001` (2026-10-21)
+    # holds publication until this mapping reaches clause-level fidelity, so a
+    # mapping that is still Partial fails the gate even when every claim in it is
+    # internally true. Passing this check on claim-integrity alone reported CLEAR
+    # once, on 2026-10-22, against a Partial mapping - that is the bug this fixes.
+    if not status.lower().startswith("complete"):
+        problems.append(
+            f"gate condition unmet: Ben's publish_after_iso27001 requires clause-level "
+            f"fidelity, mapping status is {status}"
+        )
     if problems:
-        record("G4 iso27001_claim", FAIL, "; ".join(problems))
+        record("G4 iso27001_gate", FAIL, "; ".join(problems))
         return
     record(
-        "G4 iso27001_claim",
+        "G4 iso27001_gate",
         PASS,
         f"status {status}: {cat_tagged}/{cat_total} tagged, {cat_total - cat_tagged} no-analogue, "
         f"arithmetic and catalogue agree; claim does not exceed the text",
@@ -248,6 +259,54 @@ def check_bundle_clean() -> None:
     record("G7 bundle_clean", PASS, f"{len(names)} entries, none from storage/ and no standard PDFs/EPUBs")
 
 
+# --- G8: the source delivered for the mapping is the standard, not a proxy ------
+def check_source_text() -> None:
+    """A file called *27001* in storage/ is not the same thing as the standard.
+
+    Ben delivers the licensed text by dropping it in storage/, so the gate has to
+    assert what the file actually is before mapping work is dispatched against it.
+    A derived control library carries Annex A cross-references in its prose but no
+    Annex A control identifiers of its own and no clauses 4-10, so clause-level
+    fidelity cannot be built from it.
+    """
+    storage = ROOT / "storage"
+    candidates = sorted(p for p in storage.glob("*") if "27001" in p.name) if storage.is_dir() else []
+    if not candidates:
+        record("G8 source_text", INFO, "no ISO/IEC 27001 source delivered yet")
+        return
+
+    import csv as _csv
+
+    verdicts: list[str] = []
+    ok = False
+    for path in candidates:
+        if path.suffix.lower() not in (".csv", ".txt"):
+            verdicts.append(f"{path.name}: binary/other format, not inspected")
+            continue
+        rows = list(_csv.DictReader(path.open(encoding="utf-8-sig", errors="replace")))
+        codes = [next((v for v in r.values() if v), "") for r in rows]
+        annex = sum(1 for c in codes if re.fullmatch(r"A\.\d+\.\d+", (c or "").strip()))
+        clause = sum(1 for c in codes if re.match(r"^(?:[4-9]|10)(?:\.\d+)*$", (c or "").strip()))
+        shape = re.sub(r"\d+", "#", (codes[0] or "").strip()) if codes else "?"
+        if annex >= 50 or clause >= 4:
+            ok = True
+            verdicts.append(f"{path.name}: {len(rows)} rows, {annex} Annex A codes / {clause} clause ids")
+        else:
+            verdicts.append(
+                f"{path.name}: {len(rows)} rows but 0 Annex A control codes and 0 clause 4-10 ids "
+                f"(rows are coded like {shape!r}) - a derived control library, not the standard"
+            )
+
+    if ok:
+        record("G8 source_text", PASS, "; ".join(verdicts))
+    else:
+        record(
+            "G8 source_text",
+            FAIL,
+            "no delivered source is ISO/IEC 27001:2022 itself: " + "; ".join(verdicts),
+        )
+
+
 CHECKS = (
     check_hold_intact,
     check_version_coherence,
@@ -256,6 +315,7 @@ CHECKS = (
     check_generator,
     check_licensed_text,
     check_bundle_clean,
+    check_source_text,
 )
 
 
