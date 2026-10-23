@@ -33,12 +33,9 @@ Thumbs.db
 # Licensed third-party standards text (PRA-6702)
 # ISO/IEC 27001:2022 delivered by Ben is a licensed document. It must live in
 # storage/ untracked: the bundle excludes storage/, but a git remote would
-# redistribute anything tracked here. The pre-existing ISO/IEC 42001:2023 pair
-# is already tracked and is unaffected by this rule.
-storage/ISO_IEC_27001*
-storage/ISO_IEC_27002*
-storage/*27001*
-storage/*27002*
+# redistribute anything tracked here. The ISO/IEC 42001:2023 pair was tracked
+# from the initial commit and has since been untracked for the same reason.
+storage/
 
 # Logs
 *.log

@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Publication gate for the AIMF documentation bundle (PRA-6702).
 
-The bundle is HELD: Ben's 2026-10-21 decision is `publish_after_iso27001`, so
-nothing may be pushed to a remote or uploaded until the ISO/IEC 27001 mapping is
-at clause-level fidelity against a licensed copy of the 2022 text.
+The bundle was HELD by Ben's 2026-10-21 decision `publish_after_iso27001`, which
+required clause-level fidelity against a licensed copy of the 2022 text. Ben
+reversed that condition on 2026-10-23 ("approved", comment f7aa6f1e on PRA-6323);
+the reversal is recorded in `validation/aimf-publication-amendment.md`, which this
+script reads. Under the amendment the release may ship with the ISO/IEC 27001
+mapping labelled Partial, but not with a stronger claim than the text supports,
+and no git remote may exist yet.
 
 `validation/verify_release.sh` answers "is the shipped zip internally sound".
 This script answers the different question the hold actually turns on: "is the
@@ -36,6 +40,7 @@ CHANGELOG = BUNDLE / "CHANGELOG.md"
 ISO27001 = BUNDLE / "mappings" / "AIMF-ISO27001-MAPPING.md"
 CATALOG = BUNDLE / "core" / "AIMF-CONTROL-CATALOG.csv"
 ZIPS = ROOT / "documents"
+AMENDMENT = ROOT / "validation" / "aimf-publication-amendment.md"
 
 PASS, FAIL, WARN, INFO = "PASS", "FAIL", "WARN", "INFO"
 results: list[dict] = []
@@ -74,6 +79,31 @@ def latest_tag() -> tuple[str, str] | None:
         return None
     tag = out.splitlines()[0]
     return tag, tag.replace("aimf-v", "", 1)
+
+
+# --- the amendment record: a human decision, in a file the gate reads ----------
+def load_amendment() -> tuple[dict[str, str] | None, list[str]]:
+    """Return (fields, problems). Absent file = no amendment = the hold stands.
+
+    An amendment must point at a real human comment, name what it supersedes and
+    fix the disclosure the release ships under. A malformed amendment is treated
+    as no amendment: the gate falls back to the hold rather than trusting prose.
+    """
+    if not AMENDMENT.is_file():
+        return None, []
+    fields = dict(re.findall(r"^\*\*([^*]+)\*\*:\s*(.+?)\s*$", AMENDMENT.read_text(), re.MULTILINE))
+    problems: list[str] = []
+    if fields.get("Decision", "").strip().lower() != "publish":
+        problems.append(f"Decision is {fields.get('Decision')!r}, not 'publish'")
+    if not re.search(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", fields.get("Task comment", "")):
+        problems.append("Task comment carries no comment id")
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", fields.get("Comment date", "").strip()):
+        problems.append("Comment date is not YYYY-MM-DD")
+    if "publish_after_iso27001" not in fields.get("Supersedes", ""):
+        problems.append("Supersedes does not name publish_after_iso27001")
+    if "partial" not in fields.get("ISO 27001 disclosure", "").lower():
+        problems.append("ISO 27001 disclosure is not 'Partial'")
+    return (fields if not problems else None), problems
 
 
 # --- G1: the hold has no external exposure, and no publication path exists -----
@@ -185,20 +215,49 @@ def check_iso27001_claim() -> None:
     # mapping that is still Partial fails the gate even when every claim in it is
     # internally true. Passing this check on claim-integrity alone reported CLEAR
     # once, on 2026-10-22, against a Partial mapping - that is the bug this fixes.
-    if not status.lower().startswith("complete"):
-        problems.append(
-            f"gate condition unmet: Ben's publish_after_iso27001 requires clause-level "
-            f"fidelity, mapping status is {status}"
-        )
+    #
+    # A later human decision can reverse that condition. It does so only by being
+    # on file (validation/aimf-publication-amendment.md) and it can only widen the
+    # gate to "ship labelled Partial", never to "ship saying Complete": under an
+    # amendment the status must still read Partial with its scope limitation, so
+    # the release ships the honest claim rather than a newly-cleared one.
+    amendment, amend_problems = load_amendment()
+    if amendment is None:
+        if not status.lower().startswith("complete"):
+            problems.append(
+                f"gate condition unmet: Ben's publish_after_iso27001 requires clause-level "
+                f"fidelity, mapping status is {status}"
+            )
+        if amend_problems:
+            problems.append("amendment on file is invalid, so the hold stands: " + "; ".join(amend_problems))
+    else:
+        if not status.lower().startswith("partial"):
+            problems.append(
+                f"amendment authorises publication only with the mapping labelled Partial, "
+                f"but the mapping reads {status}"
+            )
+        if "scope limitation" not in text.lower():
+            problems.append("amendment disclosure requires the mapping's scope limitation paragraph, which is absent")
+
     if problems:
         record("G4 iso27001_gate", FAIL, "; ".join(problems))
         return
-    record(
-        "G4 iso27001_gate",
-        PASS,
-        f"status {status}: {cat_tagged}/{cat_total} tagged, {cat_total - cat_tagged} no-analogue, "
-        f"arithmetic and catalogue agree; claim does not exceed the text",
-    )
+    if amendment is None:
+        record(
+            "G4 iso27001_gate",
+            PASS,
+            f"status {status}: {cat_tagged}/{cat_total} tagged, {cat_total - cat_tagged} no-analogue, "
+            f"arithmetic and catalogue agree; claim does not exceed the text",
+        )
+    else:
+        record(
+            "G4 iso27001_gate",
+            PASS,
+            f"status {status} shipped as an amendment, not as a cleared condition: "
+            f"{cat_tagged}/{cat_total} tagged, {cat_total - cat_tagged} no-analogue, arithmetic and "
+            f"catalogue agree, scope limitation intact; supersedes publish_after_iso27001 by "
+            f"comment {amendment['Task comment'].split()[0]} ({amendment['Comment date']})",
+        )
 
 
 # --- G5: generated tables still match the catalogue ----------------------------
@@ -234,7 +293,21 @@ def check_licensed_text() -> None:
             "for the 27001 text: leave it untracked",
         )
         return
-    record("G6 licensed_text_hygiene", PASS, "no licensed standard text tracked by git")
+    # Untracked now is not the same as absent from history: a push publishes history.
+    code, hist = run("git", "log", "--all", "--oneline", "--", "storage/")
+    hist_files = [l for l in hist.splitlines() if l.strip()] if code == 0 else []
+    if hist_files:
+        code2, names = run("git", "log", "--all", "--pretty=format:", "--name-only", "--", "storage/")
+        carried = sorted({n for n in names.splitlines() if n.strip()})
+        record(
+            "G6 licensed_text_hygiene",
+            WARN,
+            f"working tree is clean of licensed text, but history carries {len(hist_files)} commit(s) "
+            f"touching storage/ ({', '.join(carried) or 'files'}): a push to a remote publishes history, "
+            "so distribute by bundle only, or squash history before creating a public remote",
+        )
+        return
+    record("G6 licensed_text_hygiene", PASS, "no licensed standard text tracked by git, none in history")
 
 
 # --- G7: the shipped artifact carries no licensed standard documents -----------
@@ -300,6 +373,16 @@ def check_source_text() -> None:
     if ok:
         record("G8 source_text", PASS, "; ".join(verdicts))
     else:
+        amendment, _ = load_amendment()
+        if amendment is not None:
+            record(
+                "G8 source_text",
+                WARN,
+                "no delivered source is ISO/IEC 27001:2022 itself (" + "; ".join(verdicts) + "). Not a gate "
+                "condition under the amendment, because the mapping ships labelled Partial and claims no "
+                "clause-level fidelity; clause-level mapping still needs the standard itself",
+            )
+            return
         record(
             "G8 source_text",
             FAIL,
