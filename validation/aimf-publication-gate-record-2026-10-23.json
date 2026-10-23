@@ -1,0 +1,48 @@
+{
+  "issue": "PRA-6702",
+  "shipping_version": "1.0.12",
+  "gate": "CLEAR",
+  "checks": [
+    {
+      "check": "G1 hold_intact",
+      "status": "PASS",
+      "detail": "no git remote configured; nothing published (HEAD b8ee7ec)"
+    },
+    {
+      "check": "G2 version_coherence",
+      "status": "PASS",
+      "detail": "tag aimf-v1.0.12 == CHANGELOG == shipped zip, rollup identical"
+    },
+    {
+      "check": "G3 register_attestation",
+      "status": "PASS",
+      "detail": "register re-attested for v1.0.12 (2026-10-21)"
+    },
+    {
+      "check": "G4 iso27001_gate",
+      "status": "PASS",
+      "detail": "status Partial shipped as an amendment, not as a cleared condition: 54/72 tagged, 18 no-analogue, arithmetic and catalogue agree, scope limitation intact; supersedes publish_after_iso27001 by comment f7aa6f1e-071c-44ba-afae-d69780ca2d3b (2026-10-23)"
+    },
+    {
+      "check": "G5 mapping_check",
+      "status": "PASS",
+      "detail": "OK: mapping documents, catalog and generated tables are consistent"
+    },
+    {
+      "check": "G6 licensed_text_hygiene",
+      "status": "WARN",
+      "detail": "working tree is clean of licensed text, but history carries 2 commit(s) touching storage/ (framework-and-training/storage/ISO_IEC_42001_2023(en).epub, framework-and-training/storage/ISO_IEC_42001_2023(en).pdf): a push to a remote publishes history, so distribute by bundle only, or squash history before creating a public remote"
+    },
+    {
+      "check": "G7 bundle_clean",
+      "status": "PASS",
+      "detail": "100 entries, none from storage/ and no standard PDFs/EPUBs"
+    },
+    {
+      "check": "G8 source_text",
+      "status": "WARN",
+      "detail": "no delivered source is ISO/IEC 27001:2022 itself (ISO 27001-Controls-10202026.csv: 344 rows but 0 Annex A control codes and 0 clause 4-10 ids (rows are coded like 'DCF-#') - a derived control library, not the standard). Not a gate condition under the amendment, because the mapping ships labelled Partial and claims no clause-level fidelity; clause-level mapping still needs the standard itself"
+    }
+  ],
+  "head": "b8ee7ec Publication gate: read Ben's 2026-10-23 reversal (PRA-6323) and untrack licensed 42001 text"
+}
