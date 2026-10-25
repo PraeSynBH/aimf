@@ -13,7 +13,7 @@ runs, the disagreements, the adjudications and the parts that failed.
 ## 1. What was measured
 
 Whether two assessors, given the same evidence and the same instrument, produce the same score for
-the same control — requirement **A3 (scoring reproducibility)** in STARTINGPOINT §4.1.
+the same control — requirement **A3 (scoring reproducibility)** in the internal requirements document (not published), §4.1.
 
 The instrument is the shipped question bank plus the Scoring Protocol:
 

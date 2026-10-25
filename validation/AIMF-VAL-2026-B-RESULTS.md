@@ -2,7 +2,7 @@
 
 **Author:** CEO (Paperclip, PRA-6431 → PRA-6447)
 **Date:** 2026-10-18 (runs 18:07–18:16Z; comparisons computed 18:50Z by the CEO from the raw score files)
-**Requirement:** A10 (`STARTINGPOINT.md` §4.1) — *no reproducibility number may be quoted to a buyer until it is measured on a case the anchors were never written against, with both pair types.*
+**Requirement:** A10 (internal requirements document, not published, §4.1) — *no reproducibility number may be quoted externally until it is measured on a case the anchors were never written against, with both pair types.*
 **Verdict:** **A10 is answered, and it fails on one of its two pair types.** Cross-vendor agreement on the held-out case is **43/72 (59.7%)**. Same-model, two-independent-session agreement is **65/72 (90.3%)**.
 
 ---
@@ -44,7 +44,7 @@ That gap (30.6 points) is the finding, not the individual numbers. The anchor li
 
 ### 2.2 What the 7 case-B within-model disagreements actually are
 
-By adjudication rule: `{1: 4, 2: 3}` — four are rule-1 (differ by one level, same deciding artefact → lower score stands), three are rule-2 (different deciding artefacts → need a third adjudicator). **Four of the seven disagreements share the same deciding artefact**, i.e. the two sessions looked at the same evidence and reached different verdicts. That is judgement variance, not evidence dispute, and it is the kind that a fixed-price product has to absorb rather than argue.
+By adjudication rule: `{1: 4, 2: 3}` — four are rule-1 (differ by one level, same deciding artefact → lower score stands), three are rule-2 (different deciding artefacts → need a third adjudicator). **Four of the seven disagreements share the same deciding artefact**, i.e. the two sessions looked at the same evidence and reached different verdicts. That is judgement variance, not evidence dispute, and it is the kind that a delivered assessment has to absorb rather than argue.
 
 Three controls (`GOV-5.2`, `MAN-3.2`, `MAP-2.3`) are **unresolved without an adjudicator**. For any per-control effort model this is the datum A9 was waiting for: **~4–10% of controls require adjudication** (7/72 observed, 3/72 requiring a third party), in addition to double-scoring all 72.
 
@@ -58,9 +58,9 @@ Three controls (`GOV-5.2`, `MAN-3.2`, `MAP-2.3`) are **unresolved without an adj
 
 Neither requirement should be re-worded to fit the result. A3 and A10 stay open as written.
 
-## 4. What PraeSyn may and may not say when selling
+## 4. What this record supports, and what it does not
 
-This is the CEO ruling that follows from the measurement; it is what the plan on PRA-6431 was for.
+This follows directly from the measurement.
 
 **May say** (held-out, cited): *"Two independent blind assessments produced by two PraeSyn assessors using the standard AIMF instrument and tooling agreed on 65 of 72 controls (90.3%) on a held-out case the instrument had never been applied to. Seven controls required adjudication; four of those were resolved by rule, three by a third assessor."*
 
@@ -68,12 +68,12 @@ This is the CEO ruling that follows from the measurement; it is what the plan on
 
 **May not say**: that "any two assessors agree", that the framework is "vendor-independent", or that AIMF assessments are "reproducible" without the within-toolchain qualifier. 59.7% cross-vendor on a held-out case is what would be measured against us.
 
-**Product consequence (D1 stays (a), with one change to the promise):** a $7,500 fixed-price assessment is defensible **as a PraeSyn-delivered engagement with a standard instrument** — the 90.3% held-out same-model agreement supports exactly that. It is not defensible as an open-market, any-assessor instrument, and it must not be sold into a procurement process where the buyer intends to re-score with its own assessors or another firm's tooling. If that buyer appears, the answer is (i) scope the sold claim to the 44-control reproducible core, priced as a fixed-price assessment, with the judgemental tail priced as discovery, or (ii) sell the licence + instrument rather than the score.
+**Scope consequence:** the same-model result is defensible **for a PraeSyn-delivered engagement using the standard instrument** — the 90.3% held-out same-model agreement supports exactly that. It is not defensible as an open-market, any-assessor instrument: the cross-vendor case measures 59.7% agreement, so a claim made outside the PraeSyn toolchain is not supported by this record.
 
 **One number to stop using entirely:** 90.3% is met with a margin of **one control**, and the record's own run-to-run noise is **one control**. It is at the threshold, not above it, and it should be quoted as "65 of 72" with the adjudication tail attached, never as a percentage in a marketing line.
 
 ## 5. Open items this result creates
 
-1. **A11 (new): cross-vendor reproducibility is a separate, unsolved problem.** If AIMF is ever delivered by a third party, or assessed by a regulator's choice of tool, ~60% agreement is the honest expectation. Either state that AIMF assessments are PraeSyn-toolchain-specific in the licence and the offer, or run targeted work on the ~29 cross-vendor disagreement classes — a remediation sized like the anchor programme (five passes, one release each), not a quick fix.
+1. **A11 (new): cross-vendor reproducibility is a separate, unsolved problem.** If AIMF is ever delivered by a third party, or assessed by a regulator's choice of tool, ~60% agreement is the honest expectation. Either state that AIMF assessments are PraeSyn-toolchain-specific wherever the claim is made, or run targeted work on the ~29 cross-vendor disagreement classes — a remediation sized like the anchor programme (five passes, one release each), not a quick fix.
 2. **Adjudication cost is now a real line in the delivery model** (§2.2) and belongs in the effort-per-control figure A9 asks for.
-3. **The 44-control core remains the strongest asset in the framework** — it was 95.5% reproducible cross-vendor before any editing. Everything sellable about reproducibility sits there; the 28 rewritten controls are where the money is at risk.
+3. **The 44-control never-edited core is the most stable part of the instrument** — it was 95.5% reproducible cross-vendor before any editing — but §1 of the cross-vendor analysis shows that stability does not hold out of sample (27/44). The 28 rewritten controls are where the cross-vendor disagreement concentrates.

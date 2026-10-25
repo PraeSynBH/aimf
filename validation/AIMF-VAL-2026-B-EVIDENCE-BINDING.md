@@ -91,14 +91,14 @@ to 75.0%, so the fix did not even hold its own ceiling.
   the sign test is reported only to show the observed movement is indistinguishable
   from chance.
 
-## Consequence for the offer
+## Consequence for the claim
 
 D5 stays **(a) — disclaim now**. Two remedies have now been tested and both failed on
 the same held-out pack: anchor work (five passes, moved in-sample only) and evidence
-binding (this memo, no effect, compliance total). What remains true and sellable is
-the same-model result — 65/72 (90.3%) case B, 68/72 (94.4%) case A — which is a
+binding (this memo, no effect, compliance total). What remains true is the same-model
+result — 65/72 (90.3%) case B, 68/72 (94.4%) case A — which is a
 *PraeSyn-toolchain* claim. A11 stays open with its requirement named and its only
-funded candidate now closed. Nothing in D1–D4 moves: D1 stays (a) at $7,500.
+funded candidate now closed.
 
 No anchor was edited to produce this memo. The bindings, the bound sheets, the logs
 and the analysis script are committed beside the pack.
