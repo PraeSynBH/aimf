@@ -1,0 +1,44 @@
+{
+  "issue": "PRA-7056",
+  "decision": "d2 public-repo-page",
+  "published_at": "2026-10-25",
+  "shipping_version": "1.0.12",
+  "publisher": "PraeSyn, LLC",
+  "repository": "https://github.com/PraeSynBH/aimf",
+  "page": "https://www.praesyn.com/aimf",
+  "tag": "aimf-v1.0.12",
+  "tag_target": "this commit (the commit that carries this record)",
+  "history_rewrite": {
+    "performed_before_first_push": true,
+    "why": "G6 at the 2026-10-23 gate: the working tree was clean, but 2 commits in history touched storage/ with the licensed ISO/IEC 42001:2023 PDF and EPUB. A push publishes history.",
+    "method": "git filter-repo (three passes) on a fresh clone, then a new public remote",
+    "paths_dropped": [
+      "storage/** (licensed ISO/IEC 42001:2023 PDF+EPUB, Drata export)",
+      "STARTINGPOINT.md, plan/, projects (internal strategy)",
+      "CLAUDE.md, ANTROPIC-AI-RESPONSIBLE-SCALING-POLICY.md, **/.claude/**, **/.specstory/** (internal agent material)",
+      "documents/*.zip (bundles are release assets, not tree content)",
+      "*.swp"
+    ],
+    "verification": [
+      "git log --all --name-only -- storage/  -> empty",
+      "git log --all --name-only -- '*.pdf' '*.epub'  -> only documents/formal_framework_pdfs/AIMF-FAQ.pdf and AIMF-GLOSSARY.pdf (AIMF's own product PDFs)"
+    ]
+  },
+  "tree_identity": {
+    "public_subtree": "documents/AIMF-Full-Documentation",
+    "public_subtree_hash": "b4fadaac838aed498f5e36924f4ad52a72a29d00",
+    "shipped_bundle": "AIMF-Full-Documentation-v1.0.12.zip",
+    "shipped_bundle_sha256": "e99c07d1402f812c4618119bbab9cf16c6a583d46b2693af8c92aba9507c7e6d",
+    "shipped_bundle_bytes": 1196412,
+    "file_by_file_comparison": "IDENTICAL,       84/      84 files (unpacked bundle vs the public subtree)"
+  },
+  "release_assets": [
+    "AIMF-Full-Documentation-v1.0.12.zip",
+    "AIMF-Full-Documentation.zip"
+  ],
+  "tag_identity_fix": {
+    "defect": "the pre-publication tag aimf-v1.0.12 (d3653d5) preceded the gate record (9e27f13) by one commit",
+    "resolution": "the public tag is cut on the commit that carries this record and the gate record it refers to",
+    "check": "git rev-list -n1 aimf-v1.0.12 == the commit containing the shipped bundle's source tree and validation/aimf-publication-gate-record-2026-10-23.json"
+  }
+}
